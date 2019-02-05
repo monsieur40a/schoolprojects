@@ -1,0 +1,7 @@
+0 12 IronBreastplate 60 15
+1 10 LeatherPants 60 6
+2 12 SteelGauntlets 55 4
+3 17 LegendaryBoots 425 8
+4 18 DwarvenHelmet 200 12
+5 10 WoodenShield 30 6
+0 17 LegendaryBreastplate 525 7

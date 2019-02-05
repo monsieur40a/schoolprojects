@@ -1,0 +1,2752 @@
+"calculon.ml" 10 205 205 "calculon.ml" 10 205 230
+type(
+  bool -> unit
+)
+ident(
+  ext_ref Printexc.record_backtrace
+)
+"calculon.ml" 10 205 231 "calculon.ml" 10 205 235
+type(
+  bool
+)
+"calculon.ml" 10 205 205 "calculon.ml" 10 205 235
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 13 362 366 "calculon.ml" 13 362 377
+type(
+  string
+)
+ident(
+  def help_string "calculon.ml" 48 2490 2490 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 14 380 386 "calculon.ml" 14 380 391
+type(
+  string list
+)
+ident(
+  def lines "calculon.ml" 45 2459 2461 "calculon.ml" 45 2459 2485
+)
+"calculon.ml" 15 396 402 "calculon.ml" 15 396 471
+type(
+  string
+)
+"calculon.ml" 16 473 479 "calculon.ml" 16 473 481
+type(
+  string
+)
+"calculon.ml" 17 483 489 "calculon.ml" 17 483 511
+type(
+  string
+)
+"calculon.ml" 18 513 519 "calculon.ml" 18 513 605
+type(
+  string
+)
+"calculon.ml" 19 607 613 "calculon.ml" 19 607 680
+type(
+  string
+)
+"calculon.ml" 20 682 688 "calculon.ml" 20 682 754
+type(
+  string
+)
+"calculon.ml" 21 756 762 "calculon.ml" 21 756 825
+type(
+  string
+)
+"calculon.ml" 22 827 833 "calculon.ml" 22 827 894
+type(
+  string
+)
+"calculon.ml" 23 896 902 "calculon.ml" 23 896 977
+type(
+  string
+)
+"calculon.ml" 24 979 985 "calculon.ml" 24 979 1051
+type(
+  string
+)
+"calculon.ml" 25 1053 1059 "calculon.ml" 25 1053 1119
+type(
+  string
+)
+"calculon.ml" 26 1121 1127 "calculon.ml" 26 1121 1204
+type(
+  string
+)
+"calculon.ml" 27 1206 1212 "calculon.ml" 27 1206 1214
+type(
+  string
+)
+"calculon.ml" 28 1216 1222 "calculon.ml" 28 1216 1244
+type(
+  string
+)
+"calculon.ml" 29 1246 1252 "calculon.ml" 29 1246 1315
+type(
+  string
+)
+"calculon.ml" 30 1317 1323 "calculon.ml" 30 1317 1376
+type(
+  string
+)
+"calculon.ml" 31 1378 1384 "calculon.ml" 31 1378 1473
+type(
+  string
+)
+"calculon.ml" 32 1475 1481 "calculon.ml" 32 1475 1544
+type(
+  string
+)
+"calculon.ml" 33 1546 1552 "calculon.ml" 33 1546 1634
+type(
+  string
+)
+"calculon.ml" 34 1636 1642 "calculon.ml" 34 1636 1725
+type(
+  string
+)
+"calculon.ml" 35 1727 1733 "calculon.ml" 35 1727 1817
+type(
+  string
+)
+"calculon.ml" 36 1819 1825 "calculon.ml" 36 1819 1916
+type(
+  string
+)
+"calculon.ml" 37 1918 1924 "calculon.ml" 37 1918 1926
+type(
+  string
+)
+"calculon.ml" 38 1928 1934 "calculon.ml" 38 1928 1957
+type(
+  string
+)
+"calculon.ml" 39 1959 1965 "calculon.ml" 39 1959 2045
+type(
+  string
+)
+"calculon.ml" 40 2047 2053 "calculon.ml" 40 2047 2142
+type(
+  string
+)
+"calculon.ml" 41 2144 2150 "calculon.ml" 41 2144 2231
+type(
+  string
+)
+"calculon.ml" 42 2233 2239 "calculon.ml" 42 2233 2338
+type(
+  string
+)
+"calculon.ml" 43 2340 2346 "calculon.ml" 43 2340 2448
+type(
+  string
+)
+"calculon.ml" 14 380 394 "calculon.ml" 44 2450 2455
+type(
+  string list
+)
+"calculon.ml" 45 2459 2461 "calculon.ml" 45 2459 2474
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"calculon.ml" 45 2459 2475 "calculon.ml" 45 2459 2479
+type(
+  string
+)
+"calculon.ml" 45 2459 2480 "calculon.ml" 45 2459 2485
+type(
+  string list
+)
+ident(
+  int_ref lines "calculon.ml" 14 380 386 "calculon.ml" 14 380 391
+)
+"calculon.ml" 45 2459 2461 "calculon.ml" 45 2459 2485
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 14 380 382 "calculon.ml" 45 2459 2485
+type(
+  string
+)
+"calculon.ml" 48 2490 2494 "calculon.ml" 48 2490 2502
+type(
+  bool ref
+)
+ident(
+  def quit_now "calculon.ml" 49 2597 2597 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 48 2490 2510 "calculon.ml" 48 2490 2513
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 48 2490 2514 "calculon.ml" 48 2490 2519
+type(
+  bool
+)
+"calculon.ml" 48 2490 2510 "calculon.ml" 48 2490 2519
+type(
+  bool ref
+)
+"calculon.ml" 49 2597 2601 "calculon.ml" 49 2597 2605
+type(
+  bool ref
+)
+ident(
+  def echo "calculon.ml" 50 2684 2684 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 49 2597 2617 "calculon.ml" 49 2597 2620
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 49 2597 2621 "calculon.ml" 49 2597 2626
+type(
+  bool
+)
+"calculon.ml" 49 2597 2617 "calculon.ml" 49 2597 2626
+type(
+  bool ref
+)
+"calculon.ml" 50 2684 2688 "calculon.ml" 50 2684 2693
+type(
+  bool ref
+)
+ident(
+  def debug "calculon.ml" 51 2774 2774 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 50 2684 2704 "calculon.ml" 50 2684 2707
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 50 2684 2708 "calculon.ml" 50 2684 2713
+type(
+  bool
+)
+"calculon.ml" 50 2684 2704 "calculon.ml" 50 2684 2713
+type(
+  bool ref
+)
+"calculon.ml" 51 2774 2778 "calculon.ml" 51 2774 2786
+type(
+  bool ref
+)
+ident(
+  def optimize "calculon.ml" 52 2883 2883 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 51 2774 2794 "calculon.ml" 51 2774 2797
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 51 2774 2798 "calculon.ml" 51 2774 2803
+type(
+  bool
+)
+"calculon.ml" 51 2774 2794 "calculon.ml" 51 2774 2803
+type(
+  bool ref
+)
+"calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  def global_varmap "calculon.ml" 57 3189 3189 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 52 2883 2903 "calculon.ml" 52 2883 2906
+type(
+  Calceval.varmap_t -> Calceval.varmap_t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 52 2883 2907 "calculon.ml" 52 2883 2928
+type(
+  Calceval.varmap_t
+)
+ident(
+  ext_ref Calceval.empty_varmap
+)
+"calculon.ml" 52 2883 2903 "calculon.ml" 52 2883 2928
+type(
+  Calceval.varmap_t ref
+)
+"calculon.ml" 57 3189 3197 "calculon.ml" 57 3189 3214
+type(
+  in_channel -> unit
+)
+ident(
+  def process_statement "calculon.ml" 57 3189 3189 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 57 3189 3215 "calculon.ml" 57 3189 3221
+type(
+  in_channel
+)
+ident(
+  def inchan "calculon.ml" 58 3224 3226 "calculon.ml" 79 4318 4324
+)
+"calculon.ml" 58 3224 3226 "calculon.ml" 58 3224 3232
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 58 3224 3233 "calculon.ml" 58 3224 3247
+type(
+  (unit, out_channel, unit) format
+)
+"calculon.ml" 58 3224 3226 "calculon.ml" 58 3224 3247
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 59 3308 3314 "calculon.ml" 59 3308 3319
+type(
+  string
+)
+ident(
+  def input "calculon.ml" 60 3419 3421 "calculon.ml" 79 4318 4324
+)
+"calculon.ml" 59 3308 3322 "calculon.ml" 59 3308 3336
+type(
+  in_channel -> string
+)
+ident(
+  int_ref read_statement "calculon.ml" 84 4500 4504 "calculon.ml" 84 4500 4518
+)
+"calculon.ml" 59 3308 3337 "calculon.ml" 59 3308 3343
+type(
+  in_channel
+)
+ident(
+  int_ref inchan "calculon.ml" 57 3189 3215 "calculon.ml" 57 3189 3221
+)
+"calculon.ml" 59 3308 3322 "calculon.ml" 59 3308 3343
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 60 3419 3424 "calculon.ml" 60 3419 3425
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 60 3419 3425 "calculon.ml" 60 3419 3429
+type(
+  bool ref
+)
+ident(
+  int_ref echo "calculon.ml" 49 2597 2601 "calculon.ml" 49 2597 2605
+)
+"calculon.ml" 60 3419 3424 "calculon.ml" 60 3419 3429
+type(
+  bool
+)
+"calculon.ml" 61 3524 3528 "calculon.ml" 61 3524 3534
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 61 3524 3535 "calculon.ml" 61 3524 3541
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 61 3524 3542 "calculon.ml" 61 3524 3547
+type(
+  string
+)
+ident(
+  int_ref input "calculon.ml" 59 3308 3314 "calculon.ml" 59 3308 3319
+)
+"calculon.ml" 61 3524 3528 "calculon.ml" 61 3524 3547
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 60 3419 3421 "calculon.ml" 61 3524 3547
+type(
+  unit
+)
+"calculon.ml" 64 3565 3575 "calculon.ml" 64 3565 3581
+type(
+  Calclex.token list
+)
+ident(
+  def tokens "calculon.ml" 70 3919 3925 "calculon.ml" 70 3919 3947
+)
+"calculon.ml" 64 3565 3584 "calculon.ml" 64 3565 3602
+type(
+  string -> Calclex.token list
+)
+ident(
+  ext_ref Calclex.lex_string
+)
+"calculon.ml" 64 3565 3603 "calculon.ml" 64 3565 3608
+type(
+  string
+)
+ident(
+  int_ref input "calculon.ml" 59 3308 3314 "calculon.ml" 59 3308 3319
+)
+"calculon.ml" 64 3565 3584 "calculon.ml" 64 3565 3608
+call(
+  stack
+)
+type(
+  Calclex.token list
+)
+"calculon.ml" 70 3919 3925 "calculon.ml" 70 3919 3939
+type(
+  Calclex.token list -> unit
+)
+ident(
+  int_ref eval_statement "calculon.ml" 108 5371 5375 "calculon.ml" 108 5371 5389
+)
+"calculon.ml" 70 3919 3940 "calculon.ml" 70 3919 3946
+type(
+  Calclex.token list
+)
+ident(
+  int_ref tokens "calculon.ml" 64 3565 3575 "calculon.ml" 64 3565 3581
+)
+"calculon.ml" 70 3919 3925 "calculon.ml" 70 3919 3947
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 64 3565 3571 "calculon.ml" 70 3919 3947
+type(
+  unit
+)
+"calculon.ml" 72 3957 3963 "calculon.ml" 72 3957 3966
+type(
+  exn
+)
+ident(
+  def exc "calculon.ml" 73 4050 4057 "calculon.ml" 78 4279 4317
+)
+"calculon.ml" 73 4050 4061 "calculon.ml" 73 4050 4067
+type(
+  string
+)
+ident(
+  def excstr "calculon.ml" 74 4096 4103 "calculon.ml" 78 4279 4317
+)
+"calculon.ml" 73 4050 4070 "calculon.ml" 73 4050 4088
+type(
+  exn -> string
+)
+ident(
+  ext_ref Printexc.to_string
+)
+"calculon.ml" 73 4050 4089 "calculon.ml" 73 4050 4092
+type(
+  exn
+)
+ident(
+  int_ref exc "calculon.ml" 72 3957 3963 "calculon.ml" 72 3957 3966
+)
+"calculon.ml" 73 4050 4070 "calculon.ml" 73 4050 4092
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 74 4096 4103 "calculon.ml" 74 4096 4109
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 74 4096 4110 "calculon.ml" 74 4096 4174
+type(
+  (unit, out_channel, unit) format
+)
+"calculon.ml" 74 4096 4103 "calculon.ml" 74 4096 4174
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 75 4176 4183 "calculon.ml" 75 4176 4189
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 75 4176 4190 "calculon.ml" 75 4176 4196
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 75 4176 4197 "calculon.ml" 75 4176 4203
+type(
+  string
+)
+ident(
+  int_ref excstr "calculon.ml" 73 4050 4061 "calculon.ml" 73 4050 4067
+)
+"calculon.ml" 75 4176 4183 "calculon.ml" 75 4176 4203
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 76 4205 4215 "calculon.ml" 76 4205 4216
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 76 4205 4216 "calculon.ml" 76 4205 4221
+type(
+  bool ref
+)
+ident(
+  int_ref debug "calculon.ml" 50 2684 2688 "calculon.ml" 50 2684 2693
+)
+"calculon.ml" 76 4205 4215 "calculon.ml" 76 4205 4221
+type(
+  bool
+)
+"calculon.ml" 76 4205 4221 "calculon.ml" 76 4205 4222
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calculon.ml" 76 4205 4222 "calculon.ml" 76 4205 4226
+type(
+  bool
+)
+"calculon.ml" 76 4205 4215 "calculon.ml" 76 4205 4226
+type(
+  bool
+)
+"calculon.ml" 77 4232 4245 "calculon.ml" 77 4232 4247
+type(
+  string
+)
+ident(
+  def bt "calculon.ml" 78 4279 4288 "calculon.ml" 78 4279 4317
+)
+"calculon.ml" 77 4232 4250 "calculon.ml" 77 4232 4272
+type(
+  unit -> string
+)
+ident(
+  ext_ref Printexc.get_backtrace
+)
+"calculon.ml" 77 4232 4273 "calculon.ml" 77 4232 4275
+type(
+  unit
+)
+"calculon.ml" 77 4232 4250 "calculon.ml" 77 4232 4275
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 78 4279 4288 "calculon.ml" 78 4279 4294
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 78 4279 4295 "calculon.ml" 78 4279 4313
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 78 4279 4314 "calculon.ml" 78 4279 4316
+type(
+  string
+)
+ident(
+  int_ref bt "calculon.ml" 77 4232 4245 "calculon.ml" 77 4232 4247
+)
+"calculon.ml" 78 4279 4288 "calculon.ml" 78 4279 4317
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 77 4232 4241 "calculon.ml" 78 4279 4317
+type(
+  unit
+)
+"calculon.ml" 76 4205 4212 "calculon.ml" 78 4279 4317
+type(
+  unit
+)
+"calculon.ml" 75 4176 4183 "calculon.ml" 78 4279 4317
+type(
+  unit
+)
+"calculon.ml" 74 4096 4103 "calculon.ml" 78 4279 4317
+type(
+  unit
+)
+"calculon.ml" 73 4050 4057 "calculon.ml" 78 4279 4317
+type(
+  unit
+)
+"calculon.ml" 62 3549 3551 "calculon.ml" 79 4318 4324
+type(
+  unit
+)
+"calculon.ml" 60 3419 3421 "calculon.ml" 79 4318 4324
+type(
+  unit
+)
+"calculon.ml" 59 3308 3310 "calculon.ml" 79 4318 4324
+type(
+  unit
+)
+"calculon.ml" 58 3224 3226 "calculon.ml" 79 4318 4324
+type(
+  unit
+)
+"calculon.ml" 84 4500 4504 "calculon.ml" 84 4500 4518
+type(
+  in_channel -> string
+)
+ident(
+  def read_statement "calculon.ml" 57 3189 3189 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 84 4500 4519 "calculon.ml" 84 4500 4525
+type(
+  in_channel
+)
+ident(
+  def inchan "calculon.ml" 85 4528 4530 "calculon.ml" 96 4994 5001
+)
+"calculon.ml" 85 4528 4534 "calculon.ml" 85 4528 4543
+type(
+  Buffer.t
+)
+ident(
+  def input_buf "calculon.ml" 86 4567 4569 "calculon.ml" 96 4994 5001
+)
+"calculon.ml" 85 4528 4546 "calculon.ml" 85 4528 4559
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"calculon.ml" 85 4528 4560 "calculon.ml" 85 4528 4563
+type(
+  int
+)
+"calculon.ml" 85 4528 4546 "calculon.ml" 85 4528 4563
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+type(
+  char ref
+)
+ident(
+  def inchar "calculon.ml" 87 4593 4595 "calculon.ml" 96 4994 5001
+)
+"calculon.ml" 86 4567 4582 "calculon.ml" 86 4567 4585
+type(
+  char -> char ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calculon.ml" 86 4567 4586 "calculon.ml" 86 4567 4589
+type(
+  char
+)
+"calculon.ml" 86 4567 4582 "calculon.ml" 86 4567 4589
+type(
+  char ref
+)
+"calculon.ml" 87 4593 4601 "calculon.ml" 87 4593 4602
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 87 4593 4602 "calculon.ml" 87 4593 4608
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 87 4593 4601 "calculon.ml" 87 4593 4608
+type(
+  char
+)
+"calculon.ml" 87 4593 4608 "calculon.ml" 87 4593 4609
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calculon.ml" 87 4593 4609 "calculon.ml" 87 4593 4612
+type(
+  char
+)
+"calculon.ml" 87 4593 4601 "calculon.ml" 87 4593 4612
+type(
+  bool
+)
+"calculon.ml" 87 4593 4613 "calculon.ml" 87 4593 4615
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"calculon.ml" 87 4593 4616 "calculon.ml" 87 4593 4617
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 87 4593 4617 "calculon.ml" 87 4593 4623
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 87 4593 4616 "calculon.ml" 87 4593 4623
+type(
+  char
+)
+"calculon.ml" 87 4593 4623 "calculon.ml" 87 4593 4624
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calculon.ml" 87 4593 4624 "calculon.ml" 87 4593 4628
+type(
+  char
+)
+"calculon.ml" 87 4593 4616 "calculon.ml" 87 4593 4628
+type(
+  bool
+)
+"calculon.ml" 87 4593 4629 "calculon.ml" 87 4593 4631
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"calculon.ml" 87 4593 4632 "calculon.ml" 87 4593 4633
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 87 4593 4633 "calculon.ml" 87 4593 4639
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 87 4593 4632 "calculon.ml" 87 4593 4639
+type(
+  char
+)
+"calculon.ml" 87 4593 4639 "calculon.ml" 87 4593 4640
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calculon.ml" 87 4593 4640 "calculon.ml" 87 4593 4644
+type(
+  char
+)
+"calculon.ml" 87 4593 4632 "calculon.ml" 87 4593 4644
+type(
+  bool
+)
+"calculon.ml" 87 4593 4616 "calculon.ml" 87 4593 4644
+type(
+  bool
+)
+"calculon.ml" 87 4593 4601 "calculon.ml" 87 4593 4644
+type(
+  bool
+)
+"calculon.ml" 88 4697 4701 "calculon.ml" 88 4697 4707
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 88 4697 4708 "calculon.ml" 88 4697 4710
+type(
+  char ref -> char -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 88 4697 4711 "calculon.ml" 88 4697 4721
+type(
+  in_channel -> char
+)
+ident(
+  ext_ref Pervasives.input_char
+)
+"calculon.ml" 88 4697 4722 "calculon.ml" 88 4697 4728
+type(
+  in_channel
+)
+ident(
+  int_ref inchan "calculon.ml" 84 4500 4519 "calculon.ml" 84 4500 4525
+)
+"calculon.ml" 88 4697 4711 "calculon.ml" 88 4697 4728
+call(
+  stack
+)
+type(
+  char
+)
+"calculon.ml" 88 4697 4701 "calculon.ml" 88 4697 4729
+type(
+  unit
+)
+"calculon.ml" 87 4593 4595 "calculon.ml" 89 4730 4736
+type(
+  unit
+)
+"calculon.ml" 90 4738 4746 "calculon.ml" 90 4738 4747
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 90 4738 4747 "calculon.ml" 90 4738 4753
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 90 4738 4746 "calculon.ml" 90 4738 4753
+type(
+  char
+)
+"calculon.ml" 90 4738 4754 "calculon.ml" 90 4738 4756
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"calculon.ml" 90 4738 4757 "calculon.ml" 90 4738 4760
+type(
+  char
+)
+"calculon.ml" 90 4738 4746 "calculon.ml" 90 4738 4760
+type(
+  bool
+)
+"calculon.ml" 91 4834 4838 "calculon.ml" 91 4834 4853
+type(
+  Buffer.t -> char -> unit
+)
+ident(
+  ext_ref Buffer.add_char
+)
+"calculon.ml" 91 4834 4854 "calculon.ml" 91 4834 4863
+type(
+  Buffer.t
+)
+ident(
+  int_ref input_buf "calculon.ml" 85 4528 4534 "calculon.ml" 85 4528 4543
+)
+"calculon.ml" 91 4834 4864 "calculon.ml" 91 4834 4865
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 91 4834 4865 "calculon.ml" 91 4834 4871
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 91 4834 4864 "calculon.ml" 91 4834 4871
+type(
+  char
+)
+"calculon.ml" 91 4834 4838 "calculon.ml" 91 4834 4871
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 92 4873 4877 "calculon.ml" 92 4873 4883
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 92 4873 4884 "calculon.ml" 92 4873 4886
+type(
+  char ref -> char -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 92 4873 4887 "calculon.ml" 92 4873 4897
+type(
+  in_channel -> char
+)
+ident(
+  ext_ref Pervasives.input_char
+)
+"calculon.ml" 92 4873 4898 "calculon.ml" 92 4873 4904
+type(
+  in_channel
+)
+ident(
+  int_ref inchan "calculon.ml" 84 4500 4519 "calculon.ml" 84 4500 4525
+)
+"calculon.ml" 92 4873 4887 "calculon.ml" 92 4873 4904
+call(
+  stack
+)
+type(
+  char
+)
+"calculon.ml" 92 4873 4877 "calculon.ml" 92 4873 4905
+type(
+  unit
+)
+"calculon.ml" 91 4834 4838 "calculon.ml" 92 4873 4905
+type(
+  unit
+)
+"calculon.ml" 90 4738 4740 "calculon.ml" 93 4906 4912
+type(
+  unit
+)
+"calculon.ml" 94 4914 4916 "calculon.ml" 94 4914 4931
+type(
+  Buffer.t -> char -> unit
+)
+ident(
+  ext_ref Buffer.add_char
+)
+"calculon.ml" 94 4914 4932 "calculon.ml" 94 4914 4941
+type(
+  Buffer.t
+)
+ident(
+  int_ref input_buf "calculon.ml" 85 4528 4534 "calculon.ml" 85 4528 4543
+)
+"calculon.ml" 94 4914 4942 "calculon.ml" 94 4914 4943
+type(
+  char ref -> char
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 94 4914 4943 "calculon.ml" 94 4914 4949
+type(
+  char ref
+)
+ident(
+  int_ref inchar "calculon.ml" 86 4567 4573 "calculon.ml" 86 4567 4579
+)
+"calculon.ml" 94 4914 4942 "calculon.ml" 94 4914 4949
+type(
+  char
+)
+"calculon.ml" 94 4914 4916 "calculon.ml" 94 4914 4949
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 95 4951 4957 "calculon.ml" 95 4951 4962
+type(
+  string
+)
+ident(
+  def input "calculon.ml" 96 4994 4996 "calculon.ml" 96 4994 5001
+)
+"calculon.ml" 95 4951 4965 "calculon.ml" 95 4951 4980
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"calculon.ml" 95 4951 4981 "calculon.ml" 95 4951 4990
+type(
+  Buffer.t
+)
+ident(
+  int_ref input_buf "calculon.ml" 85 4528 4534 "calculon.ml" 85 4528 4543
+)
+"calculon.ml" 95 4951 4965 "calculon.ml" 95 4951 4990
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 96 4994 4996 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+ident(
+  int_ref input "calculon.ml" 95 4951 4957 "calculon.ml" 95 4951 4962
+)
+"calculon.ml" 95 4951 4953 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 94 4914 4916 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 90 4738 4740 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 87 4593 4595 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 86 4567 4569 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 85 4528 4530 "calculon.ml" 96 4994 5001
+type(
+  string
+)
+"calculon.ml" 99 5004 5008 "calculon.ml" 99 5004 5022
+type(
+  Calclex.token list -> unit
+)
+ident(
+  def semicolon_only "calculon.ml" 57 3189 3189 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 99 5004 5023 "calculon.ml" 99 5004 5027
+type(
+  Calclex.token list
+)
+ident(
+  def toks "calculon.ml" 100 5030 5032 "calculon.ml" 105 5208 5259
+)
+"calculon.ml" 100 5030 5038 "calculon.ml" 100 5030 5042
+type(
+  Calclex.token list
+)
+ident(
+  int_ref toks "calculon.ml" 99 5004 5023 "calculon.ml" 99 5004 5027
+)
+"calculon.ml" 101 5048 5053 "calculon.ml" 101 5048 5062
+type(
+  Calclex.token
+)
+"calculon.ml" 101 5048 5052 "calculon.ml" 101 5048 5063
+type(
+  Calclex.token list
+)
+"calculon.ml" 101 5048 5067 "calculon.ml" 101 5048 5069
+type(
+  unit
+)
+"calculon.ml" 102 5070 5074 "calculon.ml" 102 5070 5075
+type(
+  Calclex.token list
+)
+"calculon.ml" 103 5079 5084 "calculon.ml" 103 5079 5090
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 103 5079 5091 "calculon.ml" 103 5079 5126
+type(
+  (unit, out_channel, unit) format
+)
+"calculon.ml" 103 5079 5084 "calculon.ml" 103 5079 5126
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 104 5128 5133 "calculon.ml" 104 5128 5139
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 104 5128 5140 "calculon.ml" 104 5128 5206
+type(
+  (unit, out_channel, unit) format
+)
+"calculon.ml" 104 5128 5133 "calculon.ml" 104 5128 5206
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 105 5208 5213 "calculon.ml" 105 5208 5219
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 105 5208 5220 "calculon.ml" 105 5208 5226
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 105 5208 5228 "calculon.ml" 105 5208 5252
+type(
+  Calclex.token list -> string
+)
+ident(
+  ext_ref Calclex.tokenlist_string
+)
+"calculon.ml" 105 5208 5253 "calculon.ml" 105 5208 5257
+type(
+  Calclex.token list
+)
+ident(
+  int_ref toks "calculon.ml" 99 5004 5023 "calculon.ml" 99 5004 5027
+)
+"calculon.ml" 105 5208 5227 "calculon.ml" 105 5208 5258
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 105 5208 5213 "calculon.ml" 105 5208 5259
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 104 5128 5133 "calculon.ml" 105 5208 5259
+type(
+  unit
+)
+"calculon.ml" 103 5079 5084 "calculon.ml" 105 5208 5259
+type(
+  unit
+)
+"calculon.ml" 100 5030 5032 "calculon.ml" 105 5208 5259
+type(
+  unit
+)
+"calculon.ml" 108 5371 5375 "calculon.ml" 108 5371 5389
+type(
+  Calclex.token list -> unit
+)
+ident(
+  def eval_statement "calculon.ml" 57 3189 3189 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 108 5371 5390 "calculon.ml" 108 5371 5396
+type(
+  Calclex.token list
+)
+ident(
+  def tokens "calculon.ml" 109 5399 5401 "calculon.ml" 166 7965 7990
+)
+"calculon.ml" 109 5399 5407 "calculon.ml" 109 5399 5413
+type(
+  Calclex.token list
+)
+ident(
+  int_ref tokens "calculon.ml" 108 5371 5390 "calculon.ml" 108 5371 5396
+)
+"calculon.ml" 110 5419 5423 "calculon.ml" 110 5419 5425
+type(
+  Calclex.token list
+)
+"calculon.ml" 110 5419 5429 "calculon.ml" 110 5419 5431
+type(
+  unit
+)
+"calculon.ml" 112 5500 5511 "calculon.ml" 112 5500 5517
+type(
+  string
+)
+"calculon.ml" 112 5500 5505 "calculon.ml" 112 5500 5517
+type(
+  Calclex.token
+)
+"calculon.ml" 112 5500 5519 "calculon.ml" 112 5500 5528
+type(
+  Calclex.token
+)
+"calculon.ml" 112 5500 5504 "calculon.ml" 112 5500 5529
+type(
+  Calclex.token list
+)
+"calculon.ml" 113 5596 5601 "calculon.ml" 113 5596 5609
+type(
+  bool ref
+)
+ident(
+  int_ref quit_now "calculon.ml" 48 2490 2494 "calculon.ml" 48 2490 2502
+)
+"calculon.ml" 113 5596 5610 "calculon.ml" 113 5596 5612
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 113 5596 5613 "calculon.ml" 113 5596 5617
+type(
+  bool
+)
+"calculon.ml" 113 5596 5601 "calculon.ml" 113 5596 5618
+type(
+  unit
+)
+"calculon.ml" 115 5620 5631 "calculon.ml" 115 5620 5637
+type(
+  string
+)
+"calculon.ml" 115 5620 5625 "calculon.ml" 115 5620 5637
+type(
+  Calclex.token
+)
+"calculon.ml" 115 5620 5639 "calculon.ml" 115 5620 5648
+type(
+  Calclex.token
+)
+"calculon.ml" 115 5620 5624 "calculon.ml" 115 5620 5649
+type(
+  Calclex.token list
+)
+"calculon.ml" 116 5653 5658 "calculon.ml" 116 5653 5664
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 116 5653 5665 "calculon.ml" 116 5653 5671
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 116 5653 5672 "calculon.ml" 116 5653 5683
+type(
+  string
+)
+ident(
+  int_ref help_string "calculon.ml" 13 362 366 "calculon.ml" 13 362 377
+)
+"calculon.ml" 116 5653 5658 "calculon.ml" 116 5653 5684
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 118 5686 5697 "calculon.ml" 118 5686 5703
+type(
+  string
+)
+"calculon.ml" 118 5686 5691 "calculon.ml" 118 5686 5703
+type(
+  Calclex.token
+)
+"calculon.ml" 118 5686 5705 "calculon.ml" 118 5686 5714
+type(
+  Calclex.token
+)
+"calculon.ml" 118 5686 5690 "calculon.ml" 118 5686 5715
+type(
+  Calclex.token list
+)
+"calculon.ml" 119 5780 5789 "calculon.ml" 119 5780 5797
+type(
+  string -> Calceval.data_t -> unit
+)
+ident(
+  def printwho "calculon.ml" 122 5874 5879 "calculon.ml" 122 5874 5915
+)
+"calculon.ml" 119 5780 5798 "calculon.ml" 119 5780 5803
+type(
+  string
+)
+ident(
+  def vname "calculon.ml" 119 5780 5804 "calculon.ml" 120 5812 5865
+)
+"calculon.ml" 119 5780 5804 "calculon.ml" 119 5780 5809
+type(
+  Calceval.data_t
+)
+ident(
+  def vdata "calculon.ml" 120 5812 5819 "calculon.ml" 120 5812 5865
+)
+"calculon.ml" 120 5812 5819 "calculon.ml" 120 5812 5825
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 120 5812 5826 "calculon.ml" 120 5812 5839
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"calculon.ml" 120 5812 5840 "calculon.ml" 120 5812 5845
+type(
+  string
+)
+ident(
+  int_ref vname "calculon.ml" 119 5780 5798 "calculon.ml" 119 5780 5803
+)
+"calculon.ml" 120 5812 5847 "calculon.ml" 120 5812 5858
+type(
+  Calceval.data_t -> string
+)
+ident(
+  ext_ref Calceval.data_string
+)
+"calculon.ml" 120 5812 5859 "calculon.ml" 120 5812 5864
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 119 5780 5804 "calculon.ml" 119 5780 5809
+)
+"calculon.ml" 120 5812 5846 "calculon.ml" 120 5812 5865
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 120 5812 5819 "calculon.ml" 120 5812 5865
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 122 5874 5879 "calculon.ml" 122 5874 5890
+type(
+  (Calceval.Varmap.key -> Calceval.data_t -> unit) ->
+  Calceval.data_t Calceval.Varmap.t -> unit
+)
+ident(
+  ext_ref Calceval.Varmap.iter
+)
+"calculon.ml" 122 5874 5891 "calculon.ml" 122 5874 5899
+type(
+  Calceval.Varmap.key -> Calceval.data_t -> unit
+)
+ident(
+  int_ref printwho "calculon.ml" 119 5780 5789 "calculon.ml" 119 5780 5797
+)
+"calculon.ml" 122 5874 5900 "calculon.ml" 122 5874 5901
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 122 5874 5901 "calculon.ml" 122 5874 5914
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 122 5874 5900 "calculon.ml" 122 5874 5914
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 122 5874 5879 "calculon.ml" 122 5874 5915
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 119 5780 5785 "calculon.ml" 122 5874 5915
+type(
+  unit
+)
+"calculon.ml" 124 5917 5928 "calculon.ml" 124 5917 5935
+type(
+  string
+)
+"calculon.ml" 124 5917 5922 "calculon.ml" 124 5917 5935
+type(
+  Calclex.token
+)
+"calculon.ml" 124 5917 5943 "calculon.ml" 124 5917 5950
+type(
+  string
+)
+ident(
+  def varname "calculon.ml" 125 6021 6026 "calculon.ml" 125 6021 6080
+)
+"calculon.ml" 124 5917 5937 "calculon.ml" 124 5917 5950
+type(
+  Calclex.token
+)
+"calculon.ml" 124 5917 5952 "calculon.ml" 124 5917 5961
+type(
+  Calclex.token
+)
+"calculon.ml" 124 5917 5921 "calculon.ml" 124 5917 5962
+type(
+  Calclex.token list
+)
+"calculon.ml" 125 6021 6026 "calculon.ml" 125 6021 6039
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 125 6021 6040 "calculon.ml" 125 6021 6042
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 125 6021 6043 "calculon.ml" 125 6021 6056
+type(
+  Calceval.Varmap.key ->
+  Calceval.data_t Calceval.Varmap.t -> Calceval.data_t Calceval.Varmap.t
+)
+ident(
+  ext_ref Calceval.Varmap.remove
+)
+"calculon.ml" 125 6021 6057 "calculon.ml" 125 6021 6064
+type(
+  Calceval.Varmap.key
+)
+ident(
+  int_ref varname "calculon.ml" 124 5917 5943 "calculon.ml" 124 5917 5950
+)
+"calculon.ml" 125 6021 6065 "calculon.ml" 125 6021 6066
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 125 6021 6066 "calculon.ml" 125 6021 6079
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 125 6021 6065 "calculon.ml" 125 6021 6079
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 125 6021 6043 "calculon.ml" 125 6021 6079
+call(
+  stack
+)
+type(
+  Calceval.data_t Calceval.Varmap.t
+)
+"calculon.ml" 125 6021 6026 "calculon.ml" 125 6021 6080
+type(
+  unit
+)
+"calculon.ml" 127 6082 6093 "calculon.ml" 127 6082 6100
+type(
+  string
+)
+"calculon.ml" 127 6082 6087 "calculon.ml" 127 6082 6100
+type(
+  Calclex.token
+)
+"calculon.ml" 127 6082 6110 "calculon.ml" 127 6082 6111
+type(
+  bool
+)
+ident(
+  def b "calculon.ml" 128 6208 6213 "calculon.ml" 129 6225 6258
+)
+"calculon.ml" 127 6082 6102 "calculon.ml" 127 6082 6111
+type(
+  Calclex.token
+)
+"calculon.ml" 127 6082 6113 "calculon.ml" 127 6082 6122
+type(
+  Calclex.token
+)
+"calculon.ml" 127 6082 6086 "calculon.ml" 127 6082 6123
+type(
+  Calclex.token list
+)
+"calculon.ml" 128 6208 6213 "calculon.ml" 128 6208 6218
+type(
+  bool ref
+)
+ident(
+  int_ref debug "calculon.ml" 50 2684 2688 "calculon.ml" 50 2684 2693
+)
+"calculon.ml" 128 6208 6219 "calculon.ml" 128 6208 6221
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 128 6208 6222 "calculon.ml" 128 6208 6223
+type(
+  bool
+)
+ident(
+  int_ref b "calculon.ml" 127 6082 6110 "calculon.ml" 127 6082 6111
+)
+"calculon.ml" 128 6208 6213 "calculon.ml" 128 6208 6223
+type(
+  unit
+)
+"calculon.ml" 129 6225 6230 "calculon.ml" 129 6225 6236
+type(
+  (bool -> unit, out_channel, unit) format -> bool -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 129 6225 6237 "calculon.ml" 129 6225 6255
+type(
+  (bool -> unit, out_channel, unit) format
+)
+"calculon.ml" 129 6225 6256 "calculon.ml" 129 6225 6257
+type(
+  bool
+)
+ident(
+  int_ref b "calculon.ml" 127 6082 6110 "calculon.ml" 127 6082 6111
+)
+"calculon.ml" 129 6225 6230 "calculon.ml" 129 6225 6258
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 128 6208 6213 "calculon.ml" 129 6225 6258
+type(
+  unit
+)
+"calculon.ml" 131 6260 6270 "calculon.ml" 131 6260 6278
+type(
+  string
+)
+"calculon.ml" 131 6260 6264 "calculon.ml" 131 6260 6278
+type(
+  Calclex.token
+)
+"calculon.ml" 131 6260 6282 "calculon.ml" 131 6260 6286
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 132 6380 6385 "calculon.ml" 133 6434 6472
+)
+"calculon.ml" 131 6260 6264 "calculon.ml" 131 6260 6286
+type(
+  Calclex.token list
+)
+"calculon.ml" 132 6380 6389 "calculon.ml" 132 6380 6398
+type(
+  string
+)
+ident(
+  def token_str "calculon.ml" 133 6434 6439 "calculon.ml" 133 6434 6472
+)
+"calculon.ml" 132 6380 6401 "calculon.ml" 132 6380 6425
+type(
+  Calclex.token list -> string
+)
+ident(
+  ext_ref Calclex.tokenlist_string
+)
+"calculon.ml" 132 6380 6426 "calculon.ml" 132 6380 6430
+type(
+  Calclex.token list
+)
+ident(
+  int_ref rest "calculon.ml" 131 6260 6282 "calculon.ml" 131 6260 6286
+)
+"calculon.ml" 132 6380 6401 "calculon.ml" 132 6380 6430
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 133 6434 6439 "calculon.ml" 133 6434 6445
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 133 6434 6446 "calculon.ml" 133 6434 6461
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 133 6434 6462 "calculon.ml" 133 6434 6471
+type(
+  string
+)
+ident(
+  int_ref token_str "calculon.ml" 132 6380 6389 "calculon.ml" 132 6380 6398
+)
+"calculon.ml" 133 6434 6439 "calculon.ml" 133 6434 6472
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 132 6380 6385 "calculon.ml" 133 6434 6472
+type(
+  unit
+)
+"calculon.ml" 135 6474 6484 "calculon.ml" 135 6474 6495
+type(
+  string
+)
+"calculon.ml" 135 6474 6478 "calculon.ml" 135 6474 6495
+type(
+  Calclex.token
+)
+"calculon.ml" 135 6474 6499 "calculon.ml" 135 6474 6503
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 136 6594 6599 "calculon.ml" 138 6706 6751
+)
+"calculon.ml" 135 6474 6478 "calculon.ml" 135 6474 6503
+type(
+  Calclex.token list
+)
+"calculon.ml" 136 6594 6604 "calculon.ml" 136 6594 6608
+type(
+  Calcparse.expr
+)
+ident(
+  def expr "calculon.ml" 137 6647 6652 "calculon.ml" 138 6706 6751
+)
+"calculon.ml" 136 6594 6609 "calculon.ml" 136 6594 6613
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 137 6647 6652 "calculon.ml" 138 6706 6751
+)
+"calculon.ml" 136 6594 6603 "calculon.ml" 136 6594 6614
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 136 6594 6618 "calculon.ml" 136 6594 6638
+type(
+  Calclex.token list -> Calcparse.expr * Calclex.token list
+)
+ident(
+  ext_ref Calcparse.parse_expr
+)
+"calculon.ml" 136 6594 6639 "calculon.ml" 136 6594 6643
+type(
+  Calclex.token list
+)
+ident(
+  int_ref rest "calculon.ml" 135 6474 6499 "calculon.ml" 135 6474 6503
+)
+"calculon.ml" 136 6594 6618 "calculon.ml" 136 6594 6643
+call(
+  stack
+)
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 137 6647 6656 "calculon.ml" 137 6647 6668
+type(
+  string
+)
+ident(
+  def exprtree_str "calculon.ml" 138 6706 6711 "calculon.ml" 138 6706 6751
+)
+"calculon.ml" 137 6647 6671 "calculon.ml" 137 6647 6697
+type(
+  Calcparse.expr -> string
+)
+ident(
+  ext_ref Calcparse.parsetree_string
+)
+"calculon.ml" 137 6647 6698 "calculon.ml" 137 6647 6702
+type(
+  Calcparse.expr
+)
+ident(
+  int_ref expr "calculon.ml" 136 6594 6604 "calculon.ml" 136 6594 6608
+)
+"calculon.ml" 137 6647 6671 "calculon.ml" 137 6647 6702
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 138 6706 6711 "calculon.ml" 138 6706 6717
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 138 6706 6718 "calculon.ml" 138 6706 6737
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 138 6706 6738 "calculon.ml" 138 6706 6750
+type(
+  string
+)
+ident(
+  int_ref exprtree_str "calculon.ml" 137 6647 6656 "calculon.ml" 137 6647 6668
+)
+"calculon.ml" 138 6706 6711 "calculon.ml" 138 6706 6751
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 137 6647 6652 "calculon.ml" 138 6706 6751
+type(
+  unit
+)
+"calculon.ml" 136 6594 6599 "calculon.ml" 138 6706 6751
+type(
+  unit
+)
+"calculon.ml" 140 6753 6763 "calculon.ml" 140 6753 6769
+type(
+  string
+)
+"calculon.ml" 140 6753 6757 "calculon.ml" 140 6753 6769
+type(
+  Calclex.token
+)
+"calculon.ml" 140 6753 6779 "calculon.ml" 140 6753 6786
+type(
+  string
+)
+ident(
+  def varname "calculon.ml" 141 6861 6866 "calculon.ml" 147 7085 7094
+)
+"calculon.ml" 140 6753 6773 "calculon.ml" 140 6753 6786
+type(
+  Calclex.token
+)
+"calculon.ml" 140 6753 6790 "calculon.ml" 140 6753 6794
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 141 6861 6866 "calculon.ml" 147 7085 7094
+)
+"calculon.ml" 140 6753 6773 "calculon.ml" 140 6753 6794
+type(
+  Calclex.token list
+)
+"calculon.ml" 140 6753 6757 "calculon.ml" 140 6753 6794
+type(
+  Calclex.token list
+)
+"calculon.ml" 142 6872 6885 "calculon.ml" 142 6872 6900
+type(
+  Calceval.Varmap.key ->
+  Calceval.data_t Calceval.Varmap.t -> Calceval.data_t option
+)
+ident(
+  ext_ref Calceval.Varmap.find_opt
+)
+"calculon.ml" 142 6872 6901 "calculon.ml" 142 6872 6908
+type(
+  Calceval.Varmap.key
+)
+ident(
+  int_ref varname "calculon.ml" 140 6753 6779 "calculon.ml" 140 6753 6786
+)
+"calculon.ml" 142 6872 6909 "calculon.ml" 142 6872 6910
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 142 6872 6910 "calculon.ml" 142 6872 6923
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 142 6872 6909 "calculon.ml" 142 6872 6923
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 142 6872 6885 "calculon.ml" 142 6872 6923
+call(
+  stack
+)
+type(
+  Calceval.data_t option
+)
+"calculon.ml" 143 6929 6943 "calculon.ml" 143 6929 6950
+type(
+  Calceval.data_t
+)
+ident(
+  def vardata "calculon.ml" 144 6954 6964 "calculon.ml" 144 6954 7014
+)
+"calculon.ml" 143 6929 6938 "calculon.ml" 143 6929 6950
+type(
+  Calceval.data_t option
+)
+"calculon.ml" 144 6954 6964 "calculon.ml" 144 6954 6970
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 144 6954 6971 "calculon.ml" 144 6954 6977
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 144 6954 6979 "calculon.ml" 144 6954 7004
+type(
+  Calceval.data_t -> string
+)
+ident(
+  ext_ref Calceval.data_long_string
+)
+"calculon.ml" 144 6954 7005 "calculon.ml" 144 6954 7012
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vardata "calculon.ml" 143 6929 6943 "calculon.ml" 143 6929 6950
+)
+"calculon.ml" 144 6954 6978 "calculon.ml" 144 6954 7013
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 144 6954 6964 "calculon.ml" 144 6954 7014
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 145 7015 7024 "calculon.ml" 145 7015 7028
+type(
+  Calceval.data_t option
+)
+"calculon.ml" 146 7032 7042 "calculon.ml" 146 7032 7048
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 146 7032 7049 "calculon.ml" 146 7032 7075
+type(
+  (string -> unit, out_channel, unit) format
+)
+"calculon.ml" 146 7032 7076 "calculon.ml" 146 7032 7083
+type(
+  string
+)
+ident(
+  int_ref varname "calculon.ml" 140 6753 6779 "calculon.ml" 140 6753 6786
+)
+"calculon.ml" 146 7032 7042 "calculon.ml" 146 7032 7084
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 141 6861 6866 "calculon.ml" 147 7085 7094
+type(
+  unit
+)
+"calculon.ml" 149 7096 7100 "calculon.ml" 149 7096 7103
+type(
+  Calclex.token
+)
+"calculon.ml" 149 7096 7113 "calculon.ml" 149 7096 7118
+type(
+  string
+)
+ident(
+  def vname "calculon.ml" 150 7190 7195 "calculon.ml" 160 7621 7646
+)
+"calculon.ml" 149 7096 7107 "calculon.ml" 149 7096 7118
+type(
+  Calclex.token
+)
+"calculon.ml" 149 7096 7122 "calculon.ml" 149 7096 7127
+type(
+  Calclex.token
+)
+"calculon.ml" 149 7096 7131 "calculon.ml" 149 7096 7135
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 150 7190 7195 "calculon.ml" 160 7621 7646
+)
+"calculon.ml" 149 7096 7122 "calculon.ml" 149 7096 7135
+type(
+  Calclex.token list
+)
+"calculon.ml" 149 7096 7107 "calculon.ml" 149 7096 7135
+type(
+  Calclex.token list
+)
+"calculon.ml" 149 7096 7100 "calculon.ml" 149 7096 7135
+type(
+  Calclex.token list
+)
+"calculon.ml" 150 7190 7200 "calculon.ml" 150 7190 7204
+type(
+  Calcparse.expr
+)
+ident(
+  def expr "calculon.ml" 151 7242 7247 "calculon.ml" 160 7621 7646
+)
+"calculon.ml" 150 7190 7205 "calculon.ml" 150 7190 7209
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 151 7242 7247 "calculon.ml" 160 7621 7646
+)
+"calculon.ml" 150 7190 7199 "calculon.ml" 150 7190 7210
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 150 7190 7213 "calculon.ml" 150 7190 7233
+type(
+  Calclex.token list -> Calcparse.expr * Calclex.token list
+)
+ident(
+  ext_ref Calcparse.parse_expr
+)
+"calculon.ml" 150 7190 7234 "calculon.ml" 150 7190 7238
+type(
+  Calclex.token list
+)
+ident(
+  int_ref rest "calculon.ml" 149 7096 7131 "calculon.ml" 149 7096 7135
+)
+"calculon.ml" 150 7190 7213 "calculon.ml" 150 7190 7238
+call(
+  stack
+)
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 151 7242 7251 "calculon.ml" 151 7242 7256
+type(
+  Calceval.data_t
+)
+ident(
+  def vdata "calculon.ml" 152 7292 7297 "calculon.ml" 160 7621 7646
+)
+"calculon.ml" 151 7242 7259 "calculon.ml" 151 7242 7268
+type(
+  Calceval.data_t Calceval.Varmap.t -> Calcparse.expr -> Calceval.data_t
+)
+ident(
+  ext_ref Calceval.eval_expr
+)
+"calculon.ml" 151 7242 7269 "calculon.ml" 151 7242 7270
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 151 7242 7270 "calculon.ml" 151 7242 7283
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 151 7242 7269 "calculon.ml" 151 7242 7283
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 151 7242 7284 "calculon.ml" 151 7242 7288
+type(
+  Calcparse.expr
+)
+ident(
+  int_ref expr "calculon.ml" 150 7190 7200 "calculon.ml" 150 7190 7204
+)
+"calculon.ml" 151 7242 7259 "calculon.ml" 151 7242 7288
+call(
+  stack
+)
+type(
+  Calceval.data_t
+)
+"calculon.ml" 153 7303 7316 "calculon.ml" 153 7303 7321
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 151 7242 7251 "calculon.ml" 151 7242 7256
+)
+"calculon.ml" 154 7327 7344 "calculon.ml" 154 7327 7345
+ident(
+  def c "calculon.ml" 155 7350 7360 "calculon.ml" 155 7350 7404
+)
+"calculon.ml" 154 7327 7343 "calculon.ml" 154 7327 7346
+type(
+  Calceval.data_t.Closure
+)
+"calculon.ml" 154 7327 7336 "calculon.ml" 154 7327 7346
+type(
+  Calceval.data_t
+)
+"calculon.ml" 155 7350 7360 "calculon.ml" 155 7350 7361
+type(
+  Calceval.data_t.Closure
+)
+ident(
+  int_ref c "calculon.ml" 154 7327 7343 "calculon.ml" 154 7327 7346
+)
+"calculon.ml" 155 7350 7372 "calculon.ml" 155 7350 7382
+type(
+  Calceval.Varmap.key ->
+  Calceval.data_t ->
+  Calceval.data_t Calceval.Varmap.t -> Calceval.data_t Calceval.Varmap.t
+)
+ident(
+  ext_ref Calceval.Varmap.add
+)
+"calculon.ml" 155 7350 7383 "calculon.ml" 155 7350 7388
+type(
+  Calceval.Varmap.key
+)
+ident(
+  int_ref vname "calculon.ml" 149 7096 7113 "calculon.ml" 149 7096 7118
+)
+"calculon.ml" 155 7350 7389 "calculon.ml" 155 7350 7394
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 151 7242 7251 "calculon.ml" 151 7242 7256
+)
+"calculon.ml" 155 7350 7395 "calculon.ml" 155 7350 7396
+type(
+  Calceval.data_t.Closure
+)
+ident(
+  int_ref c "calculon.ml" 154 7327 7343 "calculon.ml" 154 7327 7346
+)
+"calculon.ml" 155 7350 7395 "calculon.ml" 155 7350 7403
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 155 7350 7372 "calculon.ml" 155 7350 7403
+call(
+  stack
+)
+type(
+  Calceval.data_t Calceval.Varmap.t
+)
+"calculon.ml" 155 7350 7360 "calculon.ml" 155 7350 7404
+type(
+  unit
+)
+"calculon.ml" 156 7482 7491 "calculon.ml" 156 7482 7492
+type(
+  Calceval.data_t
+)
+"calculon.ml" 156 7482 7496 "calculon.ml" 156 7482 7498
+type(
+  unit
+)
+"calculon.ml" 152 7292 7297 "calculon.ml" 157 7499 7507
+type(
+  unit
+)
+"calculon.ml" 158 7509 7514 "calculon.ml" 158 7509 7520
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 158 7509 7521 "calculon.ml" 158 7509 7532
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"calculon.ml" 158 7509 7533 "calculon.ml" 158 7509 7538
+type(
+  string
+)
+ident(
+  int_ref vname "calculon.ml" 149 7096 7113 "calculon.ml" 149 7096 7118
+)
+"calculon.ml" 158 7509 7540 "calculon.ml" 158 7509 7551
+type(
+  Calceval.data_t -> string
+)
+ident(
+  ext_ref Calceval.data_string
+)
+"calculon.ml" 158 7509 7552 "calculon.ml" 158 7509 7557
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 151 7242 7251 "calculon.ml" 151 7242 7256
+)
+"calculon.ml" 158 7509 7539 "calculon.ml" 158 7509 7558
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 158 7509 7514 "calculon.ml" 158 7509 7558
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 159 7560 7565 "calculon.ml" 159 7560 7578
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 159 7560 7579 "calculon.ml" 159 7560 7581
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calculon.ml" 159 7560 7582 "calculon.ml" 159 7560 7592
+type(
+  Calceval.Varmap.key ->
+  Calceval.data_t ->
+  Calceval.data_t Calceval.Varmap.t -> Calceval.data_t Calceval.Varmap.t
+)
+ident(
+  ext_ref Calceval.Varmap.add
+)
+"calculon.ml" 159 7560 7593 "calculon.ml" 159 7560 7598
+type(
+  Calceval.Varmap.key
+)
+ident(
+  int_ref vname "calculon.ml" 149 7096 7113 "calculon.ml" 149 7096 7118
+)
+"calculon.ml" 159 7560 7599 "calculon.ml" 159 7560 7604
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 151 7242 7251 "calculon.ml" 151 7242 7256
+)
+"calculon.ml" 159 7560 7605 "calculon.ml" 159 7560 7606
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 159 7560 7606 "calculon.ml" 159 7560 7619
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 159 7560 7605 "calculon.ml" 159 7560 7619
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 159 7560 7582 "calculon.ml" 159 7560 7619
+call(
+  stack
+)
+type(
+  Calceval.data_t Calceval.Varmap.t
+)
+"calculon.ml" 159 7560 7565 "calculon.ml" 159 7560 7619
+type(
+  unit
+)
+"calculon.ml" 160 7621 7626 "calculon.ml" 160 7621 7640
+type(
+  Calclex.token list -> unit
+)
+ident(
+  int_ref semicolon_only "calculon.ml" 99 5004 5008 "calculon.ml" 99 5004 5022
+)
+"calculon.ml" 160 7621 7641 "calculon.ml" 160 7621 7645
+type(
+  Calclex.token list
+)
+ident(
+  int_ref rest "calculon.ml" 150 7190 7205 "calculon.ml" 150 7190 7209
+)
+"calculon.ml" 160 7621 7626 "calculon.ml" 160 7621 7646
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 159 7560 7565 "calculon.ml" 160 7621 7646
+type(
+  unit
+)
+"calculon.ml" 158 7509 7514 "calculon.ml" 160 7621 7646
+type(
+  unit
+)
+"calculon.ml" 152 7292 7297 "calculon.ml" 160 7621 7646
+type(
+  unit
+)
+"calculon.ml" 151 7242 7247 "calculon.ml" 160 7621 7646
+type(
+  unit
+)
+"calculon.ml" 150 7190 7195 "calculon.ml" 160 7621 7646
+type(
+  unit
+)
+"calculon.ml" 162 7648 7652 "calculon.ml" 162 7648 7653
+type(
+  Calclex.token list
+)
+"calculon.ml" 163 7728 7738 "calculon.ml" 163 7728 7742
+type(
+  Calcparse.expr
+)
+ident(
+  def expr "calculon.ml" 164 7821 7826 "calculon.ml" 166 7965 7990
+)
+"calculon.ml" 163 7728 7743 "calculon.ml" 163 7728 7747
+type(
+  Calclex.token list
+)
+ident(
+  def rest "calculon.ml" 164 7821 7826 "calculon.ml" 166 7965 7990
+)
+"calculon.ml" 163 7728 7737 "calculon.ml" 163 7728 7748
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 163 7728 7751 "calculon.ml" 163 7728 7771
+type(
+  Calclex.token list -> Calcparse.expr * Calclex.token list
+)
+ident(
+  ext_ref Calcparse.parse_expr
+)
+"calculon.ml" 163 7728 7772 "calculon.ml" 163 7728 7778
+type(
+  Calclex.token list
+)
+ident(
+  int_ref tokens "calculon.ml" 108 5371 5390 "calculon.ml" 108 5371 5396
+)
+"calculon.ml" 163 7728 7751 "calculon.ml" 163 7728 7778
+call(
+  stack
+)
+type(
+  Calcparse.expr * Calclex.token list
+)
+"calculon.ml" 164 7821 7830 "calculon.ml" 164 7821 7835
+type(
+  Calceval.data_t
+)
+ident(
+  def vdata "calculon.ml" 165 7916 7921 "calculon.ml" 166 7965 7990
+)
+"calculon.ml" 164 7821 7838 "calculon.ml" 164 7821 7847
+type(
+  Calceval.data_t Calceval.Varmap.t -> Calcparse.expr -> Calceval.data_t
+)
+ident(
+  ext_ref Calceval.eval_expr
+)
+"calculon.ml" 164 7821 7848 "calculon.ml" 164 7821 7849
+type(
+  Calceval.varmap_t ref -> Calceval.varmap_t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 164 7821 7849 "calculon.ml" 164 7821 7862
+type(
+  Calceval.varmap_t ref
+)
+ident(
+  int_ref global_varmap "calculon.ml" 52 2883 2887 "calculon.ml" 52 2883 2900
+)
+"calculon.ml" 164 7821 7848 "calculon.ml" 164 7821 7862
+type(
+  Calceval.varmap_t
+)
+"calculon.ml" 164 7821 7863 "calculon.ml" 164 7821 7867
+type(
+  Calcparse.expr
+)
+ident(
+  int_ref expr "calculon.ml" 163 7728 7738 "calculon.ml" 163 7728 7742
+)
+"calculon.ml" 164 7821 7838 "calculon.ml" 164 7821 7867
+call(
+  stack
+)
+type(
+  Calceval.data_t
+)
+"calculon.ml" 165 7916 7921 "calculon.ml" 165 7916 7927
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 165 7916 7928 "calculon.ml" 165 7916 7939
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"calculon.ml" 165 7916 7940 "calculon.ml" 165 7916 7943
+type(
+  string
+)
+"calculon.ml" 165 7916 7945 "calculon.ml" 165 7916 7956
+type(
+  Calceval.data_t -> string
+)
+ident(
+  ext_ref Calceval.data_string
+)
+"calculon.ml" 165 7916 7957 "calculon.ml" 165 7916 7962
+type(
+  Calceval.data_t
+)
+ident(
+  int_ref vdata "calculon.ml" 164 7821 7830 "calculon.ml" 164 7821 7835
+)
+"calculon.ml" 165 7916 7944 "calculon.ml" 165 7916 7963
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 165 7916 7921 "calculon.ml" 165 7916 7963
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 166 7965 7970 "calculon.ml" 166 7965 7984
+type(
+  Calclex.token list -> unit
+)
+ident(
+  int_ref semicolon_only "calculon.ml" 99 5004 5008 "calculon.ml" 99 5004 5022
+)
+"calculon.ml" 166 7965 7985 "calculon.ml" 166 7965 7989
+type(
+  Calclex.token list
+)
+ident(
+  int_ref rest "calculon.ml" 163 7728 7743 "calculon.ml" 163 7728 7747
+)
+"calculon.ml" 166 7965 7970 "calculon.ml" 166 7965 7990
+call(
+  tail
+)
+type(
+  unit
+)
+"calculon.ml" 165 7916 7921 "calculon.ml" 166 7965 7990
+type(
+  unit
+)
+"calculon.ml" 164 7821 7826 "calculon.ml" 166 7965 7990
+type(
+  unit
+)
+"calculon.ml" 163 7728 7733 "calculon.ml" 166 7965 7990
+type(
+  unit
+)
+"calculon.ml" 109 5399 5401 "calculon.ml" 166 7965 7990
+type(
+  unit
+)
+"calculon.ml" 170 8033 8037 "calculon.ml" 170 8033 8044
+type(
+  (string * Arg.spec * string) list
+)
+ident(
+  def options "calculon.ml" 176 8247 8247 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 171 8054 8057 "calculon.ml" 171 8054 8064
+type(
+  string
+)
+"calculon.ml" 171 8054 8070 "calculon.ml" 171 8054 8076
+type(
+  bool ref
+)
+ident(
+  int_ref echo "calculon.ml" 49 2597 2601 "calculon.ml" 49 2597 2605
+)
+"calculon.ml" 171 8054 8067 "calculon.ml" 171 8054 8076
+type(
+  Arg.spec
+)
+"calculon.ml" 171 8054 8079 "calculon.ml" 171 8054 8119
+type(
+  string
+)
+"calculon.ml" 171 8054 8056 "calculon.ml" 171 8054 8120
+type(
+  string * Arg.spec * string
+)
+"calculon.ml" 172 8122 8125 "calculon.ml" 172 8122 8133
+type(
+  string
+)
+"calculon.ml" 172 8122 8138 "calculon.ml" 172 8122 8145
+type(
+  bool ref
+)
+ident(
+  int_ref debug "calculon.ml" 50 2684 2688 "calculon.ml" 50 2684 2693
+)
+"calculon.ml" 172 8122 8135 "calculon.ml" 172 8122 8145
+type(
+  Arg.spec
+)
+"calculon.ml" 172 8122 8147 "calculon.ml" 172 8122 8187
+type(
+  string
+)
+"calculon.ml" 172 8122 8124 "calculon.ml" 172 8122 8188
+type(
+  string * Arg.spec * string
+)
+"calculon.ml" 170 8033 8052 "calculon.ml" 173 8190 8191
+type(
+  (string * Arg.spec * string) list
+)
+"calculon.ml" 176 8247 8251 "calculon.ml" 176 8247 8268
+type(
+  'a -> unit
+)
+ident(
+  def handle_extra_args "calculon.ml" 179 8322 8322 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 176 8247 8269 "calculon.ml" 176 8247 8272
+type(
+  'a
+)
+ident(
+  def arg "calculon.ml" 176 8247 8275 "calculon.ml" 176 8247 8277
+)
+"calculon.ml" 176 8247 8275 "calculon.ml" 176 8247 8277
+type(
+  unit
+)
+"calculon.ml" 179 8322 8326 "calculon.ml" 179 8322 8331
+type(
+  string
+)
+ident(
+  def usage "calculon.ml" 182 8399 8399 "calculon.ml" 1 0 -1
+)
+"calculon.ml" 179 8322 8334 "calculon.ml" 179 8322 8341
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calculon.ml" 179 8322 8342 "calculon.ml" 179 8322 8363
+type(
+  (string -> string, unit, string) format
+)
+"calculon.ml" 179 8322 8364 "calculon.ml" 179 8322 8372
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"calculon.ml" 179 8322 8374 "calculon.ml" 179 8322 8375
+type(
+  int
+)
+"calculon.ml" 179 8322 8364 "calculon.ml" 179 8322 8376
+type(
+  string
+)
+"calculon.ml" 179 8322 8334 "calculon.ml" 179 8322 8376
+call(
+  stack
+)
+type(
+  string
+)
+"calculon.ml" 182 8399 8403 "calculon.ml" 182 8399 8404
+type(
+  unit
+)
+"calculon.ml" 183 8407 8409 "calculon.ml" 183 8407 8418
+type(
+  (Arg.key * Arg.spec * Arg.doc) list ->
+  Arg.anon_fun -> Arg.usage_msg -> unit
+)
+ident(
+  ext_ref Arg.parse
+)
+"calculon.ml" 183 8407 8419 "calculon.ml" 183 8407 8426
+type(
+  (Arg.key * Arg.spec * Arg.doc) list
+)
+ident(
+  int_ref options "calculon.ml" 170 8033 8037 "calculon.ml" 170 8033 8044
+)
+"calculon.ml" 183 8407 8427 "calculon.ml" 183 8407 8444
+type(
+  Arg.anon_fun
+)
+ident(
+  int_ref handle_extra_args "calculon.ml" 176 8247 8251 "calculon.ml" 176 8247 8268
+)
+"calculon.ml" 183 8407 8445 "calculon.ml" 183 8407 8450
+type(
+  Arg.usage_msg
+)
+ident(
+  int_ref usage "calculon.ml" 179 8322 8326 "calculon.ml" 179 8322 8331
+)
+"calculon.ml" 183 8407 8409 "calculon.ml" 183 8407 8450
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 186 8504 8516 "calculon.ml" 186 8504 8517
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calculon.ml" 186 8504 8517 "calculon.ml" 186 8504 8525
+type(
+  bool ref
+)
+ident(
+  int_ref quit_now "calculon.ml" 48 2490 2494 "calculon.ml" 48 2490 2502
+)
+"calculon.ml" 186 8504 8516 "calculon.ml" 186 8504 8525
+type(
+  bool
+)
+"calculon.ml" 186 8504 8526 "calculon.ml" 186 8504 8527
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calculon.ml" 186 8504 8528 "calculon.ml" 186 8504 8533
+type(
+  bool
+)
+"calculon.ml" 186 8504 8516 "calculon.ml" 186 8504 8533
+type(
+  bool
+)
+"calculon.ml" 187 8592 8600 "calculon.ml" 187 8592 8617
+type(
+  in_channel -> unit
+)
+ident(
+  int_ref process_statement "calculon.ml" 57 3189 3197 "calculon.ml" 57 3189 3214
+)
+"calculon.ml" 187 8592 8618 "calculon.ml" 187 8592 8623
+type(
+  in_channel
+)
+ident(
+  ext_ref Pervasives.stdin
+)
+"calculon.ml" 187 8592 8600 "calculon.ml" 187 8592 8624
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 186 8504 8510 "calculon.ml" 188 8625 8635
+type(
+  unit
+)
+"calculon.ml" 190 8645 8651 "calculon.ml" 190 8645 8662
+type(
+  exn
+)
+"calculon.ml" 190 8645 8666 "calculon.ml" 190 8645 8668
+type(
+  unit
+)
+"calculon.ml" 184 8488 8490 "calculon.ml" 191 8720 8725
+type(
+  unit
+)
+"calculon.ml" 192 8727 8729 "calculon.ml" 192 8727 8735
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"calculon.ml" 192 8727 8736 "calculon.ml" 192 8727 8790
+type(
+  (unit, out_channel, unit) format
+)
+"calculon.ml" 192 8727 8729 "calculon.ml" 192 8727 8791
+call(
+  stack
+)
+type(
+  unit
+)
+"calculon.ml" 184 8488 8490 "calculon.ml" 192 8727 8791
+type(
+  unit
+)
+"calculon.ml" 183 8407 8409 "calculon.ml" 192 8727 8791
+type(
+  unit
+)

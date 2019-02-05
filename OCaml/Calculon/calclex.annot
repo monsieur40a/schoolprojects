@@ -1,0 +1,4328 @@
+"calclex.ml" 23 537 541 "calclex.ml" 23 537 557
+type(
+  token list -> string
+)
+ident(
+  def tokenlist_string "calclex.ml" 68 1941 1941 "calclex.ml" 1 0 -1
+)
+"calclex.ml" 23 537 558 "calclex.ml" 23 537 564
+type(
+  token list
+)
+ident(
+  def tokens "calclex.ml" 24 567 569 "calclex.ml" 64 1846 1867
+)
+"calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+type(
+  Buffer.t
+)
+ident(
+  def buf "calclex.ml" 25 662 664 "calclex.ml" 64 1846 1867
+)
+"calclex.ml" 24 567 579 "calclex.ml" 24 567 592
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"calclex.ml" 24 567 593 "calclex.ml" 24 567 596
+type(
+  int
+)
+"calclex.ml" 24 567 579 "calclex.ml" 24 567 596
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"calclex.ml" 25 662 664 "calclex.ml" 25 662 681
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"calclex.ml" 25 662 682 "calclex.ml" 25 662 685
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 25 662 686 "calclex.ml" 25 662 689
+type(
+  string
+)
+"calclex.ml" 25 662 664 "calclex.ml" 25 662 689
+call(
+  stack
+)
+type(
+  unit
+)
+"calclex.ml" 26 691 697 "calclex.ml" 26 691 701
+type(
+  token list ref
+)
+ident(
+  def toks "calclex.ml" 27 718 720 "calclex.ml" 64 1846 1867
+)
+"calclex.ml" 26 691 704 "calclex.ml" 26 691 707
+type(
+  token list -> token list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 26 691 708 "calclex.ml" 26 691 714
+type(
+  token list
+)
+ident(
+  int_ref tokens "calclex.ml" 23 537 558 "calclex.ml" 23 537 564
+)
+"calclex.ml" 26 691 704 "calclex.ml" 26 691 714
+type(
+  token list ref
+)
+"calclex.ml" 27 718 724 "calclex.ml" 27 718 729
+type(
+  int ref
+)
+ident(
+  def count "calclex.ml" 28 741 743 "calclex.ml" 64 1846 1867
+)
+"calclex.ml" 27 718 732 "calclex.ml" 27 718 735
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 27 718 736 "calclex.ml" 27 718 737
+type(
+  int
+)
+"calclex.ml" 27 718 732 "calclex.ml" 27 718 737
+type(
+  int ref
+)
+"calclex.ml" 28 741 749 "calclex.ml" 28 741 750
+type(
+  token list ref -> token list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 28 741 750 "calclex.ml" 28 741 754
+type(
+  token list ref
+)
+ident(
+  int_ref toks "calclex.ml" 26 691 697 "calclex.ml" 26 691 701
+)
+"calclex.ml" 28 741 749 "calclex.ml" 28 741 754
+type(
+  token list
+)
+"calclex.ml" 28 741 755 "calclex.ml" 28 741 757
+type(
+  token list -> token list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"calclex.ml" 28 741 758 "calclex.ml" 28 741 760
+type(
+  token list
+)
+"calclex.ml" 28 741 749 "calclex.ml" 28 741 760
+type(
+  bool
+)
+"calclex.ml" 29 764 771 "calclex.ml" 29 764 772
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 29 764 772 "calclex.ml" 29 764 777
+type(
+  int ref
+)
+ident(
+  int_ref count "calclex.ml" 27 718 724 "calclex.ml" 27 718 729
+)
+"calclex.ml" 29 764 771 "calclex.ml" 29 764 777
+type(
+  int
+)
+"calclex.ml" 29 764 778 "calclex.ml" 29 764 779
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"calclex.ml" 29 764 780 "calclex.ml" 29 764 781
+type(
+  int
+)
+"calclex.ml" 29 764 771 "calclex.ml" 29 764 781
+type(
+  bool
+)
+"calclex.ml" 29 764 783 "calclex.ml" 29 764 785
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"calclex.ml" 29 764 786 "calclex.ml" 29 764 787
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 29 764 787 "calclex.ml" 29 764 792
+type(
+  int ref
+)
+ident(
+  int_ref count "calclex.ml" 27 718 724 "calclex.ml" 27 718 729
+)
+"calclex.ml" 29 764 786 "calclex.ml" 29 764 792
+type(
+  int
+)
+"calclex.ml" 29 764 793 "calclex.ml" 29 764 796
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"calclex.ml" 29 764 797 "calclex.ml" 29 764 799
+type(
+  int
+)
+"calclex.ml" 29 764 786 "calclex.ml" 29 764 799
+type(
+  int
+)
+"calclex.ml" 29 764 800 "calclex.ml" 29 764 801
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"calclex.ml" 29 764 802 "calclex.ml" 29 764 803
+type(
+  int
+)
+"calclex.ml" 29 764 786 "calclex.ml" 29 764 803
+type(
+  bool
+)
+"calclex.ml" 29 764 771 "calclex.ml" 29 764 803
+type(
+  bool
+)
+"calclex.ml" 30 809 815 "calclex.ml" 30 809 832
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"calclex.ml" 30 809 833 "calclex.ml" 30 809 836
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 30 809 837 "calclex.ml" 30 809 842
+type(
+  string
+)
+"calclex.ml" 30 809 815 "calclex.ml" 30 809 842
+call(
+  stack
+)
+type(
+  unit
+)
+"calclex.ml" 29 764 768 "calclex.ml" 30 809 842
+type(
+  unit
+)
+"calclex.ml" 31 844 852 "calclex.ml" 31 844 855
+type(
+  string
+)
+ident(
+  def str "calclex.ml" 57 1646 1650 "calclex.ml" 59 1721 1736
+)
+"calclex.ml" 31 844 864 "calclex.ml" 31 844 871
+type(
+  token list -> token
+)
+ident(
+  ext_ref List.hd
+)
+"calclex.ml" 31 844 872 "calclex.ml" 31 844 873
+type(
+  token list ref -> token list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 31 844 873 "calclex.ml" 31 844 877
+type(
+  token list ref
+)
+ident(
+  int_ref toks "calclex.ml" 26 691 697 "calclex.ml" 26 691 701
+)
+"calclex.ml" 31 844 872 "calclex.ml" 31 844 877
+type(
+  token list
+)
+"calclex.ml" 31 844 864 "calclex.ml" 31 844 877
+call(
+  stack
+)
+type(
+  token
+)
+"calclex.ml" 32 883 891 "calclex.ml" 32 883 895
+type(
+  token
+)
+"calclex.ml" 32 883 905 "calclex.ml" 32 883 911
+type(
+  string
+)
+"calclex.ml" 33 912 920 "calclex.ml" 33 912 925
+type(
+  token
+)
+"calclex.ml" 33 912 934 "calclex.ml" 33 912 941
+type(
+  string
+)
+"calclex.ml" 34 942 950 "calclex.ml" 34 942 955
+type(
+  token
+)
+"calclex.ml" 34 942 964 "calclex.ml" 34 942 971
+type(
+  string
+)
+"calclex.ml" 35 972 980 "calclex.ml" 35 972 985
+type(
+  token
+)
+"calclex.ml" 35 972 994 "calclex.ml" 35 972 1001
+type(
+  string
+)
+"calclex.ml" 36 1002 1010 "calclex.ml" 36 1002 1018
+type(
+  token
+)
+"calclex.ml" 36 1002 1024 "calclex.ml" 36 1002 1034
+type(
+  string
+)
+"calclex.ml" 37 1035 1043 "calclex.ml" 37 1035 1052
+type(
+  token
+)
+"calclex.ml" 37 1035 1057 "calclex.ml" 37 1035 1068
+type(
+  string
+)
+"calclex.ml" 38 1069 1077 "calclex.ml" 38 1069 1082
+type(
+  token
+)
+"calclex.ml" 38 1069 1091 "calclex.ml" 38 1069 1098
+type(
+  string
+)
+"calclex.ml" 39 1099 1107 "calclex.ml" 39 1099 1113
+type(
+  token
+)
+"calclex.ml" 39 1099 1121 "calclex.ml" 39 1099 1129
+type(
+  string
+)
+"calclex.ml" 40 1130 1138 "calclex.ml" 40 1130 1143
+type(
+  token
+)
+"calclex.ml" 40 1130 1152 "calclex.ml" 40 1130 1159
+type(
+  string
+)
+"calclex.ml" 41 1160 1168 "calclex.ml" 41 1160 1170
+type(
+  token
+)
+"calclex.ml" 41 1160 1182 "calclex.ml" 41 1160 1186
+type(
+  string
+)
+"calclex.ml" 42 1187 1195 "calclex.ml" 42 1187 1201
+type(
+  token
+)
+"calclex.ml" 42 1187 1209 "calclex.ml" 42 1187 1217
+type(
+  string
+)
+"calclex.ml" 43 1218 1226 "calclex.ml" 43 1218 1232
+type(
+  token
+)
+"calclex.ml" 43 1218 1240 "calclex.ml" 43 1218 1248
+type(
+  string
+)
+"calclex.ml" 44 1249 1257 "calclex.ml" 44 1249 1259
+type(
+  token
+)
+"calclex.ml" 44 1249 1271 "calclex.ml" 44 1249 1275
+type(
+  string
+)
+"calclex.ml" 45 1276 1284 "calclex.ml" 45 1276 1288
+type(
+  token
+)
+"calclex.ml" 45 1276 1298 "calclex.ml" 45 1276 1304
+type(
+  string
+)
+"calclex.ml" 46 1305 1313 "calclex.ml" 46 1305 1317
+type(
+  token
+)
+"calclex.ml" 46 1305 1327 "calclex.ml" 46 1305 1334
+type(
+  string
+)
+"calclex.ml" 47 1335 1343 "calclex.ml" 47 1335 1346
+type(
+  token
+)
+"calclex.ml" 47 1335 1357 "calclex.ml" 47 1335 1362
+type(
+  string
+)
+"calclex.ml" 48 1363 1371 "calclex.ml" 48 1363 1373
+type(
+  token
+)
+"calclex.ml" 48 1363 1385 "calclex.ml" 48 1363 1389
+type(
+  string
+)
+"calclex.ml" 49 1390 1398 "calclex.ml" 49 1390 1401
+type(
+  token
+)
+"calclex.ml" 49 1390 1412 "calclex.ml" 49 1390 1417
+type(
+  string
+)
+"calclex.ml" 50 1418 1426 "calclex.ml" 50 1418 1435
+type(
+  token
+)
+"calclex.ml" 50 1418 1440 "calclex.ml" 50 1418 1452
+type(
+  string
+)
+"calclex.ml" 51 1453 1468 "calclex.ml" 51 1453 1469
+ident(
+  def i "calclex.ml" 51 1453 1475 "calclex.ml" 51 1453 1497
+)
+"calclex.ml" 51 1453 1467 "calclex.ml" 51 1453 1470
+type(
+  int
+)
+"calclex.ml" 51 1453 1461 "calclex.ml" 51 1453 1470
+type(
+  token
+)
+"calclex.ml" 51 1453 1475 "calclex.ml" 51 1453 1482
+type(
+  (int -> string, unit, string) format -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 51 1453 1483 "calclex.ml" 51 1453 1495
+type(
+  (int -> string, unit, string) format
+)
+"calclex.ml" 51 1453 1496 "calclex.ml" 51 1453 1497
+type(
+  int
+)
+ident(
+  int_ref i "calclex.ml" 51 1453 1467 "calclex.ml" 51 1453 1470
+)
+"calclex.ml" 51 1453 1475 "calclex.ml" 51 1453 1497
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 52 1498 1514 "calclex.ml" 52 1498 1515
+ident(
+  def b "calclex.ml" 52 1498 1520 "calclex.ml" 52 1498 1543
+)
+"calclex.ml" 52 1498 1513 "calclex.ml" 52 1498 1516
+type(
+  bool
+)
+"calclex.ml" 52 1498 1506 "calclex.ml" 52 1498 1516
+type(
+  token
+)
+"calclex.ml" 52 1498 1520 "calclex.ml" 52 1498 1527
+type(
+  (bool -> string, unit, string) format -> bool -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 52 1498 1528 "calclex.ml" 52 1498 1541
+type(
+  (bool -> string, unit, string) format
+)
+"calclex.ml" 52 1498 1542 "calclex.ml" 52 1498 1543
+type(
+  bool
+)
+ident(
+  int_ref b "calclex.ml" 52 1498 1513 "calclex.ml" 52 1498 1516
+)
+"calclex.ml" 52 1498 1520 "calclex.ml" 52 1498 1543
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 53 1544 1558 "calclex.ml" 53 1544 1559
+ident(
+  def s "calclex.ml" 53 1544 1566 "calclex.ml" 53 1544 1587
+)
+"calclex.ml" 53 1544 1557 "calclex.ml" 53 1544 1560
+type(
+  string
+)
+"calclex.ml" 53 1544 1552 "calclex.ml" 53 1544 1560
+type(
+  token
+)
+"calclex.ml" 53 1544 1566 "calclex.ml" 53 1544 1573
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 53 1544 1574 "calclex.ml" 53 1544 1585
+type(
+  (string -> string, unit, string) format
+)
+"calclex.ml" 53 1544 1586 "calclex.ml" 53 1544 1587
+type(
+  string
+)
+ident(
+  int_ref s "calclex.ml" 53 1544 1557 "calclex.ml" 53 1544 1560
+)
+"calclex.ml" 53 1544 1566 "calclex.ml" 53 1544 1587
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 54 1588 1596 "calclex.ml" 54 1588 1599
+type(
+  token
+)
+"calclex.ml" 54 1588 1603 "calclex.ml" 54 1588 1613
+type(
+  string
+)
+"calclex.ml" 55 1614 1622 "calclex.ml" 55 1614 1625
+type(
+  token
+)
+"calclex.ml" 55 1614 1629 "calclex.ml" 55 1614 1638
+type(
+  string
+)
+"calclex.ml" 31 844 858 "calclex.ml" 55 1614 1638
+type(
+  string
+)
+"calclex.ml" 57 1646 1650 "calclex.ml" 57 1646 1667
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"calclex.ml" 57 1646 1668 "calclex.ml" 57 1646 1671
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 57 1646 1673 "calclex.ml" 57 1646 1680
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 57 1646 1681 "calclex.ml" 57 1646 1687
+type(
+  (string -> string, unit, string) format
+)
+"calclex.ml" 57 1646 1688 "calclex.ml" 57 1646 1691
+type(
+  string
+)
+ident(
+  int_ref str "calclex.ml" 31 844 852 "calclex.ml" 31 844 855
+)
+"calclex.ml" 57 1646 1672 "calclex.ml" 57 1646 1692
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 57 1646 1650 "calclex.ml" 57 1646 1692
+call(
+  stack
+)
+type(
+  unit
+)
+"calclex.ml" 58 1694 1698 "calclex.ml" 58 1694 1702
+type(
+  token list ref
+)
+ident(
+  int_ref toks "calclex.ml" 26 691 697 "calclex.ml" 26 691 701
+)
+"calclex.ml" 58 1694 1703 "calclex.ml" 58 1694 1705
+type(
+  token list ref -> token list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calclex.ml" 58 1694 1706 "calclex.ml" 58 1694 1713
+type(
+  token list -> token list
+)
+ident(
+  ext_ref List.tl
+)
+"calclex.ml" 58 1694 1714 "calclex.ml" 58 1694 1715
+type(
+  token list ref -> token list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 58 1694 1715 "calclex.ml" 58 1694 1719
+type(
+  token list ref
+)
+ident(
+  int_ref toks "calclex.ml" 26 691 697 "calclex.ml" 26 691 701
+)
+"calclex.ml" 58 1694 1714 "calclex.ml" 58 1694 1719
+type(
+  token list
+)
+"calclex.ml" 58 1694 1706 "calclex.ml" 58 1694 1719
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 58 1694 1698 "calclex.ml" 58 1694 1719
+type(
+  unit
+)
+"calclex.ml" 59 1721 1725 "calclex.ml" 59 1721 1729
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 59 1721 1730 "calclex.ml" 59 1721 1735
+type(
+  int ref
+)
+ident(
+  int_ref count "calclex.ml" 27 718 724 "calclex.ml" 27 718 729
+)
+"calclex.ml" 59 1721 1725 "calclex.ml" 59 1721 1736
+type(
+  unit
+)
+"calclex.ml" 58 1694 1698 "calclex.ml" 59 1721 1736
+type(
+  unit
+)
+"calclex.ml" 57 1646 1650 "calclex.ml" 59 1721 1736
+type(
+  unit
+)
+"calclex.ml" 31 844 848 "calclex.ml" 59 1721 1736
+type(
+  unit
+)
+"calclex.ml" 29 764 768 "calclex.ml" 59 1721 1736
+type(
+  unit
+)
+"calclex.ml" 28 741 743 "calclex.ml" 60 1737 1743
+type(
+  unit
+)
+"calclex.ml" 61 1745 1750 "calclex.ml" 61 1745 1756
+type(
+  token list
+)
+ident(
+  int_ref tokens "calclex.ml" 23 537 558 "calclex.ml" 23 537 564
+)
+"calclex.ml" 61 1745 1757 "calclex.ml" 61 1745 1759
+type(
+  token list -> token list -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"calclex.ml" 61 1745 1760 "calclex.ml" 61 1745 1762
+type(
+  token list
+)
+"calclex.ml" 61 1745 1750 "calclex.ml" 61 1745 1762
+type(
+  bool
+)
+"calclex.ml" 62 1768 1772 "calclex.ml" 62 1768 1787
+type(
+  Buffer.t -> int -> unit
+)
+ident(
+  ext_ref Buffer.truncate
+)
+"calclex.ml" 62 1768 1788 "calclex.ml" 62 1768 1791
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 62 1768 1794 "calclex.ml" 62 1768 1807
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"calclex.ml" 62 1768 1808 "calclex.ml" 62 1768 1811
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 62 1768 1793 "calclex.ml" 62 1768 1812
+call(
+  stack
+)
+type(
+  int
+)
+"calclex.ml" 62 1768 1812 "calclex.ml" 62 1768 1813
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"calclex.ml" 62 1768 1813 "calclex.ml" 62 1768 1814
+type(
+  int
+)
+"calclex.ml" 62 1768 1792 "calclex.ml" 62 1768 1815
+type(
+  int
+)
+"calclex.ml" 62 1768 1772 "calclex.ml" 62 1768 1815
+call(
+  stack
+)
+type(
+  unit
+)
+"calclex.ml" 61 1745 1747 "calclex.ml" 62 1768 1815
+type(
+  unit
+)
+"calclex.ml" 63 1817 1819 "calclex.ml" 63 1817 1836
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"calclex.ml" 63 1817 1837 "calclex.ml" 63 1817 1840
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 63 1817 1841 "calclex.ml" 63 1817 1844
+type(
+  string
+)
+"calclex.ml" 63 1817 1819 "calclex.ml" 63 1817 1844
+call(
+  stack
+)
+type(
+  unit
+)
+"calclex.ml" 64 1846 1848 "calclex.ml" 64 1846 1863
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"calclex.ml" 64 1846 1864 "calclex.ml" 64 1846 1867
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "calclex.ml" 24 567 573 "calclex.ml" 24 567 576
+)
+"calclex.ml" 64 1846 1848 "calclex.ml" 64 1846 1867
+call(
+  tail
+)
+type(
+  string
+)
+"calclex.ml" 63 1817 1819 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 61 1745 1747 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 28 741 743 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 27 718 720 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 26 691 693 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 25 662 664 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 24 567 569 "calclex.ml" 64 1846 1867
+type(
+  string
+)
+"calclex.ml" 68 1941 1945 "calclex.ml" 68 1941 1953
+type(
+  char -> bool
+)
+ident(
+  def is_digit "calclex.ml" 75 2110 2110 "calclex.ml" 1 0 -1
+)
+"calclex.ml" 68 1941 1954 "calclex.ml" 68 1941 1955
+type(
+  char
+)
+ident(
+  def c "calclex.ml" 69 1958 1960 "calclex.ml" 71 2030 2043
+)
+"calclex.ml" 69 1958 1964 "calclex.ml" 69 1958 1970
+type(
+  string
+)
+ident(
+  def digits "calclex.ml" 70 1989 1991 "calclex.ml" 71 2030 2043
+)
+"calclex.ml" 69 1958 1973 "calclex.ml" 69 1958 1985
+type(
+  string
+)
+"calclex.ml" 70 1989 1995 "calclex.ml" 70 1989 1998
+type(
+  int option
+)
+ident(
+  def loc "calclex.ml" 71 2030 2032 "calclex.ml" 71 2030 2043
+)
+"calclex.ml" 70 1989 2001 "calclex.ml" 70 1989 2017
+type(
+  string -> char -> int option
+)
+ident(
+  ext_ref String.index_opt
+)
+"calclex.ml" 70 1989 2018 "calclex.ml" 70 1989 2024
+type(
+  string
+)
+ident(
+  int_ref digits "calclex.ml" 69 1958 1964 "calclex.ml" 69 1958 1970
+)
+"calclex.ml" 70 1989 2025 "calclex.ml" 70 1989 2026
+type(
+  char
+)
+ident(
+  int_ref c "calclex.ml" 68 1941 1954 "calclex.ml" 68 1941 1955
+)
+"calclex.ml" 70 1989 2001 "calclex.ml" 70 1989 2026
+call(
+  stack
+)
+type(
+  int option
+)
+"calclex.ml" 71 2030 2032 "calclex.ml" 71 2030 2035
+type(
+  int option
+)
+ident(
+  int_ref loc "calclex.ml" 70 1989 1995 "calclex.ml" 70 1989 1998
+)
+"calclex.ml" 71 2030 2036 "calclex.ml" 71 2030 2038
+type(
+  int option -> int option -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"calclex.ml" 71 2030 2039 "calclex.ml" 71 2030 2043
+type(
+  int option
+)
+"calclex.ml" 71 2030 2032 "calclex.ml" 71 2030 2043
+type(
+  bool
+)
+"calclex.ml" 70 1989 1991 "calclex.ml" 71 2030 2043
+type(
+  bool
+)
+"calclex.ml" 69 1958 1960 "calclex.ml" 71 2030 2043
+type(
+  bool
+)
+"calclex.ml" 75 2110 2114 "calclex.ml" 75 2110 2123
+type(
+  char -> bool
+)
+ident(
+  def is_letter "calclex.ml" 83 2363 2363 "calclex.ml" 1 0 -1
+)
+"calclex.ml" 75 2110 2124 "calclex.ml" 75 2110 2125
+type(
+  char
+)
+ident(
+  def c "calclex.ml" 76 2128 2130 "calclex.ml" 79 2297 2310
+)
+"calclex.ml" 76 2128 2134 "calclex.ml" 76 2128 2141
+type(
+  string
+)
+ident(
+  def letters "calclex.ml" 77 2211 2213 "calclex.ml" 79 2297 2310
+)
+"calclex.ml" 76 2128 2144 "calclex.ml" 76 2128 2174
+type(
+  string
+)
+"calclex.ml" 77 2211 2217 "calclex.ml" 77 2211 2222
+type(
+  char
+)
+ident(
+  def lower "calclex.ml" 78 2251 2253 "calclex.ml" 79 2297 2310
+)
+"calclex.ml" 77 2211 2225 "calclex.ml" 77 2211 2245
+type(
+  char -> char
+)
+ident(
+  ext_ref Char.lowercase_ascii
+)
+"calclex.ml" 77 2211 2246 "calclex.ml" 77 2211 2247
+type(
+  char
+)
+ident(
+  int_ref c "calclex.ml" 75 2110 2124 "calclex.ml" 75 2110 2125
+)
+"calclex.ml" 77 2211 2225 "calclex.ml" 77 2211 2247
+call(
+  stack
+)
+type(
+  char
+)
+"calclex.ml" 78 2251 2257 "calclex.ml" 78 2251 2260
+type(
+  int option
+)
+ident(
+  def loc "calclex.ml" 79 2297 2299 "calclex.ml" 79 2297 2310
+)
+"calclex.ml" 78 2251 2263 "calclex.ml" 78 2251 2279
+type(
+  string -> char -> int option
+)
+ident(
+  ext_ref String.index_opt
+)
+"calclex.ml" 78 2251 2280 "calclex.ml" 78 2251 2287
+type(
+  string
+)
+ident(
+  int_ref letters "calclex.ml" 76 2128 2134 "calclex.ml" 76 2128 2141
+)
+"calclex.ml" 78 2251 2288 "calclex.ml" 78 2251 2293
+type(
+  char
+)
+ident(
+  int_ref lower "calclex.ml" 77 2211 2217 "calclex.ml" 77 2211 2222
+)
+"calclex.ml" 78 2251 2263 "calclex.ml" 78 2251 2293
+call(
+  stack
+)
+type(
+  int option
+)
+"calclex.ml" 79 2297 2299 "calclex.ml" 79 2297 2302
+type(
+  int option
+)
+ident(
+  int_ref loc "calclex.ml" 78 2251 2257 "calclex.ml" 78 2251 2260
+)
+"calclex.ml" 79 2297 2303 "calclex.ml" 79 2297 2305
+type(
+  int option -> int option -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"calclex.ml" 79 2297 2306 "calclex.ml" 79 2297 2310
+type(
+  int option
+)
+"calclex.ml" 79 2297 2299 "calclex.ml" 79 2297 2310
+type(
+  bool
+)
+"calclex.ml" 78 2251 2253 "calclex.ml" 79 2297 2310
+type(
+  bool
+)
+"calclex.ml" 77 2211 2213 "calclex.ml" 79 2297 2310
+type(
+  bool
+)
+"calclex.ml" 76 2128 2130 "calclex.ml" 79 2297 2310
+type(
+  bool
+)
+"calclex.ml" 88 2468 2472 "calclex.ml" 88 2468 2482
+type(
+  string -> token list
+)
+ident(
+  def lex_string "calclex.ml" 146 5505 5505 "calclex.ml" 1 0 -1
+)
+"calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+type(
+  string
+)
+ident(
+  def string "calclex.ml" 89 2492 2494 "calclex.ml" 143 5422 5429
+)
+"calclex.ml" 89 2492 2498 "calclex.ml" 89 2492 2501
+type(
+  int
+)
+ident(
+  def len "calclex.ml" 90 2528 2530 "calclex.ml" 143 5422 5429
+)
+"calclex.ml" 89 2492 2504 "calclex.ml" 89 2492 2517
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"calclex.ml" 89 2492 2518 "calclex.ml" 89 2492 2524
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 89 2492 2504 "calclex.ml" 89 2492 2524
+type(
+  int
+)
+"calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+type(
+  int -> token list
+)
+ident(
+  def lex "calclex.ml" 90 2528 2530 "calclex.ml" 143 5422 5429
+)
+"calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+type(
+  int
+)
+ident(
+  def pos "calclex.ml" 91 2612 2616 "calclex.ml" 141 5313 5343
+)
+"calclex.ml" 91 2612 2619 "calclex.ml" 91 2612 2622
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 91 2612 2623 "calclex.ml" 91 2612 2625
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"calclex.ml" 91 2612 2626 "calclex.ml" 91 2612 2629
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 89 2492 2498 "calclex.ml" 89 2492 2501
+)
+"calclex.ml" 91 2612 2619 "calclex.ml" 91 2612 2629
+type(
+  bool
+)
+"calclex.ml" 92 2699 2705 "calclex.ml" 92 2699 2707
+type(
+  token list
+)
+"calclex.ml" 94 2858 2870 "calclex.ml" 94 2858 2876
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 94 2858 2878 "calclex.ml" 94 2858 2881
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 94 2858 2870 "calclex.ml" 94 2858 2882
+type(
+  char
+)
+"calclex.ml" 95 2950 2957 "calclex.ml" 95 2950 2960
+type(
+  char
+)
+"calclex.ml" 95 2950 2963 "calclex.ml" 95 2950 2967
+type(
+  char
+)
+"calclex.ml" 95 2950 2957 "calclex.ml" 95 2950 2967
+type(
+  char
+)
+"calclex.ml" 95 2950 2970 "calclex.ml" 95 2950 2974
+type(
+  char
+)
+"calclex.ml" 95 2950 2957 "calclex.ml" 95 2950 2974
+type(
+  char
+)
+"calclex.ml" 95 2950 2978 "calclex.ml" 95 2950 2981
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 95 2950 2983 "calclex.ml" 95 2950 2986
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 95 2950 2986 "calclex.ml" 95 2950 2987
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 95 2950 2987 "calclex.ml" 95 2950 2988
+type(
+  int
+)
+"calclex.ml" 95 2950 2982 "calclex.ml" 95 2950 2989
+type(
+  int
+)
+"calclex.ml" 95 2950 2978 "calclex.ml" 95 2950 2989
+call(
+  tail
+)
+type(
+  token list
+)
+"calclex.ml" 96 3033 3040 "calclex.ml" 96 3033 3043
+type(
+  char
+)
+"calclex.ml" 96 3033 3047 "calclex.ml" 96 3033 3051
+type(
+  token
+)
+"calclex.ml" 96 3033 3061 "calclex.ml" 96 3033 3064
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 96 3033 3066 "calclex.ml" 96 3033 3069
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 96 3033 3069 "calclex.ml" 96 3033 3070
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 96 3033 3070 "calclex.ml" 96 3033 3071
+type(
+  int
+)
+"calclex.ml" 96 3033 3065 "calclex.ml" 96 3033 3072
+type(
+  int
+)
+"calclex.ml" 96 3033 3060 "calclex.ml" 96 3033 3073
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 96 3033 3047 "calclex.ml" 96 3033 3073
+type(
+  token list
+)
+"calclex.ml" 97 3133 3140 "calclex.ml" 97 3133 3143
+type(
+  char
+)
+"calclex.ml" 97 3133 3147 "calclex.ml" 97 3133 3152
+type(
+  token
+)
+"calclex.ml" 97 3133 3161 "calclex.ml" 97 3133 3164
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 97 3133 3166 "calclex.ml" 97 3133 3169
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 97 3133 3169 "calclex.ml" 97 3133 3170
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 97 3133 3170 "calclex.ml" 97 3133 3171
+type(
+  int
+)
+"calclex.ml" 97 3133 3165 "calclex.ml" 97 3133 3172
+type(
+  int
+)
+"calclex.ml" 97 3133 3160 "calclex.ml" 97 3133 3173
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 97 3133 3147 "calclex.ml" 97 3133 3173
+type(
+  token list
+)
+"calclex.ml" 98 3174 3181 "calclex.ml" 98 3174 3184
+type(
+  char
+)
+"calclex.ml" 98 3174 3188 "calclex.ml" 98 3174 3193
+type(
+  token
+)
+"calclex.ml" 98 3174 3202 "calclex.ml" 98 3174 3205
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 98 3174 3207 "calclex.ml" 98 3174 3210
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 98 3174 3210 "calclex.ml" 98 3174 3211
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 98 3174 3211 "calclex.ml" 98 3174 3212
+type(
+  int
+)
+"calclex.ml" 98 3174 3206 "calclex.ml" 98 3174 3213
+type(
+  int
+)
+"calclex.ml" 98 3174 3201 "calclex.ml" 98 3174 3214
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 98 3174 3188 "calclex.ml" 98 3174 3214
+type(
+  token list
+)
+"calclex.ml" 99 3215 3222 "calclex.ml" 99 3215 3225
+type(
+  char
+)
+"calclex.ml" 99 3215 3229 "calclex.ml" 99 3215 3234
+type(
+  token
+)
+"calclex.ml" 99 3215 3243 "calclex.ml" 99 3215 3246
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 99 3215 3248 "calclex.ml" 99 3215 3251
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 99 3215 3251 "calclex.ml" 99 3215 3252
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 99 3215 3252 "calclex.ml" 99 3215 3253
+type(
+  int
+)
+"calclex.ml" 99 3215 3247 "calclex.ml" 99 3215 3254
+type(
+  int
+)
+"calclex.ml" 99 3215 3242 "calclex.ml" 99 3215 3255
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 99 3215 3229 "calclex.ml" 99 3215 3255
+type(
+  token list
+)
+"calclex.ml" 100 3256 3263 "calclex.ml" 100 3256 3266
+type(
+  char
+)
+"calclex.ml" 100 3256 3270 "calclex.ml" 100 3256 3272
+type(
+  token
+)
+"calclex.ml" 100 3256 3284 "calclex.ml" 100 3256 3287
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 100 3256 3289 "calclex.ml" 100 3256 3292
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 100 3256 3292 "calclex.ml" 100 3256 3293
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 100 3256 3293 "calclex.ml" 100 3256 3294
+type(
+  int
+)
+"calclex.ml" 100 3256 3288 "calclex.ml" 100 3256 3295
+type(
+  int
+)
+"calclex.ml" 100 3256 3283 "calclex.ml" 100 3256 3296
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 100 3256 3270 "calclex.ml" 100 3256 3296
+type(
+  token list
+)
+"calclex.ml" 101 3297 3304 "calclex.ml" 101 3297 3307
+type(
+  char
+)
+"calclex.ml" 101 3297 3311 "calclex.ml" 101 3297 3316
+type(
+  token
+)
+"calclex.ml" 101 3297 3325 "calclex.ml" 101 3297 3328
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 101 3297 3330 "calclex.ml" 101 3297 3333
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 101 3297 3333 "calclex.ml" 101 3297 3334
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 101 3297 3334 "calclex.ml" 101 3297 3335
+type(
+  int
+)
+"calclex.ml" 101 3297 3329 "calclex.ml" 101 3297 3336
+type(
+  int
+)
+"calclex.ml" 101 3297 3324 "calclex.ml" 101 3297 3337
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 101 3297 3311 "calclex.ml" 101 3297 3337
+type(
+  token list
+)
+"calclex.ml" 102 3338 3345 "calclex.ml" 102 3338 3348
+type(
+  char
+)
+"calclex.ml" 102 3338 3352 "calclex.ml" 102 3338 3358
+type(
+  token
+)
+"calclex.ml" 102 3338 3366 "calclex.ml" 102 3338 3369
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 102 3338 3371 "calclex.ml" 102 3338 3374
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 102 3338 3374 "calclex.ml" 102 3338 3375
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 102 3338 3375 "calclex.ml" 102 3338 3376
+type(
+  int
+)
+"calclex.ml" 102 3338 3370 "calclex.ml" 102 3338 3377
+type(
+  int
+)
+"calclex.ml" 102 3338 3365 "calclex.ml" 102 3338 3378
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 102 3338 3352 "calclex.ml" 102 3338 3378
+type(
+  token list
+)
+"calclex.ml" 103 3427 3434 "calclex.ml" 103 3427 3437
+type(
+  char
+)
+"calclex.ml" 103 3427 3441 "calclex.ml" 103 3427 3447
+type(
+  token
+)
+"calclex.ml" 103 3427 3455 "calclex.ml" 103 3427 3458
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 103 3427 3460 "calclex.ml" 103 3427 3463
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 103 3427 3463 "calclex.ml" 103 3427 3464
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 103 3427 3464 "calclex.ml" 103 3427 3465
+type(
+  int
+)
+"calclex.ml" 103 3427 3459 "calclex.ml" 103 3427 3466
+type(
+  int
+)
+"calclex.ml" 103 3427 3454 "calclex.ml" 103 3427 3467
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 103 3427 3441 "calclex.ml" 103 3427 3467
+type(
+  token list
+)
+"calclex.ml" 104 3468 3475 "calclex.ml" 104 3468 3478
+type(
+  char
+)
+"calclex.ml" 104 3468 3482 "calclex.ml" 104 3468 3491
+type(
+  token
+)
+"calclex.ml" 104 3468 3496 "calclex.ml" 104 3468 3499
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 104 3468 3501 "calclex.ml" 104 3468 3504
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 104 3468 3504 "calclex.ml" 104 3468 3505
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 104 3468 3505 "calclex.ml" 104 3468 3506
+type(
+  int
+)
+"calclex.ml" 104 3468 3500 "calclex.ml" 104 3468 3507
+type(
+  int
+)
+"calclex.ml" 104 3468 3495 "calclex.ml" 104 3468 3508
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 104 3468 3482 "calclex.ml" 104 3468 3508
+type(
+  token list
+)
+"calclex.ml" 105 3509 3516 "calclex.ml" 105 3509 3519
+type(
+  char
+)
+"calclex.ml" 105 3509 3523 "calclex.ml" 105 3509 3531
+type(
+  token
+)
+"calclex.ml" 105 3509 3539 "calclex.ml" 105 3509 3542
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 105 3509 3544 "calclex.ml" 105 3509 3547
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 105 3509 3547 "calclex.ml" 105 3509 3548
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 105 3509 3548 "calclex.ml" 105 3509 3549
+type(
+  int
+)
+"calclex.ml" 105 3509 3543 "calclex.ml" 105 3509 3550
+type(
+  int
+)
+"calclex.ml" 105 3509 3538 "calclex.ml" 105 3509 3551
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 105 3509 3523 "calclex.ml" 105 3509 3551
+type(
+  token list
+)
+"calclex.ml" 106 3552 3559 "calclex.ml" 106 3552 3562
+type(
+  char
+)
+"calclex.ml" 106 3552 3566 "calclex.ml" 106 3552 3575
+type(
+  token
+)
+"calclex.ml" 106 3552 3580 "calclex.ml" 106 3552 3583
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 106 3552 3585 "calclex.ml" 106 3552 3588
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 106 3552 3588 "calclex.ml" 106 3552 3589
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 106 3552 3589 "calclex.ml" 106 3552 3590
+type(
+  int
+)
+"calclex.ml" 106 3552 3584 "calclex.ml" 106 3552 3591
+type(
+  int
+)
+"calclex.ml" 106 3552 3579 "calclex.ml" 106 3552 3592
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 106 3552 3566 "calclex.ml" 106 3552 3592
+type(
+  token list
+)
+"calclex.ml" 107 3593 3600 "calclex.ml" 107 3593 3603
+type(
+  char
+)
+"calclex.ml" 107 3593 3607 "calclex.ml" 107 3593 3610
+type(
+  token
+)
+"calclex.ml" 107 3593 3615 "calclex.ml" 107 3593 3618
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 107 3593 3620 "calclex.ml" 107 3593 3623
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 107 3593 3623 "calclex.ml" 107 3593 3624
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 107 3593 3624 "calclex.ml" 107 3593 3625
+type(
+  int
+)
+"calclex.ml" 107 3593 3619 "calclex.ml" 107 3593 3626
+type(
+  int
+)
+"calclex.ml" 107 3593 3614 "calclex.ml" 107 3593 3627
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 107 3593 3607 "calclex.ml" 107 3593 3627
+type(
+  token list
+)
+"calclex.ml" 108 3628 3635 "calclex.ml" 108 3628 3638
+type(
+  char
+)
+"calclex.ml" 108 3628 3642 "calclex.ml" 108 3628 3645
+type(
+  token
+)
+"calclex.ml" 108 3628 3650 "calclex.ml" 108 3628 3653
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 108 3628 3655 "calclex.ml" 108 3628 3658
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 108 3628 3658 "calclex.ml" 108 3628 3659
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"calclex.ml" 108 3628 3659 "calclex.ml" 108 3628 3660
+type(
+  int
+)
+"calclex.ml" 108 3628 3654 "calclex.ml" 108 3628 3661
+type(
+  int
+)
+"calclex.ml" 108 3628 3649 "calclex.ml" 108 3628 3662
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 108 3628 3642 "calclex.ml" 108 3628 3662
+type(
+  token list
+)
+"calclex.ml" 110 3664 3672 "calclex.ml" 110 3664 3673
+type(
+  char
+)
+ident(
+  def d "calclex.ml" 110 3664 3679 "calclex.ml" 117 4117 4153
+)
+"calclex.ml" 110 3664 3679 "calclex.ml" 110 3664 3687
+type(
+  char -> bool
+)
+ident(
+  int_ref is_digit "calclex.ml" 68 1941 1945 "calclex.ml" 68 1941 1953
+)
+"calclex.ml" 110 3664 3688 "calclex.ml" 110 3664 3689
+type(
+  char
+)
+ident(
+  int_ref d "calclex.ml" 110 3664 3672 "calclex.ml" 110 3664 3673
+)
+"calclex.ml" 110 3664 3679 "calclex.ml" 110 3664 3689
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+type(
+  int ref
+)
+ident(
+  def stop "calclex.ml" 112 3850 3859 "calclex.ml" 117 4117 4153
+)
+"calclex.ml" 111 3743 3763 "calclex.ml" 111 3743 3766
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 111 3743 3767 "calclex.ml" 111 3743 3770
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 111 3743 3763 "calclex.ml" 111 3743 3770
+type(
+  int ref
+)
+"calclex.ml" 112 3850 3865 "calclex.ml" 112 3850 3866
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 112 3850 3866 "calclex.ml" 112 3850 3870
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+)
+"calclex.ml" 112 3850 3865 "calclex.ml" 112 3850 3870
+type(
+  int
+)
+"calclex.ml" 112 3850 3871 "calclex.ml" 112 3850 3872
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"calclex.ml" 112 3850 3873 "calclex.ml" 112 3850 3876
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 89 2492 2498 "calclex.ml" 89 2492 2501
+)
+"calclex.ml" 112 3850 3865 "calclex.ml" 112 3850 3876
+type(
+  bool
+)
+"calclex.ml" 112 3850 3877 "calclex.ml" 112 3850 3879
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"calclex.ml" 112 3850 3880 "calclex.ml" 112 3850 3888
+type(
+  char -> bool
+)
+ident(
+  int_ref is_digit "calclex.ml" 68 1941 1945 "calclex.ml" 68 1941 1953
+)
+"calclex.ml" 112 3850 3889 "calclex.ml" 112 3850 3895
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 112 3850 3897 "calclex.ml" 112 3850 3898
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 112 3850 3898 "calclex.ml" 112 3850 3902
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+)
+"calclex.ml" 112 3850 3897 "calclex.ml" 112 3850 3902
+type(
+  int
+)
+"calclex.ml" 112 3850 3889 "calclex.ml" 112 3850 3903
+type(
+  char
+)
+"calclex.ml" 112 3850 3880 "calclex.ml" 112 3850 3903
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 112 3850 3865 "calclex.ml" 112 3850 3903
+type(
+  bool
+)
+"calclex.ml" 113 3907 3918 "calclex.ml" 113 3907 3922
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 113 3907 3923 "calclex.ml" 113 3907 3927
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+)
+"calclex.ml" 113 3907 3918 "calclex.ml" 113 3907 3928
+type(
+  unit
+)
+"calclex.ml" 112 3850 3859 "calclex.ml" 114 3929 3942
+type(
+  unit
+)
+"calclex.ml" 115 3944 3957 "calclex.ml" 115 3944 3963
+type(
+  string
+)
+ident(
+  def numstr "calclex.ml" 116 4032 4041 "calclex.ml" 117 4117 4153
+)
+"calclex.ml" 115 3944 3966 "calclex.ml" 115 3944 3976
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"calclex.ml" 115 3944 3977 "calclex.ml" 115 3944 3983
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 115 3944 3984 "calclex.ml" 115 3944 3987
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 115 3944 3989 "calclex.ml" 115 3944 3990
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 115 3944 3990 "calclex.ml" 115 3944 3994
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+)
+"calclex.ml" 115 3944 3989 "calclex.ml" 115 3944 3994
+type(
+  int
+)
+"calclex.ml" 115 3944 3995 "calclex.ml" 115 3944 3996
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"calclex.ml" 115 3944 3997 "calclex.ml" 115 3944 4000
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 115 3944 3988 "calclex.ml" 115 3944 4001
+type(
+  int
+)
+"calclex.ml" 115 3944 3966 "calclex.ml" 115 3944 4001
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 116 4032 4045 "calclex.ml" 116 4032 4048
+type(
+  int
+)
+ident(
+  def num "calclex.ml" 117 4117 4126 "calclex.ml" 117 4117 4153
+)
+"calclex.ml" 116 4032 4051 "calclex.ml" 116 4032 4064
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"calclex.ml" 116 4032 4065 "calclex.ml" 116 4032 4071
+type(
+  string
+)
+ident(
+  int_ref numstr "calclex.ml" 115 3944 3957 "calclex.ml" 115 3944 3963
+)
+"calclex.ml" 116 4032 4051 "calclex.ml" 116 4032 4071
+type(
+  int
+)
+"calclex.ml" 117 4117 4134 "calclex.ml" 117 4117 4137
+type(
+  int
+)
+ident(
+  int_ref num "calclex.ml" 116 4032 4045 "calclex.ml" 116 4032 4048
+)
+"calclex.ml" 117 4117 4126 "calclex.ml" 117 4117 4138
+type(
+  token
+)
+"calclex.ml" 117 4117 4143 "calclex.ml" 117 4117 4146
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 117 4117 4147 "calclex.ml" 117 4117 4148
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 117 4117 4148 "calclex.ml" 117 4117 4152
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 111 3743 3756 "calclex.ml" 111 3743 3760
+)
+"calclex.ml" 117 4117 4147 "calclex.ml" 117 4117 4152
+type(
+  int
+)
+"calclex.ml" 117 4117 4142 "calclex.ml" 117 4117 4153
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 117 4117 4126 "calclex.ml" 117 4117 4153
+type(
+  token list
+)
+"calclex.ml" 116 4032 4041 "calclex.ml" 117 4117 4153
+type(
+  token list
+)
+"calclex.ml" 115 3944 3953 "calclex.ml" 117 4117 4153
+type(
+  token list
+)
+"calclex.ml" 112 3850 3859 "calclex.ml" 117 4117 4153
+type(
+  token list
+)
+"calclex.ml" 111 3743 3752 "calclex.ml" 117 4117 4153
+type(
+  token list
+)
+"calclex.ml" 118 4219 4227 "calclex.ml" 118 4219 4228
+type(
+  char
+)
+ident(
+  def a "calclex.ml" 118 4219 4234 "calclex.ml" 138 4991 5018
+)
+"calclex.ml" 118 4219 4234 "calclex.ml" 118 4219 4243
+type(
+  char -> bool
+)
+ident(
+  int_ref is_letter "calclex.ml" 75 2110 2114 "calclex.ml" 75 2110 2123
+)
+"calclex.ml" 118 4219 4244 "calclex.ml" 118 4219 4245
+type(
+  char
+)
+ident(
+  int_ref a "calclex.ml" 118 4219 4227 "calclex.ml" 118 4219 4228
+)
+"calclex.ml" 118 4219 4234 "calclex.ml" 118 4219 4245
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+type(
+  int ref
+)
+ident(
+  def stop "calclex.ml" 120 4407 4416 "calclex.ml" 138 4991 5018
+)
+"calclex.ml" 119 4299 4319 "calclex.ml" 119 4299 4322
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 119 4299 4323 "calclex.ml" 119 4299 4326
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 119 4299 4319 "calclex.ml" 119 4299 4326
+type(
+  int ref
+)
+"calclex.ml" 120 4407 4422 "calclex.ml" 120 4407 4423
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 120 4407 4423 "calclex.ml" 120 4407 4427
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+)
+"calclex.ml" 120 4407 4422 "calclex.ml" 120 4407 4427
+type(
+  int
+)
+"calclex.ml" 120 4407 4428 "calclex.ml" 120 4407 4429
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"calclex.ml" 120 4407 4430 "calclex.ml" 120 4407 4433
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 89 2492 2498 "calclex.ml" 89 2492 2501
+)
+"calclex.ml" 120 4407 4422 "calclex.ml" 120 4407 4433
+type(
+  bool
+)
+"calclex.ml" 120 4407 4434 "calclex.ml" 120 4407 4436
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"calclex.ml" 120 4407 4437 "calclex.ml" 120 4407 4446
+type(
+  char -> bool
+)
+ident(
+  int_ref is_letter "calclex.ml" 75 2110 2114 "calclex.ml" 75 2110 2123
+)
+"calclex.ml" 120 4407 4447 "calclex.ml" 120 4407 4453
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 120 4407 4455 "calclex.ml" 120 4407 4456
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 120 4407 4456 "calclex.ml" 120 4407 4460
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+)
+"calclex.ml" 120 4407 4455 "calclex.ml" 120 4407 4460
+type(
+  int
+)
+"calclex.ml" 120 4407 4447 "calclex.ml" 120 4407 4461
+type(
+  char
+)
+"calclex.ml" 120 4407 4437 "calclex.ml" 120 4407 4461
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 120 4407 4422 "calclex.ml" 120 4407 4461
+type(
+  bool
+)
+"calclex.ml" 121 4465 4476 "calclex.ml" 121 4465 4480
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 121 4465 4481 "calclex.ml" 121 4465 4485
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+)
+"calclex.ml" 121 4465 4476 "calclex.ml" 121 4465 4486
+type(
+  unit
+)
+"calclex.ml" 120 4407 4416 "calclex.ml" 122 4487 4500
+type(
+  unit
+)
+"calclex.ml" 123 4502 4515 "calclex.ml" 123 4502 4520
+type(
+  string
+)
+ident(
+  def ident "calclex.ml" 124 4597 4606 "calclex.ml" 138 4991 5018
+)
+"calclex.ml" 123 4502 4523 "calclex.ml" 123 4502 4533
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"calclex.ml" 123 4502 4534 "calclex.ml" 123 4502 4540
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 123 4502 4541 "calclex.ml" 123 4502 4544
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 123 4502 4546 "calclex.ml" 123 4502 4547
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 123 4502 4547 "calclex.ml" 123 4502 4551
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+)
+"calclex.ml" 123 4502 4546 "calclex.ml" 123 4502 4551
+type(
+  int
+)
+"calclex.ml" 123 4502 4552 "calclex.ml" 123 4502 4553
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"calclex.ml" 123 4502 4554 "calclex.ml" 123 4502 4557
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 123 4502 4545 "calclex.ml" 123 4502 4558
+type(
+  int
+)
+"calclex.ml" 123 4502 4523 "calclex.ml" 123 4502 4558
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 124 4597 4610 "calclex.ml" 124 4597 4613
+type(
+  token
+)
+ident(
+  def tok "calclex.ml" 138 4991 5000 "calclex.ml" 138 4991 5018
+)
+"calclex.ml" 125 4616 4633 "calclex.ml" 125 4616 4638
+type(
+  string
+)
+ident(
+  int_ref ident "calclex.ml" 123 4502 4515 "calclex.ml" 123 4502 4520
+)
+"calclex.ml" 126 4644 4657 "calclex.ml" 126 4644 4662
+type(
+  string
+)
+"calclex.ml" 126 4644 4668 "calclex.ml" 126 4644 4671
+type(
+  token
+)
+"calclex.ml" 127 4672 4685 "calclex.ml" 127 4672 4690
+type(
+  string
+)
+"calclex.ml" 127 4672 4696 "calclex.ml" 127 4672 4699
+type(
+  token
+)
+"calclex.ml" 128 4700 4713 "calclex.ml" 128 4700 4717
+type(
+  string
+)
+"calclex.ml" 128 4700 4724 "calclex.ml" 128 4700 4726
+type(
+  token
+)
+"calclex.ml" 129 4727 4740 "calclex.ml" 129 4727 4746
+type(
+  string
+)
+"calclex.ml" 129 4727 4759 "calclex.ml" 129 4727 4763
+type(
+  bool
+)
+"calclex.ml" 129 4727 4751 "calclex.ml" 129 4727 4763
+type(
+  token
+)
+"calclex.ml" 130 4764 4777 "calclex.ml" 130 4764 4784
+type(
+  string
+)
+"calclex.ml" 130 4764 4796 "calclex.ml" 130 4764 4801
+type(
+  bool
+)
+"calclex.ml" 130 4764 4788 "calclex.ml" 130 4764 4801
+type(
+  token
+)
+"calclex.ml" 131 4802 4815 "calclex.ml" 131 4802 4819
+type(
+  string
+)
+"calclex.ml" 131 4802 4826 "calclex.ml" 131 4802 4828
+type(
+  token
+)
+"calclex.ml" 132 4829 4842 "calclex.ml" 132 4829 4848
+type(
+  string
+)
+"calclex.ml" 132 4829 4853 "calclex.ml" 132 4829 4857
+type(
+  token
+)
+"calclex.ml" 133 4858 4871 "calclex.ml" 133 4858 4877
+type(
+  string
+)
+"calclex.ml" 133 4858 4882 "calclex.ml" 133 4858 4886
+type(
+  token
+)
+"calclex.ml" 134 4887 4900 "calclex.ml" 134 4887 4905
+type(
+  string
+)
+"calclex.ml" 134 4887 4911 "calclex.ml" 134 4887 4917
+type(
+  token
+)
+"calclex.ml" 135 4918 4931 "calclex.ml" 135 4918 4935
+type(
+  string
+)
+"calclex.ml" 135 4918 4942 "calclex.ml" 135 4918 4947
+type(
+  token
+)
+"calclex.ml" 136 4948 4961 "calclex.ml" 136 4948 4962
+type(
+  string
+)
+"calclex.ml" 136 4948 4971 "calclex.ml" 136 4948 4978
+type(
+  string
+)
+ident(
+  int_ref ident "calclex.ml" 123 4502 4515 "calclex.ml" 123 4502 4520
+)
+"calclex.ml" 136 4948 4966 "calclex.ml" 136 4948 4978
+type(
+  token
+)
+"calclex.ml" 125 4616 4627 "calclex.ml" 136 4948 4978
+type(
+  token
+)
+"calclex.ml" 138 4991 5000 "calclex.ml" 138 4991 5003
+type(
+  token
+)
+ident(
+  int_ref tok "calclex.ml" 124 4597 4610 "calclex.ml" 124 4597 4613
+)
+"calclex.ml" 138 4991 5008 "calclex.ml" 138 4991 5011
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 138 4991 5012 "calclex.ml" 138 4991 5013
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 138 4991 5013 "calclex.ml" 138 4991 5017
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 119 4299 4312 "calclex.ml" 119 4299 4316
+)
+"calclex.ml" 138 4991 5012 "calclex.ml" 138 4991 5017
+type(
+  int
+)
+"calclex.ml" 138 4991 5007 "calclex.ml" 138 4991 5018
+call(
+  stack
+)
+type(
+  token list
+)
+"calclex.ml" 138 4991 5000 "calclex.ml" 138 4991 5018
+type(
+  token list
+)
+"calclex.ml" 124 4597 4606 "calclex.ml" 138 4991 5018
+type(
+  token list
+)
+"calclex.ml" 123 4502 4511 "calclex.ml" 138 4991 5018
+type(
+  token list
+)
+"calclex.ml" 120 4407 4416 "calclex.ml" 138 4991 5018
+type(
+  token list
+)
+"calclex.ml" 119 4299 4308 "calclex.ml" 138 4991 5018
+type(
+  token list
+)
+"calclex.ml" 139 5093 5101 "calclex.ml" 139 5093 5102
+type(
+  char
+)
+"calclex.ml" 140 5198 5211 "calclex.ml" 140 5198 5214
+type(
+  string
+)
+ident(
+  def msg "calclex.ml" 141 5313 5322 "calclex.ml" 141 5313 5343
+)
+"calclex.ml" 140 5198 5217 "calclex.ml" 140 5198 5224
+type(
+  (char -> int -> string -> string, unit, string) format ->
+  char -> int -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 140 5198 5225 "calclex.ml" 140 5198 5285
+type(
+  (char -> int -> string -> string, unit, string) format
+)
+"calclex.ml" 140 5198 5286 "calclex.ml" 140 5198 5292
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 140 5198 5294 "calclex.ml" 140 5198 5297
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 140 5198 5286 "calclex.ml" 140 5198 5298
+type(
+  char
+)
+"calclex.ml" 140 5198 5299 "calclex.ml" 140 5198 5302
+type(
+  int
+)
+ident(
+  int_ref pos "calclex.ml" 90 2528 2542 "calclex.ml" 90 2528 2545
+)
+"calclex.ml" 140 5198 5303 "calclex.ml" 140 5198 5309
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 88 2468 2483 "calclex.ml" 88 2468 2489
+)
+"calclex.ml" 140 5198 5217 "calclex.ml" 140 5198 5309
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 141 5313 5322 "calclex.ml" 141 5313 5327
+type(
+  exn -> token list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"calclex.ml" 141 5313 5338 "calclex.ml" 141 5313 5341
+type(
+  string
+)
+ident(
+  int_ref msg "calclex.ml" 140 5198 5211 "calclex.ml" 140 5198 5214
+)
+"calclex.ml" 141 5313 5337 "calclex.ml" 141 5313 5342
+type(
+  LexError
+)
+"calclex.ml" 141 5313 5328 "calclex.ml" 141 5313 5343
+type(
+  exn
+)
+"calclex.ml" 141 5313 5322 "calclex.ml" 141 5313 5343
+type(
+  token list
+)
+"calclex.ml" 140 5198 5207 "calclex.ml" 141 5313 5343
+type(
+  token list
+)
+"calclex.ml" 94 2858 2864 "calclex.ml" 141 5313 5343
+type(
+  token list
+)
+"calclex.ml" 91 2612 2616 "calclex.ml" 141 5313 5343
+type(
+  token list
+)
+"calclex.ml" 143 5422 5424 "calclex.ml" 143 5422 5427
+type(
+  int -> token list
+)
+ident(
+  int_ref lex "calclex.ml" 90 2528 2538 "calclex.ml" 90 2528 2541
+)
+"calclex.ml" 143 5422 5428 "calclex.ml" 143 5422 5429
+type(
+  int
+)
+"calclex.ml" 143 5422 5424 "calclex.ml" 143 5422 5429
+call(
+  tail
+)
+type(
+  token list
+)
+"calclex.ml" 90 2528 2530 "calclex.ml" 143 5422 5429
+type(
+  token list
+)
+"calclex.ml" 89 2492 2494 "calclex.ml" 143 5422 5429
+type(
+  token list
+)
+"calclex.ml" 146 5505 5509 "calclex.ml" 146 5505 5519
+type(
+  string -> token Stream.t
+)
+ident(
+  def lex_stream "calclex.ml" 202 7337 7355 "calclex.ml" 1 0 -1
+)
+"calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+type(
+  string
+)
+ident(
+  def string "calclex.ml" 147 5529 5532 "calclex.ml" 202 7337 7355
+)
+"calclex.ml" 147 5529 5536 "calclex.ml" 147 5529 5539
+type(
+  int
+)
+ident(
+  def len "calclex.ml" 148 5566 5569 "calclex.ml" 202 7337 7355
+)
+"calclex.ml" 147 5529 5542 "calclex.ml" 147 5529 5555
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"calclex.ml" 147 5529 5556 "calclex.ml" 147 5529 5562
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 147 5529 5542 "calclex.ml" 147 5529 5562
+type(
+  int
+)
+"calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+type(
+  int ref
+)
+ident(
+  def pos "calclex.ml" 149 5588 5591 "calclex.ml" 202 7337 7355
+)
+"calclex.ml" 148 5566 5579 "calclex.ml" 148 5566 5582
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 148 5566 5583 "calclex.ml" 148 5566 5584
+type(
+  int
+)
+"calclex.ml" 148 5566 5579 "calclex.ml" 148 5566 5584
+type(
+  int ref
+)
+"calclex.ml" 149 5588 5599 "calclex.ml" 149 5588 5602
+type(
+  'a -> token option
+)
+ident(
+  def lex "calclex.ml" 149 5588 5591 "calclex.ml" 202 7337 7355
+)
+"calclex.ml" 149 5588 5603 "calclex.ml" 149 5588 5604
+type(
+  'a
+)
+ident(
+  def i "calclex.ml" 150 5607 5612 "calclex.ml" 200 7299 7330
+)
+"calclex.ml" 150 5607 5615 "calclex.ml" 150 5607 5616
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 150 5607 5616 "calclex.ml" 150 5607 5619
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 150 5607 5615 "calclex.ml" 150 5607 5619
+type(
+  int
+)
+"calclex.ml" 150 5607 5620 "calclex.ml" 150 5607 5622
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"calclex.ml" 150 5607 5623 "calclex.ml" 150 5607 5626
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 147 5529 5536 "calclex.ml" 147 5529 5539
+)
+"calclex.ml" 150 5607 5615 "calclex.ml" 150 5607 5626
+type(
+  bool
+)
+"calclex.ml" 151 5632 5639 "calclex.ml" 151 5632 5643
+type(
+  token option
+)
+"calclex.ml" 153 5654 5667 "calclex.ml" 153 5654 5673
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 153 5654 5675 "calclex.ml" 153 5654 5676
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 153 5654 5676 "calclex.ml" 153 5654 5679
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 153 5654 5675 "calclex.ml" 153 5654 5679
+type(
+  int
+)
+"calclex.ml" 153 5654 5667 "calclex.ml" 153 5654 5680
+type(
+  char
+)
+"calclex.ml" 154 5686 5694 "calclex.ml" 154 5686 5697
+type(
+  char
+)
+"calclex.ml" 154 5686 5700 "calclex.ml" 154 5686 5704
+type(
+  char
+)
+"calclex.ml" 154 5686 5694 "calclex.ml" 154 5686 5704
+type(
+  char
+)
+"calclex.ml" 154 5686 5707 "calclex.ml" 154 5686 5711
+type(
+  char
+)
+"calclex.ml" 154 5686 5694 "calclex.ml" 154 5686 5711
+type(
+  char
+)
+"calclex.ml" 154 5686 5715 "calclex.ml" 154 5686 5719
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 154 5686 5720 "calclex.ml" 154 5686 5723
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 154 5686 5715 "calclex.ml" 154 5686 5723
+type(
+  unit
+)
+"calclex.ml" 154 5686 5725 "calclex.ml" 154 5686 5728
+type(
+  'a -> token option
+)
+ident(
+  int_ref lex "calclex.ml" 149 5588 5599 "calclex.ml" 149 5588 5602
+)
+"calclex.ml" 154 5686 5729 "calclex.ml" 154 5686 5730
+type(
+  'a
+)
+ident(
+  int_ref i "calclex.ml" 149 5588 5603 "calclex.ml" 149 5588 5604
+)
+"calclex.ml" 154 5686 5725 "calclex.ml" 154 5686 5730
+call(
+  tail
+)
+type(
+  token option
+)
+"calclex.ml" 154 5686 5715 "calclex.ml" 154 5686 5730
+type(
+  token option
+)
+"calclex.ml" 155 5731 5739 "calclex.ml" 155 5731 5742
+type(
+  char
+)
+"calclex.ml" 155 5731 5746 "calclex.ml" 155 5731 5750
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 155 5731 5751 "calclex.ml" 155 5731 5754
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 155 5731 5746 "calclex.ml" 155 5731 5754
+type(
+  unit
+)
+"calclex.ml" 155 5731 5761 "calclex.ml" 155 5731 5765
+type(
+  token
+)
+"calclex.ml" 155 5731 5756 "calclex.ml" 155 5731 5765
+type(
+  token option
+)
+"calclex.ml" 155 5731 5746 "calclex.ml" 155 5731 5765
+type(
+  token option
+)
+"calclex.ml" 156 5766 5774 "calclex.ml" 156 5766 5777
+type(
+  char
+)
+"calclex.ml" 156 5766 5781 "calclex.ml" 156 5766 5785
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 156 5766 5786 "calclex.ml" 156 5766 5789
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 156 5766 5781 "calclex.ml" 156 5766 5789
+type(
+  unit
+)
+"calclex.ml" 156 5766 5796 "calclex.ml" 156 5766 5801
+type(
+  token
+)
+"calclex.ml" 156 5766 5791 "calclex.ml" 156 5766 5801
+type(
+  token option
+)
+"calclex.ml" 156 5766 5781 "calclex.ml" 156 5766 5801
+type(
+  token option
+)
+"calclex.ml" 157 5802 5810 "calclex.ml" 157 5802 5813
+type(
+  char
+)
+"calclex.ml" 157 5802 5817 "calclex.ml" 157 5802 5821
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 157 5802 5822 "calclex.ml" 157 5802 5825
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 157 5802 5817 "calclex.ml" 157 5802 5825
+type(
+  unit
+)
+"calclex.ml" 157 5802 5832 "calclex.ml" 157 5802 5837
+type(
+  token
+)
+"calclex.ml" 157 5802 5827 "calclex.ml" 157 5802 5837
+type(
+  token option
+)
+"calclex.ml" 157 5802 5817 "calclex.ml" 157 5802 5837
+type(
+  token option
+)
+"calclex.ml" 158 5838 5846 "calclex.ml" 158 5838 5849
+type(
+  char
+)
+"calclex.ml" 158 5838 5853 "calclex.ml" 158 5838 5857
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 158 5838 5858 "calclex.ml" 158 5838 5861
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 158 5838 5853 "calclex.ml" 158 5838 5861
+type(
+  unit
+)
+"calclex.ml" 158 5838 5868 "calclex.ml" 158 5838 5873
+type(
+  token
+)
+"calclex.ml" 158 5838 5863 "calclex.ml" 158 5838 5873
+type(
+  token option
+)
+"calclex.ml" 158 5838 5853 "calclex.ml" 158 5838 5873
+type(
+  token option
+)
+"calclex.ml" 159 5874 5882 "calclex.ml" 159 5874 5885
+type(
+  char
+)
+"calclex.ml" 159 5874 5889 "calclex.ml" 159 5874 5893
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 159 5874 5894 "calclex.ml" 159 5874 5897
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 159 5874 5889 "calclex.ml" 159 5874 5897
+type(
+  unit
+)
+"calclex.ml" 159 5874 5904 "calclex.ml" 159 5874 5907
+type(
+  token
+)
+"calclex.ml" 159 5874 5899 "calclex.ml" 159 5874 5907
+type(
+  token option
+)
+"calclex.ml" 159 5874 5889 "calclex.ml" 159 5874 5907
+type(
+  token option
+)
+"calclex.ml" 160 5908 5916 "calclex.ml" 160 5908 5919
+type(
+  char
+)
+"calclex.ml" 160 5908 5923 "calclex.ml" 160 5908 5927
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 160 5908 5928 "calclex.ml" 160 5908 5931
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 160 5908 5923 "calclex.ml" 160 5908 5931
+type(
+  unit
+)
+"calclex.ml" 160 5908 5938 "calclex.ml" 160 5908 5946
+type(
+  token
+)
+"calclex.ml" 160 5908 5933 "calclex.ml" 160 5908 5946
+type(
+  token option
+)
+"calclex.ml" 160 5908 5923 "calclex.ml" 160 5908 5946
+type(
+  token option
+)
+"calclex.ml" 161 5947 5955 "calclex.ml" 161 5947 5958
+type(
+  char
+)
+"calclex.ml" 161 5947 5962 "calclex.ml" 161 5947 5966
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 161 5947 5967 "calclex.ml" 161 5947 5970
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 161 5947 5962 "calclex.ml" 161 5947 5970
+type(
+  unit
+)
+"calclex.ml" 161 5947 5977 "calclex.ml" 161 5947 5986
+type(
+  token
+)
+"calclex.ml" 161 5947 5972 "calclex.ml" 161 5947 5986
+type(
+  token option
+)
+"calclex.ml" 161 5947 5962 "calclex.ml" 161 5947 5986
+type(
+  token option
+)
+"calclex.ml" 162 5987 5995 "calclex.ml" 162 5987 5998
+type(
+  char
+)
+"calclex.ml" 162 5987 6002 "calclex.ml" 162 5987 6006
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 162 5987 6007 "calclex.ml" 162 5987 6010
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 162 5987 6002 "calclex.ml" 162 5987 6010
+type(
+  unit
+)
+"calclex.ml" 162 5987 6017 "calclex.ml" 162 5987 6019
+type(
+  token
+)
+"calclex.ml" 162 5987 6012 "calclex.ml" 162 5987 6019
+type(
+  token option
+)
+"calclex.ml" 162 5987 6002 "calclex.ml" 162 5987 6019
+type(
+  token option
+)
+"calclex.ml" 163 6020 6028 "calclex.ml" 163 6020 6031
+type(
+  char
+)
+"calclex.ml" 163 6020 6035 "calclex.ml" 163 6020 6039
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 163 6020 6040 "calclex.ml" 163 6020 6043
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 163 6020 6035 "calclex.ml" 163 6020 6043
+type(
+  unit
+)
+"calclex.ml" 163 6020 6050 "calclex.ml" 163 6020 6055
+type(
+  token
+)
+"calclex.ml" 163 6020 6045 "calclex.ml" 163 6020 6055
+type(
+  token option
+)
+"calclex.ml" 163 6020 6035 "calclex.ml" 163 6020 6055
+type(
+  token option
+)
+"calclex.ml" 164 6056 6064 "calclex.ml" 164 6056 6067
+type(
+  char
+)
+"calclex.ml" 164 6056 6071 "calclex.ml" 164 6056 6075
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 164 6056 6076 "calclex.ml" 164 6056 6079
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 164 6056 6071 "calclex.ml" 164 6056 6079
+type(
+  unit
+)
+"calclex.ml" 164 6056 6086 "calclex.ml" 164 6056 6092
+type(
+  token
+)
+"calclex.ml" 164 6056 6081 "calclex.ml" 164 6056 6092
+type(
+  token option
+)
+"calclex.ml" 164 6056 6071 "calclex.ml" 164 6056 6092
+type(
+  token option
+)
+"calclex.ml" 165 6093 6101 "calclex.ml" 165 6093 6104
+type(
+  char
+)
+"calclex.ml" 165 6093 6108 "calclex.ml" 165 6093 6112
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 165 6093 6113 "calclex.ml" 165 6093 6116
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 165 6093 6108 "calclex.ml" 165 6093 6116
+type(
+  unit
+)
+"calclex.ml" 165 6093 6123 "calclex.ml" 165 6093 6129
+type(
+  token
+)
+"calclex.ml" 165 6093 6118 "calclex.ml" 165 6093 6129
+type(
+  token option
+)
+"calclex.ml" 165 6093 6108 "calclex.ml" 165 6093 6129
+type(
+  token option
+)
+"calclex.ml" 166 6130 6138 "calclex.ml" 166 6130 6141
+type(
+  char
+)
+"calclex.ml" 166 6130 6145 "calclex.ml" 166 6130 6149
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 166 6130 6150 "calclex.ml" 166 6130 6153
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 166 6130 6145 "calclex.ml" 166 6130 6153
+type(
+  unit
+)
+"calclex.ml" 166 6130 6160 "calclex.ml" 166 6130 6169
+type(
+  token
+)
+"calclex.ml" 166 6130 6155 "calclex.ml" 166 6130 6169
+type(
+  token option
+)
+"calclex.ml" 166 6130 6145 "calclex.ml" 166 6130 6169
+type(
+  token option
+)
+"calclex.ml" 167 6170 6179 "calclex.ml" 167 6170 6180
+type(
+  char
+)
+ident(
+  def d "calclex.ml" 167 6170 6186 "calclex.ml" 175 6462 6489
+)
+"calclex.ml" 167 6170 6186 "calclex.ml" 167 6170 6194
+type(
+  char -> bool
+)
+ident(
+  int_ref is_digit "calclex.ml" 68 1941 1945 "calclex.ml" 68 1941 1953
+)
+"calclex.ml" 167 6170 6195 "calclex.ml" 167 6170 6196
+type(
+  char
+)
+ident(
+  int_ref d "calclex.ml" 167 6170 6179 "calclex.ml" 167 6170 6180
+)
+"calclex.ml" 167 6170 6186 "calclex.ml" 167 6170 6196
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+type(
+  int ref
+)
+ident(
+  def stop "calclex.ml" 169 6233 6243 "calclex.ml" 175 6462 6489
+)
+"calclex.ml" 168 6200 6221 "calclex.ml" 168 6200 6224
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 168 6200 6225 "calclex.ml" 168 6200 6226
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 168 6200 6226 "calclex.ml" 168 6200 6229
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 168 6200 6225 "calclex.ml" 168 6200 6229
+type(
+  int
+)
+"calclex.ml" 168 6200 6221 "calclex.ml" 168 6200 6229
+type(
+  int ref
+)
+"calclex.ml" 169 6233 6249 "calclex.ml" 169 6233 6250
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 169 6233 6250 "calclex.ml" 169 6233 6254
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+)
+"calclex.ml" 169 6233 6249 "calclex.ml" 169 6233 6254
+type(
+  int
+)
+"calclex.ml" 169 6233 6255 "calclex.ml" 169 6233 6256
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"calclex.ml" 169 6233 6257 "calclex.ml" 169 6233 6260
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 147 5529 5536 "calclex.ml" 147 5529 5539
+)
+"calclex.ml" 169 6233 6249 "calclex.ml" 169 6233 6260
+type(
+  bool
+)
+"calclex.ml" 169 6233 6261 "calclex.ml" 169 6233 6263
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"calclex.ml" 169 6233 6264 "calclex.ml" 169 6233 6272
+type(
+  char -> bool
+)
+ident(
+  int_ref is_digit "calclex.ml" 68 1941 1945 "calclex.ml" 68 1941 1953
+)
+"calclex.ml" 169 6233 6273 "calclex.ml" 169 6233 6279
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 169 6233 6281 "calclex.ml" 169 6233 6282
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 169 6233 6282 "calclex.ml" 169 6233 6286
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+)
+"calclex.ml" 169 6233 6281 "calclex.ml" 169 6233 6286
+type(
+  int
+)
+"calclex.ml" 169 6233 6273 "calclex.ml" 169 6233 6287
+type(
+  char
+)
+"calclex.ml" 169 6233 6264 "calclex.ml" 169 6233 6287
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 169 6233 6249 "calclex.ml" 169 6233 6287
+type(
+  bool
+)
+"calclex.ml" 170 6291 6303 "calclex.ml" 170 6291 6307
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 170 6291 6308 "calclex.ml" 170 6291 6312
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+)
+"calclex.ml" 170 6291 6303 "calclex.ml" 170 6291 6313
+type(
+  unit
+)
+"calclex.ml" 169 6233 6243 "calclex.ml" 171 6314 6328
+type(
+  unit
+)
+"calclex.ml" 172 6330 6344 "calclex.ml" 172 6330 6350
+type(
+  string
+)
+ident(
+  def numstr "calclex.ml" 173 6394 6404 "calclex.ml" 175 6462 6489
+)
+"calclex.ml" 172 6330 6353 "calclex.ml" 172 6330 6363
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"calclex.ml" 172 6330 6364 "calclex.ml" 172 6330 6370
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 172 6330 6371 "calclex.ml" 172 6330 6372
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 172 6330 6372 "calclex.ml" 172 6330 6375
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 172 6330 6371 "calclex.ml" 172 6330 6375
+type(
+  int
+)
+"calclex.ml" 172 6330 6377 "calclex.ml" 172 6330 6378
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 172 6330 6378 "calclex.ml" 172 6330 6382
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+)
+"calclex.ml" 172 6330 6377 "calclex.ml" 172 6330 6382
+type(
+  int
+)
+"calclex.ml" 172 6330 6383 "calclex.ml" 172 6330 6384
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"calclex.ml" 172 6330 6385 "calclex.ml" 172 6330 6386
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 172 6330 6386 "calclex.ml" 172 6330 6389
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 172 6330 6385 "calclex.ml" 172 6330 6389
+type(
+  int
+)
+"calclex.ml" 172 6330 6376 "calclex.ml" 172 6330 6390
+type(
+  int
+)
+"calclex.ml" 172 6330 6353 "calclex.ml" 172 6330 6390
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 173 6394 6408 "calclex.ml" 173 6394 6411
+type(
+  int
+)
+ident(
+  def num "calclex.ml" 174 6438 6448 "calclex.ml" 175 6462 6489
+)
+"calclex.ml" 173 6394 6414 "calclex.ml" 173 6394 6427
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"calclex.ml" 173 6394 6428 "calclex.ml" 173 6394 6434
+type(
+  string
+)
+ident(
+  int_ref numstr "calclex.ml" 172 6330 6344 "calclex.ml" 172 6330 6350
+)
+"calclex.ml" 173 6394 6414 "calclex.ml" 173 6394 6434
+type(
+  int
+)
+"calclex.ml" 174 6438 6448 "calclex.ml" 174 6438 6451
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 174 6438 6452 "calclex.ml" 174 6438 6454
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calclex.ml" 174 6438 6455 "calclex.ml" 174 6438 6456
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 174 6438 6456 "calclex.ml" 174 6438 6460
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 168 6200 6214 "calclex.ml" 168 6200 6218
+)
+"calclex.ml" 174 6438 6455 "calclex.ml" 174 6438 6460
+type(
+  int
+)
+"calclex.ml" 174 6438 6448 "calclex.ml" 174 6438 6460
+type(
+  unit
+)
+"calclex.ml" 175 6462 6485 "calclex.ml" 175 6462 6488
+type(
+  int
+)
+ident(
+  int_ref num "calclex.ml" 173 6394 6408 "calclex.ml" 173 6394 6411
+)
+"calclex.ml" 175 6462 6477 "calclex.ml" 175 6462 6489
+type(
+  token
+)
+"calclex.ml" 175 6462 6472 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 174 6438 6448 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 173 6394 6404 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 172 6330 6340 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 169 6233 6243 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 168 6200 6210 "calclex.ml" 175 6462 6489
+type(
+  token option
+)
+"calclex.ml" 176 6490 6499 "calclex.ml" 176 6490 6500
+type(
+  char
+)
+ident(
+  def a "calclex.ml" 176 6490 6506 "calclex.ml" 197 7147 7166
+)
+"calclex.ml" 176 6490 6506 "calclex.ml" 176 6490 6515
+type(
+  char -> bool
+)
+ident(
+  int_ref is_letter "calclex.ml" 75 2110 2114 "calclex.ml" 75 2110 2123
+)
+"calclex.ml" 176 6490 6516 "calclex.ml" 176 6490 6517
+type(
+  char
+)
+ident(
+  int_ref a "calclex.ml" 176 6490 6499 "calclex.ml" 176 6490 6500
+)
+"calclex.ml" 176 6490 6506 "calclex.ml" 176 6490 6517
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+type(
+  int ref
+)
+ident(
+  def stop "calclex.ml" 178 6554 6564 "calclex.ml" 197 7147 7166
+)
+"calclex.ml" 177 6521 6542 "calclex.ml" 177 6521 6545
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"calclex.ml" 177 6521 6546 "calclex.ml" 177 6521 6547
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 177 6521 6547 "calclex.ml" 177 6521 6550
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 177 6521 6546 "calclex.ml" 177 6521 6550
+type(
+  int
+)
+"calclex.ml" 177 6521 6542 "calclex.ml" 177 6521 6550
+type(
+  int ref
+)
+"calclex.ml" 178 6554 6570 "calclex.ml" 178 6554 6571
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 178 6554 6571 "calclex.ml" 178 6554 6575
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+)
+"calclex.ml" 178 6554 6570 "calclex.ml" 178 6554 6575
+type(
+  int
+)
+"calclex.ml" 178 6554 6576 "calclex.ml" 178 6554 6577
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"calclex.ml" 178 6554 6578 "calclex.ml" 178 6554 6581
+type(
+  int
+)
+ident(
+  int_ref len "calclex.ml" 147 5529 5536 "calclex.ml" 147 5529 5539
+)
+"calclex.ml" 178 6554 6570 "calclex.ml" 178 6554 6581
+type(
+  bool
+)
+"calclex.ml" 178 6554 6582 "calclex.ml" 178 6554 6584
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"calclex.ml" 178 6554 6585 "calclex.ml" 178 6554 6594
+type(
+  char -> bool
+)
+ident(
+  int_ref is_letter "calclex.ml" 75 2110 2114 "calclex.ml" 75 2110 2123
+)
+"calclex.ml" 178 6554 6595 "calclex.ml" 178 6554 6601
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 178 6554 6603 "calclex.ml" 178 6554 6604
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 178 6554 6604 "calclex.ml" 178 6554 6608
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+)
+"calclex.ml" 178 6554 6603 "calclex.ml" 178 6554 6608
+type(
+  int
+)
+"calclex.ml" 178 6554 6595 "calclex.ml" 178 6554 6609
+type(
+  char
+)
+"calclex.ml" 178 6554 6585 "calclex.ml" 178 6554 6609
+call(
+  stack
+)
+type(
+  bool
+)
+"calclex.ml" 178 6554 6570 "calclex.ml" 178 6554 6609
+type(
+  bool
+)
+"calclex.ml" 179 6613 6625 "calclex.ml" 179 6613 6629
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"calclex.ml" 179 6613 6630 "calclex.ml" 179 6613 6634
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+)
+"calclex.ml" 179 6613 6625 "calclex.ml" 179 6613 6635
+type(
+  unit
+)
+"calclex.ml" 178 6554 6564 "calclex.ml" 180 6636 6650
+type(
+  unit
+)
+"calclex.ml" 181 6652 6666 "calclex.ml" 181 6652 6671
+type(
+  string
+)
+ident(
+  def ident "calclex.ml" 182 6715 6725 "calclex.ml" 197 7147 7166
+)
+"calclex.ml" 181 6652 6674 "calclex.ml" 181 6652 6684
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"calclex.ml" 181 6652 6685 "calclex.ml" 181 6652 6691
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 181 6652 6692 "calclex.ml" 181 6652 6693
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 181 6652 6693 "calclex.ml" 181 6652 6696
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 181 6652 6692 "calclex.ml" 181 6652 6696
+type(
+  int
+)
+"calclex.ml" 181 6652 6698 "calclex.ml" 181 6652 6699
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 181 6652 6699 "calclex.ml" 181 6652 6703
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+)
+"calclex.ml" 181 6652 6698 "calclex.ml" 181 6652 6703
+type(
+  int
+)
+"calclex.ml" 181 6652 6704 "calclex.ml" 181 6652 6705
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"calclex.ml" 181 6652 6706 "calclex.ml" 181 6652 6707
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 181 6652 6707 "calclex.ml" 181 6652 6710
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 181 6652 6706 "calclex.ml" 181 6652 6710
+type(
+  int
+)
+"calclex.ml" 181 6652 6697 "calclex.ml" 181 6652 6711
+type(
+  int
+)
+"calclex.ml" 181 6652 6674 "calclex.ml" 181 6652 6711
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 182 6715 6729 "calclex.ml" 182 6715 6732
+type(
+  token
+)
+ident(
+  def tok "calclex.ml" 196 7123 7133 "calclex.ml" 197 7147 7166
+)
+"calclex.ml" 183 6735 6753 "calclex.ml" 183 6735 6758
+type(
+  string
+)
+ident(
+  int_ref ident "calclex.ml" 181 6652 6666 "calclex.ml" 181 6652 6671
+)
+"calclex.ml" 184 6764 6778 "calclex.ml" 184 6764 6783
+type(
+  string
+)
+"calclex.ml" 184 6764 6789 "calclex.ml" 184 6764 6792
+type(
+  token
+)
+"calclex.ml" 185 6793 6807 "calclex.ml" 185 6793 6812
+type(
+  string
+)
+"calclex.ml" 185 6793 6818 "calclex.ml" 185 6793 6821
+type(
+  token
+)
+"calclex.ml" 186 6822 6836 "calclex.ml" 186 6822 6840
+type(
+  string
+)
+"calclex.ml" 186 6822 6847 "calclex.ml" 186 6822 6849
+type(
+  token
+)
+"calclex.ml" 187 6850 6864 "calclex.ml" 187 6850 6868
+type(
+  string
+)
+"calclex.ml" 187 6850 6875 "calclex.ml" 187 6850 6877
+type(
+  token
+)
+"calclex.ml" 188 6878 6892 "calclex.ml" 188 6878 6898
+type(
+  string
+)
+"calclex.ml" 188 6878 6903 "calclex.ml" 188 6878 6907
+type(
+  token
+)
+"calclex.ml" 189 6908 6922 "calclex.ml" 189 6908 6928
+type(
+  string
+)
+"calclex.ml" 189 6908 6933 "calclex.ml" 189 6908 6937
+type(
+  token
+)
+"calclex.ml" 190 6938 6952 "calclex.ml" 190 6938 6957
+type(
+  string
+)
+"calclex.ml" 190 6938 6963 "calclex.ml" 190 6938 6969
+type(
+  token
+)
+"calclex.ml" 191 6970 6984 "calclex.ml" 191 6970 6988
+type(
+  string
+)
+"calclex.ml" 191 6970 6995 "calclex.ml" 191 6970 7000
+type(
+  token
+)
+"calclex.ml" 192 7001 7015 "calclex.ml" 192 7001 7021
+type(
+  string
+)
+"calclex.ml" 192 7001 7034 "calclex.ml" 192 7001 7038
+type(
+  bool
+)
+"calclex.ml" 192 7001 7026 "calclex.ml" 192 7001 7038
+type(
+  token
+)
+"calclex.ml" 193 7039 7053 "calclex.ml" 193 7039 7060
+type(
+  string
+)
+"calclex.ml" 193 7039 7072 "calclex.ml" 193 7039 7077
+type(
+  bool
+)
+"calclex.ml" 193 7039 7064 "calclex.ml" 193 7039 7077
+type(
+  token
+)
+"calclex.ml" 194 7078 7092 "calclex.ml" 194 7078 7093
+type(
+  string
+)
+"calclex.ml" 194 7078 7102 "calclex.ml" 194 7078 7109
+type(
+  string
+)
+ident(
+  int_ref ident "calclex.ml" 181 6652 6666 "calclex.ml" 181 6652 6671
+)
+"calclex.ml" 194 7078 7097 "calclex.ml" 194 7078 7109
+type(
+  token
+)
+"calclex.ml" 183 6735 6747 "calclex.ml" 194 7078 7109
+type(
+  token
+)
+"calclex.ml" 196 7123 7133 "calclex.ml" 196 7123 7136
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 196 7123 7137 "calclex.ml" 196 7123 7139
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"calclex.ml" 196 7123 7140 "calclex.ml" 196 7123 7141
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 196 7123 7141 "calclex.ml" 196 7123 7145
+type(
+  int ref
+)
+ident(
+  int_ref stop "calclex.ml" 177 6521 6535 "calclex.ml" 177 6521 6539
+)
+"calclex.ml" 196 7123 7140 "calclex.ml" 196 7123 7145
+type(
+  int
+)
+"calclex.ml" 196 7123 7133 "calclex.ml" 196 7123 7145
+type(
+  unit
+)
+"calclex.ml" 197 7147 7161 "calclex.ml" 197 7147 7166
+type(
+  token
+)
+ident(
+  int_ref tok "calclex.ml" 182 6715 6729 "calclex.ml" 182 6715 6732
+)
+"calclex.ml" 197 7147 7157 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 196 7123 7133 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 182 6715 6725 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 181 6652 6662 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 178 6554 6564 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 177 6521 6531 "calclex.ml" 197 7147 7166
+type(
+  token option
+)
+"calclex.ml" 198 7167 7176 "calclex.ml" 198 7167 7177
+type(
+  char
+)
+"calclex.ml" 199 7181 7195 "calclex.ml" 199 7181 7198
+type(
+  string
+)
+ident(
+  def msg "calclex.ml" 200 7299 7309 "calclex.ml" 200 7299 7330
+)
+"calclex.ml" 199 7181 7201 "calclex.ml" 199 7181 7208
+type(
+  (char -> int -> string -> string, unit, string) format ->
+  char -> int -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"calclex.ml" 199 7181 7209 "calclex.ml" 199 7181 7269
+type(
+  (char -> int -> string -> string, unit, string) format
+)
+"calclex.ml" 199 7181 7270 "calclex.ml" 199 7181 7276
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 199 7181 7278 "calclex.ml" 199 7181 7279
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 199 7181 7279 "calclex.ml" 199 7181 7282
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 199 7181 7278 "calclex.ml" 199 7181 7282
+type(
+  int
+)
+"calclex.ml" 199 7181 7270 "calclex.ml" 199 7181 7283
+type(
+  char
+)
+"calclex.ml" 199 7181 7284 "calclex.ml" 199 7181 7285
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"calclex.ml" 199 7181 7285 "calclex.ml" 199 7181 7288
+type(
+  int ref
+)
+ident(
+  int_ref pos "calclex.ml" 148 5566 5573 "calclex.ml" 148 5566 5576
+)
+"calclex.ml" 199 7181 7284 "calclex.ml" 199 7181 7288
+type(
+  int
+)
+"calclex.ml" 199 7181 7289 "calclex.ml" 199 7181 7295
+type(
+  string
+)
+ident(
+  int_ref string "calclex.ml" 146 5505 5520 "calclex.ml" 146 5505 5526
+)
+"calclex.ml" 199 7181 7201 "calclex.ml" 199 7181 7295
+call(
+  stack
+)
+type(
+  string
+)
+"calclex.ml" 200 7299 7309 "calclex.ml" 200 7299 7314
+type(
+  exn -> token option
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"calclex.ml" 200 7299 7325 "calclex.ml" 200 7299 7328
+type(
+  string
+)
+ident(
+  int_ref msg "calclex.ml" 199 7181 7195 "calclex.ml" 199 7181 7198
+)
+"calclex.ml" 200 7299 7324 "calclex.ml" 200 7299 7329
+type(
+  LexError
+)
+"calclex.ml" 200 7299 7315 "calclex.ml" 200 7299 7330
+type(
+  exn
+)
+"calclex.ml" 200 7299 7309 "calclex.ml" 200 7299 7330
+type(
+  token option
+)
+"calclex.ml" 199 7181 7191 "calclex.ml" 200 7299 7330
+type(
+  token option
+)
+"calclex.ml" 153 5654 5661 "calclex.ml" 200 7299 7330
+type(
+  token option
+)
+"calclex.ml" 150 5607 5612 "calclex.ml" 200 7299 7330
+type(
+  token option
+)
+"calclex.ml" 202 7337 7340 "calclex.ml" 202 7337 7351
+type(
+  (int -> token option) -> token Stream.t
+)
+ident(
+  ext_ref Stream.from
+)
+"calclex.ml" 202 7337 7352 "calclex.ml" 202 7337 7355
+type(
+  int -> token option
+)
+ident(
+  int_ref lex "calclex.ml" 149 5588 5599 "calclex.ml" 149 5588 5602
+)
+"calclex.ml" 202 7337 7340 "calclex.ml" 202 7337 7355
+call(
+  tail
+)
+type(
+  token Stream.t
+)
+"calclex.ml" 149 5588 5591 "calclex.ml" 202 7337 7355
+type(
+  token Stream.t
+)
+"calclex.ml" 148 5566 5569 "calclex.ml" 202 7337 7355
+type(
+  token Stream.t
+)
+"calclex.ml" 147 5529 5532 "calclex.ml" 202 7337 7355
+type(
+  token Stream.t
+)

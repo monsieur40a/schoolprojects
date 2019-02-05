@@ -1,0 +1,1610 @@
+open Doccol;;                   (* make, add, remove, has, switch, string_of_doccol *)
+open Document;;
+open Printf;;
+open Mltest;;
+
+(* files for diffing *)
+let actual_file = "test-data/actual.tmp";;
+let expect_file = "test-data/expect.tmp";;
+let diff_file   = "test-data/diff.tmp"  ;;
+let msgref = ref "";;
+
+(* Create a string version of a doc. tostring is a function that will
+   stringify the data type of the doc. *)
+let doc2str tostring doc =
+  let state_str = tostring doc.current in
+  let undo_strings = List.map tostring doc.undo_stack in
+  let undo_str = String.concat ";\n      " undo_strings in
+  let redo_strings = List.map tostring doc.redo_stack in
+  let redo_str = String.concat ";\n      " redo_strings in
+  String.concat "\n" [
+      sprintf  "   { current= %s;" state_str;
+      sprintf  "     undo_stack= [";
+      "       "^undo_str;
+      "     ];";
+      sprintf  "     redo_stack= [";
+      "       "^redo_str;
+      "     ];";
+      "   }"
+    ];;
+;;
+
+(* Create a string version of a doccol *)
+let doccol2str tostring doccol =
+  let name_docstr (name,doc) =
+    sprintf "  (\"%s\",\n%s);\n" name (doc2str tostring doc)
+  in
+  let ndstrs = List.map name_docstr doccol.docs in
+  let ndline = String.concat "\n" ndstrs in
+  String.concat "\n" [
+      sprintf "{ curname= \"%s\"; count= %d;" doccol.curname doccol.count;
+      sprintf "  curdoc = \n%s;" (doc2str tostring doccol.curdoc);
+      sprintf "  docs = [\n%s  ];" ndline;
+      sprintf "}";
+    ]
+;;
+
+(* ok or mismatch string *)
+let ok_str a b =
+  if a = b then "ok" else "**MISMATCH**"
+;;
+
+
+(* generate error message for an string list *)
+let make_msg tostring expect_col actual_col  =
+  let helper exp act =
+    let fmt = format_of_string "%-20s vs %-20s : %s\n        " in
+    match exp,act with
+      | Some (exp_name,exp_doc), Some (act_name,act_doc) ->
+         sprintf fmt exp_name act_name (ok_str exp act)
+      | Some (exp_name,_), None ->
+         sprintf fmt exp_name "-" (ok_str true false)
+      | None, Some (act_name,_) ->
+         sprintf fmt "-" act_name (ok_str true false)
+      | _ ->
+         failwith "shouldn't get None,None from map2opt"
+  in
+  let pair_strs = Mltest.map2opt helper expect_col.docs actual_col.docs in
+  let docs_match_str = String.concat " " pair_strs in
+  let fmt = format_of_string "%-20s vs %-20s : %s" in
+
+  (* let docs_match_str = "" in *)
+
+  String.concat "\n" [
+      "DOCCOL FIELDS:";
+      "curname: "^(sprintf fmt expect_col.curname actual_col.curname (ok_str expect_col.curname actual_col.curname));
+      "count:   "^(sprintf fmt (string_of_int expect_col.count) (string_of_int actual_col.count) (ok_str expect_col.count actual_col.count));
+      "curdoc:  "^(sprintf fmt "..." "..." (ok_str expect_col.curdoc actual_col.curdoc));
+      "docs:    "^(ok_str expect_col.docs       actual_col.docs);
+      "         "^docs_match_str;
+      "EXPECT DOCCOL:";
+      doccol2str tostring expect_col;
+      "";
+      "ACTUAL DOC:";
+      doccol2str tostring actual_col;
+      "";
+    ];;
+;;
+
+(* generate error message for an string list *)
+let make_msg_ret tostring expect_ret actual_ret expect_col actual_col =
+  let str = String.concat "\n" [
+      if expect_ret = actual_ret then "return value ok" else "**MISMATCH** return value";
+      "Expect return: " ^ (string_of_bool expect_ret);
+      "Actual return: " ^ (string_of_bool actual_ret);
+      "";
+  ] in
+  str^"\n"^(make_msg tostring expect_col actual_col)^"\n"
+;;
+
+(* (\* Create a *\)
+ * let make_msg_str expect_str actual_str =
+ *   List.concat "\n" [
+ *       "EXPECT:";
+ *       expect_str;
+ *       "";
+ *       "ACTUAL";
+ *       actual_str;
+ *     ]
+ * ;; *)
+
+Mltest.main [|
+(******************************************)
+(* doccol.ml tests *)
+
+(fun () ->
+  (* BEG_TEST *)
+  (* make with string doc *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 1;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg quote_str expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:146"; msg=msg; code="117:  (* make with string doc *)\n118:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n119:  let expect_col =\n...\n144:  in\n145:  let msg = make_msg quote_str expect_col actual_col in\n146:  __check__ ( expect_col = actual_col );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* make with int doc *)
+  let actual_col = Doccol.make "num7.txt" (Document.make 7) in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "num7.txt"; count= 1;
+  curdoc = 
+   { current= 7;
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("num7.txt",
+   { current= 7;
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg string_of_int expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:178"; msg=msg; code="149:  (* make with int doc *)\n150:  let actual_col = Doccol.make \"num7.txt\" (Document.make 7) in\n151:  let expect_col =\n...\n176:  in\n177:  let msg = make_msg string_of_int expect_col actual_col in\n178:  __check__ ( expect_col = actual_col );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* make and add with string doc *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let act_ret = Doccol.add actual_col "other.txt" (Document.make "Asami") in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 2;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("other.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:225"; msg=msg; code="184:  (* make and add with string doc *)\n185:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n186:  let act_ret = Doccol.add actual_col \"other.txt\" (Document.make \"Asami\") in\n187:  let exp_ret = true in\n188:  let expect_col =\n...\n223:  in\n224:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n225:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:226"; msg=msg; code="184:  (* make and add with string doc *)\n185:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n186:  let act_ret = Doccol.add actual_col \"other.txt\" (Document.make \"Asami\") in\n187:  let exp_ret = true in\n188:  let expect_col =\n...\n223:  in\n224:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n225:  __check__ ( expect_col = actual_col );\n226:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* make and add several *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let _ = Doccol.add actual_col "first.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Mako") in
+  let act_ret = Doccol.add actual_col "last.txt" (Document.make "Tenzin") in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 6;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("last.txt",
+   { current= "Tenzin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:314"; msg=msg; code="229:  (* make and add several *)\n230:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n231:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n232:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n233:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n234:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Mako\") in\n235:  let act_ret = Doccol.add actual_col \"last.txt\" (Document.make \"Tenzin\") in\n236:  let exp_ret = true in\n237:  let expect_col =\n...\n312:  in\n313:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n314:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:315"; msg=msg; code="229:  (* make and add several *)\n230:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n231:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n232:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n233:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n234:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Mako\") in\n235:  let act_ret = Doccol.add actual_col \"last.txt\" (Document.make \"Tenzin\") in\n236:  let exp_ret = true in\n237:  let expect_col =\n...\n312:  in\n313:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n314:  __check__ ( expect_col = actual_col );\n315:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* add preservies uniqueness several *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let _ = Doccol.add actual_col "first.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Korra") in
+  let act_ret = Doccol.add actual_col "second.txt" (Document.make "Tenzin") in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 5;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("fourth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:396"; msg=msg; code="321:  (* add preservies uniqueness several *)\n322:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n323:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n324:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n325:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n326:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n327:  let act_ret = Doccol.add actual_col \"second.txt\" (Document.make \"Tenzin\") in\n328:  let exp_ret = false in\n329:  let expect_col =\n...\n394:  in\n395:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n396:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:397"; msg=msg; code="321:  (* add preservies uniqueness several *)\n322:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n323:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n324:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n325:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n326:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n327:  let act_ret = Doccol.add actual_col \"second.txt\" (Document.make \"Tenzin\") in\n328:  let exp_ret = false in\n329:  let expect_col =\n...\n394:  in\n395:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n396:  __check__ ( expect_col = actual_col );\n397:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* make and add with string doc *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let act_ret = Doccol.add actual_col "other.txt" (Document.make "Asami") in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 2;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("other.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:444"; msg=msg; code="403:  (* make and add with string doc *)\n404:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n405:  let act_ret = Doccol.add actual_col \"other.txt\" (Document.make \"Asami\") in\n406:  let exp_ret = true in\n407:  let expect_col =\n...\n442:  in\n443:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n444:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:445"; msg=msg; code="403:  (* make and add with string doc *)\n404:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n405:  let act_ret = Doccol.add actual_col \"other.txt\" (Document.make \"Asami\") in\n406:  let exp_ret = true in\n407:  let expect_col =\n...\n442:  in\n443:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n444:  __check__ ( expect_col = actual_col );\n445:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* make and add several *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let _ = Doccol.add actual_col "first.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Mako") in
+  let act_ret = Doccol.add actual_col "last.txt" (Document.make "Tenzin") in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 6;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("last.txt",
+   { current= "Tenzin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:533"; msg=msg; code="448:  (* make and add several *)\n449:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n450:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n451:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n452:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n453:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Mako\") in\n454:  let act_ret = Doccol.add actual_col \"last.txt\" (Document.make \"Tenzin\") in\n455:  let exp_ret = true in\n456:  let expect_col =\n...\n531:  in\n532:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n533:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:534"; msg=msg; code="448:  (* make and add several *)\n449:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n450:  let _ = Doccol.add actual_col \"first.txt\" (Document.make \"Asami\") in\n451:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n452:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Bolin\") in\n453:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Mako\") in\n454:  let act_ret = Doccol.add actual_col \"last.txt\" (Document.make \"Tenzin\") in\n455:  let exp_ret = true in\n456:  let expect_col =\n...\n531:  in\n532:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n533:  __check__ ( expect_col = actual_col );\n534:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* add preservies uniqueness *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let _ = Doccol.add actual_col "first.txt"  (Document.make "Asami") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Korra") in
+  let act_ret = Doccol.add actual_col "second.txt" (Document.make "Tenzin") in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 5;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("fourth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:612"; msg=msg; code="537:  (* add preservies uniqueness *)\n538:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n539:  let _ = Doccol.add actual_col \"first.txt\"  (Document.make \"Asami\") in\n540:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n541:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Bolin\") in\n542:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n543:  let act_ret = Doccol.add actual_col \"second.txt\" (Document.make \"Tenzin\") in\n544:  let exp_ret = false in\n545:  let expect_col =\n...\n610:  in\n611:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n612:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:613"; msg=msg; code="537:  (* add preservies uniqueness *)\n538:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n539:  let _ = Doccol.add actual_col \"first.txt\"  (Document.make \"Asami\") in\n540:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n541:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Bolin\") in\n542:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n543:  let act_ret = Doccol.add actual_col \"second.txt\" (Document.make \"Tenzin\") in\n544:  let exp_ret = false in\n545:  let expect_col =\n...\n610:  in\n611:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n612:  __check__ ( expect_col = actual_col );\n613:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* remove success *)
+  let actual_col = Doccol.make "default.txt" (Document.make "Korra") in
+  let _ = Doccol.add actual_col "first.txt"  (Document.make "Asami") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Korra") in
+  let act_ret = Doccol.remove actual_col "second.txt" in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "default.txt"; count= 4;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("fourth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("default.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:684"; msg=msg; code="619:  (* remove success *)\n620:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n621:  let _ = Doccol.add actual_col \"first.txt\"  (Document.make \"Asami\") in\n622:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n623:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Bolin\") in\n624:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n625:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n626:  let exp_ret = true in\n627:  let expect_col =\n...\n682:  in\n683:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n684:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:685"; msg=msg; code="619:  (* remove success *)\n620:  let actual_col = Doccol.make \"default.txt\" (Document.make \"Korra\") in\n621:  let _ = Doccol.add actual_col \"first.txt\"  (Document.make \"Asami\") in\n622:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n623:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Bolin\") in\n624:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Korra\") in\n625:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n626:  let exp_ret = true in\n627:  let expect_col =\n...\n682:  in\n683:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n684:  __check__ ( expect_col = actual_col );\n685:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* remove several *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let _ = Doccol.remove actual_col "third.txt" in
+  let _ = Doccol.remove actual_col "fifth.txt" in
+  let act_ret = Doccol.remove actual_col "second.txt" in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "first.txt"; count= 3;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:746"; msg=msg; code="688:  (* remove several *)\n689:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n690:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n691:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n692:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n693:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n694:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n695:  let _ = Doccol.remove actual_col \"third.txt\" in\n696:  let _ = Doccol.remove actual_col \"fifth.txt\" in\n697:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n698:  let exp_ret = true in\n699:  let expect_col =\n...\n744:  in\n745:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n746:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:747"; msg=msg; code="688:  (* remove several *)\n689:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n690:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n691:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n692:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n693:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n694:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n695:  let _ = Doccol.remove actual_col \"third.txt\" in\n696:  let _ = Doccol.remove actual_col \"fifth.txt\" in\n697:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n698:  let exp_ret = true in\n699:  let expect_col =\n...\n744:  in\n745:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n746:  __check__ ( expect_col = actual_col );\n747:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* remove fails *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let _ = Doccol.remove actual_col "x.txt" in
+  let _ = Doccol.remove actual_col "y.txt" in
+  let act_ret = Doccol.remove actual_col "z.txt" in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "first.txt"; count= 6;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:838"; msg=msg; code="750:  (* remove fails *)\n751:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n752:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n753:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n754:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n755:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n756:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n757:  let _ = Doccol.remove actual_col \"x.txt\" in\n758:  let _ = Doccol.remove actual_col \"y.txt\" in\n759:  let act_ret = Doccol.remove actual_col \"z.txt\" in\n760:  let exp_ret = false in\n761:  let expect_col =\n...\n836:  in\n837:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n838:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:839"; msg=msg; code="750:  (* remove fails *)\n751:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n752:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n753:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n754:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n755:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n756:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n757:  let _ = Doccol.remove actual_col \"x.txt\" in\n758:  let _ = Doccol.remove actual_col \"y.txt\" in\n759:  let act_ret = Doccol.remove actual_col \"z.txt\" in\n760:  let exp_ret = false in\n761:  let expect_col =\n...\n836:  in\n837:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n838:  __check__ ( expect_col = actual_col );\n839:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* has succeeds/fails *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "first.txt"; count= 6;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let act_ret = Doccol.has actual_col "fourth.txt" in
+  let exp_ret = true in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:931"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:932"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  let act_ret = Doccol.has actual_col "nope.txt" in
+  let exp_ret = false in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:936"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:937"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n937:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  let act_ret = Doccol.has actual_col "first.txt" in
+  let exp_ret = true in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:941"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n937:  __check__ ( exp_ret = act_ret );\n938:  let act_ret = Doccol.has actual_col \"first.txt\" in\n939:  let exp_ret = true in\n940:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n941:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:942"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n937:  __check__ ( exp_ret = act_ret );\n938:  let act_ret = Doccol.has actual_col \"first.txt\" in\n939:  let exp_ret = true in\n940:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n941:  __check__ ( expect_col = actual_col );\n942:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  let act_ret = Doccol.has actual_col "nada.txt" in
+  let exp_ret = false in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:946"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n937:  __check__ ( exp_ret = act_ret );\n938:  let act_ret = Doccol.has actual_col \"first.txt\" in\n939:  let exp_ret = true in\n940:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n941:  __check__ ( expect_col = actual_col );\n942:  __check__ ( exp_ret = act_ret );\n943:  let act_ret = Doccol.has actual_col \"nada.txt\" in\n944:  let exp_ret = false in\n945:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n946:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:947"; msg=msg; code="845:  (* has succeeds/fails *)\n846:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n847:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n848:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n849:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n850:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n851:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n852:  let expect_col =\n...\n927:  in\n928:  let act_ret = Doccol.has actual_col \"fourth.txt\" in\n929:  let exp_ret = true in\n930:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n931:  __check__ ( expect_col = actual_col );\n932:  __check__ ( exp_ret = act_ret );\n933:  let act_ret = Doccol.has actual_col \"nope.txt\" in\n934:  let exp_ret = false in\n935:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n936:  __check__ ( expect_col = actual_col );\n937:  __check__ ( exp_ret = act_ret );\n938:  let act_ret = Doccol.has actual_col \"first.txt\" in\n939:  let exp_ret = true in\n940:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n941:  __check__ ( expect_col = actual_col );\n942:  __check__ ( exp_ret = act_ret );\n943:  let act_ret = Doccol.has actual_col \"nada.txt\" in\n944:  let exp_ret = false in\n945:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n946:  __check__ ( expect_col = actual_col );\n947:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* switch succeeds *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let act_ret = Doccol.switch actual_col "fourth.txt" in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "fourth.txt"; count= 6;
+  curdoc = 
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1039"; msg=msg; code="953:  (* switch succeeds *)\n954:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n955:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n956:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n957:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n958:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n959:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n960:  let act_ret = Doccol.switch actual_col \"fourth.txt\" in\n961:  let exp_ret = true in\n962:  let expect_col =\n...\n1037:  in\n1038:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1039:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1040"; msg=msg; code="953:  (* switch succeeds *)\n954:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n955:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n956:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n957:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n958:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n959:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n960:  let act_ret = Doccol.switch actual_col \"fourth.txt\" in\n961:  let exp_ret = true in\n962:  let expect_col =\n...\n1037:  in\n1038:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1039:  __check__ ( expect_col = actual_col );\n1040:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* several switches succeed *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let _ = Doccol.switch actual_col "fourth.txt" in
+  let _ = Doccol.switch actual_col "second.txt" in
+  let _ = Doccol.switch actual_col "first.txt" in
+  let act_ret = Doccol.switch actual_col "third.txt" in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "third.txt"; count= 6;
+  curdoc = 
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1133"; msg=msg; code="1044:  (* several switches succeed *)\n1045:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1046:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1047:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1048:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1049:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1050:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1051:  let _ = Doccol.switch actual_col \"fourth.txt\" in\n1052:  let _ = Doccol.switch actual_col \"second.txt\" in\n1053:  let _ = Doccol.switch actual_col \"first.txt\" in\n1054:  let act_ret = Doccol.switch actual_col \"third.txt\" in\n1055:  let exp_ret = true in\n1056:  let expect_col =\n...\n1131:  in\n1132:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1133:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1134"; msg=msg; code="1044:  (* several switches succeed *)\n1045:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1046:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1047:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1048:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1049:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1050:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1051:  let _ = Doccol.switch actual_col \"fourth.txt\" in\n1052:  let _ = Doccol.switch actual_col \"second.txt\" in\n1053:  let _ = Doccol.switch actual_col \"first.txt\" in\n1054:  let act_ret = Doccol.switch actual_col \"third.txt\" in\n1055:  let exp_ret = true in\n1056:  let expect_col =\n...\n1131:  in\n1132:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1133:  __check__ ( expect_col = actual_col );\n1134:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* switch fails *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let act_ret = Doccol.switch actual_col "third.txt" in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "first.txt"; count= 2;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1180"; msg=msg; code="1138:  (* switch fails *)\n1139:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1140:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1141:  let act_ret = Doccol.switch actual_col \"third.txt\" in\n1142:  let exp_ret = false in\n1143:  let expect_col =\n...\n1178:  in\n1179:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1180:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1181"; msg=msg; code="1138:  (* switch fails *)\n1139:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1140:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1141:  let act_ret = Doccol.switch actual_col \"third.txt\" in\n1142:  let exp_ret = false in\n1143:  let expect_col =\n...\n1178:  in\n1179:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1180:  __check__ ( expect_col = actual_col );\n1181:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+
+  (* switch mixed success *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let _ = Doccol.switch actual_col "fourth.txt" in
+  let _ = Doccol.switch actual_col "x.txt" in
+  let _ = Doccol.switch actual_col "sixth.txt" in
+  let act_ret = Doccol.switch actual_col "y.txt" in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "sixth.txt"; count= 6;
+  curdoc = 
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1273"; msg=msg; code="...\n1271:  in\n1272:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1273:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1274"; msg=msg; code="...\n1271:  in\n1272:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1273:  __check__ ( expect_col = actual_col );\n1274:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* can't remove current *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let act_ret = Doccol.remove actual_col "first.txt" in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "first.txt"; count= 6;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1366"; msg=msg; code="1280:  (* can't remove current *)\n1281:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1282:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1283:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1284:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1285:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1286:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1287:  let act_ret = Doccol.remove actual_col \"first.txt\" in\n1288:  let exp_ret = false in\n1289:  let expect_col =\n...\n1364:  in\n1365:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1366:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1367"; msg=msg; code="1280:  (* can't remove current *)\n1281:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1282:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1283:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1284:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1285:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1286:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1287:  let act_ret = Doccol.remove actual_col \"first.txt\" in\n1288:  let exp_ret = false in\n1289:  let expect_col =\n...\n1364:  in\n1365:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1366:  __check__ ( expect_col = actual_col );\n1367:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* can't remove current *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let _ = Doccol.switch actual_col "fifth.txt" in
+  let _ = Doccol.remove actual_col "first.txt" in
+  let _ = Doccol.remove actual_col "third.txt" in
+  let act_ret = Doccol.remove actual_col "fifth.txt" in
+  let exp_ret = false in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "fifth.txt"; count= 4;
+  curdoc = 
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("sixth.txt",
+   { current= "Meelo";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fifth.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1440"; msg=msg; code="1371:  (* can't remove current *)\n1372:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1373:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1374:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1375:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1376:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1377:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1378:  let _ = Doccol.switch actual_col \"fifth.txt\" in\n1379:  let _ = Doccol.remove actual_col \"first.txt\" in\n1380:  let _ = Doccol.remove actual_col \"third.txt\" in\n1381:  let act_ret = Doccol.remove actual_col \"fifth.txt\" in\n1382:  let exp_ret = false in\n1383:  let expect_col =\n...\n1438:  in\n1439:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1440:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1441"; msg=msg; code="1371:  (* can't remove current *)\n1372:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1373:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1374:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1375:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1376:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1377:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1378:  let _ = Doccol.switch actual_col \"fifth.txt\" in\n1379:  let _ = Doccol.remove actual_col \"first.txt\" in\n1380:  let _ = Doccol.remove actual_col \"third.txt\" in\n1381:  let act_ret = Doccol.remove actual_col \"fifth.txt\" in\n1382:  let exp_ret = false in\n1383:  let expect_col =\n...\n1438:  in\n1439:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1440:  __check__ ( expect_col = actual_col );\n1441:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* string_of_doccol  *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let act_str = Doccol.string_of_doccol actual_col in
+  let exp_str = "\
+1 docs
+- first.txt
+" in
+if not ( (check_diff_str exp_str expect_file act_str actual_file diff_file msgref)) then raise (TestFail {loc="test_doccol.ml:1454"; msg=(!msgref); code="1447:  (* string_of_doccol  *)\n1448:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1449:  let act_str = Doccol.string_of_doccol actual_col in\n1450:  let exp_str = \"\\\n1451:1 docs\n1452:- first.txt\n1453:\" in\n1454:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* string_of_doccol  *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let act_str = Doccol.string_of_doccol actual_col in
+  let exp_str = "\
+2 docs
+- second.txt
+- first.txt
+" in
+if not ( (check_diff_str exp_str expect_file act_str actual_file diff_file msgref)) then raise (TestFail {loc="test_doccol.ml:1467"; msg=(!msgref); code="1458:  (* string_of_doccol  *)\n1459:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1460:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1461:  let act_str = Doccol.string_of_doccol actual_col in\n1462:  let exp_str = \"\\\n1463:2 docs\n1464:- second.txt\n1465:- first.txt\n1466:\" in\n1467:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+
+  (* BEG_TEST *)
+  (* string_of_doccol  *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let _ = Doccol.add actual_col "third.txt"  (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.add actual_col "fifth.txt"  (Document.make "Korra") in
+  let _ = Doccol.add actual_col "sixth.txt"  (Document.make "Meelo") in
+  let act_str = Doccol.string_of_doccol actual_col in
+  let exp_str = "\
+6 docs
+- sixth.txt
+- fifth.txt
+- fourth.txt
+- third.txt
+- second.txt
+- first.txt
+" in
+if not ( (check_diff_str exp_str expect_file act_str actual_file diff_file msgref)) then raise (TestFail {loc="test_doccol.ml:1488"; msg=(!msgref); code="1471:  (* string_of_doccol  *)\n1472:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1473:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1474:  let _ = Doccol.add actual_col \"third.txt\"  (Document.make \"Mako\") in\n1475:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1476:  let _ = Doccol.add actual_col \"fifth.txt\"  (Document.make \"Korra\") in\n1477:  let _ = Doccol.add actual_col \"sixth.txt\"  (Document.make \"Meelo\") in\n1478:  let act_str = Doccol.string_of_doccol actual_col in\n1479:  let exp_str = \"\\\n1480:6 docs\n1481:- sixth.txt\n1482:- fifth.txt\n1483:- fourth.txt\n1484:- third.txt\n1485:- second.txt\n1486:- first.txt\n1487:\" in\n1488:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun ()->
+  (* BEG_TEST *)
+  (* stress test  *)
+  let actual_col = Doccol.make  "first.txt"  (Document.make "Korra") in
+  let act_str = Doccol.string_of_doccol actual_col in
+  let exp_str = "\
+1 docs
+- first.txt
+" in
+if not ( (check_diff_str exp_str expect_file act_str actual_file diff_file msgref)) then raise (TestFail {loc="test_doccol.ml:1501"; msg=(!msgref); code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n"}) else ();
+
+  let _ = Doccol.add actual_col "second.txt" (Document.make "Asami") in
+  let act_ret = Doccol.switch actual_col "second.txt" in
+  let exp_ret = true in
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "second.txt"; count= 2;
+  curdoc = 
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("second.txt",
+   { current= "Asami";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+  ("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  (* END_OMIT *)
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1543"; msg=msg; code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n1502:\n1503:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1504:  let act_ret = Doccol.switch actual_col \"second.txt\" in\n1505:  let exp_ret = true in\n1506:  let expect_col =\n...\n1541:  in\n1542:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1543:  __check__ ( expect_col = actual_col );\n"}) else ();
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1544"; msg=msg; code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n1502:\n1503:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1504:  let act_ret = Doccol.switch actual_col \"second.txt\" in\n1505:  let exp_ret = true in\n1506:  let expect_col =\n...\n1541:  in\n1542:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1543:  __check__ ( expect_col = actual_col );\n1544:  __check__ ( exp_ret = act_ret );\n"}) else ();
+   
+  let act_ret = Doccol.switch actual_col "x.txt" in
+  let exp_ret = false in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1549"; msg=msg; code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n1502:\n1503:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1504:  let act_ret = Doccol.switch actual_col \"second.txt\" in\n1505:  let exp_ret = true in\n1506:  let expect_col =\n...\n1541:  in\n1542:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1543:  __check__ ( expect_col = actual_col );\n1544:  __check__ ( exp_ret = act_ret );\n1545:   \n1546:  let act_ret = Doccol.switch actual_col \"x.txt\" in\n1547:  let exp_ret = false in\n1548:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1549:  __check__ ( exp_ret = act_ret );\n"}) else ();
+
+  let _ = Doccol.add actual_col "third.txt" (Document.make "Mako") in
+  let _ = Doccol.add actual_col "fourth.txt" (Document.make "Bolin") in
+  let _ = Doccol.switch actual_col "third.txt" in
+  let act_ret = Doccol.remove actual_col "second.txt" in
+  let exp_ret = true in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( exp_ret = act_ret )) then raise (TestFail {loc="test_doccol.ml:1557"; msg=msg; code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n1502:\n1503:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1504:  let act_ret = Doccol.switch actual_col \"second.txt\" in\n1505:  let exp_ret = true in\n1506:  let expect_col =\n...\n1541:  in\n1542:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1543:  __check__ ( expect_col = actual_col );\n1544:  __check__ ( exp_ret = act_ret );\n1545:   \n1546:  let act_ret = Doccol.switch actual_col \"x.txt\" in\n1547:  let exp_ret = false in\n1548:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1549:  __check__ ( exp_ret = act_ret );\n1550:\n1551:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Mako\") in\n1552:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1553:  let _ = Doccol.switch actual_col \"third.txt\" in\n1554:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n1555:  let exp_ret = true in\n1556:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1557:  __check__ ( exp_ret = act_ret );\n"}) else ();
+  
+  let expect_col =
+  (* BEG_OMIT *)
+{ curname= "third.txt"; count= 3;
+  curdoc = 
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   };
+  docs = [
+  ("fourth.txt",
+   { current= "Bolin";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+  ("third.txt",
+   { current= "Mako";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+
+  ("first.txt",
+   { current= "Korra";
+     undo_stack= [
+       
+     ];
+     redo_stack= [
+       
+     ];
+   });
+  ];
+}
+  in
+  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in
+if not ( ( expect_col = actual_col )) then raise (TestFail {loc="test_doccol.ml:1605"; msg=msg; code="1494:  (* stress test  *)\n1495:  let actual_col = Doccol.make  \"first.txt\"  (Document.make \"Korra\") in\n1496:  let act_str = Doccol.string_of_doccol actual_col in\n1497:  let exp_str = \"\\\n1498:1 docs\n1499:- first.txt\n1500:\" in\n1501:  __check_output___ (check_diff_str exp_str expect_file act_str actual_file diff_file msgref);\n1502:\n1503:  let _ = Doccol.add actual_col \"second.txt\" (Document.make \"Asami\") in\n1504:  let act_ret = Doccol.switch actual_col \"second.txt\" in\n1505:  let exp_ret = true in\n1506:  let expect_col =\n...\n1541:  in\n1542:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1543:  __check__ ( expect_col = actual_col );\n1544:  __check__ ( exp_ret = act_ret );\n1545:   \n1546:  let act_ret = Doccol.switch actual_col \"x.txt\" in\n1547:  let exp_ret = false in\n1548:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1549:  __check__ ( exp_ret = act_ret );\n1550:\n1551:  let _ = Doccol.add actual_col \"third.txt\" (Document.make \"Mako\") in\n1552:  let _ = Doccol.add actual_col \"fourth.txt\" (Document.make \"Bolin\") in\n1553:  let _ = Doccol.switch actual_col \"third.txt\" in\n1554:  let act_ret = Doccol.remove actual_col \"second.txt\" in\n1555:  let exp_ret = true in\n1556:  let msg = make_msg_ret quote_str exp_ret act_ret expect_col actual_col in\n1557:  __check__ ( exp_ret = act_ret );\n1558:  \n1559:  let expect_col =\n"}) else ();
+  (* END_TEST *)
+);
+
+
+|];;    

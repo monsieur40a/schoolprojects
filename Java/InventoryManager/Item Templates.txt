@@ -1,0 +1,11 @@
+ShinyNecklace 44 0.5
+HealingPotion 36 0.5
+IronOre 20 10
+InfinitelyHeavy 1000 0
+NanItem 0 0
+UltraPotion 10 10
+MegaPotion 10 5
+PokeBall 10 3
+PhoenixDown 5 10
+NanHolyHandGrenade 0 0
+InfinitelyHeavyTwo 1000 0

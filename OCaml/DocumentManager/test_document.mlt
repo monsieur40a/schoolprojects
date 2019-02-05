@@ -1,0 +1,356 @@
+open Document;;                 (* make, set, undo, redo *)
+open Printf;;
+open Mltest;;
+
+(* Convert string list list to a string representation. *)
+let strlistlist2str strlistlist =
+  let lines = List.map strlist2str strlistlist in
+  let linestr = String.concat ";\n  " lines in
+  "[ " ^ linestr ^ " ]\n"
+;;
+
+(* Create a string version of a doc. tostring is a function that will
+   stringify the data type of the doc. *)
+let doc2str tostring doc =
+  let state_str = tostring doc.current in
+  let undo_strings = List.map tostring doc.undo_stack in
+  let undo_str = String.concat ";\n    " undo_strings in
+  let redo_strings = List.map tostring doc.redo_stack in
+  let redo_str = String.concat ";\n    " redo_strings in
+  String.concat "\n" [
+      sprintf  "{ current= %s;" state_str;
+      sprintf  "  undo_stack= [";
+      "    "^undo_str;
+      "  ];";
+      sprintf  "  redo_stack= [";
+      "    "^redo_str;
+      "  ];";
+      "}"
+    ];;
+;;
+
+(* generate error message for an string list *)
+let make_msg tostring expect_doc actual_doc  =
+  String.concat "\n" [
+      "FIELDS:";
+      "current:    "^(if expect_doc.current = actual_doc.current       then "ok" else "**MISMATCH**");
+      "undo_stack: "^(if expect_doc.undo_stack = actual_doc.undo_stack then "ok" else "**MISMATCH**");
+      "redo_stack: "^(if expect_doc.redo_stack = actual_doc.redo_stack then "ok" else "**MISMATCH**");
+      "";
+      "EXPECT DOC:";
+      doc2str tostring expect_doc;
+      "";
+      "ACTUAL DOC:";
+      doc2str tostring actual_doc;
+      "";
+    ];;
+;;
+
+(* generate error message for an string list *)
+let make_msg_ret tostring expect_ret actual_ret expect_doc actual_doc =
+  let str = String.concat "\n" [
+      if expect_ret = actual_ret then "return value ok" else "**MISMATCH** return value";
+      "Expect undo/redo return: " ^ (string_of_bool expect_ret);
+      "Actual undo/redo return: " ^ (string_of_bool actual_ret);
+      "";
+  ] in
+  str^"\n"^(make_msg tostring expect_doc actual_doc)^"\n"
+;;
+
+Mltest.main [|
+(******************************************)
+(* document.ml tests *)
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.make with string doc *)
+  let actual_doc = Document.make "Korra" in
+  let expect_doc =
+    { current= "Korra";
+      undo_stack= [
+          
+        ];
+      redo_stack= [
+          
+        ];
+    }
+  in
+  let msg = make_msg quote_str expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:79"; msg=msg; code="66:  (* Document.make with string doc *)\n67:  let actual_doc = Document.make \"Korra\" in\n68:  let expect_doc =\n69:    { current= \"Korra\";\n70:      undo_stack= [\n71:          \n72:        ];\n73:      redo_stack= [\n74:          \n75:        ];\n76:    }\n77:  in\n78:  let msg = make_msg quote_str expect_doc actual_doc in\n79:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.make with int doc *)
+  let actual_doc = Document.make 42 in
+  let expect_doc =
+    { current= 42;
+      undo_stack= [
+
+        ];
+      redo_stack= [
+          
+        ];
+    }
+  in
+  let msg = make_msg string_of_int expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:98"; msg=msg; code="85:  (* Document.make with int doc *)\n86:  let actual_doc = Document.make 42 in\n87:  let expect_doc =\n88:    { current= 42;\n89:      undo_stack= [\n90:\n91:        ];\n92:      redo_stack= [\n93:          \n94:        ];\n95:    }\n96:  in\n97:  let msg = make_msg string_of_int expect_doc actual_doc in\n98:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+
+  (* BEG_TEST *)
+  (* Document.set once *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  let expect_doc =
+    { current= "Asami";
+      undo_stack= [
+          "Korra"
+        ];
+      redo_stack= [
+          
+        ];
+    }
+  in
+  let msg = make_msg quote_str expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:119"; msg=msg; code="105:  (* Document.set once *)\n106:  let actual_doc = Document.make \"Korra\" in\n107:  Document.set actual_doc \"Asami\";\n108:  let expect_doc =\n109:    { current= \"Asami\";\n110:      undo_stack= [\n111:          \"Korra\"\n112:        ];\n113:      redo_stack= [\n114:          \n115:        ];\n116:    }\n117:  in\n118:  let msg = make_msg quote_str expect_doc actual_doc in\n119:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.set multiple times *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  Document.set actual_doc "Mako";
+  Document.set actual_doc "Bolin";
+  Document.set actual_doc "Tenzin";
+  let expect_doc =
+    { current= "Tenzin";
+      undo_stack= [
+          "Bolin";
+          "Mako";
+          "Asami";
+          "Korra"
+        ];
+      redo_stack= [
+          
+        ];
+    }
+  in
+  let msg = make_msg quote_str expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:145"; msg=msg; code="125:  (* Document.set multiple times *)\n126:  let actual_doc = Document.make \"Korra\" in\n127:  Document.set actual_doc \"Asami\";\n128:  Document.set actual_doc \"Mako\";\n129:  Document.set actual_doc \"Bolin\";\n130:  Document.set actual_doc \"Tenzin\";\n131:  let expect_doc =\n132:    { current= \"Tenzin\";\n133:      undo_stack= [\n134:          \"Bolin\";\n135:          \"Mako\";\n136:          \"Asami\";\n137:          \"Korra\"\n138:        ];\n139:      redo_stack= [\n140:          \n141:        ];\n142:    }\n143:  in\n144:  let msg = make_msg quote_str expect_doc actual_doc in\n145:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.undo false *)
+  let actual_doc = Document.make "Korra" in
+  let actual_ret = Document.undo actual_doc in
+  let expect_ret = false in
+  let expect_doc =
+    { current= "Korra";
+      undo_stack= [
+        ];
+      redo_stack= [
+
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:165"; msg=msg; code="151:  (* Document.undo false *)\n152:  let actual_doc = Document.make \"Korra\" in\n153:  let actual_ret = Document.undo actual_doc in\n154:  let expect_ret = false in\n155:  let expect_doc =\n156:    { current= \"Korra\";\n157:      undo_stack= [\n158:        ];\n159:      redo_stack= [\n160:\n161:        ];\n162:    }\n163:  in\n164:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n165:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+  (* BEG_TEST *)
+  (* Document.redo false *)
+  let actual_doc = Document.make "Korra" in
+  let actual_ret = Document.redo actual_doc in
+  let expect_ret = false in
+  let expect_doc =
+    { current= "Korra";
+      undo_stack= [
+        ];
+      redo_stack= [
+
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:182"; msg=msg; code="168:  (* Document.redo false *)\n169:  let actual_doc = Document.make \"Korra\" in\n170:  let actual_ret = Document.redo actual_doc in\n171:  let expect_ret = false in\n172:  let expect_doc =\n173:    { current= \"Korra\";\n174:      undo_stack= [\n175:        ];\n176:      redo_stack= [\n177:\n178:        ];\n179:    }\n180:  in\n181:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n182:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.set single undo *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  Document.set actual_doc "Mako";
+  Document.set actual_doc "Bolin";
+  Document.set actual_doc "Tenzin";
+  let actual_ret = Document.undo actual_doc in
+  let expect_ret = true in
+  let expect_doc =
+    { current= "Bolin";
+      undo_stack= [
+          "Mako";
+          "Asami";
+          "Korra"
+        ];
+      redo_stack= [
+          "Tenzin"
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:208"; msg=msg; code="187:  (* Document.set single undo *)\n188:  let actual_doc = Document.make \"Korra\" in\n189:  Document.set actual_doc \"Asami\";\n190:  Document.set actual_doc \"Mako\";\n191:  Document.set actual_doc \"Bolin\";\n192:  Document.set actual_doc \"Tenzin\";\n193:  let actual_ret = Document.undo actual_doc in\n194:  let expect_ret = true in\n195:  let expect_doc =\n196:    { current= \"Bolin\";\n197:      undo_stack= [\n198:          \"Mako\";\n199:          \"Asami\";\n200:          \"Korra\"\n201:        ];\n202:      redo_stack= [\n203:          \"Tenzin\"\n204:        ];\n205:    }\n206:  in\n207:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n208:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+ 
+(fun () ->
+  (* BEG_TEST *)
+  (* Document.set multiple undo *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  Document.set actual_doc "Mako";
+  Document.set actual_doc "Bolin";
+  Document.set actual_doc "Tenzin";
+  Document.set actual_doc "Amon";
+  Document.set actual_doc "Kuvira";
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let actual_ret = Document.undo actual_doc in
+  let expect_ret = true in
+  let expect_doc =
+      { current= "Bolin";
+        undo_stack= [
+            "Mako";
+            "Asami";
+            "Korra"
+          ];
+        redo_stack= [
+            "Tenzin";
+            "Amon";
+            "Kuvira"
+          ];
+      }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:241"; msg=msg; code="214:  (* Document.set multiple undo *)\n215:  let actual_doc = Document.make \"Korra\" in\n216:  Document.set actual_doc \"Asami\";\n217:  Document.set actual_doc \"Mako\";\n218:  Document.set actual_doc \"Bolin\";\n219:  Document.set actual_doc \"Tenzin\";\n220:  Document.set actual_doc \"Amon\";\n221:  Document.set actual_doc \"Kuvira\";\n222:  let _ = Document.undo actual_doc in\n223:  let _ = Document.undo actual_doc in\n224:  let actual_ret = Document.undo actual_doc in\n225:  let expect_ret = true in\n226:  let expect_doc =\n227:      { current= \"Bolin\";\n228:        undo_stack= [\n229:            \"Mako\";\n230:            \"Asami\";\n231:            \"Korra\"\n232:          ];\n233:        redo_stack= [\n234:            \"Tenzin\";\n235:            \"Amon\";\n236:            \"Kuvira\"\n237:          ];\n238:      }\n239:  in\n240:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n241:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);  
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Multiple undo then redo once *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  Document.set actual_doc "Mako";
+  Document.set actual_doc "Bolin";
+  Document.set actual_doc "Tenzin";
+  Document.set actual_doc "Amon";
+  Document.set actual_doc "Kuvira";
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let actual_ret = Document.redo actual_doc in
+  let expect_ret = true in
+  let expect_doc =
+    { current= "Tenzin";
+      undo_stack= [
+          "Bolin";
+          "Mako";
+          "Asami";
+          "Korra"
+        ];
+      redo_stack= [
+          "Amon";
+          "Kuvira"
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:275"; msg=msg; code="247:  (* Multiple undo then redo once *)\n248:  let actual_doc = Document.make \"Korra\" in\n249:  Document.set actual_doc \"Asami\";\n250:  Document.set actual_doc \"Mako\";\n251:  Document.set actual_doc \"Bolin\";\n252:  Document.set actual_doc \"Tenzin\";\n253:  Document.set actual_doc \"Amon\";\n254:  Document.set actual_doc \"Kuvira\";\n255:  let _ = Document.undo actual_doc in\n256:  let _ = Document.undo actual_doc in\n257:  let _ = Document.undo actual_doc in\n258:  let actual_ret = Document.redo actual_doc in\n259:  let expect_ret = true in\n260:  let expect_doc =\n261:    { current= \"Tenzin\";\n262:      undo_stack= [\n263:          \"Bolin\";\n264:          \"Mako\";\n265:          \"Asami\";\n266:          \"Korra\"\n267:        ];\n268:      redo_stack= [\n269:          \"Amon\";\n270:          \"Kuvira\"\n271:        ];\n272:    }\n273:  in\n274:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n275:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);  
+
+(fun () ->
+  (* BEG_TEST *)
+  (* Multiple undo then redo multiple *)
+  let actual_doc = Document.make "Korra" in
+  Document.set actual_doc "Asami";
+  Document.set actual_doc "Mako";
+  Document.set actual_doc "Bolin";
+  Document.set actual_doc "Tenzin";
+  Document.set actual_doc "Amon";
+  Document.set actual_doc "Kuvira";
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let _ = Document.undo actual_doc in
+  let _ = Document.redo actual_doc in
+  let _ = Document.redo actual_doc in
+  let actual_ret = Document.redo actual_doc in
+  let expect_ret = true in
+  let expect_doc =
+    { current= "Tenzin";
+      undo_stack= [
+          "Bolin";
+          "Mako";
+          "Asami";
+          "Korra"
+        ];
+      redo_stack= [
+          "Amon";
+          "Kuvira"
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in
+if not ( ( expect_doc = actual_doc )) then raise (TestFail {loc="test_document.ml:313"; msg=msg; code="281:  (* Multiple undo then redo multiple *)\n282:  let actual_doc = Document.make \"Korra\" in\n283:  Document.set actual_doc \"Asami\";\n284:  Document.set actual_doc \"Mako\";\n285:  Document.set actual_doc \"Bolin\";\n286:  Document.set actual_doc \"Tenzin\";\n287:  Document.set actual_doc \"Amon\";\n288:  Document.set actual_doc \"Kuvira\";\n289:  let _ = Document.undo actual_doc in\n290:  let _ = Document.undo actual_doc in\n291:  let _ = Document.undo actual_doc in\n292:  let _ = Document.undo actual_doc in\n293:  let _ = Document.undo actual_doc in\n294:  let _ = Document.redo actual_doc in\n295:  let _ = Document.redo actual_doc in\n296:  let actual_ret = Document.redo actual_doc in\n297:  let expect_ret = true in\n298:  let expect_doc =\n299:    { current= \"Tenzin\";\n300:      undo_stack= [\n301:          \"Bolin\";\n302:          \"Mako\";\n303:          \"Asami\";\n304:          \"Korra\"\n305:        ];\n306:      redo_stack= [\n307:          \"Amon\";\n308:          \"Kuvira\"\n309:        ];\n310:    }\n311:  in\n312:  let msg = make_msg_ret quote_str expect_ret actual_ret expect_doc actual_doc in\n313:  __check__ ( expect_doc = actual_doc );\n"}) else ();
+  (* END_TEST *)
+);
+(fun () ->
+  (* BEG_TEST *)
+  (* Multiple docs *)
+  let doc1 = Document.make "Korra" in
+  let doc2 = Document.make "Amon" in
+  Document.set doc1 "Asami";
+  Document.set doc1 "Mako";
+  Document.set doc2 "Kuvira";
+  Document.set doc1 "Bolin";
+  let ret1 = Document.undo doc1 in
+  let expect_ret1 = true in
+  let ret2 = Document.redo doc2 in
+  let expect_ret2 = false in
+  let expect_doc1 =
+    { current= "Mako";
+      undo_stack= [
+          "Asami";
+          "Korra"
+        ];
+      redo_stack= [
+          "Bolin"
+        ];
+    }
+  in
+  let expect_doc2 =
+    { current= "Kuvira";
+      undo_stack= [
+          "Amon"
+        ];
+      redo_stack= [
+          
+        ];
+    }
+  in
+  let msg = make_msg_ret quote_str expect_ret1 ret1 expect_doc1 doc1 in
+if not ( ( expect_doc1 = doc1 )) then raise (TestFail {loc="test_document.ml:351"; msg=msg; code="318:  (* Multiple docs *)\n319:  let doc1 = Document.make \"Korra\" in\n320:  let doc2 = Document.make \"Amon\" in\n321:  Document.set doc1 \"Asami\";\n322:  Document.set doc1 \"Mako\";\n323:  Document.set doc2 \"Kuvira\";\n324:  Document.set doc1 \"Bolin\";\n325:  let ret1 = Document.undo doc1 in\n326:  let expect_ret1 = true in\n327:  let ret2 = Document.redo doc2 in\n328:  let expect_ret2 = false in\n329:  let expect_doc1 =\n330:    { current= \"Mako\";\n331:      undo_stack= [\n332:          \"Asami\";\n333:          \"Korra\"\n334:        ];\n335:      redo_stack= [\n336:          \"Bolin\"\n337:        ];\n338:    }\n339:  in\n340:  let expect_doc2 =\n341:    { current= \"Kuvira\";\n342:      undo_stack= [\n343:          \"Amon\"\n344:        ];\n345:      redo_stack= [\n346:          \n347:        ];\n348:    }\n349:  in\n350:  let msg = make_msg_ret quote_str expect_ret1 ret1 expect_doc1 doc1 in\n351:  __check__ ( expect_doc1 = doc1 );\n"}) else ();
+  let msg = make_msg_ret quote_str expect_ret2 ret2 expect_doc2 doc2 in
+if not ( ( expect_doc2 = doc2 )) then raise (TestFail {loc="test_document.ml:353"; msg=msg; code="318:  (* Multiple docs *)\n319:  let doc1 = Document.make \"Korra\" in\n320:  let doc2 = Document.make \"Amon\" in\n321:  Document.set doc1 \"Asami\";\n322:  Document.set doc1 \"Mako\";\n323:  Document.set doc2 \"Kuvira\";\n324:  Document.set doc1 \"Bolin\";\n325:  let ret1 = Document.undo doc1 in\n326:  let expect_ret1 = true in\n327:  let ret2 = Document.redo doc2 in\n328:  let expect_ret2 = false in\n329:  let expect_doc1 =\n330:    { current= \"Mako\";\n331:      undo_stack= [\n332:          \"Asami\";\n333:          \"Korra\"\n334:        ];\n335:      redo_stack= [\n336:          \"Bolin\"\n337:        ];\n338:    }\n339:  in\n340:  let expect_doc2 =\n341:    { current= \"Kuvira\";\n342:      undo_stack= [\n343:          \"Amon\"\n344:        ];\n345:      redo_stack= [\n346:          \n347:        ];\n348:    }\n349:  in\n350:  let msg = make_msg_ret quote_str expect_ret1 ret1 expect_doc1 doc1 in\n351:  __check__ ( expect_doc1 = doc1 );\n352:  let msg = make_msg_ret quote_str expect_ret2 ret2 expect_doc2 doc2 in\n353:  __check__ ( expect_doc2 = doc2 );\n"}) else ();
+  (* END_TEST *)
+);  
+|];;    

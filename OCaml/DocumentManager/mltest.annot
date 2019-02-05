@@ -1,0 +1,3769 @@
+"mltest.ml" 5 121 125 "mltest.ml" 5 121 136
+type(
+  bool
+)
+ident(
+  def full_actual "mltest.ml" 8 211 211 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 5 121 139 "mltest.ml" 5 121 143
+type(
+  bool
+)
+"mltest.ml" 14 431 435 "mltest.ml" 14 431 444
+type(
+  bool -> unit
+)
+ident(
+  def __check__ "mltest.ml" 16 468 468 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 14 431 445 "mltest.ml" 14 431 449
+type(
+  bool
+)
+ident(
+  def cond "mltest.ml" 14 431 452 "mltest.ml" 14 431 464
+)
+"mltest.ml" 14 431 458 "mltest.ml" 14 431 464
+type(
+  bool
+)
+ident(
+  int_ref cond "mltest.ml" 14 431 445 "mltest.ml" 14 431 449
+)
+"mltest.ml" 14 431 452 "mltest.ml" 14 431 464
+type(
+  unit
+)
+"mltest.ml" 16 468 472 "mltest.ml" 16 468 481
+type(
+  unit -> unit
+)
+ident(
+  def major_sep "mltest.ml" 17 551 551 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 16 468 482 "mltest.ml" 16 468 484
+type(
+  unit
+)
+"mltest.ml" 16 468 487 "mltest.ml" 16 468 493
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 16 468 494 "mltest.ml" 16 468 548
+type(
+  (unit, out_channel, unit) format
+)
+"mltest.ml" 16 468 487 "mltest.ml" 16 468 548
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 17 551 555 "mltest.ml" 17 551 564
+type(
+  unit -> unit
+)
+ident(
+  def minor_sep "mltest.ml" 20 659 659 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 17 551 565 "mltest.ml" 17 551 567
+type(
+  unit
+)
+"mltest.ml" 17 551 570 "mltest.ml" 17 551 576
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 17 551 577 "mltest.ml" 17 551 631
+type(
+  (unit, out_channel, unit) format
+)
+"mltest.ml" 17 551 570 "mltest.ml" 17 551 631
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 20 659 663 "mltest.ml" 20 659 668
+type(
+  'a -> 'a
+)
+ident(
+  def ident "mltest.ml" 22 718 718 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 20 659 669 "mltest.ml" 20 659 670
+type(
+  'a
+)
+ident(
+  def x "mltest.ml" 20 659 673 "mltest.ml" 20 659 674
+)
+"mltest.ml" 20 659 673 "mltest.ml" 20 659 674
+type(
+  'a
+)
+ident(
+  int_ref x "mltest.ml" 20 659 669 "mltest.ml" 20 659 670
+)
+"mltest.ml" 22 718 722 "mltest.ml" 22 718 731
+type(
+  string -> string
+)
+ident(
+  def quote_str "mltest.ml" 26 866 866 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 22 718 732 "mltest.ml" 22 718 735
+type(
+  string
+)
+ident(
+  def str "mltest.ml" 22 718 738 "mltest.ml" 22 718 758
+)
+"mltest.ml" 22 718 738 "mltest.ml" 22 718 745
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 22 718 746 "mltest.ml" 22 718 754
+type(
+  (string -> string, unit, string) format
+)
+"mltest.ml" 22 718 755 "mltest.ml" 22 718 758
+type(
+  string
+)
+ident(
+  int_ref str "mltest.ml" 22 718 732 "mltest.ml" 22 718 735
+)
+"mltest.ml" 22 718 738 "mltest.ml" 22 718 758
+call(
+  tail
+)
+type(
+  string
+)
+"mltest.ml" 26 866 870 "mltest.ml" 26 866 878
+type(
+  ('a -> string) -> 'a list -> string
+)
+ident(
+  def list2str "mltest.ml" 43 1255 1255 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 26 866 879 "mltest.ml" 26 866 886
+type(
+  'a -> string
+)
+ident(
+  def convert "mltest.ml" 26 866 887 "mltest.ml" 38 1192 1214
+)
+"mltest.ml" 26 866 887 "mltest.ml" 26 866 890
+type(
+  'a list
+)
+ident(
+  def lst "mltest.ml" 27 893 895 "mltest.ml" 38 1192 1214
+)
+"mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+type(
+  Buffer.t
+)
+ident(
+  def buf "mltest.ml" 28 926 928 "mltest.ml" 38 1192 1214
+)
+"mltest.ml" 27 893 905 "mltest.ml" 27 893 918
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"mltest.ml" 27 893 919 "mltest.ml" 27 893 922
+type(
+  int
+)
+"mltest.ml" 27 893 905 "mltest.ml" 27 893 922
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"mltest.ml" 28 926 928 "mltest.ml" 28 926 945
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 28 926 946 "mltest.ml" 28 926 949
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 28 926 950 "mltest.ml" 28 926 953
+type(
+  string
+)
+"mltest.ml" 28 926 928 "mltest.ml" 28 926 953
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 29 955 961 "mltest.ml" 29 955 966
+type(
+  'a -> unit
+)
+ident(
+  def iterf "mltest.ml" 33 1047 1049 "mltest.ml" 38 1192 1214
+)
+"mltest.ml" 29 955 967 "mltest.ml" 29 955 968
+type(
+  'a
+)
+ident(
+  def x "mltest.ml" 30 971 975 "mltest.ml" 31 996 1041
+)
+"mltest.ml" 30 971 979 "mltest.ml" 30 971 980
+type(
+  string
+)
+ident(
+  def s "mltest.ml" 31 996 1000 "mltest.ml" 31 996 1041
+)
+"mltest.ml" 30 971 983 "mltest.ml" 30 971 990
+type(
+  'a -> string
+)
+ident(
+  int_ref convert "mltest.ml" 26 866 879 "mltest.ml" 26 866 886
+)
+"mltest.ml" 30 971 991 "mltest.ml" 30 971 992
+type(
+  'a
+)
+ident(
+  int_ref x "mltest.ml" 29 955 967 "mltest.ml" 29 955 968
+)
+"mltest.ml" 30 971 983 "mltest.ml" 30 971 992
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 31 996 1000 "mltest.ml" 31 996 1017
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 31 996 1018 "mltest.ml" 31 996 1021
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 31 996 1023 "mltest.ml" 31 996 1030
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 31 996 1031 "mltest.ml" 31 996 1037
+type(
+  (string -> string, unit, string) format
+)
+"mltest.ml" 31 996 1038 "mltest.ml" 31 996 1039
+type(
+  string
+)
+ident(
+  int_ref s "mltest.ml" 30 971 979 "mltest.ml" 30 971 980
+)
+"mltest.ml" 31 996 1022 "mltest.ml" 31 996 1040
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 31 996 1000 "mltest.ml" 31 996 1041
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 30 971 975 "mltest.ml" 31 996 1041
+type(
+  unit
+)
+"mltest.ml" 33 1047 1049 "mltest.ml" 33 1047 1058
+type(
+  ('a -> unit) -> 'a list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"mltest.ml" 33 1047 1059 "mltest.ml" 33 1047 1064
+type(
+  'a -> unit
+)
+ident(
+  int_ref iterf "mltest.ml" 29 955 961 "mltest.ml" 29 955 966
+)
+"mltest.ml" 33 1047 1065 "mltest.ml" 33 1047 1068
+type(
+  'a list
+)
+ident(
+  int_ref lst "mltest.ml" 26 866 887 "mltest.ml" 26 866 890
+)
+"mltest.ml" 33 1047 1049 "mltest.ml" 33 1047 1068
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 34 1070 1076 "mltest.ml" 34 1070 1082
+type(
+  int
+)
+ident(
+  def buflen "mltest.ml" 35 1106 1108 "mltest.ml" 38 1192 1214
+)
+"mltest.ml" 34 1070 1085 "mltest.ml" 34 1070 1098
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"mltest.ml" 34 1070 1099 "mltest.ml" 34 1070 1102
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 34 1070 1085 "mltest.ml" 34 1070 1102
+call(
+  stack
+)
+type(
+  int
+)
+"mltest.ml" 35 1106 1111 "mltest.ml" 35 1106 1117
+type(
+  int
+)
+ident(
+  int_ref buflen "mltest.ml" 34 1070 1076 "mltest.ml" 34 1070 1082
+)
+"mltest.ml" 35 1106 1118 "mltest.ml" 35 1106 1119
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"mltest.ml" 35 1106 1120 "mltest.ml" 35 1106 1121
+type(
+  int
+)
+"mltest.ml" 35 1106 1111 "mltest.ml" 35 1106 1121
+type(
+  bool
+)
+"mltest.ml" 36 1127 1131 "mltest.ml" 36 1127 1146
+type(
+  Buffer.t -> int -> unit
+)
+ident(
+  ext_ref Buffer.truncate
+)
+"mltest.ml" 36 1127 1147 "mltest.ml" 36 1127 1150
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 36 1127 1152 "mltest.ml" 36 1127 1158
+type(
+  int
+)
+ident(
+  int_ref buflen "mltest.ml" 34 1070 1076 "mltest.ml" 34 1070 1082
+)
+"mltest.ml" 36 1127 1158 "mltest.ml" 36 1127 1159
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"mltest.ml" 36 1127 1159 "mltest.ml" 36 1127 1160
+type(
+  int
+)
+"mltest.ml" 36 1127 1151 "mltest.ml" 36 1127 1161
+type(
+  int
+)
+"mltest.ml" 36 1127 1131 "mltest.ml" 36 1127 1161
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 35 1106 1108 "mltest.ml" 36 1127 1161
+type(
+  unit
+)
+"mltest.ml" 37 1163 1165 "mltest.ml" 37 1163 1182
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 37 1163 1183 "mltest.ml" 37 1163 1186
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 37 1163 1187 "mltest.ml" 37 1163 1190
+type(
+  string
+)
+"mltest.ml" 37 1163 1165 "mltest.ml" 37 1163 1190
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 38 1192 1194 "mltest.ml" 38 1192 1209
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"mltest.ml" 38 1192 1210 "mltest.ml" 38 1192 1213
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 27 893 899 "mltest.ml" 27 893 902
+)
+"mltest.ml" 38 1192 1194 "mltest.ml" 38 1192 1214
+call(
+  tail
+)
+type(
+  string
+)
+"mltest.ml" 37 1163 1165 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 35 1106 1108 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 34 1070 1072 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 33 1047 1049 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 29 955 957 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 28 926 928 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 27 893 895 "mltest.ml" 38 1192 1214
+type(
+  string
+)
+"mltest.ml" 43 1255 1259 "mltest.ml" 43 1255 1270
+type(
+  string list -> string
+)
+ident(
+  def strlist2str "mltest.ml" 44 1294 1294 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 43 1255 1273 "mltest.ml" 43 1255 1281
+type(
+  (string -> string) -> string list -> string
+)
+ident(
+  int_ref list2str "mltest.ml" 26 866 870 "mltest.ml" 26 866 878
+)
+"mltest.ml" 43 1255 1282 "mltest.ml" 43 1255 1291
+type(
+  string -> string
+)
+ident(
+  int_ref quote_str "mltest.ml" 22 718 722 "mltest.ml" 22 718 731
+)
+"mltest.ml" 43 1255 1273 "mltest.ml" 43 1255 1291
+call(
+  stack
+)
+type(
+  string list -> string
+)
+"mltest.ml" 44 1294 1298 "mltest.ml" 44 1294 1309
+type(
+  int list -> string
+)
+ident(
+  def intlist2str "mltest.ml" 45 1337 1337 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 44 1294 1312 "mltest.ml" 44 1294 1320
+type(
+  (int -> string) -> int list -> string
+)
+ident(
+  int_ref list2str "mltest.ml" 26 866 870 "mltest.ml" 26 866 878
+)
+"mltest.ml" 44 1294 1321 "mltest.ml" 44 1294 1334
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"mltest.ml" 44 1294 1312 "mltest.ml" 44 1294 1334
+call(
+  stack
+)
+type(
+  int list -> string
+)
+"mltest.ml" 45 1337 1341 "mltest.ml" 45 1337 1354
+type(
+  float list -> string
+)
+ident(
+  def floatlist2str "mltest.ml" 46 1384 1384 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 45 1337 1357 "mltest.ml" 45 1337 1365
+type(
+  (float -> string) -> float list -> string
+)
+ident(
+  int_ref list2str "mltest.ml" 26 866 870 "mltest.ml" 26 866 878
+)
+"mltest.ml" 45 1337 1366 "mltest.ml" 45 1337 1381
+type(
+  float -> string
+)
+ident(
+  ext_ref Pervasives.string_of_float
+)
+"mltest.ml" 45 1337 1357 "mltest.ml" 45 1337 1381
+call(
+  stack
+)
+type(
+  float list -> string
+)
+"mltest.ml" 46 1384 1388 "mltest.ml" 46 1384 1400
+type(
+  bool list -> string
+)
+ident(
+  def boollist2str "mltest.ml" 50 1523 1523 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 46 1384 1403 "mltest.ml" 46 1384 1411
+type(
+  (bool -> string) -> bool list -> string
+)
+ident(
+  int_ref list2str "mltest.ml" 26 866 870 "mltest.ml" 26 866 878
+)
+"mltest.ml" 46 1384 1412 "mltest.ml" 46 1384 1426
+type(
+  bool -> string
+)
+ident(
+  ext_ref Pervasives.string_of_bool
+)
+"mltest.ml" 46 1384 1403 "mltest.ml" 46 1384 1426
+call(
+  stack
+)
+type(
+  bool list -> string
+)
+"mltest.ml" 50 1523 1527 "mltest.ml" 50 1523 1534
+type(
+  ('a -> string) -> 'a array -> string
+)
+ident(
+  def arr2str "mltest.ml" 66 1914 1914 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 50 1523 1535 "mltest.ml" 50 1523 1542
+type(
+  'a -> string
+)
+ident(
+  def convert "mltest.ml" 50 1523 1543 "mltest.ml" 62 1851 1873
+)
+"mltest.ml" 50 1523 1543 "mltest.ml" 50 1523 1546
+type(
+  'a array
+)
+ident(
+  def lst "mltest.ml" 51 1549 1551 "mltest.ml" 62 1851 1873
+)
+"mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+type(
+  Buffer.t
+)
+ident(
+  def buf "mltest.ml" 52 1582 1584 "mltest.ml" 62 1851 1873
+)
+"mltest.ml" 51 1549 1561 "mltest.ml" 51 1549 1574
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"mltest.ml" 51 1549 1575 "mltest.ml" 51 1549 1578
+type(
+  int
+)
+"mltest.ml" 51 1549 1561 "mltest.ml" 51 1549 1578
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"mltest.ml" 52 1582 1584 "mltest.ml" 52 1582 1601
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 52 1582 1602 "mltest.ml" 52 1582 1605
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 52 1582 1606 "mltest.ml" 52 1582 1610
+type(
+  string
+)
+"mltest.ml" 52 1582 1584 "mltest.ml" 52 1582 1610
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 53 1612 1618 "mltest.ml" 53 1612 1623
+type(
+  'a -> unit
+)
+ident(
+  def iterf "mltest.ml" 57 1704 1706 "mltest.ml" 62 1851 1873
+)
+"mltest.ml" 53 1612 1624 "mltest.ml" 53 1612 1625
+type(
+  'a
+)
+ident(
+  def x "mltest.ml" 54 1628 1632 "mltest.ml" 55 1653 1698
+)
+"mltest.ml" 54 1628 1636 "mltest.ml" 54 1628 1637
+type(
+  string
+)
+ident(
+  def s "mltest.ml" 55 1653 1657 "mltest.ml" 55 1653 1698
+)
+"mltest.ml" 54 1628 1640 "mltest.ml" 54 1628 1647
+type(
+  'a -> string
+)
+ident(
+  int_ref convert "mltest.ml" 50 1523 1535 "mltest.ml" 50 1523 1542
+)
+"mltest.ml" 54 1628 1648 "mltest.ml" 54 1628 1649
+type(
+  'a
+)
+ident(
+  int_ref x "mltest.ml" 53 1612 1624 "mltest.ml" 53 1612 1625
+)
+"mltest.ml" 54 1628 1640 "mltest.ml" 54 1628 1649
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 55 1653 1657 "mltest.ml" 55 1653 1674
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 55 1653 1675 "mltest.ml" 55 1653 1678
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 55 1653 1680 "mltest.ml" 55 1653 1687
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 55 1653 1688 "mltest.ml" 55 1653 1694
+type(
+  (string -> string, unit, string) format
+)
+"mltest.ml" 55 1653 1695 "mltest.ml" 55 1653 1696
+type(
+  string
+)
+ident(
+  int_ref s "mltest.ml" 54 1628 1636 "mltest.ml" 54 1628 1637
+)
+"mltest.ml" 55 1653 1679 "mltest.ml" 55 1653 1697
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 55 1653 1657 "mltest.ml" 55 1653 1698
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 54 1628 1632 "mltest.ml" 55 1653 1698
+type(
+  unit
+)
+"mltest.ml" 57 1704 1706 "mltest.ml" 57 1704 1716
+type(
+  ('a -> unit) -> 'a array -> unit
+)
+ident(
+  ext_ref Array.iter
+)
+"mltest.ml" 57 1704 1717 "mltest.ml" 57 1704 1722
+type(
+  'a -> unit
+)
+ident(
+  int_ref iterf "mltest.ml" 53 1612 1618 "mltest.ml" 53 1612 1623
+)
+"mltest.ml" 57 1704 1723 "mltest.ml" 57 1704 1726
+type(
+  'a array
+)
+ident(
+  int_ref lst "mltest.ml" 50 1523 1543 "mltest.ml" 50 1523 1546
+)
+"mltest.ml" 57 1704 1706 "mltest.ml" 57 1704 1726
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 58 1728 1734 "mltest.ml" 58 1728 1740
+type(
+  int
+)
+ident(
+  def buflen "mltest.ml" 59 1764 1766 "mltest.ml" 62 1851 1873
+)
+"mltest.ml" 58 1728 1743 "mltest.ml" 58 1728 1756
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"mltest.ml" 58 1728 1757 "mltest.ml" 58 1728 1760
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 58 1728 1743 "mltest.ml" 58 1728 1760
+call(
+  stack
+)
+type(
+  int
+)
+"mltest.ml" 59 1764 1769 "mltest.ml" 59 1764 1775
+type(
+  int
+)
+ident(
+  int_ref buflen "mltest.ml" 58 1728 1734 "mltest.ml" 58 1728 1740
+)
+"mltest.ml" 59 1764 1776 "mltest.ml" 59 1764 1777
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"mltest.ml" 59 1764 1778 "mltest.ml" 59 1764 1779
+type(
+  int
+)
+"mltest.ml" 59 1764 1769 "mltest.ml" 59 1764 1779
+type(
+  bool
+)
+"mltest.ml" 60 1785 1789 "mltest.ml" 60 1785 1804
+type(
+  Buffer.t -> int -> unit
+)
+ident(
+  ext_ref Buffer.truncate
+)
+"mltest.ml" 60 1785 1805 "mltest.ml" 60 1785 1808
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 60 1785 1810 "mltest.ml" 60 1785 1816
+type(
+  int
+)
+ident(
+  int_ref buflen "mltest.ml" 58 1728 1734 "mltest.ml" 58 1728 1740
+)
+"mltest.ml" 60 1785 1816 "mltest.ml" 60 1785 1817
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"mltest.ml" 60 1785 1817 "mltest.ml" 60 1785 1818
+type(
+  int
+)
+"mltest.ml" 60 1785 1809 "mltest.ml" 60 1785 1819
+type(
+  int
+)
+"mltest.ml" 60 1785 1789 "mltest.ml" 60 1785 1819
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 59 1764 1766 "mltest.ml" 60 1785 1819
+type(
+  unit
+)
+"mltest.ml" 61 1821 1823 "mltest.ml" 61 1821 1840
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"mltest.ml" 61 1821 1841 "mltest.ml" 61 1821 1844
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 61 1821 1845 "mltest.ml" 61 1821 1849
+type(
+  string
+)
+"mltest.ml" 61 1821 1823 "mltest.ml" 61 1821 1849
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 62 1851 1853 "mltest.ml" 62 1851 1868
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"mltest.ml" 62 1851 1869 "mltest.ml" 62 1851 1872
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "mltest.ml" 51 1549 1555 "mltest.ml" 51 1549 1558
+)
+"mltest.ml" 62 1851 1853 "mltest.ml" 62 1851 1873
+call(
+  tail
+)
+type(
+  string
+)
+"mltest.ml" 61 1821 1823 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 59 1764 1766 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 58 1728 1730 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 57 1704 1706 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 53 1612 1614 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 52 1582 1584 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 51 1549 1551 "mltest.ml" 62 1851 1873
+type(
+  string
+)
+"mltest.ml" 66 1914 1918 "mltest.ml" 66 1914 1928
+type(
+  string array -> string
+)
+ident(
+  def strarr2str "mltest.ml" 67 1951 1951 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 66 1914 1931 "mltest.ml" 66 1914 1938
+type(
+  (string -> string) -> string array -> string
+)
+ident(
+  int_ref arr2str "mltest.ml" 50 1523 1527 "mltest.ml" 50 1523 1534
+)
+"mltest.ml" 66 1914 1939 "mltest.ml" 66 1914 1948
+type(
+  string -> string
+)
+ident(
+  int_ref quote_str "mltest.ml" 22 718 722 "mltest.ml" 22 718 731
+)
+"mltest.ml" 66 1914 1931 "mltest.ml" 66 1914 1948
+call(
+  stack
+)
+type(
+  string array -> string
+)
+"mltest.ml" 67 1951 1955 "mltest.ml" 67 1951 1965
+type(
+  int array -> string
+)
+ident(
+  def intarr2str "mltest.ml" 68 1992 1992 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 67 1951 1968 "mltest.ml" 67 1951 1975
+type(
+  (int -> string) -> int array -> string
+)
+ident(
+  int_ref arr2str "mltest.ml" 50 1523 1527 "mltest.ml" 50 1523 1534
+)
+"mltest.ml" 67 1951 1976 "mltest.ml" 67 1951 1989
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"mltest.ml" 67 1951 1968 "mltest.ml" 67 1951 1989
+call(
+  stack
+)
+type(
+  int array -> string
+)
+"mltest.ml" 68 1992 1996 "mltest.ml" 68 1992 2008
+type(
+  float array -> string
+)
+ident(
+  def floatarr2str "mltest.ml" 69 2037 2037 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 68 1992 2011 "mltest.ml" 68 1992 2018
+type(
+  (float -> string) -> float array -> string
+)
+ident(
+  int_ref arr2str "mltest.ml" 50 1523 1527 "mltest.ml" 50 1523 1534
+)
+"mltest.ml" 68 1992 2019 "mltest.ml" 68 1992 2034
+type(
+  float -> string
+)
+ident(
+  ext_ref Pervasives.string_of_float
+)
+"mltest.ml" 68 1992 2011 "mltest.ml" 68 1992 2034
+call(
+  stack
+)
+type(
+  float array -> string
+)
+"mltest.ml" 69 2037 2041 "mltest.ml" 69 2037 2052
+type(
+  bool array -> string
+)
+ident(
+  def boolarr2str "mltest.ml" 71 2081 2081 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 69 2037 2055 "mltest.ml" 69 2037 2062
+type(
+  (bool -> string) -> bool array -> string
+)
+ident(
+  int_ref arr2str "mltest.ml" 50 1523 1527 "mltest.ml" 50 1523 1534
+)
+"mltest.ml" 69 2037 2063 "mltest.ml" 69 2037 2077
+type(
+  bool -> string
+)
+ident(
+  ext_ref Pervasives.string_of_bool
+)
+"mltest.ml" 69 2037 2055 "mltest.ml" 69 2037 2077
+call(
+  stack
+)
+type(
+  bool array -> string
+)
+"mltest.ml" 71 2081 2089 "mltest.ml" 71 2081 2096
+type(
+  ('a option -> 'b option -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  def map2opt "mltest.ml" 71 2081 2081 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  def func "mltest.ml" 71 2081 2102 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 71 2081 2102 "mltest.ml" 71 2081 2107
+type(
+  'a list
+)
+ident(
+  def alist "mltest.ml" 71 2081 2108 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 71 2081 2108 "mltest.ml" 71 2081 2113
+type(
+  'b list
+)
+ident(
+  def blist "mltest.ml" 72 2116 2118 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 72 2116 2124 "mltest.ml" 72 2116 2129
+type(
+  'a list
+)
+ident(
+  int_ref alist "mltest.ml" 71 2081 2102 "mltest.ml" 71 2081 2107
+)
+"mltest.ml" 72 2116 2130 "mltest.ml" 72 2116 2135
+type(
+  'b list
+)
+ident(
+  int_ref blist "mltest.ml" 71 2081 2108 "mltest.ml" 71 2081 2113
+)
+"mltest.ml" 72 2116 2124 "mltest.ml" 72 2116 2135
+type(
+  'a list * 'b list
+)
+"mltest.ml" 73 2141 2145 "mltest.ml" 73 2141 2147
+type(
+  'a list
+)
+"mltest.ml" 73 2141 2148 "mltest.ml" 73 2141 2150
+type(
+  'b list
+)
+"mltest.ml" 73 2141 2145 "mltest.ml" 73 2141 2150
+type(
+  'a list * 'b list
+)
+"mltest.ml" 73 2141 2162 "mltest.ml" 73 2141 2164
+type(
+  'c list
+)
+"mltest.ml" 74 2165 2169 "mltest.ml" 74 2165 2171
+type(
+  'a
+)
+ident(
+  def ah "mltest.ml" 74 2165 2186 "mltest.ml" 74 2165 2234
+)
+"mltest.ml" 74 2165 2173 "mltest.ml" 74 2165 2175
+type(
+  'a list
+)
+ident(
+  def at "mltest.ml" 74 2165 2186 "mltest.ml" 74 2165 2234
+)
+"mltest.ml" 74 2165 2169 "mltest.ml" 74 2165 2175
+type(
+  'a list
+)
+"mltest.ml" 74 2165 2176 "mltest.ml" 74 2165 2178
+type(
+  'b list
+)
+"mltest.ml" 74 2165 2169 "mltest.ml" 74 2165 2178
+type(
+  'a list * 'b list
+)
+"mltest.ml" 74 2165 2187 "mltest.ml" 74 2165 2191
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 74 2165 2198 "mltest.ml" 74 2165 2200
+type(
+  'a
+)
+ident(
+  int_ref ah "mltest.ml" 74 2165 2169 "mltest.ml" 74 2165 2171
+)
+"mltest.ml" 74 2165 2192 "mltest.ml" 74 2165 2201
+type(
+  'a option
+)
+"mltest.ml" 74 2165 2202 "mltest.ml" 74 2165 2206
+type(
+  'b option
+)
+"mltest.ml" 74 2165 2186 "mltest.ml" 74 2165 2207
+call(
+  stack
+)
+type(
+  'c
+)
+"mltest.ml" 74 2165 2215 "mltest.ml" 74 2165 2222
+type(
+  ('a option -> 'b option -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref map2opt "mltest.ml" 71 2081 2089 "mltest.ml" 71 2081 2096
+)
+"mltest.ml" 74 2165 2223 "mltest.ml" 74 2165 2227
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 74 2165 2228 "mltest.ml" 74 2165 2230
+type(
+  'a list
+)
+ident(
+  int_ref at "mltest.ml" 74 2165 2173 "mltest.ml" 74 2165 2175
+)
+"mltest.ml" 74 2165 2231 "mltest.ml" 74 2165 2233
+type(
+  'b list
+)
+"mltest.ml" 74 2165 2214 "mltest.ml" 74 2165 2234
+call(
+  stack
+)
+type(
+  'c list
+)
+"mltest.ml" 74 2165 2186 "mltest.ml" 74 2165 2234
+type(
+  'c list
+)
+"mltest.ml" 75 2235 2239 "mltest.ml" 75 2235 2241
+type(
+  'a list
+)
+"mltest.ml" 75 2235 2242 "mltest.ml" 75 2235 2244
+type(
+  'b
+)
+ident(
+  def bh "mltest.ml" 75 2235 2256 "mltest.ml" 75 2235 2304
+)
+"mltest.ml" 75 2235 2246 "mltest.ml" 75 2235 2248
+type(
+  'b list
+)
+ident(
+  def bt "mltest.ml" 75 2235 2256 "mltest.ml" 75 2235 2304
+)
+"mltest.ml" 75 2235 2242 "mltest.ml" 75 2235 2248
+type(
+  'b list
+)
+"mltest.ml" 75 2235 2239 "mltest.ml" 75 2235 2248
+type(
+  'a list * 'b list
+)
+"mltest.ml" 75 2235 2257 "mltest.ml" 75 2235 2261
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 75 2235 2262 "mltest.ml" 75 2235 2266
+type(
+  'a option
+)
+"mltest.ml" 75 2235 2273 "mltest.ml" 75 2235 2275
+type(
+  'b
+)
+ident(
+  int_ref bh "mltest.ml" 75 2235 2242 "mltest.ml" 75 2235 2244
+)
+"mltest.ml" 75 2235 2267 "mltest.ml" 75 2235 2276
+type(
+  'b option
+)
+"mltest.ml" 75 2235 2256 "mltest.ml" 75 2235 2277
+call(
+  stack
+)
+type(
+  'c
+)
+"mltest.ml" 75 2235 2285 "mltest.ml" 75 2235 2292
+type(
+  ('a option -> 'b option -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref map2opt "mltest.ml" 71 2081 2089 "mltest.ml" 71 2081 2096
+)
+"mltest.ml" 75 2235 2293 "mltest.ml" 75 2235 2297
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 75 2235 2298 "mltest.ml" 75 2235 2300
+type(
+  'a list
+)
+"mltest.ml" 75 2235 2301 "mltest.ml" 75 2235 2303
+type(
+  'b list
+)
+ident(
+  int_ref bt "mltest.ml" 75 2235 2246 "mltest.ml" 75 2235 2248
+)
+"mltest.ml" 75 2235 2284 "mltest.ml" 75 2235 2304
+call(
+  stack
+)
+type(
+  'c list
+)
+"mltest.ml" 75 2235 2256 "mltest.ml" 75 2235 2304
+type(
+  'c list
+)
+"mltest.ml" 76 2305 2309 "mltest.ml" 76 2305 2311
+type(
+  'a
+)
+ident(
+  def ah "mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 76 2305 2313 "mltest.ml" 76 2305 2315
+type(
+  'a list
+)
+ident(
+  def at "mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 76 2305 2309 "mltest.ml" 76 2305 2315
+type(
+  'a list
+)
+"mltest.ml" 76 2305 2316 "mltest.ml" 76 2305 2318
+type(
+  'b
+)
+ident(
+  def bh "mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 76 2305 2320 "mltest.ml" 76 2305 2322
+type(
+  'b list
+)
+ident(
+  def bt "mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2374
+)
+"mltest.ml" 76 2305 2316 "mltest.ml" 76 2305 2322
+type(
+  'b list
+)
+"mltest.ml" 76 2305 2309 "mltest.ml" 76 2305 2322
+type(
+  'a list * 'b list
+)
+"mltest.ml" 76 2305 2327 "mltest.ml" 76 2305 2331
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 76 2305 2338 "mltest.ml" 76 2305 2340
+type(
+  'a
+)
+ident(
+  int_ref ah "mltest.ml" 76 2305 2309 "mltest.ml" 76 2305 2311
+)
+"mltest.ml" 76 2305 2332 "mltest.ml" 76 2305 2341
+type(
+  'a option
+)
+"mltest.ml" 76 2305 2348 "mltest.ml" 76 2305 2350
+type(
+  'b
+)
+ident(
+  int_ref bh "mltest.ml" 76 2305 2316 "mltest.ml" 76 2305 2318
+)
+"mltest.ml" 76 2305 2342 "mltest.ml" 76 2305 2351
+type(
+  'b option
+)
+"mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2352
+call(
+  stack
+)
+type(
+  'c
+)
+"mltest.ml" 76 2305 2355 "mltest.ml" 76 2305 2362
+type(
+  ('a option -> 'b option -> 'c) -> 'a list -> 'b list -> 'c list
+)
+ident(
+  int_ref map2opt "mltest.ml" 71 2081 2089 "mltest.ml" 71 2081 2096
+)
+"mltest.ml" 76 2305 2363 "mltest.ml" 76 2305 2367
+type(
+  'a option -> 'b option -> 'c
+)
+ident(
+  int_ref func "mltest.ml" 71 2081 2097 "mltest.ml" 71 2081 2101
+)
+"mltest.ml" 76 2305 2368 "mltest.ml" 76 2305 2370
+type(
+  'a list
+)
+ident(
+  int_ref at "mltest.ml" 76 2305 2313 "mltest.ml" 76 2305 2315
+)
+"mltest.ml" 76 2305 2371 "mltest.ml" 76 2305 2373
+type(
+  'b list
+)
+ident(
+  int_ref bt "mltest.ml" 76 2305 2320 "mltest.ml" 76 2305 2322
+)
+"mltest.ml" 76 2305 2354 "mltest.ml" 76 2305 2374
+call(
+  stack
+)
+type(
+  'c list
+)
+"mltest.ml" 76 2305 2326 "mltest.ml" 76 2305 2374
+type(
+  'c list
+)
+"mltest.ml" 72 2116 2118 "mltest.ml" 76 2305 2374
+type(
+  'c list
+)
+"mltest.ml" 79 2433 2437 "mltest.ml" 79 2433 2448
+type(
+  string -> (unit -> 'a) -> unit
+)
+ident(
+  def save_stdout "mltest.ml" 90 2770 2770 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 79 2433 2449 "mltest.ml" 79 2433 2457
+type(
+  string
+)
+ident(
+  def filename "mltest.ml" 79 2433 2458 "mltest.ml" 86 2656 2690
+)
+"mltest.ml" 79 2433 2458 "mltest.ml" 79 2433 2463
+type(
+  unit -> 'a
+)
+ident(
+  def thunk "mltest.ml" 80 2466 2468 "mltest.ml" 86 2656 2690
+)
+"mltest.ml" 80 2466 2468 "mltest.ml" 80 2466 2473
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.flush
+)
+"mltest.ml" 80 2466 2474 "mltest.ml" 80 2466 2480
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stdout
+)
+"mltest.ml" 80 2466 2468 "mltest.ml" 80 2466 2480
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 81 2484 2490 "mltest.ml" 81 2484 2499
+type(
+  Unix.file_descr
+)
+ident(
+  def oldstdout "mltest.ml" 82 2526 2528 "mltest.ml" 86 2656 2690
+)
+"mltest.ml" 81 2484 2502 "mltest.ml" 81 2484 2510
+type(
+  ?cloexec:bool -> Unix.file_descr -> Unix.file_descr
+)
+ident(
+  ext_ref Unix.dup
+)
+"mltest.ml" 81 2484 2511 "mltest.ml" 81 2484 2522
+type(
+  Unix.file_descr
+)
+ident(
+  ext_ref Unix.stdout
+)
+"mltest.ml" 81 2484 2502 "mltest.ml" 81 2484 2522
+call(
+  stack
+)
+type(
+  Unix.file_descr
+)
+"mltest.ml" 82 2526 2532 "mltest.ml" 82 2526 2541
+type(
+  out_channel
+)
+ident(
+  def newstdout "mltest.ml" 83 2565 2567 "mltest.ml" 86 2656 2690
+)
+"mltest.ml" 82 2526 2544 "mltest.ml" 82 2526 2552
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out
+)
+"mltest.ml" 82 2526 2553 "mltest.ml" 82 2526 2561
+type(
+  string
+)
+ident(
+  int_ref filename "mltest.ml" 79 2433 2449 "mltest.ml" 79 2433 2457
+)
+"mltest.ml" 82 2526 2544 "mltest.ml" 82 2526 2561
+call(
+  stack
+)
+type(
+  out_channel
+)
+"mltest.ml" 83 2565 2567 "mltest.ml" 83 2565 2576
+type(
+  ?cloexec:bool -> Unix.file_descr -> Unix.file_descr -> unit
+)
+ident(
+  ext_ref Unix.dup2
+)
+"mltest.ml" 83 2565 2578 "mltest.ml" 83 2565 2603
+type(
+  out_channel -> Unix.file_descr
+)
+ident(
+  ext_ref Unix.descr_of_out_channel
+)
+"mltest.ml" 83 2565 2604 "mltest.ml" 83 2565 2613
+type(
+  out_channel
+)
+ident(
+  int_ref newstdout "mltest.ml" 82 2526 2532 "mltest.ml" 82 2526 2541
+)
+"mltest.ml" 83 2565 2577 "mltest.ml" 83 2565 2614
+call(
+  stack
+)
+type(
+  Unix.file_descr
+)
+"mltest.ml" 83 2565 2615 "mltest.ml" 83 2565 2626
+type(
+  Unix.file_descr
+)
+ident(
+  ext_ref Unix.stdout
+)
+"mltest.ml" 83 2565 2567 "mltest.ml" 83 2565 2626
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 84 2628 2630 "mltest.ml" 84 2628 2635
+type(
+  unit -> 'a
+)
+ident(
+  int_ref thunk "mltest.ml" 79 2433 2458 "mltest.ml" 79 2433 2463
+)
+"mltest.ml" 84 2628 2636 "mltest.ml" 84 2628 2638
+type(
+  unit
+)
+"mltest.ml" 84 2628 2630 "mltest.ml" 84 2628 2638
+call(
+  stack
+)
+type(
+  'a
+)
+"mltest.ml" 85 2640 2642 "mltest.ml" 85 2640 2647
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.flush
+)
+"mltest.ml" 85 2640 2648 "mltest.ml" 85 2640 2654
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stdout
+)
+"mltest.ml" 85 2640 2642 "mltest.ml" 85 2640 2654
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 86 2656 2658 "mltest.ml" 86 2656 2667
+type(
+  ?cloexec:bool -> Unix.file_descr -> Unix.file_descr -> unit
+)
+ident(
+  ext_ref Unix.dup2
+)
+"mltest.ml" 86 2656 2668 "mltest.ml" 86 2656 2677
+type(
+  Unix.file_descr
+)
+ident(
+  int_ref oldstdout "mltest.ml" 81 2484 2490 "mltest.ml" 81 2484 2499
+)
+"mltest.ml" 86 2656 2678 "mltest.ml" 86 2656 2689
+type(
+  Unix.file_descr
+)
+ident(
+  ext_ref Unix.stdout
+)
+"mltest.ml" 86 2656 2658 "mltest.ml" 86 2656 2690
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 85 2640 2642 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 84 2628 2630 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 83 2565 2567 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 82 2526 2528 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 81 2484 2486 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 80 2466 2468 "mltest.ml" 86 2656 2690
+type(
+  unit
+)
+"mltest.ml" 90 2770 2774 "mltest.ml" 90 2770 2779
+type(
+  string -> string
+)
+ident(
+  def slurp "mltest.ml" 101 3132 3132 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 90 2770 2780 "mltest.ml" 90 2770 2788
+type(
+  string
+)
+ident(
+  def filename "mltest.ml" 91 2791 2793 "mltest.ml" 97 3064 3087
+)
+"mltest.ml" 91 2791 2797 "mltest.ml" 91 2791 2803
+type(
+  in_channel
+)
+ident(
+  def inchan "mltest.ml" 92 2826 2828 "mltest.ml" 97 3064 3087
+)
+"mltest.ml" 91 2791 2806 "mltest.ml" 91 2791 2813
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"mltest.ml" 91 2791 2814 "mltest.ml" 91 2791 2822
+type(
+  string
+)
+ident(
+  int_ref filename "mltest.ml" 90 2770 2780 "mltest.ml" 90 2770 2788
+)
+"mltest.ml" 91 2791 2806 "mltest.ml" 91 2791 2822
+call(
+  stack
+)
+type(
+  in_channel
+)
+"mltest.ml" 92 2826 2832 "mltest.ml" 92 2826 2835
+type(
+  int
+)
+ident(
+  def len "mltest.ml" 93 2866 2868 "mltest.ml" 97 3064 3087
+)
+"mltest.ml" 92 2826 2838 "mltest.ml" 92 2826 2855
+type(
+  in_channel -> int
+)
+ident(
+  ext_ref Pervasives.in_channel_length
+)
+"mltest.ml" 92 2826 2856 "mltest.ml" 92 2826 2862
+type(
+  in_channel
+)
+ident(
+  int_ref inchan "mltest.ml" 91 2791 2797 "mltest.ml" 91 2791 2803
+)
+"mltest.ml" 92 2826 2838 "mltest.ml" 92 2826 2862
+call(
+  stack
+)
+type(
+  int
+)
+"mltest.ml" 93 2866 2872 "mltest.ml" 93 2866 2877
+type(
+  bytes
+)
+ident(
+  def bytes "mltest.ml" 94 2900 2902 "mltest.ml" 97 3064 3087
+)
+"mltest.ml" 93 2866 2880 "mltest.ml" 93 2866 2892
+type(
+  int -> bytes
+)
+ident(
+  ext_ref Bytes.create
+)
+"mltest.ml" 93 2866 2893 "mltest.ml" 93 2866 2896
+type(
+  int
+)
+ident(
+  int_ref len "mltest.ml" 92 2826 2832 "mltest.ml" 92 2826 2835
+)
+"mltest.ml" 93 2866 2880 "mltest.ml" 93 2866 2896
+type(
+  bytes
+)
+"mltest.ml" 94 2900 2906 "mltest.ml" 94 2900 2913
+type(
+  int
+)
+ident(
+  def readlen "mltest.ml" 95 2944 2946 "mltest.ml" 97 3064 3087
+)
+"mltest.ml" 94 2900 2916 "mltest.ml" 94 2900 2921
+type(
+  in_channel -> bytes -> int -> int -> int
+)
+ident(
+  ext_ref Pervasives.input
+)
+"mltest.ml" 94 2900 2922 "mltest.ml" 94 2900 2928
+type(
+  in_channel
+)
+ident(
+  int_ref inchan "mltest.ml" 91 2791 2797 "mltest.ml" 91 2791 2803
+)
+"mltest.ml" 94 2900 2929 "mltest.ml" 94 2900 2934
+type(
+  bytes
+)
+ident(
+  int_ref bytes "mltest.ml" 93 2866 2872 "mltest.ml" 93 2866 2877
+)
+"mltest.ml" 94 2900 2935 "mltest.ml" 94 2900 2936
+type(
+  int
+)
+"mltest.ml" 94 2900 2937 "mltest.ml" 94 2900 2940
+type(
+  int
+)
+ident(
+  int_ref len "mltest.ml" 92 2826 2832 "mltest.ml" 92 2826 2835
+)
+"mltest.ml" 94 2900 2916 "mltest.ml" 94 2900 2940
+call(
+  stack
+)
+type(
+  int
+)
+"mltest.ml" 95 2944 2949 "mltest.ml" 95 2944 2952
+type(
+  int
+)
+ident(
+  int_ref len "mltest.ml" 92 2826 2832 "mltest.ml" 92 2826 2835
+)
+"mltest.ml" 95 2944 2953 "mltest.ml" 95 2944 2955
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( != )
+)
+"mltest.ml" 95 2944 2956 "mltest.ml" 95 2944 2963
+type(
+  int
+)
+ident(
+  int_ref readlen "mltest.ml" 94 2900 2906 "mltest.ml" 94 2900 2913
+)
+"mltest.ml" 95 2944 2949 "mltest.ml" 95 2944 2963
+type(
+  bool
+)
+"mltest.ml" 96 2969 2973 "mltest.ml" 96 2969 2980
+type(
+  (string -> int -> int -> unit, out_channel, unit) format ->
+  string -> int -> int -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"mltest.ml" 96 2969 2981 "mltest.ml" 96 2969 3041
+type(
+  (string -> int -> int -> unit, out_channel, unit) format
+)
+"mltest.ml" 96 2969 3042 "mltest.ml" 96 2969 3050
+type(
+  string
+)
+ident(
+  int_ref filename "mltest.ml" 90 2770 2780 "mltest.ml" 90 2770 2788
+)
+"mltest.ml" 96 2969 3051 "mltest.ml" 96 2969 3054
+type(
+  int
+)
+ident(
+  int_ref len "mltest.ml" 92 2826 2832 "mltest.ml" 92 2826 2835
+)
+"mltest.ml" 96 2969 3055 "mltest.ml" 96 2969 3062
+type(
+  int
+)
+ident(
+  int_ref readlen "mltest.ml" 94 2900 2906 "mltest.ml" 94 2900 2913
+)
+"mltest.ml" 96 2969 2973 "mltest.ml" 96 2969 3062
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 95 2944 2946 "mltest.ml" 96 2969 3062
+type(
+  unit
+)
+"mltest.ml" 97 3064 3066 "mltest.ml" 97 3064 3081
+type(
+  bytes -> string
+)
+ident(
+  ext_ref Bytes.to_string
+)
+"mltest.ml" 97 3064 3082 "mltest.ml" 97 3064 3087
+type(
+  bytes
+)
+ident(
+  int_ref bytes "mltest.ml" 93 2866 2872 "mltest.ml" 93 2866 2877
+)
+"mltest.ml" 97 3064 3066 "mltest.ml" 97 3064 3087
+call(
+  tail
+)
+type(
+  string
+)
+"mltest.ml" 95 2944 2946 "mltest.ml" 97 3064 3087
+type(
+  string
+)
+"mltest.ml" 94 2900 2902 "mltest.ml" 97 3064 3087
+type(
+  string
+)
+"mltest.ml" 93 2866 2868 "mltest.ml" 97 3064 3087
+type(
+  string
+)
+"mltest.ml" 92 2826 2828 "mltest.ml" 97 3064 3087
+type(
+  string
+)
+"mltest.ml" 91 2791 2793 "mltest.ml" 97 3064 3087
+type(
+  string
+)
+"mltest.ml" 101 3132 3136 "mltest.ml" 101 3132 3140
+type(
+  string -> string -> unit
+)
+ident(
+  def dump "mltest.ml" 119 3659 3659 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 101 3132 3141 "mltest.ml" 101 3132 3147
+type(
+  string
+)
+ident(
+  def string "mltest.ml" 101 3132 3148 "mltest.ml" 104 3228 3248
+)
+"mltest.ml" 101 3132 3148 "mltest.ml" 101 3132 3156
+type(
+  string
+)
+ident(
+  def filename "mltest.ml" 102 3159 3161 "mltest.ml" 104 3228 3248
+)
+"mltest.ml" 102 3159 3165 "mltest.ml" 102 3159 3172
+type(
+  out_channel
+)
+ident(
+  def outchan "mltest.ml" 103 3196 3198 "mltest.ml" 104 3228 3248
+)
+"mltest.ml" 102 3159 3175 "mltest.ml" 102 3159 3183
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out
+)
+"mltest.ml" 102 3159 3184 "mltest.ml" 102 3159 3192
+type(
+  string
+)
+ident(
+  int_ref filename "mltest.ml" 101 3132 3148 "mltest.ml" 101 3132 3156
+)
+"mltest.ml" 102 3159 3175 "mltest.ml" 102 3159 3192
+call(
+  stack
+)
+type(
+  out_channel
+)
+"mltest.ml" 103 3196 3198 "mltest.ml" 103 3196 3211
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"mltest.ml" 103 3196 3212 "mltest.ml" 103 3196 3219
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "mltest.ml" 102 3159 3165 "mltest.ml" 102 3159 3172
+)
+"mltest.ml" 103 3196 3220 "mltest.ml" 103 3196 3226
+type(
+  string
+)
+ident(
+  int_ref string "mltest.ml" 101 3132 3141 "mltest.ml" 101 3132 3147
+)
+"mltest.ml" 103 3196 3198 "mltest.ml" 103 3196 3226
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 104 3228 3230 "mltest.ml" 104 3228 3239
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"mltest.ml" 104 3228 3240 "mltest.ml" 104 3228 3247
+type(
+  out_channel
+)
+ident(
+  int_ref outchan "mltest.ml" 102 3159 3165 "mltest.ml" 102 3159 3172
+)
+"mltest.ml" 104 3228 3230 "mltest.ml" 104 3228 3248
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 103 3196 3198 "mltest.ml" 104 3228 3248
+type(
+  unit
+)
+"mltest.ml" 102 3159 3161 "mltest.ml" 104 3228 3248
+type(
+  unit
+)
+"mltest.ml" 119 3659 3663 "mltest.ml" 119 3659 3673
+type(
+  string -> string -> string -> string ref -> bool
+)
+ident(
+  def check_diff "mltest.ml" 156 4721 4721 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 119 3659 3674 "mltest.ml" 119 3659 3685
+type(
+  string
+)
+ident(
+  def expect_file "mltest.ml" 119 3659 3686 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 119 3659 3686 "mltest.ml" 119 3659 3697
+type(
+  string
+)
+ident(
+  def actual_file "mltest.ml" 119 3659 3698 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 119 3659 3698 "mltest.ml" 119 3659 3707
+type(
+  string
+)
+ident(
+  def diff_file "mltest.ml" 119 3659 3708 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 119 3659 3708 "mltest.ml" 119 3659 3714
+type(
+  string ref
+)
+ident(
+  def msgref "mltest.ml" 120 3717 3719 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 120 3717 3723 "mltest.ml" 120 3717 3726
+type(
+  string
+)
+ident(
+  def cmd "mltest.ml" 121 3797 3799 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 120 3717 3729 "mltest.ml" 120 3717 3736
+type(
+  (string -> string -> string -> string, unit, string) format ->
+  string -> string -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 120 3717 3737 "mltest.ml" 120 3717 3759
+type(
+  (string -> string -> string -> string, unit, string) format
+)
+"mltest.ml" 120 3717 3760 "mltest.ml" 120 3717 3771
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 119 3659 3674 "mltest.ml" 119 3659 3685
+)
+"mltest.ml" 120 3717 3772 "mltest.ml" 120 3717 3783
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 119 3659 3686 "mltest.ml" 119 3659 3697
+)
+"mltest.ml" 120 3717 3784 "mltest.ml" 120 3717 3793
+type(
+  string
+)
+ident(
+  int_ref diff_file "mltest.ml" 119 3659 3698 "mltest.ml" 119 3659 3707
+)
+"mltest.ml" 120 3717 3729 "mltest.ml" 120 3717 3793
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 121 3797 3803 "mltest.ml" 121 3797 3810
+type(
+  int
+)
+ident(
+  def retcode "mltest.ml" 122 3832 3834 "mltest.ml" 151 4607 4614
+)
+"mltest.ml" 121 3797 3813 "mltest.ml" 121 3797 3824
+type(
+  string -> int
+)
+ident(
+  ext_ref Sys.command
+)
+"mltest.ml" 121 3797 3825 "mltest.ml" 121 3797 3828
+type(
+  string
+)
+ident(
+  int_ref cmd "mltest.ml" 120 3717 3723 "mltest.ml" 120 3717 3726
+)
+"mltest.ml" 121 3797 3813 "mltest.ml" 121 3797 3828
+type(
+  int
+)
+"mltest.ml" 122 3832 3837 "mltest.ml" 122 3832 3844
+type(
+  int
+)
+ident(
+  int_ref retcode "mltest.ml" 121 3797 3803 "mltest.ml" 121 3797 3810
+)
+"mltest.ml" 122 3832 3845 "mltest.ml" 122 3832 3846
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"mltest.ml" 122 3832 3847 "mltest.ml" 122 3832 3848
+type(
+  int
+)
+"mltest.ml" 122 3832 3837 "mltest.ml" 122 3832 3848
+type(
+  bool
+)
+"mltest.ml" 123 3854 3858 "mltest.ml" 123 3854 3862
+type(
+  bool
+)
+"mltest.ml" 126 3880 3890 "mltest.ml" 126 3880 3895
+type(
+  string
+)
+ident(
+  def lines "mltest.ml" 149 4572 4578 "mltest.ml" 150 4595 4606
+)
+"mltest.ml" 127 3898 3906 "mltest.ml" 127 3898 3919
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"mltest.ml" 127 3898 3920 "mltest.ml" 127 3898 3924
+type(
+  string
+)
+"mltest.ml" 128 3925 3937 "mltest.ml" 128 3925 3972
+type(
+  string
+)
+"mltest.ml" 129 3974 3986 "mltest.ml" 129 3974 4001
+type(
+  string
+)
+"mltest.ml" 129 3974 4001 "mltest.ml" 129 3974 4002
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"mltest.ml" 129 3974 4002 "mltest.ml" 129 3974 4013
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 119 3659 3674 "mltest.ml" 119 3659 3685
+)
+"mltest.ml" 129 3974 3986 "mltest.ml" 129 3974 4013
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 130 4015 4027 "mltest.ml" 130 4015 4042
+type(
+  string
+)
+"mltest.ml" 130 4015 4042 "mltest.ml" 130 4015 4043
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"mltest.ml" 130 4015 4043 "mltest.ml" 130 4015 4054
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 119 3659 3686 "mltest.ml" 119 3659 3697
+)
+"mltest.ml" 130 4015 4027 "mltest.ml" 130 4015 4054
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 131 4056 4068 "mltest.ml" 131 4056 4070
+type(
+  string
+)
+"mltest.ml" 132 4072 4084 "mltest.ml" 132 4072 4109
+type(
+  string
+)
+"mltest.ml" 133 4111 4123 "mltest.ml" 133 4111 4158
+type(
+  string
+)
+"mltest.ml" 134 4160 4172 "mltest.ml" 134 4160 4205
+type(
+  string
+)
+"mltest.ml" 135 4207 4219 "mltest.ml" 135 4207 4270
+type(
+  string
+)
+"mltest.ml" 136 4272 4284 "mltest.ml" 136 4272 4286
+type(
+  string
+)
+"mltest.ml" 137 4288 4300 "mltest.ml" 137 4288 4330
+type(
+  string
+)
+"mltest.ml" 138 4332 4344 "mltest.ml" 138 4332 4349
+type(
+  string -> string
+)
+ident(
+  int_ref slurp "mltest.ml" 90 2770 2774 "mltest.ml" 90 2770 2779
+)
+"mltest.ml" 138 4332 4350 "mltest.ml" 138 4332 4359
+type(
+  string
+)
+ident(
+  int_ref diff_file "mltest.ml" 119 3659 3698 "mltest.ml" 119 3659 3707
+)
+"mltest.ml" 138 4332 4344 "mltest.ml" 138 4332 4359
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 128 3925 3936 "mltest.ml" 139 4361 4373
+type(
+  string list
+)
+"mltest.ml" 139 4361 4374 "mltest.ml" 139 4361 4375
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"mltest.ml" 140 4376 4392 "mltest.ml" 140 4376 4403
+type(
+  bool
+)
+ident(
+  int_ref full_actual "mltest.ml" 5 121 125 "mltest.ml" 5 121 136
+)
+"mltest.ml" 141 4409 4425 "mltest.ml" 141 4409 4430
+type(
+  string
+)
+"mltest.ml" 142 4432 4448 "mltest.ml" 142 4432 4461
+type(
+  string
+)
+"mltest.ml" 143 4463 4479 "mltest.ml" 143 4463 4484
+type(
+  string -> string
+)
+ident(
+  int_ref slurp "mltest.ml" 90 2770 2774 "mltest.ml" 90 2770 2779
+)
+"mltest.ml" 143 4463 4485 "mltest.ml" 143 4463 4496
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 119 3659 3686 "mltest.ml" 119 3659 3697
+)
+"mltest.ml" 143 4463 4479 "mltest.ml" 143 4463 4496
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 141 4409 4424 "mltest.ml" 144 4498 4514
+type(
+  string list
+)
+"mltest.ml" 146 4533 4548 "mltest.ml" 146 4533 4550
+type(
+  string list
+)
+"mltest.ml" 140 4376 4389 "mltest.ml" 146 4533 4550
+type(
+  string list
+)
+"mltest.ml" 128 3925 3935 "mltest.ml" 147 4551 4562
+call(
+  stack
+)
+type(
+  string list
+)
+"mltest.ml" 127 3898 3906 "mltest.ml" 147 4551 4562
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 149 4572 4578 "mltest.ml" 149 4572 4584
+type(
+  string ref
+)
+ident(
+  int_ref msgref "mltest.ml" 119 3659 3708 "mltest.ml" 119 3659 3714
+)
+"mltest.ml" 149 4572 4585 "mltest.ml" 149 4572 4587
+type(
+  string ref -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"mltest.ml" 149 4572 4588 "mltest.ml" 149 4572 4593
+type(
+  string
+)
+ident(
+  int_ref lines "mltest.ml" 126 3880 3890 "mltest.ml" 126 3880 3895
+)
+"mltest.ml" 149 4572 4578 "mltest.ml" 149 4572 4593
+type(
+  unit
+)
+"mltest.ml" 150 4595 4601 "mltest.ml" 150 4595 4606
+type(
+  bool
+)
+"mltest.ml" 149 4572 4578 "mltest.ml" 150 4595 4606
+type(
+  bool
+)
+"mltest.ml" 125 3870 3874 "mltest.ml" 151 4607 4614
+type(
+  bool
+)
+"mltest.ml" 122 3832 3834 "mltest.ml" 151 4607 4614
+type(
+  bool
+)
+"mltest.ml" 121 3797 3799 "mltest.ml" 151 4607 4614
+type(
+  bool
+)
+"mltest.ml" 120 3717 3719 "mltest.ml" 151 4607 4614
+type(
+  bool
+)
+"mltest.ml" 156 4721 4725 "mltest.ml" 156 4721 4742
+type(
+  string -> string -> string -> string -> string ref -> bool
+)
+ident(
+  def check_diff_expect "mltest.ml" 163 4994 4994 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 156 4721 4743 "mltest.ml" 156 4721 4756
+type(
+  string
+)
+ident(
+  def expect_string "mltest.ml" 156 4721 4757 "mltest.ml" 158 4834 4887
+)
+"mltest.ml" 156 4721 4757 "mltest.ml" 156 4721 4768
+type(
+  string
+)
+ident(
+  def expect_file "mltest.ml" 156 4721 4769 "mltest.ml" 158 4834 4887
+)
+"mltest.ml" 156 4721 4769 "mltest.ml" 156 4721 4780
+type(
+  string
+)
+ident(
+  def actual_file "mltest.ml" 156 4721 4781 "mltest.ml" 158 4834 4887
+)
+"mltest.ml" 156 4721 4781 "mltest.ml" 156 4721 4790
+type(
+  string
+)
+ident(
+  def diff_file "mltest.ml" 156 4721 4791 "mltest.ml" 158 4834 4887
+)
+"mltest.ml" 156 4721 4791 "mltest.ml" 156 4721 4797
+type(
+  string ref
+)
+ident(
+  def msgref "mltest.ml" 157 4800 4802 "mltest.ml" 158 4834 4887
+)
+"mltest.ml" 157 4800 4802 "mltest.ml" 157 4800 4806
+type(
+  string -> string -> unit
+)
+ident(
+  int_ref dump "mltest.ml" 101 3132 3136 "mltest.ml" 101 3132 3140
+)
+"mltest.ml" 157 4800 4807 "mltest.ml" 157 4800 4820
+type(
+  string
+)
+ident(
+  int_ref expect_string "mltest.ml" 156 4721 4743 "mltest.ml" 156 4721 4756
+)
+"mltest.ml" 157 4800 4821 "mltest.ml" 157 4800 4832
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 156 4721 4757 "mltest.ml" 156 4721 4768
+)
+"mltest.ml" 157 4800 4802 "mltest.ml" 157 4800 4832
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 158 4834 4836 "mltest.ml" 158 4834 4846
+type(
+  string -> string -> string -> string ref -> bool
+)
+ident(
+  int_ref check_diff "mltest.ml" 119 3659 3663 "mltest.ml" 119 3659 3673
+)
+"mltest.ml" 158 4834 4847 "mltest.ml" 158 4834 4858
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 156 4721 4757 "mltest.ml" 156 4721 4768
+)
+"mltest.ml" 158 4834 4859 "mltest.ml" 158 4834 4870
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 156 4721 4769 "mltest.ml" 156 4721 4780
+)
+"mltest.ml" 158 4834 4871 "mltest.ml" 158 4834 4880
+type(
+  string
+)
+ident(
+  int_ref diff_file "mltest.ml" 156 4721 4781 "mltest.ml" 156 4721 4790
+)
+"mltest.ml" 158 4834 4881 "mltest.ml" 158 4834 4887
+type(
+  string ref
+)
+ident(
+  int_ref msgref "mltest.ml" 156 4721 4791 "mltest.ml" 156 4721 4797
+)
+"mltest.ml" 158 4834 4836 "mltest.ml" 158 4834 4887
+call(
+  tail
+)
+type(
+  bool
+)
+"mltest.ml" 157 4800 4802 "mltest.ml" 158 4834 4887
+type(
+  bool
+)
+"mltest.ml" 163 4994 4998 "mltest.ml" 163 4994 5012
+type(
+  string -> string -> string -> string -> string -> string ref -> bool
+)
+ident(
+  def check_diff_str "mltest.ml" 169 5210 5210 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 163 4994 5013 "mltest.ml" 163 4994 5026
+type(
+  string
+)
+ident(
+  def expect_string "mltest.ml" 163 4994 5027 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 163 4994 5027 "mltest.ml" 163 4994 5038
+type(
+  string
+)
+ident(
+  def expect_file "mltest.ml" 163 4994 5039 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 163 4994 5039 "mltest.ml" 163 4994 5052
+type(
+  string
+)
+ident(
+  def actual_string "mltest.ml" 163 4994 5053 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 163 4994 5053 "mltest.ml" 163 4994 5064
+type(
+  string
+)
+ident(
+  def actual_file "mltest.ml" 163 4994 5065 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 163 4994 5065 "mltest.ml" 163 4994 5074
+type(
+  string
+)
+ident(
+  def diff_file "mltest.ml" 163 4994 5075 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 163 4994 5075 "mltest.ml" 163 4994 5081
+type(
+  string ref
+)
+ident(
+  def msgref "mltest.ml" 164 5084 5086 "mltest.ml" 166 5152 5205
+)
+"mltest.ml" 164 5084 5086 "mltest.ml" 164 5084 5090
+type(
+  string -> string -> unit
+)
+ident(
+  int_ref dump "mltest.ml" 101 3132 3136 "mltest.ml" 101 3132 3140
+)
+"mltest.ml" 164 5084 5091 "mltest.ml" 164 5084 5104
+type(
+  string
+)
+ident(
+  int_ref expect_string "mltest.ml" 163 4994 5013 "mltest.ml" 163 4994 5026
+)
+"mltest.ml" 164 5084 5105 "mltest.ml" 164 5084 5116
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 163 4994 5027 "mltest.ml" 163 4994 5038
+)
+"mltest.ml" 164 5084 5086 "mltest.ml" 164 5084 5116
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 165 5118 5120 "mltest.ml" 165 5118 5124
+type(
+  string -> string -> unit
+)
+ident(
+  int_ref dump "mltest.ml" 101 3132 3136 "mltest.ml" 101 3132 3140
+)
+"mltest.ml" 165 5118 5125 "mltest.ml" 165 5118 5138
+type(
+  string
+)
+ident(
+  int_ref actual_string "mltest.ml" 163 4994 5039 "mltest.ml" 163 4994 5052
+)
+"mltest.ml" 165 5118 5139 "mltest.ml" 165 5118 5150
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 163 4994 5053 "mltest.ml" 163 4994 5064
+)
+"mltest.ml" 165 5118 5120 "mltest.ml" 165 5118 5150
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 166 5152 5154 "mltest.ml" 166 5152 5164
+type(
+  string -> string -> string -> string ref -> bool
+)
+ident(
+  int_ref check_diff "mltest.ml" 119 3659 3663 "mltest.ml" 119 3659 3673
+)
+"mltest.ml" 166 5152 5165 "mltest.ml" 166 5152 5176
+type(
+  string
+)
+ident(
+  int_ref expect_file "mltest.ml" 163 4994 5027 "mltest.ml" 163 4994 5038
+)
+"mltest.ml" 166 5152 5177 "mltest.ml" 166 5152 5188
+type(
+  string
+)
+ident(
+  int_ref actual_file "mltest.ml" 163 4994 5053 "mltest.ml" 163 4994 5064
+)
+"mltest.ml" 166 5152 5189 "mltest.ml" 166 5152 5198
+type(
+  string
+)
+ident(
+  int_ref diff_file "mltest.ml" 163 4994 5065 "mltest.ml" 163 4994 5074
+)
+"mltest.ml" 166 5152 5199 "mltest.ml" 166 5152 5205
+type(
+  string ref
+)
+ident(
+  int_ref msgref "mltest.ml" 163 4994 5075 "mltest.ml" 163 4994 5081
+)
+"mltest.ml" 166 5152 5154 "mltest.ml" 166 5152 5205
+call(
+  tail
+)
+type(
+  bool
+)
+"mltest.ml" 165 5118 5120 "mltest.ml" 166 5152 5205
+type(
+  bool
+)
+"mltest.ml" 164 5084 5086 "mltest.ml" 166 5152 5205
+type(
+  bool
+)
+"mltest.ml" 174 5353 5357 "mltest.ml" 174 5353 5365
+type(
+  runtype ref
+)
+ident(
+  def run_type "mltest.ml" 177 5472 5472 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 174 5353 5368 "mltest.ml" 174 5353 5371
+type(
+  runtype -> runtype ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"mltest.ml" 174 5353 5372 "mltest.ml" 174 5353 5375
+type(
+  runtype
+)
+"mltest.ml" 174 5353 5368 "mltest.ml" 174 5353 5375
+type(
+  runtype ref
+)
+"mltest.ml" 177 5472 5476 "mltest.ml" 177 5472 5483
+type(
+  'a list
+)
+ident(
+  def options "mltest.ml" 183 5723 5723 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 177 5472 5491 "mltest.ml" 180 5664 5665
+type(
+  'a list
+)
+"mltest.ml" 183 5723 5727 "mltest.ml" 183 5723 5744
+type(
+  string -> unit
+)
+ident(
+  def handle_extra_args "mltest.ml" 189 5852 5852 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 183 5723 5745 "mltest.ml" 183 5723 5748
+type(
+  string
+)
+ident(
+  def arg "mltest.ml" 184 5751 5753 "mltest.ml" 185 5782 5806
+)
+"mltest.ml" 184 5751 5757 "mltest.ml" 184 5751 5758
+type(
+  int
+)
+ident(
+  def i "mltest.ml" 185 5782 5784 "mltest.ml" 185 5782 5806
+)
+"mltest.ml" 184 5751 5761 "mltest.ml" 184 5751 5774
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"mltest.ml" 184 5751 5775 "mltest.ml" 184 5751 5778
+type(
+  string
+)
+ident(
+  int_ref arg "mltest.ml" 183 5723 5745 "mltest.ml" 183 5723 5748
+)
+"mltest.ml" 184 5751 5761 "mltest.ml" 184 5751 5778
+type(
+  int
+)
+"mltest.ml" 185 5782 5784 "mltest.ml" 185 5782 5792
+type(
+  runtype ref
+)
+ident(
+  int_ref run_type "mltest.ml" 174 5353 5357 "mltest.ml" 174 5353 5365
+)
+"mltest.ml" 185 5782 5793 "mltest.ml" 185 5782 5795
+type(
+  runtype ref -> runtype -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"mltest.ml" 185 5782 5802 "mltest.ml" 185 5782 5805
+type(
+  int
+)
+ident(
+  int_ref i "mltest.ml" 184 5751 5757 "mltest.ml" 184 5751 5758
+)
+"mltest.ml" 185 5782 5796 "mltest.ml" 185 5782 5805
+type(
+  runtype
+)
+"mltest.ml" 185 5782 5784 "mltest.ml" 185 5782 5806
+type(
+  unit
+)
+"mltest.ml" 184 5751 5753 "mltest.ml" 185 5782 5806
+type(
+  unit
+)
+"mltest.ml" 189 5852 5856 "mltest.ml" 189 5852 5861
+type(
+  string
+)
+ident(
+  def usage "mltest.ml" 201 6225 6225 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 190 5864 5870 "mltest.ml" 190 5864 5875
+type(
+  string list
+)
+ident(
+  def lines "mltest.ml" 196 6093 6095 "mltest.ml" 196 6093 6119
+)
+"mltest.ml" 191 5880 5886 "mltest.ml" 191 5880 5893
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 191 5880 5894 "mltest.ml" 191 5880 5915
+type(
+  (string -> string, unit, string) format
+)
+"mltest.ml" 191 5880 5916 "mltest.ml" 191 5880 5924
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"mltest.ml" 191 5880 5926 "mltest.ml" 191 5880 5927
+type(
+  int
+)
+"mltest.ml" 191 5880 5916 "mltest.ml" 191 5880 5928
+type(
+  string
+)
+"mltest.ml" 191 5880 5886 "mltest.ml" 191 5880 5928
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 192 5930 5936 "mltest.ml" 192 5930 5943
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"mltest.ml" 192 5930 5944 "mltest.ml" 192 5930 5961
+type(
+  (string -> string, unit, string) format
+)
+"mltest.ml" 192 5930 5962 "mltest.ml" 192 5930 5970
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"mltest.ml" 192 5930 5972 "mltest.ml" 192 5930 5973
+type(
+  int
+)
+"mltest.ml" 192 5930 5962 "mltest.ml" 192 5930 5974
+type(
+  string
+)
+"mltest.ml" 192 5930 5936 "mltest.ml" 192 5930 5974
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 193 5976 5982 "mltest.ml" 193 5976 6038
+type(
+  string
+)
+"mltest.ml" 194 6040 6046 "mltest.ml" 194 6040 6082
+type(
+  string
+)
+"mltest.ml" 190 5864 5878 "mltest.ml" 195 6084 6089
+type(
+  string list
+)
+"mltest.ml" 196 6093 6095 "mltest.ml" 196 6093 6108
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"mltest.ml" 196 6093 6109 "mltest.ml" 196 6093 6113
+type(
+  string
+)
+"mltest.ml" 196 6093 6114 "mltest.ml" 196 6093 6119
+type(
+  string list
+)
+ident(
+  int_ref lines "mltest.ml" 190 5864 5870 "mltest.ml" 190 5864 5875
+)
+"mltest.ml" 196 6093 6095 "mltest.ml" 196 6093 6119
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 190 5864 5866 "mltest.ml" 196 6093 6119
+type(
+  string
+)
+"mltest.ml" 201 6225 6229 "mltest.ml" 201 6225 6233
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  def main "mltest.ml" 241 7733 7789 "mltest.ml" 1 0 -1
+)
+"mltest.ml" 201 6225 6235 "mltest.ml" 201 6225 6240
+type(
+  (unit -> unit) array
+)
+ident(
+  def tests "mltest.ml" 202 6269 6271 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 202 6269 6271 "mltest.ml" 202 6269 6296
+type(
+  bool -> unit
+)
+ident(
+  ext_ref Printexc.record_backtrace
+)
+"mltest.ml" 202 6269 6297 "mltest.ml" 202 6269 6301
+type(
+  bool
+)
+"mltest.ml" 202 6269 6271 "mltest.ml" 202 6269 6301
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 203 6303 6305 "mltest.ml" 203 6303 6314
+type(
+  (Arg.key * Arg.spec * Arg.doc) list ->
+  Arg.anon_fun -> Arg.usage_msg -> unit
+)
+ident(
+  ext_ref Arg.parse
+)
+"mltest.ml" 203 6303 6315 "mltest.ml" 203 6303 6322
+type(
+  (Arg.key * Arg.spec * Arg.doc) list
+)
+ident(
+  int_ref options "mltest.ml" 177 5472 5476 "mltest.ml" 177 5472 5483
+)
+"mltest.ml" 203 6303 6323 "mltest.ml" 203 6303 6340
+type(
+  Arg.anon_fun
+)
+ident(
+  int_ref handle_extra_args "mltest.ml" 183 5723 5727 "mltest.ml" 183 5723 5744
+)
+"mltest.ml" 203 6303 6341 "mltest.ml" 203 6303 6346
+type(
+  Arg.usage_msg
+)
+ident(
+  int_ref usage "mltest.ml" 189 5852 5856 "mltest.ml" 189 5852 5861
+)
+"mltest.ml" 203 6303 6305 "mltest.ml" 203 6303 6346
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 205 6382 6388 "mltest.ml" 205 6382 6399
+type(
+  int
+)
+ident(
+  def found_tests "mltest.ml" 206 6424 6426 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 205 6382 6402 "mltest.ml" 205 6382 6414
+type(
+  (unit -> unit) array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"mltest.ml" 205 6382 6415 "mltest.ml" 205 6382 6420
+type(
+  (unit -> unit) array
+)
+ident(
+  int_ref tests "mltest.ml" 201 6225 6235 "mltest.ml" 201 6225 6240
+)
+"mltest.ml" 205 6382 6402 "mltest.ml" 205 6382 6420
+type(
+  int
+)
+"mltest.ml" 206 6424 6426 "mltest.ml" 206 6424 6432
+type(
+  (int -> unit, out_channel, unit) format -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 206 6424 6433 "mltest.ml" 206 6424 6451
+type(
+  (int -> unit, out_channel, unit) format
+)
+"mltest.ml" 206 6424 6452 "mltest.ml" 206 6424 6463
+type(
+  int
+)
+ident(
+  int_ref found_tests "mltest.ml" 205 6382 6388 "mltest.ml" 205 6382 6399
+)
+"mltest.ml" 206 6424 6426 "mltest.ml" 206 6424 6463
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 208 6468 6474 "mltest.ml" 208 6468 6483
+type(
+  int
+)
+ident(
+  def start_idx "mltest.ml" 213 6695 6697 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 208 6468 6484 "mltest.ml" 208 6468 6492
+type(
+  int
+)
+ident(
+  def stop_idx "mltest.ml" 213 6695 6697 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 208 6468 6474 "mltest.ml" 208 6468 6492
+type(
+  int * int
+)
+"mltest.ml" 209 6535 6545 "mltest.ml" 209 6535 6546
+type(
+  runtype ref -> runtype
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"mltest.ml" 209 6535 6546 "mltest.ml" 209 6535 6554
+type(
+  runtype ref
+)
+ident(
+  int_ref run_type "mltest.ml" 174 5353 5357 "mltest.ml" 174 5353 5365
+)
+"mltest.ml" 209 6535 6545 "mltest.ml" 209 6535 6554
+type(
+  runtype
+)
+"mltest.ml" 210 6560 6566 "mltest.ml" 210 6560 6569
+type(
+  runtype
+)
+"mltest.ml" 210 6560 6574 "mltest.ml" 210 6560 6575
+type(
+  int
+)
+"mltest.ml" 210 6560 6578 "mltest.ml" 210 6560 6590
+type(
+  (unit -> unit) array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"mltest.ml" 210 6560 6591 "mltest.ml" 210 6560 6596
+type(
+  (unit -> unit) array
+)
+ident(
+  int_ref tests "mltest.ml" 201 6225 6235 "mltest.ml" 201 6225 6240
+)
+"mltest.ml" 210 6560 6577 "mltest.ml" 210 6560 6597
+type(
+  int
+)
+"mltest.ml" 210 6560 6573 "mltest.ml" 210 6560 6598
+type(
+  int * int
+)
+"mltest.ml" 211 6621 6634 "mltest.ml" 211 6621 6635
+ident(
+  def i "mltest.ml" 211 6621 6640 "mltest.ml" 211 6621 6646
+)
+"mltest.ml" 211 6621 6633 "mltest.ml" 211 6621 6636
+type(
+  int
+)
+"mltest.ml" 211 6621 6627 "mltest.ml" 211 6621 6636
+type(
+  runtype
+)
+"mltest.ml" 211 6621 6641 "mltest.ml" 211 6621 6642
+type(
+  int
+)
+ident(
+  int_ref i "mltest.ml" 211 6621 6633 "mltest.ml" 211 6621 6636
+)
+"mltest.ml" 211 6621 6644 "mltest.ml" 211 6621 6645
+type(
+  int
+)
+ident(
+  int_ref i "mltest.ml" 211 6621 6633 "mltest.ml" 211 6621 6636
+)
+"mltest.ml" 211 6621 6640 "mltest.ml" 211 6621 6646
+type(
+  int * int
+)
+"mltest.ml" 209 6535 6539 "mltest.ml" 211 6621 6646
+type(
+  int * int
+)
+"mltest.ml" 213 6695 6701 "mltest.ml" 213 6695 6712
+type(
+  int
+)
+ident(
+  def total_tests "mltest.ml" 214 6741 6743 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 213 6695 6716 "mltest.ml" 213 6695 6724
+type(
+  int
+)
+ident(
+  int_ref stop_idx "mltest.ml" 208 6468 6484 "mltest.ml" 208 6468 6492
+)
+"mltest.ml" 213 6695 6724 "mltest.ml" 213 6695 6725
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"mltest.ml" 213 6695 6725 "mltest.ml" 213 6695 6734
+type(
+  int
+)
+ident(
+  int_ref start_idx "mltest.ml" 208 6468 6474 "mltest.ml" 208 6468 6483
+)
+"mltest.ml" 213 6695 6716 "mltest.ml" 213 6695 6734
+type(
+  int
+)
+"mltest.ml" 213 6695 6734 "mltest.ml" 213 6695 6735
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"mltest.ml" 213 6695 6735 "mltest.ml" 213 6695 6736
+type(
+  int
+)
+"mltest.ml" 213 6695 6715 "mltest.ml" 213 6695 6737
+type(
+  int
+)
+"mltest.ml" 214 6741 6743 "mltest.ml" 214 6741 6749
+type(
+  (int -> unit, out_channel, unit) format -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 214 6741 6750 "mltest.ml" 214 6741 6770
+type(
+  (int -> unit, out_channel, unit) format
+)
+"mltest.ml" 214 6741 6771 "mltest.ml" 214 6741 6782
+type(
+  int
+)
+ident(
+  int_ref total_tests "mltest.ml" 213 6695 6701 "mltest.ml" 213 6695 6712
+)
+"mltest.ml" 214 6741 6743 "mltest.ml" 214 6741 6782
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 215 6784 6786 "mltest.ml" 215 6784 6795
+type(
+  unit -> unit
+)
+ident(
+  int_ref major_sep "mltest.ml" 16 468 472 "mltest.ml" 16 468 481
+)
+"mltest.ml" 215 6784 6796 "mltest.ml" 215 6784 6798
+type(
+  unit
+)
+"mltest.ml" 215 6784 6786 "mltest.ml" 215 6784 6798
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 217 6801 6807 "mltest.ml" 217 6801 6813
+type(
+  int ref
+)
+ident(
+  def passed "mltest.ml" 218 6877 6879 "mltest.ml" 241 7733 7789
+)
+"mltest.ml" 217 6801 6816 "mltest.ml" 217 6801 6819
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"mltest.ml" 217 6801 6820 "mltest.ml" 217 6801 6821
+type(
+  int
+)
+"mltest.ml" 217 6801 6816 "mltest.ml" 217 6801 6821
+type(
+  int ref
+)
+"mltest.ml" 218 6877 6885 "mltest.ml" 218 6877 6894
+type(
+  int
+)
+ident(
+  int_ref start_idx "mltest.ml" 208 6468 6474 "mltest.ml" 208 6468 6483
+)
+"mltest.ml" 218 6877 6898 "mltest.ml" 218 6877 6906
+type(
+  int
+)
+ident(
+  int_ref stop_idx "mltest.ml" 208 6468 6484 "mltest.ml" 208 6468 6492
+)
+"mltest.ml" 220 6954 6960 "mltest.ml" 220 6954 6966
+type(
+  (int -> unit, out_channel, unit) format -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 220 6954 6967 "mltest.ml" 220 6954 6979
+type(
+  (int -> unit, out_channel, unit) format
+)
+"mltest.ml" 220 6954 6980 "mltest.ml" 220 6954 6981
+type(
+  int
+)
+ident(
+  int_ref i "mltest.ml" 218 6877 6879 "mltest.ml" 239 7709 7715
+)
+"mltest.ml" 220 6954 6960 "mltest.ml" 220 6954 6981
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 221 6983 6993 "mltest.ml" 221 6983 6997
+type(
+  unit -> unit
+)
+ident(
+  def test "mltest.ml" 222 7015 7021 "mltest.ml" 224 7095 7113
+)
+"mltest.ml" 221 6983 7000 "mltest.ml" 221 6983 7005
+type(
+  (unit -> unit) array
+)
+ident(
+  int_ref tests "mltest.ml" 201 6225 6235 "mltest.ml" 201 6225 6240
+)
+"mltest.ml" 221 6983 7007 "mltest.ml" 221 6983 7008
+type(
+  int
+)
+ident(
+  int_ref i "mltest.ml" 218 6877 6879 "mltest.ml" 239 7709 7715
+)
+"mltest.ml" 221 6983 7008 "mltest.ml" 221 6983 7009
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"mltest.ml" 221 6983 7009 "mltest.ml" 221 6983 7010
+type(
+  int
+)
+"mltest.ml" 221 6983 7007 "mltest.ml" 221 6983 7010
+type(
+  int
+)
+"mltest.ml" 221 6983 7000 "mltest.ml" 221 6983 7011
+type(
+  unit -> unit
+)
+"mltest.ml" 222 7015 7021 "mltest.ml" 222 7015 7025
+type(
+  unit -> unit
+)
+ident(
+  int_ref test "mltest.ml" 221 6983 6993 "mltest.ml" 221 6983 6997
+)
+"mltest.ml" 222 7015 7026 "mltest.ml" 222 7015 7028
+type(
+  unit
+)
+"mltest.ml" 222 7015 7021 "mltest.ml" 222 7015 7028
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 223 7074 7080 "mltest.ml" 223 7074 7086
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 223 7074 7087 "mltest.ml" 223 7074 7093
+type(
+  (unit, out_channel, unit) format
+)
+"mltest.ml" 223 7074 7080 "mltest.ml" 223 7074 7093
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 224 7095 7101 "mltest.ml" 224 7095 7105
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"mltest.ml" 224 7095 7106 "mltest.ml" 224 7095 7112
+type(
+  int ref
+)
+ident(
+  int_ref passed "mltest.ml" 217 6801 6807 "mltest.ml" 217 6801 6813
+)
+"mltest.ml" 224 7095 7101 "mltest.ml" 224 7095 7113
+type(
+  unit
+)
+"mltest.ml" 223 7074 7080 "mltest.ml" 224 7095 7113
+type(
+  unit
+)
+"mltest.ml" 222 7015 7021 "mltest.ml" 224 7095 7113
+type(
+  unit
+)
+"mltest.ml" 221 6983 6989 "mltest.ml" 224 7095 7113
+type(
+  unit
+)
+"mltest.ml" 220 6954 6960 "mltest.ml" 224 7095 7113
+type(
+  unit
+)
+"mltest.ml" 225 7160 7169 "mltest.ml" 225 7160 7175
+type(
+  exn
+)
+ident(
+  def except "mltest.ml" 226 7223 7229 "mltest.ml" 238 7689 7708
+)
+"mltest.ml" 226 7223 7233 "mltest.ml" 226 7223 7246
+type(
+  string
+)
+ident(
+  def backtrace_str "mltest.ml" 228 7320 7326 "mltest.ml" 238 7689 7708
+)
+"mltest.ml" 227 7283 7291 "mltest.ml" 227 7283 7313
+type(
+  unit -> string
+)
+ident(
+  ext_ref Printexc.get_backtrace
+)
+"mltest.ml" 227 7283 7314 "mltest.ml" 227 7283 7316
+type(
+  unit
+)
+"mltest.ml" 227 7283 7291 "mltest.ml" 227 7283 7316
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 228 7320 7326 "mltest.ml" 228 7320 7332
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 228 7320 7333 "mltest.ml" 228 7320 7341
+type(
+  (unit, out_channel, unit) format
+)
+"mltest.ml" 228 7320 7326 "mltest.ml" 228 7320 7341
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 229 7343 7349 "mltest.ml" 229 7343 7358
+type(
+  unit -> unit
+)
+ident(
+  int_ref minor_sep "mltest.ml" 17 551 555 "mltest.ml" 17 551 564
+)
+"mltest.ml" 229 7343 7359 "mltest.ml" 229 7343 7361
+type(
+  unit
+)
+"mltest.ml" 229 7343 7349 "mltest.ml" 229 7343 7361
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 230 7363 7381 "mltest.ml" 230 7363 7387
+type(
+  exn
+)
+ident(
+  int_ref except "mltest.ml" 225 7160 7169 "mltest.ml" 225 7160 7175
+)
+"mltest.ml" 232 7437 7458 "mltest.ml" 232 7437 7461
+type(
+  string
+)
+ident(
+  def loc "mltest.ml" 233 7485 7493 "mltest.ml" 233 7485 7528
+)
+"mltest.ml" 232 7437 7467 "mltest.ml" 232 7437 7470
+type(
+  string
+)
+ident(
+  def msg "mltest.ml" 233 7485 7493 "mltest.ml" 233 7485 7528
+)
+"mltest.ml" 232 7437 7477 "mltest.ml" 232 7437 7481
+type(
+  string
+)
+ident(
+  def code "mltest.ml" 233 7485 7493 "mltest.ml" 233 7485 7528
+)
+"mltest.ml" 232 7437 7453 "mltest.ml" 232 7437 7482
+type(
+  TestFail
+)
+"mltest.ml" 232 7437 7445 "mltest.ml" 232 7437 7482
+type(
+  exn
+)
+"mltest.ml" 233 7485 7493 "mltest.ml" 233 7485 7499
+type(
+  (string -> string -> string -> unit, out_channel, unit) format ->
+  string -> string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 233 7485 7500 "mltest.ml" 233 7485 7514
+type(
+  (string -> string -> string -> unit, out_channel, unit) format
+)
+"mltest.ml" 233 7485 7515 "mltest.ml" 233 7485 7518
+type(
+  string
+)
+ident(
+  int_ref loc "mltest.ml" 232 7437 7458 "mltest.ml" 232 7437 7461
+)
+"mltest.ml" 233 7485 7519 "mltest.ml" 233 7485 7523
+type(
+  string
+)
+ident(
+  int_ref code "mltest.ml" 232 7437 7477 "mltest.ml" 232 7437 7481
+)
+"mltest.ml" 233 7485 7524 "mltest.ml" 233 7485 7527
+type(
+  string
+)
+ident(
+  int_ref msg "mltest.ml" 232 7437 7467 "mltest.ml" 232 7437 7470
+)
+"mltest.ml" 233 7485 7493 "mltest.ml" 233 7485 7528
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 234 7529 7537 "mltest.ml" 234 7529 7538
+type(
+  exn
+)
+"mltest.ml" 235 7542 7554 "mltest.ml" 235 7542 7564
+type(
+  string
+)
+ident(
+  def except_str "mltest.ml" 236 7596 7604 "mltest.ml" 236 7596 7677
+)
+"mltest.ml" 235 7542 7567 "mltest.ml" 235 7542 7585
+type(
+  exn -> string
+)
+ident(
+  ext_ref Printexc.to_string
+)
+"mltest.ml" 235 7542 7586 "mltest.ml" 235 7542 7592
+type(
+  exn
+)
+ident(
+  int_ref except "mltest.ml" 225 7160 7169 "mltest.ml" 225 7160 7175
+)
+"mltest.ml" 235 7542 7567 "mltest.ml" 235 7542 7592
+call(
+  stack
+)
+type(
+  string
+)
+"mltest.ml" 236 7596 7604 "mltest.ml" 236 7596 7610
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 236 7596 7611 "mltest.ml" 236 7596 7651
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"mltest.ml" 236 7596 7652 "mltest.ml" 236 7596 7662
+type(
+  string
+)
+ident(
+  int_ref except_str "mltest.ml" 235 7542 7554 "mltest.ml" 235 7542 7564
+)
+"mltest.ml" 236 7596 7663 "mltest.ml" 236 7596 7676
+type(
+  string
+)
+ident(
+  int_ref backtrace_str "mltest.ml" 226 7223 7233 "mltest.ml" 226 7223 7246
+)
+"mltest.ml" 236 7596 7604 "mltest.ml" 236 7596 7677
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 235 7542 7550 "mltest.ml" 236 7596 7677
+type(
+  unit
+)
+"mltest.ml" 230 7363 7369 "mltest.ml" 237 7678 7687
+type(
+  unit
+)
+"mltest.ml" 238 7689 7695 "mltest.ml" 238 7689 7704
+type(
+  unit -> unit
+)
+ident(
+  int_ref minor_sep "mltest.ml" 17 551 555 "mltest.ml" 17 551 564
+)
+"mltest.ml" 238 7689 7705 "mltest.ml" 238 7689 7707
+type(
+  unit
+)
+"mltest.ml" 238 7689 7695 "mltest.ml" 238 7689 7708
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 230 7363 7369 "mltest.ml" 238 7689 7708
+type(
+  unit
+)
+"mltest.ml" 229 7343 7349 "mltest.ml" 238 7689 7708
+type(
+  unit
+)
+"mltest.ml" 228 7320 7326 "mltest.ml" 238 7689 7708
+type(
+  unit
+)
+"mltest.ml" 226 7223 7229 "mltest.ml" 238 7689 7708
+type(
+  unit
+)
+"mltest.ml" 219 6946 6950 "mltest.ml" 238 7689 7708
+type(
+  unit
+)
+"mltest.ml" 218 6877 6879 "mltest.ml" 239 7709 7715
+type(
+  unit
+)
+"mltest.ml" 240 7717 7719 "mltest.ml" 240 7717 7728
+type(
+  unit -> unit
+)
+ident(
+  int_ref major_sep "mltest.ml" 16 468 472 "mltest.ml" 16 468 481
+)
+"mltest.ml" 240 7717 7729 "mltest.ml" 240 7717 7731
+type(
+  unit
+)
+"mltest.ml" 240 7717 7719 "mltest.ml" 240 7717 7731
+call(
+  stack
+)
+type(
+  unit
+)
+"mltest.ml" 241 7733 7735 "mltest.ml" 241 7733 7741
+type(
+  (int -> int -> unit, out_channel, unit) format -> int -> int -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"mltest.ml" 241 7733 7742 "mltest.ml" 241 7733 7768
+type(
+  (int -> int -> unit, out_channel, unit) format
+)
+"mltest.ml" 241 7733 7769 "mltest.ml" 241 7733 7770
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"mltest.ml" 241 7733 7770 "mltest.ml" 241 7733 7776
+type(
+  int ref
+)
+ident(
+  int_ref passed "mltest.ml" 217 6801 6807 "mltest.ml" 217 6801 6813
+)
+"mltest.ml" 241 7733 7769 "mltest.ml" 241 7733 7776
+type(
+  int
+)
+"mltest.ml" 241 7733 7777 "mltest.ml" 241 7733 7788
+type(
+  int
+)
+ident(
+  int_ref total_tests "mltest.ml" 213 6695 6701 "mltest.ml" 213 6695 6712
+)
+"mltest.ml" 241 7733 7735 "mltest.ml" 241 7733 7789
+call(
+  tail
+)
+type(
+  unit
+)
+"mltest.ml" 240 7717 7719 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 218 6877 6879 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 217 6801 6803 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 215 6784 6786 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 214 6741 6743 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 213 6695 6697 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 208 6468 6470 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 206 6424 6426 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 205 6382 6384 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 203 6303 6305 "mltest.ml" 241 7733 7789
+type(
+  unit
+)
+"mltest.ml" 202 6269 6271 "mltest.ml" 241 7733 7789
+type(
+  unit
+)

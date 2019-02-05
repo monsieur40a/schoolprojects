@@ -1,0 +1,6 @@
+26 LegendaryBattleaxe 3000 30
+1000 ButterSword 9000 10
+10 NormalSword 100 3
+50 MasterSword 500 4
+150 BaconSword 1000 10
+7 MapleBow 50 3

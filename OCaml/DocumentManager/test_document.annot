@@ -1,0 +1,5242 @@
+"test_document.mlt" 6 148 152 "test_document.mlt" 6 148 167
+type(
+  string list list -> string
+)
+ident(
+  def strlistlist2str "test_document.mlt" 14 421 421 "test_document.mlt" 1 0 -1
+)
+"test_document.mlt" 6 148 168 "test_document.mlt" 6 148 179
+type(
+  string list list
+)
+ident(
+  def strlistlist "test_document.mlt" 7 182 184 "test_document.mlt" 9 279 304
+)
+"test_document.mlt" 7 182 188 "test_document.mlt" 7 182 193
+type(
+  string list
+)
+ident(
+  def lines "test_document.mlt" 8 232 234 "test_document.mlt" 9 279 304
+)
+"test_document.mlt" 7 182 196 "test_document.mlt" 7 182 204
+type(
+  (string list -> string) -> string list list -> string list
+)
+ident(
+  ext_ref List.map
+)
+"test_document.mlt" 7 182 205 "test_document.mlt" 7 182 216
+type(
+  string list -> string
+)
+ident(
+  ext_ref Mltest.strlist2str
+)
+"test_document.mlt" 7 182 217 "test_document.mlt" 7 182 228
+type(
+  string list list
+)
+ident(
+  int_ref strlistlist "test_document.mlt" 6 148 168 "test_document.mlt" 6 148 179
+)
+"test_document.mlt" 7 182 196 "test_document.mlt" 7 182 228
+call(
+  stack
+)
+type(
+  string list
+)
+"test_document.mlt" 8 232 238 "test_document.mlt" 8 232 245
+type(
+  string
+)
+ident(
+  def linestr "test_document.mlt" 9 279 281 "test_document.mlt" 9 279 304
+)
+"test_document.mlt" 8 232 248 "test_document.mlt" 8 232 261
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 8 232 262 "test_document.mlt" 8 232 269
+type(
+  string
+)
+"test_document.mlt" 8 232 270 "test_document.mlt" 8 232 275
+type(
+  string list
+)
+ident(
+  int_ref lines "test_document.mlt" 7 182 188 "test_document.mlt" 7 182 193
+)
+"test_document.mlt" 8 232 248 "test_document.mlt" 8 232 275
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 9 279 281 "test_document.mlt" 9 279 285
+type(
+  string
+)
+"test_document.mlt" 9 279 286 "test_document.mlt" 9 279 287
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 9 279 288 "test_document.mlt" 9 279 295
+type(
+  string
+)
+ident(
+  int_ref linestr "test_document.mlt" 8 232 238 "test_document.mlt" 8 232 245
+)
+"test_document.mlt" 9 279 296 "test_document.mlt" 9 279 297
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 9 279 298 "test_document.mlt" 9 279 304
+type(
+  string
+)
+"test_document.mlt" 9 279 288 "test_document.mlt" 9 279 304
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 9 279 281 "test_document.mlt" 9 279 304
+call(
+  tail
+)
+type(
+  string
+)
+"test_document.mlt" 8 232 234 "test_document.mlt" 9 279 304
+type(
+  string
+)
+"test_document.mlt" 7 182 184 "test_document.mlt" 9 279 304
+type(
+  string
+)
+"test_document.mlt" 14 421 425 "test_document.mlt" 14 421 432
+type(
+  ('a -> string) -> 'a Document.document -> string
+)
+ident(
+  def doc2str "test_document.mlt" 33 996 996 "test_document.mlt" 1 0 -1
+)
+"test_document.mlt" 14 421 433 "test_document.mlt" 14 421 441
+type(
+  'a -> string
+)
+ident(
+  def tostring "test_document.mlt" 14 421 442 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 14 421 442 "test_document.mlt" 14 421 445
+type(
+  'a Document.document
+)
+ident(
+  def doc "test_document.mlt" 15 448 450 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 15 448 454 "test_document.mlt" 15 448 463
+type(
+  string
+)
+ident(
+  def state_str "test_document.mlt" 16 490 492 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 15 448 466 "test_document.mlt" 15 448 474
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 14 421 433 "test_document.mlt" 14 421 441
+)
+"test_document.mlt" 15 448 475 "test_document.mlt" 15 448 478
+type(
+  'a Document.document
+)
+ident(
+  int_ref doc "test_document.mlt" 14 421 442 "test_document.mlt" 14 421 445
+)
+"test_document.mlt" 15 448 475 "test_document.mlt" 15 448 486
+type(
+  'a
+)
+"test_document.mlt" 15 448 466 "test_document.mlt" 15 448 486
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 16 490 496 "test_document.mlt" 16 490 508
+type(
+  string list
+)
+ident(
+  def undo_strings "test_document.mlt" 17 547 549 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 16 490 511 "test_document.mlt" 16 490 519
+type(
+  ('a -> string) -> 'a list -> string list
+)
+ident(
+  ext_ref List.map
+)
+"test_document.mlt" 16 490 520 "test_document.mlt" 16 490 528
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 14 421 433 "test_document.mlt" 14 421 441
+)
+"test_document.mlt" 16 490 529 "test_document.mlt" 16 490 532
+type(
+  'a Document.document
+)
+ident(
+  int_ref doc "test_document.mlt" 14 421 442 "test_document.mlt" 14 421 445
+)
+"test_document.mlt" 16 490 529 "test_document.mlt" 16 490 543
+type(
+  'a list
+)
+"test_document.mlt" 16 490 511 "test_document.mlt" 16 490 543
+call(
+  stack
+)
+type(
+  string list
+)
+"test_document.mlt" 17 547 553 "test_document.mlt" 17 547 561
+type(
+  string
+)
+ident(
+  def undo_str "test_document.mlt" 18 604 606 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 17 547 564 "test_document.mlt" 17 547 577
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 17 547 578 "test_document.mlt" 17 547 587
+type(
+  string
+)
+"test_document.mlt" 17 547 588 "test_document.mlt" 17 547 600
+type(
+  string list
+)
+ident(
+  int_ref undo_strings "test_document.mlt" 16 490 496 "test_document.mlt" 16 490 508
+)
+"test_document.mlt" 17 547 564 "test_document.mlt" 17 547 600
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 18 604 610 "test_document.mlt" 18 604 622
+type(
+  string list
+)
+ident(
+  def redo_strings "test_document.mlt" 19 661 663 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 18 604 625 "test_document.mlt" 18 604 633
+type(
+  ('a -> string) -> 'a list -> string list
+)
+ident(
+  ext_ref List.map
+)
+"test_document.mlt" 18 604 634 "test_document.mlt" 18 604 642
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 14 421 433 "test_document.mlt" 14 421 441
+)
+"test_document.mlt" 18 604 643 "test_document.mlt" 18 604 646
+type(
+  'a Document.document
+)
+ident(
+  int_ref doc "test_document.mlt" 14 421 442 "test_document.mlt" 14 421 445
+)
+"test_document.mlt" 18 604 643 "test_document.mlt" 18 604 657
+type(
+  'a list
+)
+"test_document.mlt" 18 604 625 "test_document.mlt" 18 604 657
+call(
+  stack
+)
+type(
+  string list
+)
+"test_document.mlt" 19 661 667 "test_document.mlt" 19 661 675
+type(
+  string
+)
+ident(
+  def redo_str "test_document.mlt" 20 718 720 "test_document.mlt" 29 936 941
+)
+"test_document.mlt" 19 661 678 "test_document.mlt" 19 661 691
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 19 661 692 "test_document.mlt" 19 661 701
+type(
+  string
+)
+"test_document.mlt" 19 661 702 "test_document.mlt" 19 661 714
+type(
+  string list
+)
+ident(
+  int_ref redo_strings "test_document.mlt" 18 604 610 "test_document.mlt" 18 604 622
+)
+"test_document.mlt" 19 661 678 "test_document.mlt" 19 661 714
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 20 718 720 "test_document.mlt" 20 718 733
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 20 718 734 "test_document.mlt" 20 718 738
+type(
+  string
+)
+"test_document.mlt" 21 741 747 "test_document.mlt" 21 741 754
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"test_document.mlt" 21 741 756 "test_document.mlt" 21 741 772
+type(
+  (string -> string, unit, string) format
+)
+"test_document.mlt" 21 741 773 "test_document.mlt" 21 741 782
+type(
+  string
+)
+ident(
+  int_ref state_str "test_document.mlt" 15 448 454 "test_document.mlt" 15 448 463
+)
+"test_document.mlt" 21 741 747 "test_document.mlt" 21 741 782
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 22 784 790 "test_document.mlt" 22 784 797
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"test_document.mlt" 22 784 799 "test_document.mlt" 22 784 816
+type(
+  (string, unit, string) format
+)
+"test_document.mlt" 22 784 790 "test_document.mlt" 22 784 816
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 23 818 824 "test_document.mlt" 23 818 830
+type(
+  string
+)
+"test_document.mlt" 23 818 830 "test_document.mlt" 23 818 831
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 23 818 831 "test_document.mlt" 23 818 839
+type(
+  string
+)
+ident(
+  int_ref undo_str "test_document.mlt" 17 547 553 "test_document.mlt" 17 547 561
+)
+"test_document.mlt" 23 818 824 "test_document.mlt" 23 818 839
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 24 841 847 "test_document.mlt" 24 841 853
+type(
+  string
+)
+"test_document.mlt" 25 855 861 "test_document.mlt" 25 855 868
+type(
+  (string, unit, string) format -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"test_document.mlt" 25 855 870 "test_document.mlt" 25 855 887
+type(
+  (string, unit, string) format
+)
+"test_document.mlt" 25 855 861 "test_document.mlt" 25 855 887
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 26 889 895 "test_document.mlt" 26 889 901
+type(
+  string
+)
+"test_document.mlt" 26 889 901 "test_document.mlt" 26 889 902
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 26 889 902 "test_document.mlt" 26 889 910
+type(
+  string
+)
+ident(
+  int_ref redo_str "test_document.mlt" 19 661 667 "test_document.mlt" 19 661 675
+)
+"test_document.mlt" 26 889 895 "test_document.mlt" 26 889 910
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 27 912 918 "test_document.mlt" 27 912 924
+type(
+  string
+)
+"test_document.mlt" 28 926 932 "test_document.mlt" 28 926 935
+type(
+  string
+)
+"test_document.mlt" 20 718 739 "test_document.mlt" 29 936 941
+type(
+  string list
+)
+"test_document.mlt" 20 718 720 "test_document.mlt" 29 936 941
+call(
+  tail
+)
+type(
+  string
+)
+"test_document.mlt" 19 661 663 "test_document.mlt" 29 936 941
+type(
+  string
+)
+"test_document.mlt" 18 604 606 "test_document.mlt" 29 936 941
+type(
+  string
+)
+"test_document.mlt" 17 547 549 "test_document.mlt" 29 936 941
+type(
+  string
+)
+"test_document.mlt" 16 490 492 "test_document.mlt" 29 936 941
+type(
+  string
+)
+"test_document.mlt" 15 448 450 "test_document.mlt" 29 936 941
+type(
+  string
+)
+"test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+type(
+  ('a -> string) -> 'a Document.document -> 'a Document.document -> string
+)
+ident(
+  def make_msg "test_document.mlt" 50 1594 1594 "test_document.mlt" 1 0 -1
+)
+"test_document.mlt" 33 996 1009 "test_document.mlt" 33 996 1017
+type(
+  'a -> string
+)
+ident(
+  def tostring "test_document.mlt" 33 996 1018 "test_document.mlt" 46 1534 1539
+)
+"test_document.mlt" 33 996 1018 "test_document.mlt" 33 996 1028
+type(
+  'a Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 33 996 1029 "test_document.mlt" 46 1534 1539
+)
+"test_document.mlt" 33 996 1029 "test_document.mlt" 33 996 1039
+type(
+  'a Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 34 1043 1045 "test_document.mlt" 46 1534 1539
+)
+"test_document.mlt" 34 1043 1045 "test_document.mlt" 34 1043 1058
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 34 1043 1059 "test_document.mlt" 34 1043 1063
+type(
+  string
+)
+"test_document.mlt" 35 1066 1072 "test_document.mlt" 35 1066 1081
+type(
+  string
+)
+"test_document.mlt" 36 1083 1089 "test_document.mlt" 36 1083 1103
+type(
+  string
+)
+"test_document.mlt" 36 1083 1103 "test_document.mlt" 36 1083 1104
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 36 1083 1108 "test_document.mlt" 36 1083 1118
+type(
+  'a Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 33 996 1018 "test_document.mlt" 33 996 1028
+)
+"test_document.mlt" 36 1083 1108 "test_document.mlt" 36 1083 1126
+type(
+  'a
+)
+"test_document.mlt" 36 1083 1127 "test_document.mlt" 36 1083 1128
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 36 1083 1129 "test_document.mlt" 36 1083 1139
+type(
+  'a Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 33 996 1029 "test_document.mlt" 33 996 1039
+)
+"test_document.mlt" 36 1083 1129 "test_document.mlt" 36 1083 1147
+type(
+  'a
+)
+"test_document.mlt" 36 1083 1108 "test_document.mlt" 36 1083 1147
+type(
+  bool
+)
+"test_document.mlt" 36 1083 1159 "test_document.mlt" 36 1083 1163
+type(
+  string
+)
+"test_document.mlt" 36 1083 1169 "test_document.mlt" 36 1083 1183
+type(
+  string
+)
+"test_document.mlt" 36 1083 1104 "test_document.mlt" 36 1083 1184
+type(
+  string
+)
+"test_document.mlt" 36 1083 1089 "test_document.mlt" 36 1083 1184
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 37 1186 1192 "test_document.mlt" 37 1186 1206
+type(
+  string
+)
+"test_document.mlt" 37 1186 1206 "test_document.mlt" 37 1186 1207
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 37 1186 1211 "test_document.mlt" 37 1186 1221
+type(
+  'a Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 33 996 1018 "test_document.mlt" 33 996 1028
+)
+"test_document.mlt" 37 1186 1211 "test_document.mlt" 37 1186 1232
+type(
+  'a list
+)
+"test_document.mlt" 37 1186 1233 "test_document.mlt" 37 1186 1234
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 37 1186 1235 "test_document.mlt" 37 1186 1245
+type(
+  'a Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 33 996 1029 "test_document.mlt" 33 996 1039
+)
+"test_document.mlt" 37 1186 1235 "test_document.mlt" 37 1186 1256
+type(
+  'a list
+)
+"test_document.mlt" 37 1186 1211 "test_document.mlt" 37 1186 1256
+type(
+  bool
+)
+"test_document.mlt" 37 1186 1262 "test_document.mlt" 37 1186 1266
+type(
+  string
+)
+"test_document.mlt" 37 1186 1272 "test_document.mlt" 37 1186 1286
+type(
+  string
+)
+"test_document.mlt" 37 1186 1207 "test_document.mlt" 37 1186 1287
+type(
+  string
+)
+"test_document.mlt" 37 1186 1192 "test_document.mlt" 37 1186 1287
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 38 1289 1295 "test_document.mlt" 38 1289 1309
+type(
+  string
+)
+"test_document.mlt" 38 1289 1309 "test_document.mlt" 38 1289 1310
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 38 1289 1314 "test_document.mlt" 38 1289 1324
+type(
+  'a Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 33 996 1018 "test_document.mlt" 33 996 1028
+)
+"test_document.mlt" 38 1289 1314 "test_document.mlt" 38 1289 1335
+type(
+  'a list
+)
+"test_document.mlt" 38 1289 1336 "test_document.mlt" 38 1289 1337
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 38 1289 1338 "test_document.mlt" 38 1289 1348
+type(
+  'a Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 33 996 1029 "test_document.mlt" 33 996 1039
+)
+"test_document.mlt" 38 1289 1338 "test_document.mlt" 38 1289 1359
+type(
+  'a list
+)
+"test_document.mlt" 38 1289 1314 "test_document.mlt" 38 1289 1359
+type(
+  bool
+)
+"test_document.mlt" 38 1289 1365 "test_document.mlt" 38 1289 1369
+type(
+  string
+)
+"test_document.mlt" 38 1289 1375 "test_document.mlt" 38 1289 1389
+type(
+  string
+)
+"test_document.mlt" 38 1289 1310 "test_document.mlt" 38 1289 1390
+type(
+  string
+)
+"test_document.mlt" 38 1289 1295 "test_document.mlt" 38 1289 1390
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 39 1392 1398 "test_document.mlt" 39 1392 1400
+type(
+  string
+)
+"test_document.mlt" 40 1402 1408 "test_document.mlt" 40 1402 1421
+type(
+  string
+)
+"test_document.mlt" 41 1423 1429 "test_document.mlt" 41 1423 1436
+type(
+  ('a -> string) -> 'a Document.document -> string
+)
+ident(
+  int_ref doc2str "test_document.mlt" 14 421 425 "test_document.mlt" 14 421 432
+)
+"test_document.mlt" 41 1423 1437 "test_document.mlt" 41 1423 1445
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 33 996 1009 "test_document.mlt" 33 996 1017
+)
+"test_document.mlt" 41 1423 1446 "test_document.mlt" 41 1423 1456
+type(
+  'a Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 33 996 1018 "test_document.mlt" 33 996 1028
+)
+"test_document.mlt" 41 1423 1429 "test_document.mlt" 41 1423 1456
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 42 1458 1464 "test_document.mlt" 42 1458 1466
+type(
+  string
+)
+"test_document.mlt" 43 1468 1474 "test_document.mlt" 43 1468 1487
+type(
+  string
+)
+"test_document.mlt" 44 1489 1495 "test_document.mlt" 44 1489 1502
+type(
+  ('a -> string) -> 'a Document.document -> string
+)
+ident(
+  int_ref doc2str "test_document.mlt" 14 421 425 "test_document.mlt" 14 421 432
+)
+"test_document.mlt" 44 1489 1503 "test_document.mlt" 44 1489 1511
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 33 996 1009 "test_document.mlt" 33 996 1017
+)
+"test_document.mlt" 44 1489 1512 "test_document.mlt" 44 1489 1522
+type(
+  'a Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 33 996 1029 "test_document.mlt" 33 996 1039
+)
+"test_document.mlt" 44 1489 1495 "test_document.mlt" 44 1489 1522
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 45 1524 1530 "test_document.mlt" 45 1524 1532
+type(
+  string
+)
+"test_document.mlt" 34 1043 1064 "test_document.mlt" 46 1534 1539
+type(
+  string list
+)
+"test_document.mlt" 34 1043 1045 "test_document.mlt" 46 1534 1539
+call(
+  tail
+)
+type(
+  string
+)
+"test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+type(
+  ('a -> string) ->
+  bool -> bool -> 'a Document.document -> 'a Document.document -> string
+)
+ident(
+  def make_msg_ret "test_document.mlt" 60 1998 1998 "test_document.mlt" 1 0 -1
+)
+"test_document.mlt" 50 1594 1611 "test_document.mlt" 50 1594 1619
+type(
+  'a -> string
+)
+ident(
+  def tostring "test_document.mlt" 50 1594 1620 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 50 1594 1620 "test_document.mlt" 50 1594 1630
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 50 1594 1631 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 50 1594 1631 "test_document.mlt" 50 1594 1641
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 50 1594 1642 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 50 1594 1642 "test_document.mlt" 50 1594 1652
+type(
+  'a Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 50 1594 1653 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 50 1594 1653 "test_document.mlt" 50 1594 1663
+type(
+  'a Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 51 1666 1668 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 51 1666 1672 "test_document.mlt" 51 1666 1675
+type(
+  string
+)
+ident(
+  def str "test_document.mlt" 57 1936 1938 "test_document.mlt" 57 1936 1993
+)
+"test_document.mlt" 51 1666 1678 "test_document.mlt" 51 1666 1691
+type(
+  string -> string list -> string
+)
+ident(
+  ext_ref String.concat
+)
+"test_document.mlt" 51 1666 1692 "test_document.mlt" 51 1666 1696
+type(
+  string
+)
+"test_document.mlt" 52 1699 1708 "test_document.mlt" 52 1699 1718
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 50 1594 1620 "test_document.mlt" 50 1594 1630
+)
+"test_document.mlt" 52 1699 1719 "test_document.mlt" 52 1699 1720
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 52 1699 1721 "test_document.mlt" 52 1699 1731
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 50 1594 1631 "test_document.mlt" 50 1594 1641
+)
+"test_document.mlt" 52 1699 1708 "test_document.mlt" 52 1699 1731
+type(
+  bool
+)
+"test_document.mlt" 52 1699 1737 "test_document.mlt" 52 1699 1754
+type(
+  string
+)
+"test_document.mlt" 52 1699 1760 "test_document.mlt" 52 1699 1787
+type(
+  string
+)
+"test_document.mlt" 52 1699 1705 "test_document.mlt" 52 1699 1787
+type(
+  string
+)
+"test_document.mlt" 53 1789 1795 "test_document.mlt" 53 1789 1822
+type(
+  string
+)
+"test_document.mlt" 53 1789 1823 "test_document.mlt" 53 1789 1824
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 53 1789 1826 "test_document.mlt" 53 1789 1840
+type(
+  bool -> string
+)
+ident(
+  ext_ref Pervasives.string_of_bool
+)
+"test_document.mlt" 53 1789 1841 "test_document.mlt" 53 1789 1851
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 50 1594 1620 "test_document.mlt" 50 1594 1630
+)
+"test_document.mlt" 53 1789 1825 "test_document.mlt" 53 1789 1852
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 53 1789 1795 "test_document.mlt" 53 1789 1852
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 54 1854 1860 "test_document.mlt" 54 1854 1887
+type(
+  string
+)
+"test_document.mlt" 54 1854 1888 "test_document.mlt" 54 1854 1889
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 54 1854 1891 "test_document.mlt" 54 1854 1905
+type(
+  bool -> string
+)
+ident(
+  ext_ref Pervasives.string_of_bool
+)
+"test_document.mlt" 54 1854 1906 "test_document.mlt" 54 1854 1916
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 50 1594 1631 "test_document.mlt" 50 1594 1641
+)
+"test_document.mlt" 54 1854 1890 "test_document.mlt" 54 1854 1917
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 54 1854 1860 "test_document.mlt" 54 1854 1917
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 55 1919 1925 "test_document.mlt" 55 1919 1927
+type(
+  string
+)
+"test_document.mlt" 51 1666 1697 "test_document.mlt" 56 1929 1932
+type(
+  string list
+)
+"test_document.mlt" 51 1666 1678 "test_document.mlt" 56 1929 1932
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 57 1936 1938 "test_document.mlt" 57 1936 1941
+type(
+  string
+)
+ident(
+  int_ref str "test_document.mlt" 51 1666 1672 "test_document.mlt" 51 1666 1675
+)
+"test_document.mlt" 57 1936 1941 "test_document.mlt" 57 1936 1942
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 57 1936 1942 "test_document.mlt" 57 1936 1946
+type(
+  string
+)
+"test_document.mlt" 57 1936 1946 "test_document.mlt" 57 1936 1947
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 57 1936 1948 "test_document.mlt" 57 1936 1956
+type(
+  ('a -> string) -> 'a Document.document -> 'a Document.document -> string
+)
+ident(
+  int_ref make_msg "test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+)
+"test_document.mlt" 57 1936 1957 "test_document.mlt" 57 1936 1965
+type(
+  'a -> string
+)
+ident(
+  int_ref tostring "test_document.mlt" 50 1594 1611 "test_document.mlt" 50 1594 1619
+)
+"test_document.mlt" 57 1936 1966 "test_document.mlt" 57 1936 1976
+type(
+  'a Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 50 1594 1642 "test_document.mlt" 50 1594 1652
+)
+"test_document.mlt" 57 1936 1977 "test_document.mlt" 57 1936 1987
+type(
+  'a Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 50 1594 1653 "test_document.mlt" 50 1594 1663
+)
+"test_document.mlt" 57 1936 1947 "test_document.mlt" 57 1936 1988
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 57 1936 1988 "test_document.mlt" 57 1936 1989
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"test_document.mlt" 57 1936 1989 "test_document.mlt" 57 1936 1993
+type(
+  string
+)
+"test_document.mlt" 57 1936 1947 "test_document.mlt" 57 1936 1993
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 57 1936 1942 "test_document.mlt" 57 1936 1993
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 57 1936 1938 "test_document.mlt" 57 1936 1993
+call(
+  tail
+)
+type(
+  string
+)
+"test_document.mlt" 51 1666 1668 "test_document.mlt" 57 1936 1993
+type(
+  string
+)
+"test_document.mlt" 60 1998 1998 "test_document.mlt" 60 1998 2009
+type(
+  (unit -> unit) array -> unit
+)
+ident(
+  ext_ref Mltest.main
+)
+"test_document.mlt" 64 2083 2088 "test_document.mlt" 64 2083 2090
+type(
+  unit
+)
+"test_document.mlt" 67 2149 2155 "test_document.mlt" 67 2149 2165
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 68 2193 2195 "test_document.mlt" 79 2387 2878
+)
+"test_document.mlt" 67 2149 2168 "test_document.mlt" 67 2149 2181
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 67 2149 2182 "test_document.mlt" 67 2149 2189
+type(
+  string
+)
+"test_document.mlt" 67 2149 2168 "test_document.mlt" 67 2149 2189
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 68 2193 2199 "test_document.mlt" 68 2193 2209
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 78 2331 2333 "test_document.mlt" 79 2387 2878
+)
+"test_document.mlt" 69 2212 2227 "test_document.mlt" 69 2212 2234
+type(
+  string
+)
+"test_document.mlt" 70 2236 2254 "test_document.mlt" 72 2267 2276
+type(
+  string list
+)
+"test_document.mlt" 73 2278 2296 "test_document.mlt" 75 2309 2318
+type(
+  string list
+)
+"test_document.mlt" 69 2212 2216 "test_document.mlt" 76 2320 2325
+type(
+  string Document.document
+)
+"test_document.mlt" 78 2331 2337 "test_document.mlt" 78 2331 2340
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 79 2387 2387 "test_document.mlt" 79 2387 2878
+)
+"test_document.mlt" 78 2331 2343 "test_document.mlt" 78 2331 2351
+type(
+  (string -> string) ->
+  string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg "test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+)
+"test_document.mlt" 78 2331 2352 "test_document.mlt" 78 2331 2361
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 78 2331 2362 "test_document.mlt" 78 2331 2372
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 68 2193 2199 "test_document.mlt" 68 2193 2209
+)
+"test_document.mlt" 78 2331 2373 "test_document.mlt" 78 2331 2383
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 67 2149 2155 "test_document.mlt" 67 2149 2165
+)
+"test_document.mlt" 78 2331 2343 "test_document.mlt" 78 2331 2383
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 79 2387 2390 "test_document.mlt" 79 2387 2393
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 79 2387 2398 "test_document.mlt" 79 2387 2408
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 68 2193 2199 "test_document.mlt" 68 2193 2209
+)
+"test_document.mlt" 79 2387 2409 "test_document.mlt" 79 2387 2410
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 79 2387 2411 "test_document.mlt" 79 2387 2421
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 67 2149 2155 "test_document.mlt" 67 2149 2165
+)
+"test_document.mlt" 79 2387 2394 "test_document.mlt" 79 2387 2424
+type(
+  bool
+)
+"test_document.mlt" 79 2387 2390 "test_document.mlt" 79 2387 2424
+type(
+  bool
+)
+"test_document.mlt" 79 2387 2430 "test_document.mlt" 79 2387 2435
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 79 2387 2451 "test_document.mlt" 79 2387 2472
+type(
+  string
+)
+"test_document.mlt" 79 2387 2478 "test_document.mlt" 79 2387 2481
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 78 2331 2337 "test_document.mlt" 78 2331 2340
+)
+"test_document.mlt" 79 2387 2488 "test_document.mlt" 79 2387 2867
+type(
+  string
+)
+"test_document.mlt" 79 2387 2446 "test_document.mlt" 79 2387 2868
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 79 2387 2436 "test_document.mlt" 79 2387 2869
+type(
+  exn
+)
+"test_document.mlt" 79 2387 2430 "test_document.mlt" 79 2387 2869
+type(
+  unit
+)
+"test_document.mlt" 79 2387 2875 "test_document.mlt" 79 2387 2877
+type(
+  unit
+)
+"test_document.mlt" 79 2387 2387 "test_document.mlt" 79 2387 2878
+type(
+  unit
+)
+"test_document.mlt" 78 2331 2333 "test_document.mlt" 79 2387 2878
+type(
+  unit
+)
+"test_document.mlt" 68 2193 2195 "test_document.mlt" 79 2387 2878
+type(
+  unit
+)
+"test_document.mlt" 67 2149 2151 "test_document.mlt" 79 2387 2878
+type(
+  unit
+)
+"test_document.mlt" 64 2083 2083 "test_document.mlt" 81 2896 2897
+type(
+  unit -> unit
+)
+"test_document.mlt" 83 2900 2905 "test_document.mlt" 83 2900 2907
+type(
+  unit
+)
+"test_document.mlt" 86 2963 2969 "test_document.mlt" 86 2963 2979
+type(
+  int Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 87 3002 3004 "test_document.mlt" 98 3185 3653
+)
+"test_document.mlt" 86 2963 2982 "test_document.mlt" 86 2963 2995
+type(
+  int -> int Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 86 2963 2996 "test_document.mlt" 86 2963 2998
+type(
+  int
+)
+"test_document.mlt" 86 2963 2982 "test_document.mlt" 86 2963 2998
+call(
+  stack
+)
+type(
+  int Document.document
+)
+"test_document.mlt" 87 3002 3008 "test_document.mlt" 87 3002 3018
+type(
+  int Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 97 3125 3127 "test_document.mlt" 98 3185 3653
+)
+"test_document.mlt" 88 3021 3036 "test_document.mlt" 88 3021 3038
+type(
+  int
+)
+"test_document.mlt" 89 3040 3058 "test_document.mlt" 91 3061 3070
+type(
+  int list
+)
+"test_document.mlt" 92 3072 3090 "test_document.mlt" 94 3103 3112
+type(
+  int list
+)
+"test_document.mlt" 88 3021 3025 "test_document.mlt" 95 3114 3119
+type(
+  int Document.document
+)
+"test_document.mlt" 97 3125 3131 "test_document.mlt" 97 3125 3134
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 98 3185 3185 "test_document.mlt" 98 3185 3653
+)
+"test_document.mlt" 97 3125 3137 "test_document.mlt" 97 3125 3145
+type(
+  (int -> string) -> int Document.document -> int Document.document -> string
+)
+ident(
+  int_ref make_msg "test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+)
+"test_document.mlt" 97 3125 3146 "test_document.mlt" 97 3125 3159
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"test_document.mlt" 97 3125 3160 "test_document.mlt" 97 3125 3170
+type(
+  int Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 87 3002 3008 "test_document.mlt" 87 3002 3018
+)
+"test_document.mlt" 97 3125 3171 "test_document.mlt" 97 3125 3181
+type(
+  int Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 86 2963 2969 "test_document.mlt" 86 2963 2979
+)
+"test_document.mlt" 97 3125 3137 "test_document.mlt" 97 3125 3181
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 98 3185 3188 "test_document.mlt" 98 3185 3191
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 98 3185 3196 "test_document.mlt" 98 3185 3206
+type(
+  int Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 87 3002 3008 "test_document.mlt" 87 3002 3018
+)
+"test_document.mlt" 98 3185 3207 "test_document.mlt" 98 3185 3208
+type(
+  int Document.document -> int Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 98 3185 3209 "test_document.mlt" 98 3185 3219
+type(
+  int Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 86 2963 2969 "test_document.mlt" 86 2963 2979
+)
+"test_document.mlt" 98 3185 3192 "test_document.mlt" 98 3185 3222
+type(
+  bool
+)
+"test_document.mlt" 98 3185 3188 "test_document.mlt" 98 3185 3222
+type(
+  bool
+)
+"test_document.mlt" 98 3185 3228 "test_document.mlt" 98 3185 3233
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 98 3185 3249 "test_document.mlt" 98 3185 3270
+type(
+  string
+)
+"test_document.mlt" 98 3185 3276 "test_document.mlt" 98 3185 3279
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 97 3125 3131 "test_document.mlt" 97 3125 3134
+)
+"test_document.mlt" 98 3185 3286 "test_document.mlt" 98 3185 3642
+type(
+  string
+)
+"test_document.mlt" 98 3185 3244 "test_document.mlt" 98 3185 3643
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 98 3185 3234 "test_document.mlt" 98 3185 3644
+type(
+  exn
+)
+"test_document.mlt" 98 3185 3228 "test_document.mlt" 98 3185 3644
+type(
+  unit
+)
+"test_document.mlt" 98 3185 3650 "test_document.mlt" 98 3185 3652
+type(
+  unit
+)
+"test_document.mlt" 98 3185 3185 "test_document.mlt" 98 3185 3653
+type(
+  unit
+)
+"test_document.mlt" 97 3125 3127 "test_document.mlt" 98 3185 3653
+type(
+  unit
+)
+"test_document.mlt" 87 3002 3004 "test_document.mlt" 98 3185 3653
+type(
+  unit
+)
+"test_document.mlt" 86 2963 2965 "test_document.mlt" 98 3185 3653
+type(
+  unit
+)
+"test_document.mlt" 83 2900 2900 "test_document.mlt" 100 3671 3672
+type(
+  unit -> unit
+)
+"test_document.mlt" 102 3675 3680 "test_document.mlt" 102 3675 3682
+type(
+  unit
+)
+"test_document.mlt" 106 3730 3736 "test_document.mlt" 106 3730 3746
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 107 3774 3776 "test_document.mlt" 119 4010 4555
+)
+"test_document.mlt" 106 3730 3749 "test_document.mlt" 106 3730 3762
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 106 3730 3763 "test_document.mlt" 106 3730 3770
+type(
+  string
+)
+"test_document.mlt" 106 3730 3749 "test_document.mlt" 106 3730 3770
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 107 3774 3776 "test_document.mlt" 107 3774 3788
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 107 3774 3789 "test_document.mlt" 107 3774 3799
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 106 3730 3736 "test_document.mlt" 106 3730 3746
+)
+"test_document.mlt" 107 3774 3800 "test_document.mlt" 107 3774 3807
+type(
+  string
+)
+"test_document.mlt" 107 3774 3776 "test_document.mlt" 107 3774 3807
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 108 3809 3815 "test_document.mlt" 108 3809 3825
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 118 3954 3956 "test_document.mlt" 119 4010 4555
+)
+"test_document.mlt" 109 3828 3843 "test_document.mlt" 109 3828 3850
+type(
+  string
+)
+"test_document.mlt" 111 3872 3882 "test_document.mlt" 111 3872 3889
+type(
+  string
+)
+"test_document.mlt" 110 3852 3870 "test_document.mlt" 112 3890 3899
+type(
+  string list
+)
+"test_document.mlt" 113 3901 3919 "test_document.mlt" 115 3932 3941
+type(
+  string list
+)
+"test_document.mlt" 109 3828 3832 "test_document.mlt" 116 3943 3948
+type(
+  string Document.document
+)
+"test_document.mlt" 118 3954 3960 "test_document.mlt" 118 3954 3963
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 119 4010 4010 "test_document.mlt" 119 4010 4555
+)
+"test_document.mlt" 118 3954 3966 "test_document.mlt" 118 3954 3974
+type(
+  (string -> string) ->
+  string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg "test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+)
+"test_document.mlt" 118 3954 3975 "test_document.mlt" 118 3954 3984
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 118 3954 3985 "test_document.mlt" 118 3954 3995
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 108 3809 3815 "test_document.mlt" 108 3809 3825
+)
+"test_document.mlt" 118 3954 3996 "test_document.mlt" 118 3954 4006
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 106 3730 3736 "test_document.mlt" 106 3730 3746
+)
+"test_document.mlt" 118 3954 3966 "test_document.mlt" 118 3954 4006
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 119 4010 4013 "test_document.mlt" 119 4010 4016
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 119 4010 4021 "test_document.mlt" 119 4010 4031
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 108 3809 3815 "test_document.mlt" 108 3809 3825
+)
+"test_document.mlt" 119 4010 4032 "test_document.mlt" 119 4010 4033
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 119 4010 4034 "test_document.mlt" 119 4010 4044
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 106 3730 3736 "test_document.mlt" 106 3730 3746
+)
+"test_document.mlt" 119 4010 4017 "test_document.mlt" 119 4010 4047
+type(
+  bool
+)
+"test_document.mlt" 119 4010 4013 "test_document.mlt" 119 4010 4047
+type(
+  bool
+)
+"test_document.mlt" 119 4010 4053 "test_document.mlt" 119 4010 4058
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 119 4010 4074 "test_document.mlt" 119 4010 4096
+type(
+  string
+)
+"test_document.mlt" 119 4010 4102 "test_document.mlt" 119 4010 4105
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 118 3954 3960 "test_document.mlt" 118 3954 3963
+)
+"test_document.mlt" 119 4010 4112 "test_document.mlt" 119 4010 4544
+type(
+  string
+)
+"test_document.mlt" 119 4010 4069 "test_document.mlt" 119 4010 4545
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 119 4010 4059 "test_document.mlt" 119 4010 4546
+type(
+  exn
+)
+"test_document.mlt" 119 4010 4053 "test_document.mlt" 119 4010 4546
+type(
+  unit
+)
+"test_document.mlt" 119 4010 4552 "test_document.mlt" 119 4010 4554
+type(
+  unit
+)
+"test_document.mlt" 119 4010 4010 "test_document.mlt" 119 4010 4555
+type(
+  unit
+)
+"test_document.mlt" 118 3954 3956 "test_document.mlt" 119 4010 4555
+type(
+  unit
+)
+"test_document.mlt" 108 3809 3811 "test_document.mlt" 119 4010 4555
+type(
+  unit
+)
+"test_document.mlt" 107 3774 3776 "test_document.mlt" 119 4010 4555
+type(
+  unit
+)
+"test_document.mlt" 106 3730 3732 "test_document.mlt" 119 4010 4555
+type(
+  unit
+)
+"test_document.mlt" 102 3675 3675 "test_document.mlt" 121 4573 4574
+type(
+  unit -> unit
+)
+"test_document.mlt" 123 4577 4582 "test_document.mlt" 123 4577 4584
+type(
+  unit
+)
+"test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 127 4685 4687 "test_document.mlt" 145 5083 5842
+)
+"test_document.mlt" 126 4641 4660 "test_document.mlt" 126 4641 4673
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 126 4641 4674 "test_document.mlt" 126 4641 4681
+type(
+  string
+)
+"test_document.mlt" 126 4641 4660 "test_document.mlt" 126 4641 4681
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 127 4685 4687 "test_document.mlt" 127 4685 4699
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 127 4685 4700 "test_document.mlt" 127 4685 4710
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 127 4685 4711 "test_document.mlt" 127 4685 4718
+type(
+  string
+)
+"test_document.mlt" 127 4685 4687 "test_document.mlt" 127 4685 4718
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 128 4720 4722 "test_document.mlt" 128 4720 4734
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 128 4720 4735 "test_document.mlt" 128 4720 4745
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 128 4720 4746 "test_document.mlt" 128 4720 4752
+type(
+  string
+)
+"test_document.mlt" 128 4720 4722 "test_document.mlt" 128 4720 4752
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 129 4754 4756 "test_document.mlt" 129 4754 4768
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 129 4754 4769 "test_document.mlt" 129 4754 4779
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 129 4754 4780 "test_document.mlt" 129 4754 4787
+type(
+  string
+)
+"test_document.mlt" 129 4754 4756 "test_document.mlt" 129 4754 4787
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 130 4789 4791 "test_document.mlt" 130 4789 4803
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 130 4789 4804 "test_document.mlt" 130 4789 4814
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 130 4789 4815 "test_document.mlt" 130 4789 4823
+type(
+  string
+)
+"test_document.mlt" 130 4789 4791 "test_document.mlt" 130 4789 4823
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 131 4825 4831 "test_document.mlt" 131 4825 4841
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 144 5027 5029 "test_document.mlt" 145 5083 5842
+)
+"test_document.mlt" 132 4844 4859 "test_document.mlt" 132 4844 4867
+type(
+  string
+)
+"test_document.mlt" 134 4889 4899 "test_document.mlt" 134 4889 4906
+type(
+  string
+)
+"test_document.mlt" 135 4908 4918 "test_document.mlt" 135 4908 4924
+type(
+  string
+)
+"test_document.mlt" 136 4926 4936 "test_document.mlt" 136 4926 4943
+type(
+  string
+)
+"test_document.mlt" 137 4945 4955 "test_document.mlt" 137 4945 4962
+type(
+  string
+)
+"test_document.mlt" 133 4869 4887 "test_document.mlt" 138 4963 4972
+type(
+  string list
+)
+"test_document.mlt" 139 4974 4992 "test_document.mlt" 141 5005 5014
+type(
+  string list
+)
+"test_document.mlt" 132 4844 4848 "test_document.mlt" 142 5016 5021
+type(
+  string Document.document
+)
+"test_document.mlt" 144 5027 5033 "test_document.mlt" 144 5027 5036
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 145 5083 5083 "test_document.mlt" 145 5083 5842
+)
+"test_document.mlt" 144 5027 5039 "test_document.mlt" 144 5027 5047
+type(
+  (string -> string) ->
+  string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg "test_document.mlt" 33 996 1000 "test_document.mlt" 33 996 1008
+)
+"test_document.mlt" 144 5027 5048 "test_document.mlt" 144 5027 5057
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 144 5027 5058 "test_document.mlt" 144 5027 5068
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 131 4825 4831 "test_document.mlt" 131 4825 4841
+)
+"test_document.mlt" 144 5027 5069 "test_document.mlt" 144 5027 5079
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 144 5027 5039 "test_document.mlt" 144 5027 5079
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 145 5083 5086 "test_document.mlt" 145 5083 5089
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 145 5083 5094 "test_document.mlt" 145 5083 5104
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 131 4825 4831 "test_document.mlt" 131 4825 4841
+)
+"test_document.mlt" 145 5083 5105 "test_document.mlt" 145 5083 5106
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 145 5083 5107 "test_document.mlt" 145 5083 5117
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 126 4641 4647 "test_document.mlt" 126 4641 4657
+)
+"test_document.mlt" 145 5083 5090 "test_document.mlt" 145 5083 5120
+type(
+  bool
+)
+"test_document.mlt" 145 5083 5086 "test_document.mlt" 145 5083 5120
+type(
+  bool
+)
+"test_document.mlt" 145 5083 5126 "test_document.mlt" 145 5083 5131
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 145 5083 5147 "test_document.mlt" 145 5083 5169
+type(
+  string
+)
+"test_document.mlt" 145 5083 5175 "test_document.mlt" 145 5083 5178
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 144 5027 5033 "test_document.mlt" 144 5027 5036
+)
+"test_document.mlt" 145 5083 5185 "test_document.mlt" 145 5083 5831
+type(
+  string
+)
+"test_document.mlt" 145 5083 5142 "test_document.mlt" 145 5083 5832
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 145 5083 5132 "test_document.mlt" 145 5083 5833
+type(
+  exn
+)
+"test_document.mlt" 145 5083 5126 "test_document.mlt" 145 5083 5833
+type(
+  unit
+)
+"test_document.mlt" 145 5083 5839 "test_document.mlt" 145 5083 5841
+type(
+  unit
+)
+"test_document.mlt" 145 5083 5083 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 144 5027 5029 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 131 4825 4827 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 130 4789 4791 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 129 4754 4756 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 128 4720 4722 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 127 4685 4687 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 126 4641 4643 "test_document.mlt" 145 5083 5842
+type(
+  unit
+)
+"test_document.mlt" 123 4577 4577 "test_document.mlt" 147 5860 5861
+type(
+  unit -> unit
+)
+"test_document.mlt" 149 5864 5869 "test_document.mlt" 149 5864 5871
+type(
+  unit
+)
+"test_document.mlt" 152 5920 5926 "test_document.mlt" 152 5920 5936
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 153 5964 5966 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 152 5920 5939 "test_document.mlt" 152 5920 5952
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 152 5920 5953 "test_document.mlt" 152 5920 5960
+type(
+  string
+)
+"test_document.mlt" 152 5920 5939 "test_document.mlt" 152 5920 5960
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 153 5964 5970 "test_document.mlt" 153 5964 5980
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 154 6011 6013 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 153 5964 5983 "test_document.mlt" 153 5964 5996
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 153 5964 5997 "test_document.mlt" 153 5964 6007
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 152 5920 5926 "test_document.mlt" 152 5920 5936
+)
+"test_document.mlt" 153 5964 5983 "test_document.mlt" 153 5964 6007
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 154 6011 6017 "test_document.mlt" 154 6011 6027
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 155 6039 6041 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 154 6011 6030 "test_document.mlt" 154 6011 6035
+type(
+  bool
+)
+"test_document.mlt" 155 6039 6045 "test_document.mlt" 155 6039 6055
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 164 6156 6158 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 156 6058 6073 "test_document.mlt" 156 6058 6080
+type(
+  string
+)
+"test_document.mlt" 157 6082 6100 "test_document.mlt" 158 6102 6111
+type(
+  string list
+)
+"test_document.mlt" 159 6113 6131 "test_document.mlt" 161 6134 6143
+type(
+  string list
+)
+"test_document.mlt" 156 6058 6062 "test_document.mlt" 162 6145 6150
+type(
+  string Document.document
+)
+"test_document.mlt" 164 6156 6162 "test_document.mlt" 164 6156 6165
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 165 6238 6238 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 164 6156 6168 "test_document.mlt" 164 6156 6180
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 164 6156 6181 "test_document.mlt" 164 6156 6190
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 164 6156 6191 "test_document.mlt" 164 6156 6201
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 154 6011 6017 "test_document.mlt" 154 6011 6027
+)
+"test_document.mlt" 164 6156 6202 "test_document.mlt" 164 6156 6212
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 153 5964 5970 "test_document.mlt" 153 5964 5980
+)
+"test_document.mlt" 164 6156 6213 "test_document.mlt" 164 6156 6223
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 155 6039 6045 "test_document.mlt" 155 6039 6055
+)
+"test_document.mlt" 164 6156 6224 "test_document.mlt" 164 6156 6234
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 152 5920 5926 "test_document.mlt" 152 5920 5936
+)
+"test_document.mlt" 164 6156 6168 "test_document.mlt" 164 6156 6234
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 165 6238 6241 "test_document.mlt" 165 6238 6244
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 165 6238 6249 "test_document.mlt" 165 6238 6259
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 155 6039 6045 "test_document.mlt" 155 6039 6055
+)
+"test_document.mlt" 165 6238 6260 "test_document.mlt" 165 6238 6261
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 165 6238 6262 "test_document.mlt" 165 6238 6272
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 152 5920 5926 "test_document.mlt" 152 5920 5936
+)
+"test_document.mlt" 165 6238 6245 "test_document.mlt" 165 6238 6275
+type(
+  bool
+)
+"test_document.mlt" 165 6238 6241 "test_document.mlt" 165 6238 6275
+type(
+  bool
+)
+"test_document.mlt" 165 6238 6281 "test_document.mlt" 165 6238 6286
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 165 6238 6302 "test_document.mlt" 165 6238 6324
+type(
+  string
+)
+"test_document.mlt" 165 6238 6330 "test_document.mlt" 165 6238 6333
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 164 6156 6162 "test_document.mlt" 164 6156 6165
+)
+"test_document.mlt" 165 6238 6340 "test_document.mlt" 165 6238 6808
+type(
+  string
+)
+"test_document.mlt" 165 6238 6297 "test_document.mlt" 165 6238 6809
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 165 6238 6287 "test_document.mlt" 165 6238 6810
+type(
+  exn
+)
+"test_document.mlt" 165 6238 6281 "test_document.mlt" 165 6238 6810
+type(
+  unit
+)
+"test_document.mlt" 165 6238 6816 "test_document.mlt" 165 6238 6818
+type(
+  unit
+)
+"test_document.mlt" 165 6238 6238 "test_document.mlt" 165 6238 6818
+type(
+  unit
+)
+"test_document.mlt" 169 6882 6888 "test_document.mlt" 169 6882 6898
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 170 6926 6928 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 169 6882 6901 "test_document.mlt" 169 6882 6914
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 169 6882 6915 "test_document.mlt" 169 6882 6922
+type(
+  string
+)
+"test_document.mlt" 169 6882 6901 "test_document.mlt" 169 6882 6922
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 170 6926 6932 "test_document.mlt" 170 6926 6942
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 171 6973 6975 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 170 6926 6945 "test_document.mlt" 170 6926 6958
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 170 6926 6959 "test_document.mlt" 170 6926 6969
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 169 6882 6888 "test_document.mlt" 169 6882 6898
+)
+"test_document.mlt" 170 6926 6945 "test_document.mlt" 170 6926 6969
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 171 6973 6979 "test_document.mlt" 171 6973 6989
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 172 7001 7003 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 171 6973 6992 "test_document.mlt" 171 6973 6997
+type(
+  bool
+)
+"test_document.mlt" 172 7001 7007 "test_document.mlt" 172 7001 7017
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 181 7118 7120 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 173 7020 7035 "test_document.mlt" 173 7020 7042
+type(
+  string
+)
+"test_document.mlt" 174 7044 7062 "test_document.mlt" 175 7064 7073
+type(
+  string list
+)
+"test_document.mlt" 176 7075 7093 "test_document.mlt" 178 7096 7105
+type(
+  string list
+)
+"test_document.mlt" 173 7020 7024 "test_document.mlt" 179 7107 7112
+type(
+  string Document.document
+)
+"test_document.mlt" 181 7118 7124 "test_document.mlt" 181 7118 7127
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 182 7200 7200 "test_document.mlt" 182 7200 7781
+)
+"test_document.mlt" 181 7118 7130 "test_document.mlt" 181 7118 7142
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 181 7118 7143 "test_document.mlt" 181 7118 7152
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 181 7118 7153 "test_document.mlt" 181 7118 7163
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 171 6973 6979 "test_document.mlt" 171 6973 6989
+)
+"test_document.mlt" 181 7118 7164 "test_document.mlt" 181 7118 7174
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 170 6926 6932 "test_document.mlt" 170 6926 6942
+)
+"test_document.mlt" 181 7118 7175 "test_document.mlt" 181 7118 7185
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 172 7001 7007 "test_document.mlt" 172 7001 7017
+)
+"test_document.mlt" 181 7118 7186 "test_document.mlt" 181 7118 7196
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 169 6882 6888 "test_document.mlt" 169 6882 6898
+)
+"test_document.mlt" 181 7118 7130 "test_document.mlt" 181 7118 7196
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 182 7200 7203 "test_document.mlt" 182 7200 7206
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 182 7200 7211 "test_document.mlt" 182 7200 7221
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 172 7001 7007 "test_document.mlt" 172 7001 7017
+)
+"test_document.mlt" 182 7200 7222 "test_document.mlt" 182 7200 7223
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 182 7200 7224 "test_document.mlt" 182 7200 7234
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 169 6882 6888 "test_document.mlt" 169 6882 6898
+)
+"test_document.mlt" 182 7200 7207 "test_document.mlt" 182 7200 7237
+type(
+  bool
+)
+"test_document.mlt" 182 7200 7203 "test_document.mlt" 182 7200 7237
+type(
+  bool
+)
+"test_document.mlt" 182 7200 7243 "test_document.mlt" 182 7200 7248
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 182 7200 7264 "test_document.mlt" 182 7200 7286
+type(
+  string
+)
+"test_document.mlt" 182 7200 7292 "test_document.mlt" 182 7200 7295
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 181 7118 7124 "test_document.mlt" 181 7118 7127
+)
+"test_document.mlt" 182 7200 7302 "test_document.mlt" 182 7200 7770
+type(
+  string
+)
+"test_document.mlt" 182 7200 7259 "test_document.mlt" 182 7200 7771
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 182 7200 7249 "test_document.mlt" 182 7200 7772
+type(
+  exn
+)
+"test_document.mlt" 182 7200 7243 "test_document.mlt" 182 7200 7772
+type(
+  unit
+)
+"test_document.mlt" 182 7200 7778 "test_document.mlt" 182 7200 7780
+type(
+  unit
+)
+"test_document.mlt" 182 7200 7200 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 181 7118 7120 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 172 7001 7003 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 171 6973 6975 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 170 6926 6928 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 169 6882 6884 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 165 6238 6238 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 164 6156 6158 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 155 6039 6041 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 154 6011 6013 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 153 5964 5966 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 152 5920 5922 "test_document.mlt" 182 7200 7781
+type(
+  unit
+)
+"test_document.mlt" 149 5864 5864 "test_document.mlt" 184 7799 7800
+type(
+  unit -> unit
+)
+"test_document.mlt" 185 7802 7807 "test_document.mlt" 185 7802 7809
+type(
+  unit
+)
+"test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 189 7907 7909 "test_document.mlt" 208 8393 9242
+)
+"test_document.mlt" 188 7863 7882 "test_document.mlt" 188 7863 7895
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 188 7863 7896 "test_document.mlt" 188 7863 7903
+type(
+  string
+)
+"test_document.mlt" 188 7863 7882 "test_document.mlt" 188 7863 7903
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 189 7907 7909 "test_document.mlt" 189 7907 7921
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 189 7907 7922 "test_document.mlt" 189 7907 7932
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 189 7907 7933 "test_document.mlt" 189 7907 7940
+type(
+  string
+)
+"test_document.mlt" 189 7907 7909 "test_document.mlt" 189 7907 7940
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 190 7942 7944 "test_document.mlt" 190 7942 7956
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 190 7942 7957 "test_document.mlt" 190 7942 7967
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 190 7942 7968 "test_document.mlt" 190 7942 7974
+type(
+  string
+)
+"test_document.mlt" 190 7942 7944 "test_document.mlt" 190 7942 7974
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 191 7976 7978 "test_document.mlt" 191 7976 7990
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 191 7976 7991 "test_document.mlt" 191 7976 8001
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 191 7976 8002 "test_document.mlt" 191 7976 8009
+type(
+  string
+)
+"test_document.mlt" 191 7976 7978 "test_document.mlt" 191 7976 8009
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 192 8011 8013 "test_document.mlt" 192 8011 8025
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 192 8011 8026 "test_document.mlt" 192 8011 8036
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 192 8011 8037 "test_document.mlt" 192 8011 8045
+type(
+  string
+)
+"test_document.mlt" 192 8011 8013 "test_document.mlt" 192 8011 8045
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 193 8047 8053 "test_document.mlt" 193 8047 8063
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 194 8094 8096 "test_document.mlt" 208 8393 9242
+)
+"test_document.mlt" 193 8047 8066 "test_document.mlt" 193 8047 8079
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 193 8047 8080 "test_document.mlt" 193 8047 8090
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 193 8047 8066 "test_document.mlt" 193 8047 8090
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 194 8094 8100 "test_document.mlt" 194 8094 8110
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 195 8121 8123 "test_document.mlt" 208 8393 9242
+)
+"test_document.mlt" 194 8094 8113 "test_document.mlt" 194 8094 8117
+type(
+  bool
+)
+"test_document.mlt" 195 8121 8127 "test_document.mlt" 195 8121 8137
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 207 8311 8313 "test_document.mlt" 208 8393 9242
+)
+"test_document.mlt" 196 8140 8155 "test_document.mlt" 196 8140 8162
+type(
+  string
+)
+"test_document.mlt" 198 8184 8194 "test_document.mlt" 198 8184 8200
+type(
+  string
+)
+"test_document.mlt" 199 8202 8212 "test_document.mlt" 199 8202 8219
+type(
+  string
+)
+"test_document.mlt" 200 8221 8231 "test_document.mlt" 200 8221 8238
+type(
+  string
+)
+"test_document.mlt" 197 8164 8182 "test_document.mlt" 201 8239 8248
+type(
+  string list
+)
+"test_document.mlt" 203 8270 8280 "test_document.mlt" 203 8270 8288
+type(
+  string
+)
+"test_document.mlt" 202 8250 8268 "test_document.mlt" 204 8289 8298
+type(
+  string list
+)
+"test_document.mlt" 196 8140 8144 "test_document.mlt" 205 8300 8305
+type(
+  string Document.document
+)
+"test_document.mlt" 207 8311 8317 "test_document.mlt" 207 8311 8320
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 208 8393 8393 "test_document.mlt" 208 8393 9242
+)
+"test_document.mlt" 207 8311 8323 "test_document.mlt" 207 8311 8335
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 207 8311 8336 "test_document.mlt" 207 8311 8345
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 207 8311 8346 "test_document.mlt" 207 8311 8356
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 194 8094 8100 "test_document.mlt" 194 8094 8110
+)
+"test_document.mlt" 207 8311 8357 "test_document.mlt" 207 8311 8367
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 193 8047 8053 "test_document.mlt" 193 8047 8063
+)
+"test_document.mlt" 207 8311 8368 "test_document.mlt" 207 8311 8378
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 195 8121 8127 "test_document.mlt" 195 8121 8137
+)
+"test_document.mlt" 207 8311 8379 "test_document.mlt" 207 8311 8389
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 207 8311 8323 "test_document.mlt" 207 8311 8389
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 208 8393 8396 "test_document.mlt" 208 8393 8399
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 208 8393 8404 "test_document.mlt" 208 8393 8414
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 195 8121 8127 "test_document.mlt" 195 8121 8137
+)
+"test_document.mlt" 208 8393 8415 "test_document.mlt" 208 8393 8416
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 208 8393 8417 "test_document.mlt" 208 8393 8427
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 188 7863 7869 "test_document.mlt" 188 7863 7879
+)
+"test_document.mlt" 208 8393 8400 "test_document.mlt" 208 8393 8430
+type(
+  bool
+)
+"test_document.mlt" 208 8393 8396 "test_document.mlt" 208 8393 8430
+type(
+  bool
+)
+"test_document.mlt" 208 8393 8436 "test_document.mlt" 208 8393 8441
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 208 8393 8457 "test_document.mlt" 208 8393 8479
+type(
+  string
+)
+"test_document.mlt" 208 8393 8485 "test_document.mlt" 208 8393 8488
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 207 8311 8317 "test_document.mlt" 207 8311 8320
+)
+"test_document.mlt" 208 8393 8495 "test_document.mlt" 208 8393 9231
+type(
+  string
+)
+"test_document.mlt" 208 8393 8452 "test_document.mlt" 208 8393 9232
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 208 8393 8442 "test_document.mlt" 208 8393 9233
+type(
+  exn
+)
+"test_document.mlt" 208 8393 8436 "test_document.mlt" 208 8393 9233
+type(
+  unit
+)
+"test_document.mlt" 208 8393 9239 "test_document.mlt" 208 8393 9241
+type(
+  unit
+)
+"test_document.mlt" 208 8393 8393 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 207 8311 8313 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 195 8121 8123 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 194 8094 8096 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 193 8047 8049 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 192 8011 8013 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 191 7976 7978 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 190 7942 7944 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 189 7907 7909 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 188 7863 7865 "test_document.mlt" 208 8393 9242
+type(
+  unit
+)
+"test_document.mlt" 185 7802 7802 "test_document.mlt" 210 9260 9261
+type(
+  unit -> unit
+)
+"test_document.mlt" 212 9265 9270 "test_document.mlt" 212 9265 9272
+type(
+  unit
+)
+"test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 216 9372 9374 "test_document.mlt" 241 10066 11163
+)
+"test_document.mlt" 215 9328 9347 "test_document.mlt" 215 9328 9360
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 215 9328 9361 "test_document.mlt" 215 9328 9368
+type(
+  string
+)
+"test_document.mlt" 215 9328 9347 "test_document.mlt" 215 9328 9368
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 216 9372 9374 "test_document.mlt" 216 9372 9386
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 216 9372 9387 "test_document.mlt" 216 9372 9397
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 216 9372 9398 "test_document.mlt" 216 9372 9405
+type(
+  string
+)
+"test_document.mlt" 216 9372 9374 "test_document.mlt" 216 9372 9405
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 217 9407 9409 "test_document.mlt" 217 9407 9421
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 217 9407 9422 "test_document.mlt" 217 9407 9432
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 217 9407 9433 "test_document.mlt" 217 9407 9439
+type(
+  string
+)
+"test_document.mlt" 217 9407 9409 "test_document.mlt" 217 9407 9439
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 218 9441 9443 "test_document.mlt" 218 9441 9455
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 218 9441 9456 "test_document.mlt" 218 9441 9466
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 218 9441 9467 "test_document.mlt" 218 9441 9474
+type(
+  string
+)
+"test_document.mlt" 218 9441 9443 "test_document.mlt" 218 9441 9474
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 219 9476 9478 "test_document.mlt" 219 9476 9490
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 219 9476 9491 "test_document.mlt" 219 9476 9501
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 219 9476 9502 "test_document.mlt" 219 9476 9510
+type(
+  string
+)
+"test_document.mlt" 219 9476 9478 "test_document.mlt" 219 9476 9510
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 220 9512 9514 "test_document.mlt" 220 9512 9526
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 220 9512 9527 "test_document.mlt" 220 9512 9537
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 220 9512 9538 "test_document.mlt" 220 9512 9544
+type(
+  string
+)
+"test_document.mlt" 220 9512 9514 "test_document.mlt" 220 9512 9544
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 221 9546 9548 "test_document.mlt" 221 9546 9560
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 221 9546 9561 "test_document.mlt" 221 9546 9571
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 221 9546 9572 "test_document.mlt" 221 9546 9580
+type(
+  string
+)
+"test_document.mlt" 221 9546 9548 "test_document.mlt" 221 9546 9580
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 222 9582 9588 "test_document.mlt" 222 9582 9589
+type(
+  bool
+)
+"test_document.mlt" 222 9582 9592 "test_document.mlt" 222 9582 9605
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 222 9582 9606 "test_document.mlt" 222 9582 9616
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 222 9582 9592 "test_document.mlt" 222 9582 9616
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 223 9620 9626 "test_document.mlt" 223 9620 9627
+type(
+  bool
+)
+"test_document.mlt" 223 9620 9630 "test_document.mlt" 223 9620 9643
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 223 9620 9644 "test_document.mlt" 223 9620 9654
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 223 9620 9630 "test_document.mlt" 223 9620 9654
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 224 9658 9664 "test_document.mlt" 224 9658 9674
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 225 9705 9707 "test_document.mlt" 241 10066 11163
+)
+"test_document.mlt" 224 9658 9677 "test_document.mlt" 224 9658 9690
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 224 9658 9691 "test_document.mlt" 224 9658 9701
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 224 9658 9677 "test_document.mlt" 224 9658 9701
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 225 9705 9711 "test_document.mlt" 225 9705 9721
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 226 9732 9734 "test_document.mlt" 241 10066 11163
+)
+"test_document.mlt" 225 9705 9724 "test_document.mlt" 225 9705 9728
+type(
+  bool
+)
+"test_document.mlt" 226 9732 9738 "test_document.mlt" 226 9732 9748
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 240 9984 9986 "test_document.mlt" 241 10066 11163
+)
+"test_document.mlt" 227 9751 9768 "test_document.mlt" 227 9751 9775
+type(
+  string
+)
+"test_document.mlt" 229 9799 9811 "test_document.mlt" 229 9799 9817
+type(
+  string
+)
+"test_document.mlt" 230 9819 9831 "test_document.mlt" 230 9819 9838
+type(
+  string
+)
+"test_document.mlt" 231 9840 9852 "test_document.mlt" 231 9840 9859
+type(
+  string
+)
+"test_document.mlt" 228 9777 9797 "test_document.mlt" 232 9860 9871
+type(
+  string list
+)
+"test_document.mlt" 234 9895 9907 "test_document.mlt" 234 9895 9915
+type(
+  string
+)
+"test_document.mlt" 235 9917 9929 "test_document.mlt" 235 9917 9935
+type(
+  string
+)
+"test_document.mlt" 236 9937 9949 "test_document.mlt" 236 9937 9957
+type(
+  string
+)
+"test_document.mlt" 233 9873 9893 "test_document.mlt" 237 9958 9969
+type(
+  string list
+)
+"test_document.mlt" 227 9751 9757 "test_document.mlt" 238 9971 9978
+type(
+  string Document.document
+)
+"test_document.mlt" 240 9984 9990 "test_document.mlt" 240 9984 9993
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 241 10066 10066 "test_document.mlt" 241 10066 11163
+)
+"test_document.mlt" 240 9984 9996 "test_document.mlt" 240 9984 10008
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 240 9984 10009 "test_document.mlt" 240 9984 10018
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 240 9984 10019 "test_document.mlt" 240 9984 10029
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 225 9705 9711 "test_document.mlt" 225 9705 9721
+)
+"test_document.mlt" 240 9984 10030 "test_document.mlt" 240 9984 10040
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 224 9658 9664 "test_document.mlt" 224 9658 9674
+)
+"test_document.mlt" 240 9984 10041 "test_document.mlt" 240 9984 10051
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 226 9732 9738 "test_document.mlt" 226 9732 9748
+)
+"test_document.mlt" 240 9984 10052 "test_document.mlt" 240 9984 10062
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 240 9984 9996 "test_document.mlt" 240 9984 10062
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 241 10066 10069 "test_document.mlt" 241 10066 10072
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 241 10066 10077 "test_document.mlt" 241 10066 10087
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 226 9732 9738 "test_document.mlt" 226 9732 9748
+)
+"test_document.mlt" 241 10066 10088 "test_document.mlt" 241 10066 10089
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 241 10066 10090 "test_document.mlt" 241 10066 10100
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 215 9328 9334 "test_document.mlt" 215 9328 9344
+)
+"test_document.mlt" 241 10066 10073 "test_document.mlt" 241 10066 10103
+type(
+  bool
+)
+"test_document.mlt" 241 10066 10069 "test_document.mlt" 241 10066 10103
+type(
+  bool
+)
+"test_document.mlt" 241 10066 10109 "test_document.mlt" 241 10066 10114
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 241 10066 10130 "test_document.mlt" 241 10066 10152
+type(
+  string
+)
+"test_document.mlt" 241 10066 10158 "test_document.mlt" 241 10066 10161
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 240 9984 9990 "test_document.mlt" 240 9984 9993
+)
+"test_document.mlt" 241 10066 10168 "test_document.mlt" 241 10066 11152
+type(
+  string
+)
+"test_document.mlt" 241 10066 10125 "test_document.mlt" 241 10066 11153
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 241 10066 10115 "test_document.mlt" 241 10066 11154
+type(
+  exn
+)
+"test_document.mlt" 241 10066 10109 "test_document.mlt" 241 10066 11154
+type(
+  unit
+)
+"test_document.mlt" 241 10066 11160 "test_document.mlt" 241 10066 11162
+type(
+  unit
+)
+"test_document.mlt" 241 10066 10066 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 240 9984 9986 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 226 9732 9734 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 225 9705 9707 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 224 9658 9660 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 223 9620 9622 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 222 9582 9584 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 221 9546 9548 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 220 9512 9514 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 219 9476 9478 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 218 9441 9443 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 217 9407 9409 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 216 9372 9374 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 215 9328 9330 "test_document.mlt" 241 10066 11163
+type(
+  unit
+)
+"test_document.mlt" 212 9265 9265 "test_document.mlt" 243 11181 11182
+type(
+  unit -> unit
+)
+"test_document.mlt" 245 11187 11192 "test_document.mlt" 245 11187 11194
+type(
+  unit
+)
+"test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 249 11296 11298 "test_document.mlt" 275 12004 13122
+)
+"test_document.mlt" 248 11252 11271 "test_document.mlt" 248 11252 11284
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 248 11252 11285 "test_document.mlt" 248 11252 11292
+type(
+  string
+)
+"test_document.mlt" 248 11252 11271 "test_document.mlt" 248 11252 11292
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 249 11296 11298 "test_document.mlt" 249 11296 11310
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 249 11296 11311 "test_document.mlt" 249 11296 11321
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 249 11296 11322 "test_document.mlt" 249 11296 11329
+type(
+  string
+)
+"test_document.mlt" 249 11296 11298 "test_document.mlt" 249 11296 11329
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 250 11331 11333 "test_document.mlt" 250 11331 11345
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 250 11331 11346 "test_document.mlt" 250 11331 11356
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 250 11331 11357 "test_document.mlt" 250 11331 11363
+type(
+  string
+)
+"test_document.mlt" 250 11331 11333 "test_document.mlt" 250 11331 11363
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 251 11365 11367 "test_document.mlt" 251 11365 11379
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 251 11365 11380 "test_document.mlt" 251 11365 11390
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 251 11365 11391 "test_document.mlt" 251 11365 11398
+type(
+  string
+)
+"test_document.mlt" 251 11365 11367 "test_document.mlt" 251 11365 11398
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 252 11400 11402 "test_document.mlt" 252 11400 11414
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 252 11400 11415 "test_document.mlt" 252 11400 11425
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 252 11400 11426 "test_document.mlt" 252 11400 11434
+type(
+  string
+)
+"test_document.mlt" 252 11400 11402 "test_document.mlt" 252 11400 11434
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 253 11436 11438 "test_document.mlt" 253 11436 11450
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 253 11436 11451 "test_document.mlt" 253 11436 11461
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 253 11436 11462 "test_document.mlt" 253 11436 11468
+type(
+  string
+)
+"test_document.mlt" 253 11436 11438 "test_document.mlt" 253 11436 11468
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 254 11470 11472 "test_document.mlt" 254 11470 11484
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 254 11470 11485 "test_document.mlt" 254 11470 11495
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 254 11470 11496 "test_document.mlt" 254 11470 11504
+type(
+  string
+)
+"test_document.mlt" 254 11470 11472 "test_document.mlt" 254 11470 11504
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 255 11506 11512 "test_document.mlt" 255 11506 11513
+type(
+  bool
+)
+"test_document.mlt" 255 11506 11516 "test_document.mlt" 255 11506 11529
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 255 11506 11530 "test_document.mlt" 255 11506 11540
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 255 11506 11516 "test_document.mlt" 255 11506 11540
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 256 11544 11550 "test_document.mlt" 256 11544 11551
+type(
+  bool
+)
+"test_document.mlt" 256 11544 11554 "test_document.mlt" 256 11544 11567
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 256 11544 11568 "test_document.mlt" 256 11544 11578
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 256 11544 11554 "test_document.mlt" 256 11544 11578
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 257 11582 11588 "test_document.mlt" 257 11582 11589
+type(
+  bool
+)
+"test_document.mlt" 257 11582 11592 "test_document.mlt" 257 11582 11605
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 257 11582 11606 "test_document.mlt" 257 11582 11616
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 257 11582 11592 "test_document.mlt" 257 11582 11616
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 258 11620 11626 "test_document.mlt" 258 11620 11636
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 259 11667 11669 "test_document.mlt" 275 12004 13122
+)
+"test_document.mlt" 258 11620 11639 "test_document.mlt" 258 11620 11652
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 258 11620 11653 "test_document.mlt" 258 11620 11663
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 258 11620 11639 "test_document.mlt" 258 11620 11663
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 259 11667 11673 "test_document.mlt" 259 11667 11683
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 260 11694 11696 "test_document.mlt" 275 12004 13122
+)
+"test_document.mlt" 259 11667 11686 "test_document.mlt" 259 11667 11690
+type(
+  bool
+)
+"test_document.mlt" 260 11694 11700 "test_document.mlt" 260 11694 11710
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 274 11922 11924 "test_document.mlt" 275 12004 13122
+)
+"test_document.mlt" 261 11713 11728 "test_document.mlt" 261 11713 11736
+type(
+  string
+)
+"test_document.mlt" 263 11758 11768 "test_document.mlt" 263 11758 11775
+type(
+  string
+)
+"test_document.mlt" 264 11777 11787 "test_document.mlt" 264 11777 11793
+type(
+  string
+)
+"test_document.mlt" 265 11795 11805 "test_document.mlt" 265 11795 11812
+type(
+  string
+)
+"test_document.mlt" 266 11814 11824 "test_document.mlt" 266 11814 11831
+type(
+  string
+)
+"test_document.mlt" 262 11738 11756 "test_document.mlt" 267 11832 11841
+type(
+  string list
+)
+"test_document.mlt" 269 11863 11873 "test_document.mlt" 269 11863 11879
+type(
+  string
+)
+"test_document.mlt" 270 11881 11891 "test_document.mlt" 270 11881 11899
+type(
+  string
+)
+"test_document.mlt" 268 11843 11861 "test_document.mlt" 271 11900 11909
+type(
+  string list
+)
+"test_document.mlt" 261 11713 11717 "test_document.mlt" 272 11911 11916
+type(
+  string Document.document
+)
+"test_document.mlt" 274 11922 11928 "test_document.mlt" 274 11922 11931
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 275 12004 12004 "test_document.mlt" 275 12004 13122
+)
+"test_document.mlt" 274 11922 11934 "test_document.mlt" 274 11922 11946
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 274 11922 11947 "test_document.mlt" 274 11922 11956
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 274 11922 11957 "test_document.mlt" 274 11922 11967
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 259 11667 11673 "test_document.mlt" 259 11667 11683
+)
+"test_document.mlt" 274 11922 11968 "test_document.mlt" 274 11922 11978
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 258 11620 11626 "test_document.mlt" 258 11620 11636
+)
+"test_document.mlt" 274 11922 11979 "test_document.mlt" 274 11922 11989
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 260 11694 11700 "test_document.mlt" 260 11694 11710
+)
+"test_document.mlt" 274 11922 11990 "test_document.mlt" 274 11922 12000
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 274 11922 11934 "test_document.mlt" 274 11922 12000
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 275 12004 12007 "test_document.mlt" 275 12004 12010
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 275 12004 12015 "test_document.mlt" 275 12004 12025
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 260 11694 11700 "test_document.mlt" 260 11694 11710
+)
+"test_document.mlt" 275 12004 12026 "test_document.mlt" 275 12004 12027
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 275 12004 12028 "test_document.mlt" 275 12004 12038
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 248 11252 11258 "test_document.mlt" 248 11252 11268
+)
+"test_document.mlt" 275 12004 12011 "test_document.mlt" 275 12004 12041
+type(
+  bool
+)
+"test_document.mlt" 275 12004 12007 "test_document.mlt" 275 12004 12041
+type(
+  bool
+)
+"test_document.mlt" 275 12004 12047 "test_document.mlt" 275 12004 12052
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 275 12004 12068 "test_document.mlt" 275 12004 12090
+type(
+  string
+)
+"test_document.mlt" 275 12004 12096 "test_document.mlt" 275 12004 12099
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 274 11922 11928 "test_document.mlt" 274 11922 11931
+)
+"test_document.mlt" 275 12004 12106 "test_document.mlt" 275 12004 13111
+type(
+  string
+)
+"test_document.mlt" 275 12004 12063 "test_document.mlt" 275 12004 13112
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 275 12004 12053 "test_document.mlt" 275 12004 13113
+type(
+  exn
+)
+"test_document.mlt" 275 12004 12047 "test_document.mlt" 275 12004 13113
+type(
+  unit
+)
+"test_document.mlt" 275 12004 13119 "test_document.mlt" 275 12004 13121
+type(
+  unit
+)
+"test_document.mlt" 275 12004 12004 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 274 11922 11924 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 260 11694 11696 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 259 11667 11669 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 258 11620 11622 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 257 11582 11584 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 256 11544 11546 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 255 11506 11508 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 254 11470 11472 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 253 11436 11438 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 252 11400 11402 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 251 11365 11367 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 250 11331 11333 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 249 11296 11298 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 248 11252 11254 "test_document.mlt" 275 12004 13122
+type(
+  unit
+)
+"test_document.mlt" 245 11187 11187 "test_document.mlt" 277 13140 13141
+type(
+  unit -> unit
+)
+"test_document.mlt" 279 13146 13151 "test_document.mlt" 279 13146 13153
+type(
+  unit
+)
+"test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+type(
+  string Document.document
+)
+ident(
+  def actual_doc "test_document.mlt" 283 13259 13261 "test_document.mlt" 313 14119 15413
+)
+"test_document.mlt" 282 13215 13234 "test_document.mlt" 282 13215 13247
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 282 13215 13248 "test_document.mlt" 282 13215 13255
+type(
+  string
+)
+"test_document.mlt" 282 13215 13234 "test_document.mlt" 282 13215 13255
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 283 13259 13261 "test_document.mlt" 283 13259 13273
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 283 13259 13274 "test_document.mlt" 283 13259 13284
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 283 13259 13285 "test_document.mlt" 283 13259 13292
+type(
+  string
+)
+"test_document.mlt" 283 13259 13261 "test_document.mlt" 283 13259 13292
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 284 13294 13296 "test_document.mlt" 284 13294 13308
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 284 13294 13309 "test_document.mlt" 284 13294 13319
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 284 13294 13320 "test_document.mlt" 284 13294 13326
+type(
+  string
+)
+"test_document.mlt" 284 13294 13296 "test_document.mlt" 284 13294 13326
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 285 13328 13330 "test_document.mlt" 285 13328 13342
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 285 13328 13343 "test_document.mlt" 285 13328 13353
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 285 13328 13354 "test_document.mlt" 285 13328 13361
+type(
+  string
+)
+"test_document.mlt" 285 13328 13330 "test_document.mlt" 285 13328 13361
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 286 13363 13365 "test_document.mlt" 286 13363 13377
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 286 13363 13378 "test_document.mlt" 286 13363 13388
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 286 13363 13389 "test_document.mlt" 286 13363 13397
+type(
+  string
+)
+"test_document.mlt" 286 13363 13365 "test_document.mlt" 286 13363 13397
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 287 13399 13401 "test_document.mlt" 287 13399 13413
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 287 13399 13414 "test_document.mlt" 287 13399 13424
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 287 13399 13425 "test_document.mlt" 287 13399 13431
+type(
+  string
+)
+"test_document.mlt" 287 13399 13401 "test_document.mlt" 287 13399 13431
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 288 13433 13435 "test_document.mlt" 288 13433 13447
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 288 13433 13448 "test_document.mlt" 288 13433 13458
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 288 13433 13459 "test_document.mlt" 288 13433 13467
+type(
+  string
+)
+"test_document.mlt" 288 13433 13435 "test_document.mlt" 288 13433 13467
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 289 13469 13475 "test_document.mlt" 289 13469 13476
+type(
+  bool
+)
+"test_document.mlt" 289 13469 13479 "test_document.mlt" 289 13469 13492
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 289 13469 13493 "test_document.mlt" 289 13469 13503
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 289 13469 13479 "test_document.mlt" 289 13469 13503
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 290 13507 13513 "test_document.mlt" 290 13507 13514
+type(
+  bool
+)
+"test_document.mlt" 290 13507 13517 "test_document.mlt" 290 13507 13530
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 290 13507 13531 "test_document.mlt" 290 13507 13541
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 290 13507 13517 "test_document.mlt" 290 13507 13541
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 291 13545 13551 "test_document.mlt" 291 13545 13552
+type(
+  bool
+)
+"test_document.mlt" 291 13545 13555 "test_document.mlt" 291 13545 13568
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 291 13545 13569 "test_document.mlt" 291 13545 13579
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 291 13545 13555 "test_document.mlt" 291 13545 13579
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 292 13583 13589 "test_document.mlt" 292 13583 13590
+type(
+  bool
+)
+"test_document.mlt" 292 13583 13593 "test_document.mlt" 292 13583 13606
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 292 13583 13607 "test_document.mlt" 292 13583 13617
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 292 13583 13593 "test_document.mlt" 292 13583 13617
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 293 13621 13627 "test_document.mlt" 293 13621 13628
+type(
+  bool
+)
+"test_document.mlt" 293 13621 13631 "test_document.mlt" 293 13621 13644
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 293 13621 13645 "test_document.mlt" 293 13621 13655
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 293 13621 13631 "test_document.mlt" 293 13621 13655
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 294 13659 13665 "test_document.mlt" 294 13659 13666
+type(
+  bool
+)
+"test_document.mlt" 294 13659 13669 "test_document.mlt" 294 13659 13682
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 294 13659 13683 "test_document.mlt" 294 13659 13693
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 294 13659 13669 "test_document.mlt" 294 13659 13693
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 295 13697 13703 "test_document.mlt" 295 13697 13704
+type(
+  bool
+)
+"test_document.mlt" 295 13697 13707 "test_document.mlt" 295 13697 13720
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 295 13697 13721 "test_document.mlt" 295 13697 13731
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 295 13697 13707 "test_document.mlt" 295 13697 13731
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 296 13735 13741 "test_document.mlt" 296 13735 13751
+type(
+  bool
+)
+ident(
+  def actual_ret "test_document.mlt" 297 13782 13784 "test_document.mlt" 313 14119 15413
+)
+"test_document.mlt" 296 13735 13754 "test_document.mlt" 296 13735 13767
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 296 13735 13768 "test_document.mlt" 296 13735 13778
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 296 13735 13754 "test_document.mlt" 296 13735 13778
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 297 13782 13788 "test_document.mlt" 297 13782 13798
+type(
+  bool
+)
+ident(
+  def expect_ret "test_document.mlt" 298 13809 13811 "test_document.mlt" 313 14119 15413
+)
+"test_document.mlt" 297 13782 13801 "test_document.mlt" 297 13782 13805
+type(
+  bool
+)
+"test_document.mlt" 298 13809 13815 "test_document.mlt" 298 13809 13825
+type(
+  string Document.document
+)
+ident(
+  def expect_doc "test_document.mlt" 312 14037 14039 "test_document.mlt" 313 14119 15413
+)
+"test_document.mlt" 299 13828 13843 "test_document.mlt" 299 13828 13851
+type(
+  string
+)
+"test_document.mlt" 301 13873 13883 "test_document.mlt" 301 13873 13890
+type(
+  string
+)
+"test_document.mlt" 302 13892 13902 "test_document.mlt" 302 13892 13908
+type(
+  string
+)
+"test_document.mlt" 303 13910 13920 "test_document.mlt" 303 13910 13927
+type(
+  string
+)
+"test_document.mlt" 304 13929 13939 "test_document.mlt" 304 13929 13946
+type(
+  string
+)
+"test_document.mlt" 300 13853 13871 "test_document.mlt" 305 13947 13956
+type(
+  string list
+)
+"test_document.mlt" 307 13978 13988 "test_document.mlt" 307 13978 13994
+type(
+  string
+)
+"test_document.mlt" 308 13996 14006 "test_document.mlt" 308 13996 14014
+type(
+  string
+)
+"test_document.mlt" 306 13958 13976 "test_document.mlt" 309 14015 14024
+type(
+  string list
+)
+"test_document.mlt" 299 13828 13832 "test_document.mlt" 310 14026 14031
+type(
+  string Document.document
+)
+"test_document.mlt" 312 14037 14043 "test_document.mlt" 312 14037 14046
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 313 14119 14119 "test_document.mlt" 313 14119 15413
+)
+"test_document.mlt" 312 14037 14049 "test_document.mlt" 312 14037 14061
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 312 14037 14062 "test_document.mlt" 312 14037 14071
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 312 14037 14072 "test_document.mlt" 312 14037 14082
+type(
+  bool
+)
+ident(
+  int_ref expect_ret "test_document.mlt" 297 13782 13788 "test_document.mlt" 297 13782 13798
+)
+"test_document.mlt" 312 14037 14083 "test_document.mlt" 312 14037 14093
+type(
+  bool
+)
+ident(
+  int_ref actual_ret "test_document.mlt" 296 13735 13741 "test_document.mlt" 296 13735 13751
+)
+"test_document.mlt" 312 14037 14094 "test_document.mlt" 312 14037 14104
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 298 13809 13815 "test_document.mlt" 298 13809 13825
+)
+"test_document.mlt" 312 14037 14105 "test_document.mlt" 312 14037 14115
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 312 14037 14049 "test_document.mlt" 312 14037 14115
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 313 14119 14122 "test_document.mlt" 313 14119 14125
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 313 14119 14130 "test_document.mlt" 313 14119 14140
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc "test_document.mlt" 298 13809 13815 "test_document.mlt" 298 13809 13825
+)
+"test_document.mlt" 313 14119 14141 "test_document.mlt" 313 14119 14142
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 313 14119 14143 "test_document.mlt" 313 14119 14153
+type(
+  string Document.document
+)
+ident(
+  int_ref actual_doc "test_document.mlt" 282 13215 13221 "test_document.mlt" 282 13215 13231
+)
+"test_document.mlt" 313 14119 14126 "test_document.mlt" 313 14119 14156
+type(
+  bool
+)
+"test_document.mlt" 313 14119 14122 "test_document.mlt" 313 14119 14156
+type(
+  bool
+)
+"test_document.mlt" 313 14119 14162 "test_document.mlt" 313 14119 14167
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 313 14119 14183 "test_document.mlt" 313 14119 14205
+type(
+  string
+)
+"test_document.mlt" 313 14119 14211 "test_document.mlt" 313 14119 14214
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 312 14037 14043 "test_document.mlt" 312 14037 14046
+)
+"test_document.mlt" 313 14119 14221 "test_document.mlt" 313 14119 15402
+type(
+  string
+)
+"test_document.mlt" 313 14119 14178 "test_document.mlt" 313 14119 15403
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 313 14119 14168 "test_document.mlt" 313 14119 15404
+type(
+  exn
+)
+"test_document.mlt" 313 14119 14162 "test_document.mlt" 313 14119 15404
+type(
+  unit
+)
+"test_document.mlt" 313 14119 15410 "test_document.mlt" 313 14119 15412
+type(
+  unit
+)
+"test_document.mlt" 313 14119 14119 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 312 14037 14039 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 298 13809 13811 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 297 13782 13784 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 296 13735 13737 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 295 13697 13699 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 294 13659 13661 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 293 13621 13623 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 292 13583 13585 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 291 13545 13547 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 290 13507 13509 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 289 13469 13471 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 288 13433 13435 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 287 13399 13401 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 286 13363 13365 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 285 13328 13330 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 284 13294 13296 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 283 13259 13261 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 282 13215 13217 "test_document.mlt" 313 14119 15413
+type(
+  unit
+)
+"test_document.mlt" 279 13146 13146 "test_document.mlt" 315 15431 15432
+type(
+  unit -> unit
+)
+"test_document.mlt" 316 15434 15439 "test_document.mlt" 316 15434 15441
+type(
+  unit
+)
+"test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+type(
+  string Document.document
+)
+ident(
+  def doc1 "test_document.mlt" 320 15522 15524 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 319 15484 15497 "test_document.mlt" 319 15484 15510
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 319 15484 15511 "test_document.mlt" 319 15484 15518
+type(
+  string
+)
+"test_document.mlt" 319 15484 15497 "test_document.mlt" 319 15484 15518
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 320 15522 15528 "test_document.mlt" 320 15522 15532
+type(
+  string Document.document
+)
+ident(
+  def doc2 "test_document.mlt" 321 15559 15561 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 320 15522 15535 "test_document.mlt" 320 15522 15548
+type(
+  string -> string Document.document
+)
+ident(
+  ext_ref Document.make
+)
+"test_document.mlt" 320 15522 15549 "test_document.mlt" 320 15522 15555
+type(
+  string
+)
+"test_document.mlt" 320 15522 15535 "test_document.mlt" 320 15522 15555
+call(
+  stack
+)
+type(
+  string Document.document
+)
+"test_document.mlt" 321 15559 15561 "test_document.mlt" 321 15559 15573
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 321 15559 15574 "test_document.mlt" 321 15559 15578
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 321 15559 15579 "test_document.mlt" 321 15559 15586
+type(
+  string
+)
+"test_document.mlt" 321 15559 15561 "test_document.mlt" 321 15559 15586
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 322 15588 15590 "test_document.mlt" 322 15588 15602
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 322 15588 15603 "test_document.mlt" 322 15588 15607
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 322 15588 15608 "test_document.mlt" 322 15588 15614
+type(
+  string
+)
+"test_document.mlt" 322 15588 15590 "test_document.mlt" 322 15588 15614
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 323 15616 15618 "test_document.mlt" 323 15616 15630
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 323 15616 15631 "test_document.mlt" 323 15616 15635
+type(
+  string Document.document
+)
+ident(
+  int_ref doc2 "test_document.mlt" 320 15522 15528 "test_document.mlt" 320 15522 15532
+)
+"test_document.mlt" 323 15616 15636 "test_document.mlt" 323 15616 15644
+type(
+  string
+)
+"test_document.mlt" 323 15616 15618 "test_document.mlt" 323 15616 15644
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 324 15646 15648 "test_document.mlt" 324 15646 15660
+type(
+  string Document.document -> string -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"test_document.mlt" 324 15646 15661 "test_document.mlt" 324 15646 15665
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 324 15646 15666 "test_document.mlt" 324 15646 15673
+type(
+  string
+)
+"test_document.mlt" 324 15646 15648 "test_document.mlt" 324 15646 15673
+call(
+  stack
+)
+type(
+  unit
+)
+"test_document.mlt" 325 15675 15681 "test_document.mlt" 325 15675 15685
+type(
+  bool
+)
+ident(
+  def ret1 "test_document.mlt" 326 15710 15712 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 325 15675 15688 "test_document.mlt" 325 15675 15701
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.undo
+)
+"test_document.mlt" 325 15675 15702 "test_document.mlt" 325 15675 15706
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 325 15675 15688 "test_document.mlt" 325 15675 15706
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 326 15710 15716 "test_document.mlt" 326 15710 15727
+type(
+  bool
+)
+ident(
+  def expect_ret1 "test_document.mlt" 327 15738 15740 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 326 15710 15730 "test_document.mlt" 326 15710 15734
+type(
+  bool
+)
+"test_document.mlt" 327 15738 15744 "test_document.mlt" 327 15738 15748
+type(
+  bool
+)
+ident(
+  def ret2 "test_document.mlt" 328 15773 15775 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 327 15738 15751 "test_document.mlt" 327 15738 15764
+type(
+  string Document.document -> bool
+)
+ident(
+  ext_ref Document.redo
+)
+"test_document.mlt" 327 15738 15765 "test_document.mlt" 327 15738 15769
+type(
+  string Document.document
+)
+ident(
+  int_ref doc2 "test_document.mlt" 320 15522 15528 "test_document.mlt" 320 15522 15532
+)
+"test_document.mlt" 327 15738 15751 "test_document.mlt" 327 15738 15769
+call(
+  stack
+)
+type(
+  bool
+)
+"test_document.mlt" 328 15773 15779 "test_document.mlt" 328 15773 15790
+type(
+  bool
+)
+ident(
+  def expect_ret2 "test_document.mlt" 329 15802 15804 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 328 15773 15793 "test_document.mlt" 328 15773 15798
+type(
+  bool
+)
+"test_document.mlt" 329 15802 15808 "test_document.mlt" 329 15802 15819
+type(
+  string Document.document
+)
+ident(
+  def expect_doc1 "test_document.mlt" 340 15973 15975 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 330 15822 15837 "test_document.mlt" 330 15822 15843
+type(
+  string
+)
+"test_document.mlt" 332 15865 15875 "test_document.mlt" 332 15865 15882
+type(
+  string
+)
+"test_document.mlt" 333 15884 15894 "test_document.mlt" 333 15884 15901
+type(
+  string
+)
+"test_document.mlt" 331 15845 15863 "test_document.mlt" 334 15902 15911
+type(
+  string list
+)
+"test_document.mlt" 336 15933 15943 "test_document.mlt" 336 15933 15950
+type(
+  string
+)
+"test_document.mlt" 335 15913 15931 "test_document.mlt" 337 15951 15960
+type(
+  string list
+)
+"test_document.mlt" 330 15822 15826 "test_document.mlt" 338 15962 15967
+type(
+  string Document.document
+)
+"test_document.mlt" 340 15973 15979 "test_document.mlt" 340 15973 15990
+type(
+  string Document.document
+)
+ident(
+  def expect_doc2 "test_document.mlt" 350 16119 16121 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 341 15993 16008 "test_document.mlt" 341 15993 16016
+type(
+  string
+)
+"test_document.mlt" 343 16038 16048 "test_document.mlt" 343 16038 16054
+type(
+  string
+)
+"test_document.mlt" 342 16018 16036 "test_document.mlt" 344 16055 16064
+type(
+  string list
+)
+"test_document.mlt" 345 16066 16084 "test_document.mlt" 347 16097 16106
+type(
+  string list
+)
+"test_document.mlt" 341 15993 15997 "test_document.mlt" 348 16108 16113
+type(
+  string Document.document
+)
+"test_document.mlt" 350 16119 16125 "test_document.mlt" 350 16119 16128
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 351 16191 16191 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 350 16119 16131 "test_document.mlt" 350 16119 16143
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 350 16119 16144 "test_document.mlt" 350 16119 16153
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 350 16119 16154 "test_document.mlt" 350 16119 16165
+type(
+  bool
+)
+ident(
+  int_ref expect_ret1 "test_document.mlt" 326 15710 15716 "test_document.mlt" 326 15710 15727
+)
+"test_document.mlt" 350 16119 16166 "test_document.mlt" 350 16119 16170
+type(
+  bool
+)
+ident(
+  int_ref ret1 "test_document.mlt" 325 15675 15681 "test_document.mlt" 325 15675 15685
+)
+"test_document.mlt" 350 16119 16171 "test_document.mlt" 350 16119 16182
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc1 "test_document.mlt" 329 15802 15808 "test_document.mlt" 329 15802 15819
+)
+"test_document.mlt" 350 16119 16183 "test_document.mlt" 350 16119 16187
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 350 16119 16131 "test_document.mlt" 350 16119 16187
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 351 16191 16194 "test_document.mlt" 351 16191 16197
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 351 16191 16202 "test_document.mlt" 351 16191 16213
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc1 "test_document.mlt" 329 15802 15808 "test_document.mlt" 329 15802 15819
+)
+"test_document.mlt" 351 16191 16214 "test_document.mlt" 351 16191 16215
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 351 16191 16216 "test_document.mlt" 351 16191 16220
+type(
+  string Document.document
+)
+ident(
+  int_ref doc1 "test_document.mlt" 319 15484 15490 "test_document.mlt" 319 15484 15494
+)
+"test_document.mlt" 351 16191 16198 "test_document.mlt" 351 16191 16223
+type(
+  bool
+)
+"test_document.mlt" 351 16191 16194 "test_document.mlt" 351 16191 16223
+type(
+  bool
+)
+"test_document.mlt" 351 16191 16229 "test_document.mlt" 351 16191 16234
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 351 16191 16250 "test_document.mlt" 351 16191 16272
+type(
+  string
+)
+"test_document.mlt" 351 16191 16278 "test_document.mlt" 351 16191 16281
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 350 16119 16125 "test_document.mlt" 350 16119 16128
+)
+"test_document.mlt" 351 16191 16288 "test_document.mlt" 351 16191 17249
+type(
+  string
+)
+"test_document.mlt" 351 16191 16245 "test_document.mlt" 351 16191 17250
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 351 16191 16235 "test_document.mlt" 351 16191 17251
+type(
+  exn
+)
+"test_document.mlt" 351 16191 16229 "test_document.mlt" 351 16191 17251
+type(
+  unit
+)
+"test_document.mlt" 351 16191 17257 "test_document.mlt" 351 16191 17259
+type(
+  unit
+)
+"test_document.mlt" 351 16191 16191 "test_document.mlt" 351 16191 17259
+type(
+  unit
+)
+"test_document.mlt" 352 17261 17267 "test_document.mlt" 352 17261 17270
+type(
+  string
+)
+ident(
+  def msg "test_document.mlt" 353 17333 17333 "test_document.mlt" 353 17333 18520
+)
+"test_document.mlt" 352 17261 17273 "test_document.mlt" 352 17261 17285
+type(
+  (string -> string) ->
+  bool ->
+  bool -> string Document.document -> string Document.document -> string
+)
+ident(
+  int_ref make_msg_ret "test_document.mlt" 50 1594 1598 "test_document.mlt" 50 1594 1610
+)
+"test_document.mlt" 352 17261 17286 "test_document.mlt" 352 17261 17295
+type(
+  string -> string
+)
+ident(
+  ext_ref Mltest.quote_str
+)
+"test_document.mlt" 352 17261 17296 "test_document.mlt" 352 17261 17307
+type(
+  bool
+)
+ident(
+  int_ref expect_ret2 "test_document.mlt" 328 15773 15779 "test_document.mlt" 328 15773 15790
+)
+"test_document.mlt" 352 17261 17308 "test_document.mlt" 352 17261 17312
+type(
+  bool
+)
+ident(
+  int_ref ret2 "test_document.mlt" 327 15738 15744 "test_document.mlt" 327 15738 15748
+)
+"test_document.mlt" 352 17261 17313 "test_document.mlt" 352 17261 17324
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc2 "test_document.mlt" 340 15973 15979 "test_document.mlt" 340 15973 15990
+)
+"test_document.mlt" 352 17261 17325 "test_document.mlt" 352 17261 17329
+type(
+  string Document.document
+)
+ident(
+  int_ref doc2 "test_document.mlt" 320 15522 15528 "test_document.mlt" 320 15522 15532
+)
+"test_document.mlt" 352 17261 17273 "test_document.mlt" 352 17261 17329
+call(
+  stack
+)
+type(
+  string
+)
+"test_document.mlt" 353 17333 17336 "test_document.mlt" 353 17333 17339
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"test_document.mlt" 353 17333 17344 "test_document.mlt" 353 17333 17355
+type(
+  string Document.document
+)
+ident(
+  int_ref expect_doc2 "test_document.mlt" 340 15973 15979 "test_document.mlt" 340 15973 15990
+)
+"test_document.mlt" 353 17333 17356 "test_document.mlt" 353 17333 17357
+type(
+  string Document.document -> string Document.document -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"test_document.mlt" 353 17333 17358 "test_document.mlt" 353 17333 17362
+type(
+  string Document.document
+)
+ident(
+  int_ref doc2 "test_document.mlt" 320 15522 15528 "test_document.mlt" 320 15522 15532
+)
+"test_document.mlt" 353 17333 17340 "test_document.mlt" 353 17333 17365
+type(
+  bool
+)
+"test_document.mlt" 353 17333 17336 "test_document.mlt" 353 17333 17365
+type(
+  bool
+)
+"test_document.mlt" 353 17333 17371 "test_document.mlt" 353 17333 17376
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"test_document.mlt" 353 17333 17392 "test_document.mlt" 353 17333 17414
+type(
+  string
+)
+"test_document.mlt" 353 17333 17420 "test_document.mlt" 353 17333 17423
+type(
+  string
+)
+ident(
+  int_ref msg "test_document.mlt" 352 17261 17267 "test_document.mlt" 352 17261 17270
+)
+"test_document.mlt" 353 17333 17430 "test_document.mlt" 353 17333 18509
+type(
+  string
+)
+"test_document.mlt" 353 17333 17387 "test_document.mlt" 353 17333 18510
+type(
+  Mltest.TestFail
+)
+"test_document.mlt" 353 17333 17377 "test_document.mlt" 353 17333 18511
+type(
+  exn
+)
+"test_document.mlt" 353 17333 17371 "test_document.mlt" 353 17333 18511
+type(
+  unit
+)
+"test_document.mlt" 353 17333 18517 "test_document.mlt" 353 17333 18519
+type(
+  unit
+)
+"test_document.mlt" 353 17333 17333 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 352 17261 17263 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 351 16191 16191 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 350 16119 16121 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 340 15973 15975 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 329 15802 15804 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 328 15773 15775 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 327 15738 15740 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 326 15710 15712 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 325 15675 15677 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 324 15646 15648 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 323 15616 15618 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 322 15588 15590 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 321 15559 15561 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 320 15522 15524 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 319 15484 15486 "test_document.mlt" 353 17333 18520
+type(
+  unit
+)
+"test_document.mlt" 316 15434 15434 "test_document.mlt" 355 18538 18539
+type(
+  unit -> unit
+)
+"test_document.mlt" 60 1998 2010 "test_document.mlt" 356 18543 18545
+type(
+  (unit -> unit) array
+)
+"test_document.mlt" 60 1998 1998 "test_document.mlt" 356 18543 18545
+call(
+  stack
+)
+type(
+  unit
+)

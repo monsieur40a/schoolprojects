@@ -1,0 +1,587 @@
+"bulkops.ml" 16 373 377 "bulkops.ml" 16 373 384
+type(
+  string list Doccol.doccol -> unit
+)
+ident(
+  def showall "bulkops.ml" 64 1472 1472 "bulkops.ml" 1 0 -1
+)
+"bulkops.ml" 16 373 385 "bulkops.ml" 16 373 391
+type(
+  string list Doccol.doccol
+)
+ident(
+  def doccol "bulkops.ml" 17 395 397 "bulkops.ml" 23 761 782
+)
+"bulkops.ml" 17 395 401 "bulkops.ml" 17 395 407
+type(
+  string * string list Document.document -> unit
+)
+ident(
+  def helper "bulkops.ml" 22 665 667 "bulkops.ml" 23 761 782
+)
+"bulkops.ml" 17 395 409 "bulkops.ml" 17 395 413
+type(
+  string
+)
+ident(
+  def name "bulkops.ml" 18 474 478 "bulkops.ml" 20 552 584
+)
+"bulkops.ml" 17 395 414 "bulkops.ml" 17 395 417
+type(
+  string list Document.document
+)
+ident(
+  def doc "bulkops.ml" 18 474 478 "bulkops.ml" 20 552 584
+)
+"bulkops.ml" 17 395 408 "bulkops.ml" 17 395 418
+type(
+  string * string list Document.document
+)
+"bulkops.ml" 18 474 478 "bulkops.ml" 18 474 491
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"bulkops.ml" 18 474 492 "bulkops.ml" 18 474 507
+type(
+  (string -> unit, out_channel, unit) format
+)
+"bulkops.ml" 18 474 508 "bulkops.ml" 18 474 512
+type(
+  string
+)
+ident(
+  int_ref name "bulkops.ml" 17 395 409 "bulkops.ml" 17 395 413
+)
+"bulkops.ml" 18 474 478 "bulkops.ml" 18 474 512
+call(
+  stack
+)
+type(
+  unit
+)
+"bulkops.ml" 19 515 523 "bulkops.ml" 19 515 533
+type(
+  string list
+)
+ident(
+  def docStrList "bulkops.ml" 20 552 556 "bulkops.ml" 20 552 584
+)
+"bulkops.ml" 19 515 536 "bulkops.ml" 19 515 539
+type(
+  string list Document.document
+)
+ident(
+  int_ref doc "bulkops.ml" 17 395 414 "bulkops.ml" 17 395 417
+)
+"bulkops.ml" 19 515 536 "bulkops.ml" 19 515 547
+type(
+  string list
+)
+"bulkops.ml" 20 552 556 "bulkops.ml" 20 552 572
+type(
+  string list -> unit
+)
+ident(
+  ext_ref Sortedlist.print
+)
+"bulkops.ml" 20 552 573 "bulkops.ml" 20 552 583
+type(
+  string list
+)
+ident(
+  int_ref docStrList "bulkops.ml" 19 515 523 "bulkops.ml" 19 515 533
+)
+"bulkops.ml" 20 552 556 "bulkops.ml" 20 552 584
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 19 515 519 "bulkops.ml" 20 552 584
+type(
+  unit
+)
+"bulkops.ml" 18 474 478 "bulkops.ml" 20 552 584
+type(
+  unit
+)
+"bulkops.ml" 22 665 667 "bulkops.ml" 22 665 676
+type(
+  (string * string list Document.document -> unit) ->
+  (string * string list Document.document) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"bulkops.ml" 22 665 677 "bulkops.ml" 22 665 683
+type(
+  string * string list Document.document -> unit
+)
+ident(
+  int_ref helper "bulkops.ml" 17 395 401 "bulkops.ml" 17 395 407
+)
+"bulkops.ml" 22 665 684 "bulkops.ml" 22 665 690
+type(
+  string list Doccol.doccol
+)
+ident(
+  int_ref doccol "bulkops.ml" 16 373 385 "bulkops.ml" 16 373 391
+)
+"bulkops.ml" 22 665 684 "bulkops.ml" 22 665 695
+type(
+  (string * string list Document.document) list
+)
+"bulkops.ml" 22 665 667 "bulkops.ml" 22 665 695
+call(
+  stack
+)
+type(
+  unit
+)
+"bulkops.ml" 23 761 763 "bulkops.ml" 23 761 776
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"bulkops.ml" 23 761 777 "bulkops.ml" 23 761 781
+type(
+  (unit, out_channel, unit) format
+)
+"bulkops.ml" 23 761 763 "bulkops.ml" 23 761 782
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 22 665 667 "bulkops.ml" 23 761 782
+type(
+  unit
+)
+"bulkops.ml" 17 395 397 "bulkops.ml" 23 761 782
+type(
+  unit
+)
+"bulkops.ml" 64 1472 1476 "bulkops.ml" 64 1472 1483
+type(
+  string list Doccol.doccol -> unit
+)
+ident(
+  def saveall "bulkops.ml" 76 1986 1986 "bulkops.ml" 1 0 -1
+)
+"bulkops.ml" 64 1472 1484 "bulkops.ml" 64 1472 1490
+type(
+  string list Doccol.doccol
+)
+ident(
+  def doccol "bulkops.ml" 65 1494 1496 "bulkops.ml" 69 1668 1699
+)
+"bulkops.ml" 65 1494 1500 "bulkops.ml" 65 1494 1506
+type(
+  string * string list Document.document -> unit
+)
+ident(
+  def helper "bulkops.ml" 69 1668 1670 "bulkops.ml" 69 1668 1699
+)
+"bulkops.ml" 65 1494 1508 "bulkops.ml" 65 1494 1512
+type(
+  string
+)
+ident(
+  def name "bulkops.ml" 66 1521 1525 "bulkops.ml" 67 1558 1599
+)
+"bulkops.ml" 65 1494 1513 "bulkops.ml" 65 1494 1516
+type(
+  string list Document.document
+)
+ident(
+  def doc "bulkops.ml" 66 1521 1525 "bulkops.ml" 67 1558 1599
+)
+"bulkops.ml" 65 1494 1507 "bulkops.ml" 65 1494 1517
+type(
+  string * string list Document.document
+)
+"bulkops.ml" 66 1521 1529 "bulkops.ml" 66 1521 1539
+type(
+  string list
+)
+ident(
+  def docStrList "bulkops.ml" 67 1558 1562 "bulkops.ml" 67 1558 1599
+)
+"bulkops.ml" 66 1521 1542 "bulkops.ml" 66 1521 1545
+type(
+  string list Document.document
+)
+ident(
+  int_ref doc "bulkops.ml" 65 1494 1513 "bulkops.ml" 65 1494 1516
+)
+"bulkops.ml" 66 1521 1542 "bulkops.ml" 66 1521 1553
+type(
+  string list
+)
+"bulkops.ml" 67 1558 1562 "bulkops.ml" 67 1558 1582
+type(
+  string list -> string -> unit
+)
+ident(
+  ext_ref Util.strlist_to_file
+)
+"bulkops.ml" 67 1558 1583 "bulkops.ml" 67 1558 1593
+type(
+  string list
+)
+ident(
+  int_ref docStrList "bulkops.ml" 66 1521 1529 "bulkops.ml" 66 1521 1539
+)
+"bulkops.ml" 67 1558 1594 "bulkops.ml" 67 1558 1598
+type(
+  string
+)
+ident(
+  int_ref name "bulkops.ml" 65 1494 1508 "bulkops.ml" 65 1494 1512
+)
+"bulkops.ml" 67 1558 1562 "bulkops.ml" 67 1558 1599
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 66 1521 1525 "bulkops.ml" 67 1558 1599
+type(
+  unit
+)
+"bulkops.ml" 69 1668 1670 "bulkops.ml" 69 1668 1679
+type(
+  (string * string list Document.document -> unit) ->
+  (string * string list Document.document) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"bulkops.ml" 69 1668 1680 "bulkops.ml" 69 1668 1686
+type(
+  string * string list Document.document -> unit
+)
+ident(
+  int_ref helper "bulkops.ml" 65 1494 1500 "bulkops.ml" 65 1494 1506
+)
+"bulkops.ml" 69 1668 1687 "bulkops.ml" 69 1668 1693
+type(
+  string list Doccol.doccol
+)
+ident(
+  int_ref doccol "bulkops.ml" 64 1472 1484 "bulkops.ml" 64 1472 1490
+)
+"bulkops.ml" 69 1668 1687 "bulkops.ml" 69 1668 1698
+type(
+  (string * string list Document.document) list
+)
+"bulkops.ml" 69 1668 1670 "bulkops.ml" 69 1668 1699
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 65 1494 1496 "bulkops.ml" 69 1668 1699
+type(
+  unit
+)
+"bulkops.ml" 76 1986 1990 "bulkops.ml" 76 1986 1996
+type(
+  'a list Doccol.doccol -> 'a -> unit
+)
+ident(
+  def addall "bulkops.ml" 89 2666 2666 "bulkops.ml" 1 0 -1
+)
+"bulkops.ml" 76 1986 1997 "bulkops.ml" 76 1986 2003
+type(
+  'a list Doccol.doccol
+)
+ident(
+  def doccol "bulkops.ml" 76 1986 2004 "bulkops.ml" 82 2320 2351
+)
+"bulkops.ml" 76 1986 2004 "bulkops.ml" 76 1986 2008
+type(
+  'a
+)
+ident(
+  def elem "bulkops.ml" 77 2012 2014 "bulkops.ml" 82 2320 2351
+)
+"bulkops.ml" 77 2012 2018 "bulkops.ml" 77 2012 2024
+type(
+  'b * 'a list Document.document -> unit
+)
+ident(
+  def helper "bulkops.ml" 82 2320 2322 "bulkops.ml" 82 2320 2351
+)
+"bulkops.ml" 77 2012 2026 "bulkops.ml" 77 2012 2030
+type(
+  'b
+)
+ident(
+  def name "bulkops.ml" 78 2039 2043 "bulkops.ml" 80 2236 2271
+)
+"bulkops.ml" 77 2012 2031 "bulkops.ml" 77 2012 2034
+type(
+  'a list Document.document
+)
+ident(
+  def doc "bulkops.ml" 78 2039 2043 "bulkops.ml" 80 2236 2271
+)
+"bulkops.ml" 77 2012 2025 "bulkops.ml" 77 2012 2035
+type(
+  'b * 'a list Document.document
+)
+"bulkops.ml" 78 2039 2047 "bulkops.ml" 78 2039 2057
+type(
+  'a list
+)
+ident(
+  def docStrList "bulkops.ml" 79 2118 2122 "bulkops.ml" 80 2236 2271
+)
+"bulkops.ml" 78 2039 2060 "bulkops.ml" 78 2039 2063
+type(
+  'a list Document.document
+)
+ident(
+  int_ref doc "bulkops.ml" 77 2012 2031 "bulkops.ml" 77 2012 2034
+)
+"bulkops.ml" 78 2039 2060 "bulkops.ml" 78 2039 2071
+type(
+  'a list
+)
+"bulkops.ml" 79 2118 2126 "bulkops.ml" 79 2118 2139
+type(
+  'a list
+)
+ident(
+  def newdocStrList "bulkops.ml" 80 2236 2240 "bulkops.ml" 80 2236 2271
+)
+"bulkops.ml" 79 2118 2142 "bulkops.ml" 79 2118 2159
+type(
+  'a list -> 'a -> 'a list
+)
+ident(
+  ext_ref Sortedlist.insert
+)
+"bulkops.ml" 79 2118 2160 "bulkops.ml" 79 2118 2170
+type(
+  'a list
+)
+ident(
+  int_ref docStrList "bulkops.ml" 78 2039 2047 "bulkops.ml" 78 2039 2057
+)
+"bulkops.ml" 79 2118 2171 "bulkops.ml" 79 2118 2175
+type(
+  'a
+)
+ident(
+  int_ref elem "bulkops.ml" 76 1986 2004 "bulkops.ml" 76 1986 2008
+)
+"bulkops.ml" 79 2118 2142 "bulkops.ml" 79 2118 2175
+call(
+  stack
+)
+type(
+  'a list
+)
+"bulkops.ml" 80 2236 2240 "bulkops.ml" 80 2236 2252
+type(
+  'a list Document.document -> 'a list -> unit
+)
+ident(
+  ext_ref Document.set
+)
+"bulkops.ml" 80 2236 2253 "bulkops.ml" 80 2236 2256
+type(
+  'a list Document.document
+)
+ident(
+  int_ref doc "bulkops.ml" 77 2012 2031 "bulkops.ml" 77 2012 2034
+)
+"bulkops.ml" 80 2236 2257 "bulkops.ml" 80 2236 2270
+type(
+  'a list
+)
+ident(
+  int_ref newdocStrList "bulkops.ml" 79 2118 2126 "bulkops.ml" 79 2118 2139
+)
+"bulkops.ml" 80 2236 2240 "bulkops.ml" 80 2236 2271
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 79 2118 2122 "bulkops.ml" 80 2236 2271
+type(
+  unit
+)
+"bulkops.ml" 78 2039 2043 "bulkops.ml" 80 2236 2271
+type(
+  unit
+)
+"bulkops.ml" 82 2320 2322 "bulkops.ml" 82 2320 2331
+type(
+  (string * 'a list Document.document -> unit) ->
+  (string * 'a list Document.document) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"bulkops.ml" 82 2320 2332 "bulkops.ml" 82 2320 2338
+type(
+  string * 'a list Document.document -> unit
+)
+ident(
+  int_ref helper "bulkops.ml" 77 2012 2018 "bulkops.ml" 77 2012 2024
+)
+"bulkops.ml" 82 2320 2339 "bulkops.ml" 82 2320 2345
+type(
+  'a list Doccol.doccol
+)
+ident(
+  int_ref doccol "bulkops.ml" 76 1986 1997 "bulkops.ml" 76 1986 2003
+)
+"bulkops.ml" 82 2320 2339 "bulkops.ml" 82 2320 2350
+type(
+  (string * 'a list Document.document) list
+)
+"bulkops.ml" 82 2320 2322 "bulkops.ml" 82 2320 2351
+call(
+  tail
+)
+type(
+  unit
+)
+"bulkops.ml" 77 2012 2014 "bulkops.ml" 82 2320 2351
+type(
+  unit
+)
+"bulkops.ml" 89 2666 2670 "bulkops.ml" 89 2666 2678
+type(
+  'a list Doccol.doccol -> 'a list
+)
+ident(
+  def mergeall "bulkops.ml" 93 2928 2967 "bulkops.ml" 1 0 -1
+)
+"bulkops.ml" 89 2666 2679 "bulkops.ml" 89 2666 2685
+type(
+  'a list Doccol.doccol
+)
+ident(
+  def doccol "bulkops.ml" 90 2689 2691 "bulkops.ml" 93 2928 2967
+)
+"bulkops.ml" 90 2689 2695 "bulkops.ml" 90 2689 2701
+type(
+  'b list -> 'c * 'b list Document.document -> 'b list
+)
+ident(
+  def helper "bulkops.ml" 93 2928 2930 "bulkops.ml" 93 2928 2967
+)
+"bulkops.ml" 90 2689 2702 "bulkops.ml" 90 2689 2710
+type(
+  'b list
+)
+ident(
+  def currList "bulkops.ml" 90 2689 2711 "bulkops.ml" 91 2798 2839
+)
+"bulkops.ml" 90 2689 2712 "bulkops.ml" 90 2689 2716
+type(
+  'c
+)
+ident(
+  def name "bulkops.ml" 91 2798 2802 "bulkops.ml" 91 2798 2839
+)
+"bulkops.ml" 90 2689 2718 "bulkops.ml" 90 2689 2721
+type(
+  'b list Document.document
+)
+ident(
+  def doc "bulkops.ml" 91 2798 2802 "bulkops.ml" 91 2798 2839
+)
+"bulkops.ml" 90 2689 2711 "bulkops.ml" 90 2689 2722
+type(
+  'c * 'b list Document.document
+)
+"bulkops.ml" 91 2798 2802 "bulkops.ml" 91 2798 2818
+type(
+  'b list -> 'b list -> 'b list
+)
+ident(
+  ext_ref Sortedlist.merge
+)
+"bulkops.ml" 91 2798 2819 "bulkops.ml" 91 2798 2827
+type(
+  'b list
+)
+ident(
+  int_ref currList "bulkops.ml" 90 2689 2702 "bulkops.ml" 90 2689 2710
+)
+"bulkops.ml" 91 2798 2828 "bulkops.ml" 91 2798 2831
+type(
+  'b list Document.document
+)
+ident(
+  int_ref doc "bulkops.ml" 90 2689 2718 "bulkops.ml" 90 2689 2721
+)
+"bulkops.ml" 91 2798 2828 "bulkops.ml" 91 2798 2839
+type(
+  'b list
+)
+"bulkops.ml" 91 2798 2802 "bulkops.ml" 91 2798 2839
+call(
+  tail
+)
+type(
+  'b list
+)
+"bulkops.ml" 93 2928 2930 "bulkops.ml" 93 2928 2944
+type(
+  ('a list -> string * 'a list Document.document -> 'a list) ->
+  'a list -> (string * 'a list Document.document) list -> 'a list
+)
+ident(
+  ext_ref List.fold_left
+)
+"bulkops.ml" 93 2928 2945 "bulkops.ml" 93 2928 2951
+type(
+  'a list -> string * 'a list Document.document -> 'a list
+)
+ident(
+  int_ref helper "bulkops.ml" 90 2689 2695 "bulkops.ml" 90 2689 2701
+)
+"bulkops.ml" 93 2928 2952 "bulkops.ml" 93 2928 2954
+type(
+  'a list
+)
+"bulkops.ml" 93 2928 2955 "bulkops.ml" 93 2928 2961
+type(
+  'a list Doccol.doccol
+)
+ident(
+  int_ref doccol "bulkops.ml" 89 2666 2679 "bulkops.ml" 89 2666 2685
+)
+"bulkops.ml" 93 2928 2955 "bulkops.ml" 93 2928 2966
+type(
+  (string * 'a list Document.document) list
+)
+"bulkops.ml" 93 2928 2930 "bulkops.ml" 93 2928 2967
+call(
+  tail
+)
+type(
+  'a list
+)
+"bulkops.ml" 90 2689 2691 "bulkops.ml" 93 2928 2967
+type(
+  'a list
+)
